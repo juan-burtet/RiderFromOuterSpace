@@ -10,8 +10,8 @@ config_version=3
 
 [application]
 
-config/name="teste"
-run/main_scene="res://Main.tscn"
+config/name="TECH DEMO"
+run/main_scene="res://Mundo.tscn"
 config/icon="res://icon.png"
 
 [rendering]

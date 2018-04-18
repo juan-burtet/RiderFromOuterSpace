@@ -1,16 +1,31 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://JungleDirtTileSet.tres" type="TileSet" id=1]
-[ext_resource path="res://WorldComplete.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://WorldComplete.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://DirtAutoTile.tres" type="TileSet" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
 
 [node name="Mundo2" type="Node"]
 
-[node name="TileMap" type="TileMap" parent="." index="0"]
+[node name="WorldComplete" parent="." index="0" instance=ExtResource( 1 )]
 
+position = Vector2( 576, 288 )
+next_world = "res://Mundo.tscn"
+
+[node name="Player" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 64, -32 )
+
+[node name="TileMap" type="TileMap" parent="." index="2"]
+
+editor/display_folded = true
 mode = 0
-tile_set = ExtResource( 1 )
-cell_size = Vector2( 32, 32 )
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 64, 64 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 cell_half_offset = 2
@@ -24,19 +39,249 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 1, 0, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 2, 0, 65539, 4, 0, 65545, 0, 0, 65546, 1, 0, 65547, 2, 0, 65549, 0, 0, 65550, 1, 0, 65553, 2, 0, 131075, 4, 0, 131077, 0, 0, 131079, 2, 0, 131081, 0, 0, 131083, 2, 0, 131085, 3, 0, 131087, 4, 0, 131089, 5, 0, 196611, 4, 0, 196613, 3, 0, 196615, 5, 0, 196617, 3, 0, 196618, 4, 0, 196619, 5, 0, 196621, 3, 0, 196624, 4, 0, 196625, 5, 0, 262145, 6, 0, 262146, 7, 0, 262147, 8, 0, 262149, 6, 0, 262150, 7, 0, 262151, 8, 0, 262153, 6, 0, 262155, 8, 0, 262157, 6, 0, 262161, 8, 0, 655361, 0, 0, 655362, 1, 0, 655363, 1, 0, 655364, 1, 0, 655365, 1, 0, 655366, 1, 0, 655367, 1, 0, 655368, 1, 0, 655369, 1, 0, 655370, 1, 0, 655371, 1, 0, 655372, 1, 0, 655373, 1, 0, 655374, 1, 0, 655375, 1, 0, 655376, 1, 0, 655377, 1, 0, 655378, 1, 0, 655379, 2, 0, 720897, 3, 0, 720898, 4, 0, 720899, 4, 0, 720900, 4, 0, 720901, 4, 0, 720902, 4, 0, 720903, 4, 0, 720904, 4, 0, 720905, 4, 0, 720906, 4, 0, 720907, 4, 0, 720908, 4, 0, 720909, 4, 0, 720910, 4, 0, 720911, 4, 0, 720912, 4, 0, 720913, 4, 0, 720914, 4, 0, 720915, 5, 0 )
-_sections_unfolded = [ "Cell" ]
+tile_data = PoolIntArray( -262146, 0, 1, -262145, 0, 9, -327680, 0, 196609, -327679, 0, 196609, -327678, 0, 196609, -327677, 0, 196609, -327676, 0, 196609, -327675, 0, 196609, -327674, 0, 196609, -327673, 0, 196609, -327672, 0, 196609, -327671, 0, 7, -196610, 0, 131073, -196609, 0, 131074, -262135, 0, 65541, -131074, 0, 131073, -131073, 0, 131074, -196600, 0, 1, -196599, 0, 11, -65538, 0, 131073, -65537, 0, 131074, -131065, 0, 1, -131064, 0, 65540, -131063, 0, 131074, -2, 0, 131073, -1, 0, 131074, -65529, 0, 131073, -65528, 0, 196619, -65527, 0, 131074, 65534, 0, 65546, 65535, 0, 65547, 0, 0, 196609, 1, 0, 196609, 2, 0, 196609, 3, 0, 196610, 7, 0, 131073, 8, 0, 196619, 9, 0, 131074, 131070, 0, 65541, 65541, 0, 1, 65542, 0, 65536, 65543, 0, 65540, 65544, 0, 196619, 65545, 0, 131074, 196606, 0, 65541, 131072, 0, 1, 131073, 0, 65536, 131074, 0, 65536, 131075, 0, 65536, 131076, 0, 65536, 131077, 0, 65540, 131078, 0, 3, 131079, 0, 131072, 131080, 0, 131072, 131081, 0, 65547, 131082, 0, 7, 262142, 0, 65541, 196608, 0, 131073, 196609, 0, 196619, 196610, 0, 196619, 196611, 0, 196619, 196612, 0, 196619, 196613, 0, 196619, 196614, 0, 131074, 196618, 0, 65541, 327678, 0, 65541, 262144, 0, 65537, 262145, 0, 131072, 262146, 0, 131072, 262147, 0, 131072, 262148, 0, 131072, 262149, 0, 131072, 262150, 0, 65538, 262154, 0, 65541, 393214, 0, 65541, 327688, 0, 1, 327689, 0, 65536, 327690, 0, 11, 458750, 0, 65542, 458751, 0, 196609, 393216, 0, 196609, 393217, 0, 196609, 393218, 0, 196609, 393219, 0, 196609, 393220, 0, 196609, 393221, 0, 196609, 393222, 0, 196609, 393223, 0, 196609, 393224, 0, 65544, 393225, 0, 131072, 393226, 0, 65538 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="WorldComplete" parent="." index="1" instance=ExtResource( 2 )]
+[node name="StaticBody2D" type="StaticBody2D" parent="TileMap" index="0"]
 
-position = Vector2( 576, 288 )
-next_world = "res://Mundo.tscn"
+editor/display_folded = true
+position = Vector2( -64, -128 )
+scale = Vector2( 2, 6 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Player" parent="." index="2" instance=ExtResource( 3 )]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/StaticBody2D" index="0"]
 
-position = Vector2( 64, 288 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="TileMap" index="1"]
+
+editor/display_folded = true
+position = Vector2( -96, 256 )
+scale = Vector2( 1, 6 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/StaticBody2D2" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="TileMap" index="2"]
+
+editor/display_folded = true
+position = Vector2( 224, 224 )
+scale = Vector2( 7, 3 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/StaticBody2D3" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="TileMap" index="3"]
+
+editor/display_folded = true
+position = Vector2( 320, 416 )
+scale = Vector2( 12, 1 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/StaticBody2D4" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="TileMap" index="4"]
+
+editor/display_folded = true
+position = Vector2( 608, 352 )
+scale = Vector2( 3, 1 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/StaticBody2D5" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="TileMap" index="5"]
+
+editor/display_folded = true
+position = Vector2( 672, 224 )
+scale = Vector2( 1, 3 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/StaticBody2D6" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="TileMap" index="6"]
+
+editor/display_folded = true
+position = Vector2( 544, 32 )
+scale = Vector2( 3, 5 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/StaticBody2D7" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="TileMap" index="7"]
+
+editor/display_folded = true
+position = Vector2( 384, 96 )
+scale = Vector2( 2, 1 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/StaticBody2D8" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="TileMap" index="8"]
+
+editor/display_folded = true
+position = Vector2( 128, 32 )
+scale = Vector2( 4, 1 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/StaticBody2D9" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="TileMap" index="9"]
+
+editor/display_folded = true
+position = Vector2( 320, -288 )
+scale = Vector2( 10, 1 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/StaticBody2D10" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="TileMap" index="10"]
+
+editor/display_folded = true
+position = Vector2( 576, -160 )
+scale = Vector2( 2, 1 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/StaticBody2D11" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="TileMap" index="11"]
+
+editor/display_folded = true
+position = Vector2( 608, -224 )
+scale = Vector2( 1, 1 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/StaticBody2D12" index="0"]
+
+shape = SubResource( 1 )
 
 

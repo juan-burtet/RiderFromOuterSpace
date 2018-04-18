@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Sprites/Tiles/DirtAutoTile.png" type="Texture" id=1]
+
+[node name="DirtAutoTile" type="Node"]
+
+[node name="DirtAutoTile" type="Sprite" parent="." index="0"]
+
+position = Vector2( -352, -128 )
+texture = ExtResource( 1 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+
+

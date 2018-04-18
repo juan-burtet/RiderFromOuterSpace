@@ -10,7 +10,7 @@ source_file="res://Sprites/Player/Idle0.png"
 source_md5="246979be4c4097bb08de13c74044a767"
 
 dest_files=[ "res://.import/Idle0.png-7f3430501802949ad0d6ed458caabfca.stex" ]
-dest_md5="3cddaf32b17a4a2e4ddbd0b49e53dcd5"
+dest_md5="82baeb12e9285df33fe55188237fce53"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

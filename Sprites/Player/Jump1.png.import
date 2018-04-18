@@ -10,7 +10,7 @@ source_file="res://Sprites/Player/Jump1.png"
 source_md5="336006d4101d48f9d7107ac1ab960a53"
 
 dest_files=[ "res://.import/Jump1.png-9749e5d58f27aeec18bdc0b4f8be9025.stex" ]
-dest_md5="c25fc708181ca51ccbd8104811dba1b8"
+dest_md5="bf8227b2d398ce826a454d009dbc1c1e"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

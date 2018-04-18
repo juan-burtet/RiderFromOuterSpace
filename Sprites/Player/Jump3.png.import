@@ -10,7 +10,7 @@ source_file="res://Sprites/Player/Jump3.png"
 source_md5="6de55ae8f0ee1e4a836211f6ec3e03c8"
 
 dest_files=[ "res://.import/Jump3.png-831d7a3bbe3d330bd166bbf6e83e64e5.stex" ]
-dest_md5="261a98906e667094114754cfd2b5f3d5"
+dest_md5="1b1c5ae86dea555f906d62dfba01eb63"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

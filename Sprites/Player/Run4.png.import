@@ -10,7 +10,7 @@ source_file="res://Sprites/Player/Run4.png"
 source_md5="5a7654b04ab5983c5d2d177a7d419e15"
 
 dest_files=[ "res://.import/Run4.png-d85e7eb3186664e77faa416be8dced3a.stex" ]
-dest_md5="30c2e0179a3cacf8600d0bccee19dfb8"
+dest_md5="dc41c410b282b1b447b173c1a8de4cc7"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="TECH DEMO"
-run/main_scene="res://Mundo.tscn"
+run/main_scene="res://StartMenu.tscn"
 config/icon="res://icon.png"
 
 [display]

@@ -9,7 +9,7 @@
   - [ ] Se é um jogo 3D, mostre algo 3D se movendo na tela.
   
 * Colocar o projeto no GitHub:
-  >[PeC-IV-Jogos](https://github.com/juan-burtet/PeC-IV-Jogos)
+  >[Rider from Outer Space](https://github.com/juan-burtet/PeC-IV-Jogos/tree/master/Rider%20From%20Outer%20Space)
 
 * Mostrar que consegue baixar e colocar pra rodar numa máquina que não tem o projeto: 
   > Completo
@@ -27,9 +27,9 @@
     - _Powerups_: Poderes que causam "bonus" para o personagem, esses bônus são perdidos quando o personagem é atacado.\
     - _Resistores_: Coletaveis que podem ser usados para comprar upgrades.
 
-* Tech Demo.
-  > Completo
-
+* [Tech Demo](https://github.com/juan-burtet/PeC-IV-Jogos/tree/master/Extras/Godot%203%20-%20Platform%20Tutorial).
+  > Completo.
+  
 * __Storyboard__:
   - [ ] Desenhos dos elementos descritos no item 5 da aula de hoje.
   - [ ] Definir o número de fases, personagens, itens, menus, etc. 

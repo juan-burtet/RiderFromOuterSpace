@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="100" height="100" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="stage1tile1" tilewidth="32" tileheight="32">
+  <image source="mylevel1_tiles.png" width="256" height="768"/>
+ </tileset>
+ <layer name="layer4" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJzt1DFOxAAQBEG/87KDCC4C/i/hdF7QBldJI22+Uj+P43g7937uedH7cdzHx7nPc68L33f6x9e573M/F77v9I+6RXq16hbp1apbpFerbpFerbpFerXqFunVqlukV6tukV6tukV6teoW6dWqW6RXq26RXq26RXq16hbp1apbpFerbpFerbpFerXqFunVqlukV6tukV6tukV6teoW6dWqW6RXq26RXq26RXq16hbp1apbpFerbpFerbpFerXqFunVqlukV6tukV6tukV6teoW6dWqW6RXq26RXq26RXq16hbp1Xr8kQEAAAAAAAAAAAAAAAAAAAAAAAAAAADAf/QLxRHT5g==
+  </data>
+ </layer>
+ <layer name="layer3" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJztm+1y2yAQRcmLtfpld5zEzfs/TZWZMF1dXz6FBcj3zOy0dQW29gCSAF2dc9cXi5EpOY9fa/xeYyk4fjHlbNnSuuTjMS5rvK3xJ3KMzfPl51hfzpb1n324472MTI2PWA6tsxwf9vM9fYaVDdU3MrFzw/h0jznEcp9u6+MDysV8pPqfH/9YrllbsZ8tbl4fmKtQYN6wH7B6cnyE+t+FlPe5jtWHv3Vk9vjwufDttpUPWz/2AZZ/VvYVfficfY9H7Pz3+giVscfe1vjKqG9GH35MxutE7tjVw0dufbP5sNfimjjSh71HOKuPkjGqt4+a+uRDPmqYycd9jffK+l7JB7vHqfHxne+/JL7gd95+Pn9P1DezD5sLbIM5fQPrYPegoWMx57HAZ8Kz+rCBuWJ+bi6dy5iP2rib77N/P7MPllc7RuTmlY0/uf2gxhN+D/bXs/jANvnMvB4RI9M7N/KxpXdu5GNL79zIx5beuZGPLbXnFNqrYNfwRo2RqXXB1jzsWsjROS5pByNTcr5sXZrN0ffYM+Kf1XO8jEzJ+abm/ULP4tZlSTsuOdbuZUl5GZmS8anWB7rE/R6sD17NsTl9DX3YuS10MzIlfaOVDz+mLW6bq9garN2fFdt7wnzYv8/kg40ruI7byof9Nzsu1Q6wj53RBxtX8HoduoYf7QOdnM1H7TWipw889kw+aq8R8tEWtueqhQ+/hisfZYTOscX+htSzi3w80sqHXb9lexCe4cP2Qb9mdlYfbG+NzwF+bvMSe35p5cO7Z9+JXs7iw58bW//OycszfeTMV87qg+3zSZ1v6Rq672t7fZR8L+49mcXHnjyXhB1HMMfsPoz5qP3uWX0cEaE9OM/0cXfn2u/j49lrf+gj5m5PjAzLOZs/9fMpoblyLFvjDn086x31kQnlhM2fvsH/Yc7xPsquC+W4Co1Xe8aqGX2wtVhsp+xdZz8HvLiwD/undxnqZ/LB88jmIvAZJfbOGHqIrbMvLs8HvhNvy8lHeA6J+YiVDfWv2O9CR768fOz3ERufUj5Y/1nc/D7sc2BrH2zOJfXOWY2P2NiGnkYG2w6759/jg7VPlltsF3t8xObkZvPBIvUuG8tnjY/QcfIRjtS5Woe577HJx39KfbR4By33Xc5aH6nfODKlPo6M0H1Gykeq3pHpnfPcYD6sr5K1gpHpnefSvtJivndkeue5R4xM79zIx5beuZGPLb1zIx9beudGPoQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCiEf+AXwXIpY=
+  </data>
+ </layer>
+ <layer name="layer2" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   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
+  </data>
+ </layer>
+ <layer name="layer1" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJztnN2O6zAIhNu+/0OvVlWlKHJifgYYHH+SL063MQMDdnQu+nm9Xp+9qBY7XXR66ZJnF51euuTZRaeXLnne6WQ4j1H3g1VvVq6auna9Lztp/YH2gzVnZm1HJBoRs56d/zmm9DzLPoOv/iZ53hPXq8EaOyqGtIe150eFHxE9OIvDfEYd0XiMiuXdb/S81A/2u9A6HxaNllmN6gW0H2idGbEq6ZKDpAe65PLjPfisSw6a+eiyMvyIzqEi5up+ePaxxmRcZz9QNavEoruaox8aTzrk2EnrD+uMMHvDrM1D5PmYrTsrTlRspt5i9T2b7F6++nz78aUyp+j6Rp7F0SubzLO446rMJ4qqXvPQyY/RM5Ke6kRHzWeuPMmcRRTMeqW6NDPOThedd2w/YrDWTXpWdfClm94RlncSVtj1SXiSH6h32t//9UfUR/N+hYwv3U8TV1tXq8YMP1BUzJW1zxlh1iaFtc4WTbMzgh32vo+4V9hyPMLux5PoekesSqYX1ncGhL6I2Jkrgmy91TWMys+Tv6Q+FVTXF9FvaCr96EJXP6rnLQptTp65WrF+aFA1kpyB2485nc6rDmeU9/6W5Ie6/9lriSDDD7S+SDxxPO+gqPfb6Hp59tfWYfRviz5N/bz7zPyIJHs+qhZSfyTbD51+SW6IWBoN0j1Ge1X7YalbRs9exWKazYg56OJHxJxLY1u1sfsh1ReZj3WvCP9RPmbORyXbDy4893PGOuuMzl36fXT8O00sa6R9dRBnSQYsOjZfMnokMgZTbyPIyiWqbit58U93P9BU3+2zGkm/y3Q3SjVE3vFRfnjis7P94ILZj051PGI5m0afbT/q6eLHU3zZfvhAa2PzQ/rck6jwQ/tcNiyxK/1YjVlNo3vO2ucaPZZZ0/xdEzvre1Yy/NBqkWi07n1+3rMv03md6UdEDHTtWPxAajjvNfrdeFZY/NB8V6u1ux+opYlv1Silotc6gpyP92lZ4zwBzTvP7F1MUteq81dCtba7WlvnoyuVd7VEg/X+6EhVHtF3f/SKIDOWJC6iJl39yPZeGvuJ81HhwSy+pOetezL7keUDMscV5+Pqd2UrGP3O7R2WWWL3I3ruNJz9mLHafHjOCIa8PDOU1e9SrFpYvDhq0XyX0Q82PVYy+igaRk1WMucDWavZ7/N39USiDZULqk4eD9h92X5wgc5tr71WW39BXBfv
+  </data>
+ </layer>
+ <objectgroup name="objlayer" width="100" height="100">
+  <object name="ruby" gid="3" x="1281" y="160"/>
+  <object name="ruby" gid="3" x="32" y="192"/>
+  <object name="ruby" gid="3" x="33" y="351"/>
+  <object name="ruby" gid="3" x="449" y="164"/>
+  <object name="ruby" gid="3" x="32" y="544"/>
+  <object name="ruby" gid="3" x="33" y="991"/>
+  <object name="ruby" gid="3" x="34" y="1088"/>
+  <object name="ruby" gid="3" x="1776" y="352"/>
+  <object name="ruby" gid="3" x="3135" y="160"/>
+  <object name="ruby" gid="3" x="2416" y="641"/>
+  <object name="ruby" gid="3" x="1793" y="864"/>
+  <object name="ruby" gid="3" x="1743" y="1152"/>
+  <object name="ruby" gid="3" x="1156" y="1153"/>
+  <object name="ruby" gid="3" x="804" y="1568"/>
+  <object name="ruby" gid="3" x="803" y="1791"/>
+  <object name="ruby" gid="3" x="897" y="1757"/>
+  <object name="ruby" gid="3" x="33" y="1247"/>
+  <object name="ruby" gid="3" x="58" y="1600"/>
+  <object name="ruby" gid="3" x="32" y="1984"/>
+  <object name="ruby" gid="3" x="32" y="2176"/>
+  <object name="ruby" gid="3" x="32" y="2431"/>
+  <object name="ruby" gid="3" x="34" y="2748"/>
+  <object name="ruby" gid="3" x="32" y="3136"/>
+  <object name="ruby" gid="3" x="417" y="3133"/>
+  <object name="ruby" gid="3" x="1152" y="3132"/>
+  <object name="ruby" gid="3" x="419" y="2716"/>
+  <object name="ruby" gid="3" x="1523" y="2465"/>
+  <object name="ruby" gid="3" x="1856" y="2850"/>
+  <object name="ruby" gid="3" x="2816" y="2910"/>
+  <object name="ruby" gid="3" x="3101" y="2689"/>
+  <object name="ruby" gid="3" x="1889" y="1792"/>
+  <object name="ruby" gid="3" x="3013" y="1855"/>
+  <object name="ruby" gid="3" x="3135" y="1087"/>
+  <object name="ruby" gid="3" x="2601" y="127"/>
+  <object name="banana" gid="4" x="2592" y="1056"/>
+  <object name="banana" gid="4" x="2160" y="2428"/>
+  <object name="banana" gid="4" x="269" y="256"/>
+  <object name="door" gid="6" x="3093" y="3136"/>
+  <object name="playerborn" gid="5" x="161" y="119"/>
+ </objectgroup>
+</map>

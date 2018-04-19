@@ -2,7 +2,7 @@
 
 [ext_resource path="res://StartMenu.gd" type="Script" id=1]
 
-[node name="StartMenu" type="Control"]
+[node name="StartMenu" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0

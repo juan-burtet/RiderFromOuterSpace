@@ -4,7 +4,7 @@
 * Bater o martelo na escolha das ferramentas:
   > Godot Engine
 
-* Montar um projeto "Hello World": 
+* Montar um projeto "[Hello World](https://github.com/juan-burtet/PeC-IV-Jogos/tree/master/Extras/Hello%20World)": 
   - [x] Se é um jogo 2D, mostre algo 2D se movendo na tela.
   - [ ] Se é um jogo 3D, mostre algo 3D se movendo na tela.
   
@@ -14,7 +14,7 @@
 * Mostrar que consegue baixar e colocar pra rodar numa máquina que não tem o projeto: 
   > Completo
 
-* __Storyboard__:
+* __[Storyboard](https://github.com/juan-burtet/PeC-IV-Jogos/blob/master/STORYBOARD.md)__:
   * Um paragráfo descrevendo o jogo:
     - Jogo plataforma com gráfico 8/16-bits (inspirado no NES) de tiro inspirado em Sunset Riders e CONTRA.
   * Um paragráfo descrevendo uma fase:
@@ -30,7 +30,7 @@
 * [Tech Demo](https://github.com/juan-burtet/PeC-IV-Jogos/tree/master/Extras/Godot%203%20-%20Platform%20Tutorial).
   > Completo.
   
-* __Storyboard__:
+* __[Storyboard](https://github.com/juan-burtet/PeC-IV-Jogos/blob/master/STORYBOARD.md)__:
   - [ ] Desenhos dos elementos descritos no item 5 da aula de hoje.
   - [ ] Definir o número de fases, personagens, itens, menus, etc. 
       - 5 fases no total e uma fase final, onde é derrotado o ultimo chefe.

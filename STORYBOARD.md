@@ -9,9 +9,9 @@
 * Personagens:
   * __Jaeger__: É o personagem principal, um caçador de recompensas intergalático que nunca rejeita uma missão. Sua missão começa ao ser contrato pelo contrabandista (CHEFE) para ir atrás de um artefato perdido nos cantos mais remotos da galáxia.
   * __Carmack__: É um contrabandista temido em toda galáxia. Apesar de contratar _Jaeger_, ele tem outros planos em mente quando o mesmo retornar o artefato a ele.
-    - ![No Name](/Extras/img/carmackArtwork.png)
+    - ![Carmack](/Extras/img/carmackArtwork2.png)
   * __Dijkstra__: O Chefe da primeira fase. Ele também está em busca do artefato e destruirá qualquer um que ficar no seu caminho.
-    - ![Dijkstra](/Extras/img/dijkstraArtwork2.png)
+    - ![Dijkstra](/Extras/img/dijkstraArtwork21.png)
   * __Turing__: O Chefe da segunda fase. Turing tem informações sobre o artefato e não entregará essa informação com facilidade.
     - ![Turing Artwork](/Extras/img/turingArtwork.png)
   * __Lovelace__: O Chefe da terceira fase. _Lovelace_ está protegendo o artefato, pois sabe que o poder que ele possui é muito perigoso.

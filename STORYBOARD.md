@@ -41,9 +41,17 @@
     - __Quit to Main Menu__: Volta para o menu inicial.
 * __Mapas__: O jogo possui 3 mapas que são divididos em 3 seções (2 partes + Chefe) e um mapa final que possui apenas uma luta com chefe. Os mapas são:
   * __Königsberg__: O Primeiro mapa do jogo é em um Planeta deserto. A primeira Seção se passa na Superficie, a segunda se passa no subsolo (cavernas) e a terceira seção é onde ocorre a Luta com o chefe.
+  
+  > <img src="/Extras/img/mapa1.png" width="400px">
   * __Nala__: O Segundo mapa do jogo é em um Planeta com temática Tecnologica. A primeira seção se passa na parte ao ar livre do Planeta, a segunda se passa dentro do laboratório e a terceira seção se passa dentro da sala do Computador Central, onde ocorre a luta com o chefe.
+  
+  > <img src="/Extras/img/mapa2.png" width="400px">
   * __Byron__: O Terceiro mapa do jogo é um Planeta com muitas ruínas e templos. A primeira seção se passa no caminho para encontrar o templo, a segunda seção é dentro do templo e a terceira seção é a luta contra o chefe dentro da sala onde o Artefato está.
+  
+  > <img src="/Extras/img/mapa3.png" width="400px">
   * __Nave do _Carmack___: O Mapa Final do jogo é uma luta contra chefe dentro da Nave do _Carmack_. Este mapa é dividido em 3 seções, onde em casa seção a luta é diferente.
+  
+  > <img src="/Extras/img/mapafinal.png" width="400px">
 * __Personagens__: Uma breve descrição de todos os personagens importantes para a história.
   * __Jaeger__: É o personagem principal, um caçador de recompensas intergalático que nunca rejeita uma missão. Sua missão começa ao ser contrato pelo misterioso _Carmack_ para ir atrás de um artefato perdido nos cantos mais remotos da galáxia.
     

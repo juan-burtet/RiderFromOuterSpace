@@ -3,22 +3,32 @@
 
   ![Game Logo](/Extras/img/Game-Logo.gif)
   
-* Nome do Jogo: _Rider From Outer Space_
-* Estilo: Plataforma 2D (_Run N' Gun_)
-* Descrição: Inspirado nos clássicos do NES, _Rider From Outer Space_ é um Jogo de Plataforma 2D (_Run N' Gun_) com gráficos 8 bits.
-* História: O jogo se inicia com _Jaeger_, um caçador de recompensas intergalático que tem sua nava captura por um misterioso Comandante chamado _Carmack_. _Carmack_ deseja contratar _Jaeger_ para ir em busca de um artefato reconhecido apenas como "A Joia".\
-  Ao aceitar a missão, _Jaeger_ sai em busca de respostas de onde ele poderia encontrar tal artefato, e acaba indo até o planeta _Königsberg_, onde um contrabandista chamado _Dijkstra_, famoso por conhecer grande parte das rotas do Universo, poderia lhe dar alguma pista sobre o artefato. __CONTINUAR HISTÓRIA__
-* Personagens: Uma breve descrição de todos os personagens importantes para a história.
+* _Nome do Jogo_: _Rider From Outer Space_
+* _Estilo_: Plataforma 2D (_Run N' Gun_)
+* _Descrição_: Inspirado nos clássicos do NES, _Rider From Outer Space_ é um Jogo de Plataforma 2D (_Run N' Gun_) com gráficos 8 bits.
+* _História_: O jogo se inicia com _Jaeger_, um caçador de recompensas intergalático que tem sua nava captura por um misterioso Comandante chamado _Carmack_. _Carmack_ deseja contratar _Jaeger_ para ir em busca de um artefato reconhecido apenas como "A Joia".\
+  Ao aceitar a missão, _Jaeger_ sai em busca de respostas de onde ele poderia encontrar tal artefato, e acaba indo até o planeta _Königsberg_, onde um contrabandista chamado _Dijkstra_, famoso por conhecer grande parte das rotas do Universo, poderia lhe dar alguma pista sobre o artefato. Ao chegar no planeta, encontra muitas criaturas hostis e um caminho dificil até encontrar _Dijkstra_. Ao encontra-lo, e pedir informações sobre o artefato, o mesmo lhe diz que ninguém deveria saber sobre a "A Joia" e uma luta se inicia. Ao fim da luta, _Dijkstra_ dá a informação que se _Jaeger_ realmente deseja encontrar tal objeto, ele teria respostas no Planeta _Nala_.\
+  Ao chegar ao planeta, encontra um exercito de máquinas totalmente focados em destruir qualquer ser vivo. Passando por muitas áreas, encontra um ser Alienigena que diz ser chamado de _Turing_. Ele diz ter todas as respostas que _Jaeger_ procura mas nunca entregaria. Ao ser derrotado, _Jaeger_ descobre a localização da "A Joia" no computador central da base e vai em direção ao planeta _Byron_.\
+  __CONTINUAR HISTÓRIA AQUI__ (FINALIZAR LUTA COM LOVELACE E LUTAR CONTRA CARMACK)
+* Gameplay: Toda a movimentação possivel dentro do game.
+  * __Andar__:
+  * __Atirar__:
+  * __Dash__:
+  * __Pular__:
+  * __Double Jump__:
+  * __Especial__:
+  * __MAIS ALGUM?__:
+* _Personagens_: Uma breve descrição de todos os personagens importantes para a história.
   * __Jaeger__: É o personagem principal, um caçador de recompensas intergalático que nunca rejeita uma missão. Sua missão começa ao ser contrato pelo misterioso _Carmack_ para ir atrás de um artefato perdido nos cantos mais remotos da galáxia.
   * __Carmack__: É um contrabandista temido em toda galáxia. Apesar de contratar _Jaeger_, ele tem outros planos em mente quando o mesmo retornar o artefato a ele.
-    - ![Carmack](/Extras/img/carmackArtwork2.png)
+    > ![Carmack](/Extras/img/carmackArtwork2.png)
   * __Dijkstra__: O Chefe da primeira fase. Ele também está em busca do artefato e destruirá qualquer um que ficar no seu caminho.
-    - ![Dijkstra](/Extras/img/dijkstraArtwork21.png)
+    > ![Dijkstra](/Extras/img/dijkstraArtwork21.png)
   * __Turing__: O Chefe da segunda fase. Turing tem informações sobre o artefato e não entregará essa informação com facilidade.
-    - ![Turing Artwork](/Extras/img/turingArtwork.png)
+    > ![Turing Artwork](/Extras/img/turingArtwork.png)
   * __Lovelace__: O Chefe da terceira fase. _Lovelace_ está protegendo o artefato, pois sabe que o poder que ele possui é muito perigoso.
-    - ![Lovelace Artwork](/Extras/img/lovelaceArtwork.png)
-* Itens: Objetos disponiveis pelo mapa que podem ser interagidos pelo Personagem Principal.
+    > ![Lovelace Artwork](/Extras/img/lovelaceArtwork.png)
+* _Itens_: Objetos disponiveis pelo mapa que podem ser interagidos pelo Personagem Principal.
   * __Power Ups__: O jogo possui alguns _Power Ups_ que podem ser encontrado durante as fases, que dão algum poder por um tempo limitado. Estes são:
     - ESCUDO: Você fica imortal por cerca de 15 segundos
     - TELE-GUIADO: Todas as balas acertam os inimigos
@@ -26,12 +36,12 @@
   * __Coletavéis__: O jogo possui coletavéis que te ajudam a dar _upgrades_ em alguns acessórios do personagem principal:
     - (ITEM PARA FAZER OS UPGRADES): São encontrados por todo o mapa e são usados para comprar os upgrades.
     - (MEGA UPGRADE): Este item te dá um upgrade sem ter que juntar os itens acima para fazer o upgrade. Este item é bem raro e pode ser encontrado um por fase, normalmente bem escondido no cenário.
- * Armas: Os tipos de armas utilizados pelo Personagem Principal.
+ * _Armas_: Os tipos de armas utilizados pelo Personagem Principal.
    * __Pistola__: É a arma média. Sendo uma ótima arma em todos os ambientes, ela possui uma frequência de tiro e dano médio.
    * __Shotgun__: A arma para combate de perto. O seu tiro é em área, sendo a melhor arma pra acertar de perto mas com uma frequência de tiro bem baixa.
    * __Metralhadora__: A arma com maior frequência de tiro, sendo totalmente automática, atira em uma alta frequência mas com o menor dano entre todas as armas.
- * Especial: A cada inimigo derrotado, uma barra de especial é aumentada. Ao ter a barra completa, o especial pode ser lançado. Se trata de um ataque em área que dá dano em todos os inimigos em tela.
- * Upgrades: Tudo que pode ser melhorado no personagem.
+ * _Especial_: A cada inimigo derrotado, uma barra de especial é aumentada. Ao ter a barra completa, o especial pode ser lançado. Se trata de um ataque em área que dá dano em todos os inimigos em tela.
+ * _Upgrades_: Tudo que pode ser melhorado no personagem.
    * __Vida__: Ao aumentar esse upgrade, o HP do personagem é aumentado.
    * __Aumenta__: Aumenta a altura máxima do pulo (e segundo pulo) e do _Dash_.
    * __Pistola__: Aumenta o dano da Pistola.

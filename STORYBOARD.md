@@ -42,32 +42,32 @@
 * __Mapas__: O jogo possui 3 mapas que são divididos em 3 seções (2 partes + Chefe) e um mapa final que possui apenas uma luta com chefe. Os mapas são:
   * __Königsberg__: O Primeiro mapa do jogo é em um Planeta deserto. A primeira Seção se passa na Superficie, a segunda se passa no subsolo (cavernas) e a terceira seção é onde ocorre a Luta com o chefe.
   
-  > <img src="/Extras/img/mapa1.png" width="400px">
+  > <img src="/Extras/img/mapa1.png" width="400px"> [1]
   * __Nala__: O Segundo mapa do jogo é em um Planeta com temática Tecnologica. A primeira seção se passa na parte ao ar livre do Planeta, a segunda se passa dentro do laboratório e a terceira seção se passa dentro da sala do Computador Central, onde ocorre a luta com o chefe.
   
-  > <img src="/Extras/img/mapa2.png" width="400px">
+  > <img src="/Extras/img/mapa2.png" width="400px"> [1]
   * __Byron__: O Terceiro mapa do jogo é um Planeta com muitas ruínas e templos. A primeira seção se passa no caminho para encontrar o templo, a segunda seção é dentro do templo e a terceira seção é a luta contra o chefe dentro da sala onde o Artefato está.
   
-  > <img src="/Extras/img/mapa3.png" width="400px">
+  > <img src="/Extras/img/mapa3.png" width="400px"> [1]
   * __Nave do _Carmack___: O Mapa Final do jogo é uma luta contra chefe dentro da Nave do _Carmack_. Este mapa é dividido em 3 seções, onde em casa seção a luta é diferente.
   
-  > <img src="/Extras/img/mapafinal.png" width="400px">
+  > <img src="/Extras/img/mapafinal.png" width="400px"> [1]
 * __Personagens__: Uma breve descrição de todos os personagens importantes para a história.
   * __Jaeger__: É o personagem principal, um caçador de recompensas intergalático que nunca rejeita uma missão. Sua missão começa ao ser contrato pelo misterioso _Carmack_ para ir atrás de um artefato perdido nos cantos mais remotos da galáxia.
     
     > <img src="/Extras/img/jaegerArtwork.jpg" width="250px">
   * __Carmack__: É um contrabandista temido em toda galáxia. Apesar de contratar _Jaeger_, ele tem outros planos em mente quando o mesmo retornar o artefato a ele.
     
-    > <img src="/Extras/img/carmackArtwork2.png" width="250px">
+    > <img src="/Extras/img/carmackArtwork2.png" width="250px"> [1]
   * __Dijkstra__: O Chefe da primeira fase. Ele também está em busca do artefato e destruirá qualquer um que ficar no seu caminho.
     
-    > <img src="/Extras/img/dijkstraArtwork21.png" width="250px">
+    > <img src="/Extras/img/dijkstraArtwork21.png" width="250px"> [1]
   * __Turing__: O Chefe da segunda fase. Turing tem informações sobre o artefato e não entregará essa informação com facilidade.
     
-    > <img src="/Extras/img/turingArtwork.png" width="250px">
+    > <img src="/Extras/img/turingArtwork.png" width="250px"> [1]
   * __Lovelace__: O Chefe da terceira fase. _Lovelace_ está protegendo o artefato, pois sabe que o poder que ele possui é muito perigoso.
     
-    > <img src="/Extras/img/lovelaceArtwork.png" width="250px">
+    > <img src="/Extras/img/lovelaceArtwork.png" width="250px"> [1]
 * __Inimigos__: Os inimigos são divididos em 3 tipos, e possuem skins diferentes em cada mapa.
   * __Shooter__: Este inimigo possui armas de fogo e atira ao detectar o personagem principal. (HP baixo)
   * __Fighter__: Este inimigo usa ataques corporais e tem uma detecção maior que o _Shooter_. (HP alto)

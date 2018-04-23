@@ -1,6 +1,15 @@
 # PeC-IV-Jogos
 ## Repositório da Disciplina de Jogos (Ciência da Computação - UFPEL)
 
+  * [Extras](https://github.com/juan-burtet/PeC-IV-Jogos/tree/master/Extras)
+    > Pasta com arquivos extras pro Desenvolvimento do trabalho. 
+  * [Rider From Outer Space](https://github.com/juan-burtet/PeC-IV-Jogos/tree/master/Rider%20From%20Outer%20Space)
+    > Repositório com o Projeto do Jogo.
+  * [STORYBOARD.md](https://github.com/juan-burtet/PeC-IV-Jogos/blob/master/STORYBOARD.md)
+    > Markdown contendo a Storyboard do Jogo.
+
+### Objetivos
+
 * Bater o martelo na escolha das ferramentas:
   > Godot Engine
 

@@ -30,12 +30,16 @@
   * __Especial__: Ao ter uma barra especifica de energia completa, é possivel utilizar um ataque especial que dá dano em todos os personagens que estão em cena.
 * __Menus__: O jogo possui um Menu inicial, Menu _in-game_ e um Menu de _Upgrade_. 
   * __Menu Inicial__: O menu onde o jogo se inicia, que possui 4 opções:
+    
+    > <img src="/Extras/img/mainMenu.png" width="350px">
     - __Start Game__: Botão para iniciar o jogo.
     - __Load Game__: Botão para prosseguir o game de algum ponto salvo. (Os mapas possuem alguns checkpoints, onde são os pontos de salvamento)
     - __Chapter Select__: Botão para selecionar algum capitulo especifico.
     - __Opções__: Botão que abre algumas opções do jogo. (Modificar opções gráficas e volume do jogo)
     - __Quit Game__: Sair do Jogo.
   * __Menu in-game__: Menu de Pause durante o jogo, que possui as opções:
+    
+    > <img src="/Extras/img/startMenu.png" width="350px">
     - __Return Game__: Retornar ao jogo.
     - __Stats__: Ver a lista de _upgrades_.
     - __Quit to Main Menu__: Volta para o menu inicial.
@@ -72,24 +76,30 @@
   * __Shooter__: Este inimigo possui armas de fogo e atira ao detectar o personagem principal. (HP baixo)
   * __Fighter__: Este inimigo usa ataques corporais e tem uma detecção maior que o _Shooter_. (HP alto)
   * __Bomber__: Este inimigo corre em sua direção e explode ao chegar numa distância próxima ou ao ser morto. (Morre com 1 tiro)
-* __Itens__: Objetos disponiveis pelo mapa que podem ser interagidos pelo Personagem Principal.
-  * __Power Ups__: O jogo possui alguns _Power Ups_ que podem ser encontrado durante as fases, que dão algum poder por um tempo limitado. Estes são:
-    - __Shield__: Você fica imortal por cerca de 15 segundos.
-    - __Guided__: Todas as balas acertam os inimigos.
-    - __Power__: Todos os tiros dão o dobro de dano.
-  * __Coletavéis__: O jogo possui coletavéis que te ajudam a dar _upgrades_ em alguns acessórios do personagem principal:
-    - __Resistors__: São encontrados por todo o mapa e são usados para comprar os upgrades.
-    - __Master Upgrade__: Este item te dá um upgrade sem ter que juntar os itens acima para fazer o upgrade. Este item é bem raro e pode ser encontrado um por fase, normalmente bem escondido no cenário.
 * __Armas__: Os tipos de armas utilizados pelo Personagem Principal.
    * __Pistol__: É a arma média. Sendo uma ótima arma em todos os ambientes, ela possui uma frequência de tiro e dano médio.
    * __Shotgun__: A arma para combate de perto. O seu tiro é em área, sendo a melhor arma pra acertar de perto mas com uma frequência de tiro bem baixa.
    * __Machine gun__: A arma com maior frequência de tiro, sendo totalmente automática, atira em uma alta frequência mas com o menor dano entre todas as armas.
 * __Upgrades__: Tudo que pode ser melhorado no personagem.
-   * __Life__: Ao aumentar esse upgrade, o HP do personagem é aumentado.
-   * __Jetpack__: Aumenta a altura máxima do pulo (e segundo pulo) e do _Dash_.
-   * __Pistol__: Aumenta o dano da Pistola.
-   * __Shotgun__: Aumenta o dano da _Shotgun_.
-   * __Machine Gun__: Aumenta o dano da Metralhadora.
+  > <img src="/Extras/img/upgradeStats.png" width="350px">  
+  * __Life__: Ao aumentar esse upgrade, o HP do personagem é aumentado.   * __Jetpack__: Aumenta a altura máxima do pulo (e segundo pulo) e do _Dash_.
+  * __Pistol__: Aumenta o dano da Pistola.
+  * __Shotgun__: Aumenta o dano da _Shotgun_.
+  * __Machine Gun__: Aumenta o dano da Metralhadora.
+* __Itens__: Objetos disponiveis pelo mapa que podem ser interagidos pelo Personagem Principal.
+  * __Power Ups__: O jogo possui alguns _Power Ups_ que podem ser encontrado durante as fases, que dão algum poder por um tempo limitado. Estes são:
+    - __Shield__: Você fica imortal por cerca de 15 segundos. <img src="/Extras/img/shield.png" width="50px">
+    - __Guided__: Todas as balas acertam os inimigos. <img src="/Extras/img/reticule.png" width="50px">
+    - __Power__: Todos os tiros dão o dobro de dano. <img src="/Extras/img/upgrade.png" width="50px">
+  * __Coletavéis__: O jogo possui coletavéis que te ajudam a dar _upgrades_ em alguns acessórios do personagem principal:
+    - __Resistors__: São encontrados por todo o mapa e são usados para comprar os upgrades. <img src="/Extras/img/electrical-resistance.png" width="50px">
+    - __Master Upgrade__: Este item te dá um upgrade instantâneo. <img src="/Extras/img/embrassed-energy.png" width="50px">
+   
+## CRONOGRAMA
+
+  * Entrega do Storyboard __(30/04/18)__
+  * Uma das fases estar funcionando __(11/06/18)__
+  * Apresentação do Jogo Final __(16/07/18)__
    
 ## REFERÊNCIAS
 [[1] OpenGameArt](https://opengameart.org/)

@@ -101,5 +101,10 @@
   * Uma das fases estar funcionando __(11/06/18)__
   * Apresentação do Jogo Final __(16/07/18)__
    
+   
+## NÃO ESQUECER DE:
+  - [ ] Atualizar o Cronograma.
+  - [ ] Adicionar o desenho dos mapas!
+  
 ## REFERÊNCIAS
 [[1] OpenGameArt](https://opengameart.org/)

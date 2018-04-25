@@ -96,14 +96,22 @@
     - __Master Upgrade__: Este item te dá um upgrade instantâneo. <img src="/Extras/img/embrassed-energy.png" width="50px">
    
 ## CRONOGRAMA
-
-  * Entrega do Storyboard __(30/04/18)__
-  * Uma das fases estar funcionando __(11/06/18)__
-  * Apresentação do Jogo Final __(16/07/18)__
+  
+  - [ ] __[SEMANA 0]__ Entrega Final do Storyboard. __(07/05/18)__
+  - [ ] __[SEMANA 1]__ Menus/Mapas Finalizados __(14/05/18)__
+  - [ ] __[SEMANA 2]__ Movimentação do Personagem Finalizada __(21/05/18)__ 
+  - [ ] __[SEMANA 3]__ Movimentação dos Inimigos/Chefes Finalizadas __(28/05/18)__
+  - [ ] __[SEMANA 4]__ Conferir demo de entrega da semana 5 __(04/06/18)__
+  - [ ] __[SEMANA 5]__ __ENTREGA DA PRIMEIRA FASE DO JOGO__ __(11/06/18)__ __<= DEADLINE__
+  - [ ] __[SEMANA 6]__ Finalização "Completa" de todos os mapas __(18/06/18)__
+  - [ ] __[SEMANA 7]__ Finalização de Diálogos/Cutscenes __(25/06/18)__
+  - [ ] __[SEMANA 8]__ Finalização do Alpha __(02/07/18)__
+  - [ ] __[SEMANA 9]__ Finalização do Beta __(09/07/18)__
+  - [ ] __[SEMANA 10]__ __ENTREGA DO JOGO__ __(16/07/18)__ __<= DEADLINE__
    
    
 ## NÃO ESQUECER DE:
-  - [ ] Atualizar o Cronograma.
+  - [x] Atualizar o Cronograma.
   - [ ] Adicionar o desenho dos mapas!
   
 ## REFERÊNCIAS

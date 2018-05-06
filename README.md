@@ -26,7 +26,7 @@
 * [Tech Demo](https://github.com/juan-burtet/PeC-IV-Jogos/tree/master/Extras/Godot%203%20-%20Platform%20Tutorial)
   > Completo.
   
-* __[Storyboard](https://github.com/juan-burtet/PeC-IV-Jogos/blob/master/STORYBOARD.md)__
+* [Storyboard](https://github.com/juan-burtet/PeC-IV-Jogos/blob/master/STORYBOARD.md)
   > Em processo.
 
 * Divisão das Tarefas do Grupo.

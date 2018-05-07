@@ -52,7 +52,7 @@
     * __Seção 2 do mapa 1:__
       > <img src="/Extras/img/mapa1area2.jpg" width="400px">
         * A Seção 2 se trata de descidas e subidas dentro das cavernas do planeta.
-        
+
   > <img src="/Extras/img/mapa2.png" width="400px"> [1]
   * __Nala__: O Segundo mapa do jogo é em um Planeta com temática Tecnologica. A primeira seção se passa na parte ao ar livre do Planeta, a segunda se passa dentro do laboratório e a terceira seção se passa dentro da sala do Computador Central, onde ocorre a luta com o chefe. __[TEMPO TOTAL DO MAPA: 12 min]__
     * __Seção 1 do mapa 2:__
@@ -116,7 +116,7 @@
 
 ## CRONOGRAMA
 
-  - [ ] __[SEMANA 0]__ Entrega Final do Storyboard. __(07/05/18)__
+  - [x] __[SEMANA 0]__ Entrega Final do Storyboard. __(07/05/18)__
   - [ ] __[SEMANA 1]__ Menus/Mapas Finalizados __(14/05/18)__
   - [ ] __[SEMANA 2]__ Movimentação do Personagem Finalizada __(21/05/18)__
   - [ ] __[SEMANA 3]__ Movimentação dos Inimigos/Chefes Finalizadas __(28/05/18)__
@@ -131,7 +131,7 @@
 
 ## NÃO ESQUECER DE:
   - [x] Atualizar o Cronograma.
-  - [ ] Adicionar o desenho dos mapas!
+  - [x] Adicionar o desenho dos mapas!
 
 ## REFERÊNCIAS
 [[1] OpenGameArt](https://opengameart.org/)

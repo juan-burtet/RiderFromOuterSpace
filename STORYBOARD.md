@@ -1,7 +1,7 @@
 # Storyboard
 ### Rider From Outer Space
 
-  ![Game Logo](/Extras/img/Game-Logo.gif)
+<img src="/Extras/MySprites/GameLogo/gamelogo.png" width="350px">
   
 * __Nome do Jogo__: _Rider From Outer Space_
 * __Estilo__: Plataforma 2D (_Run N' Gun_)

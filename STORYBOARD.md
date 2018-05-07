@@ -59,7 +59,7 @@
       > <img src="/Extras/img/mapa2area1.jpg" width="400px">\
         * A Seção 1 se trata de uma simples descida, tendo que enfrentar muitos inimigos.
     * __Seção 2 do mapa 2:__
-      > <img src="/Extras/img/mapa2area1.jpg" width="400px">
+      > <img src="/Extras/img/mapa2area2.jpg" width="400px">
         * A Seção 2 se trata de uma reta até o laborátorio enfrentando grandes quantidades de inimigos.
 
   > <img src="/Extras/img/mapa3.png" width="400px"> [1]
@@ -67,8 +67,8 @@
     * __Seção 1 do mapa 3:__
       > <img src="/Extras/img/mapa3area1.jpg" width="400px">\
         * A Seção 1 se trata da subida até entrar no templo.         
-    *  __Seção 2 do mapa 3:__
-      > <img src="/Extras/img/mapa3area2.jpg" width="400px">
+    * __Seção 2 do mapa 3:__
+      > <img src="/Extras/img/mapa3area2.jpg" width="400px">\
         * A Seção 2 se trata da descida até encontrar a sala do artefato.
 
   > <img src="/Extras/img/mapafinal.png" width="250px"> [1]
@@ -101,7 +101,8 @@
    * __Machine gun__: A arma com maior frequência de tiro, sendo totalmente automática, atira em uma alta frequência mas com o menor dano entre todas as armas.
 * __Upgrades__: Tudo que pode ser melhorado no personagem.
   > <img src="/Extras/img/upgradeStats.png" width="350px">  
-  * __Life__: Ao aumentar esse upgrade, o HP do personagem é aumentado.   * __Jetpack__: Aumenta a altura máxima do pulo (e segundo pulo) e do _Dash_.
+  * __Life__: Ao aumentar esse upgrade, o HP do personagem é aumentado.   
+  * __Jetpack__: Aumenta a altura máxima do pulo (e segundo pulo) e do _Dash_.
   * __Pistol__: Aumenta o dano da Pistola.
   * __Shotgun__: Aumenta o dano da _Shotgun_.
   * __Machine Gun__: Aumenta o dano da Metralhadora.
@@ -122,16 +123,11 @@
   - [ ] __[SEMANA 3]__ Movimentação dos Inimigos/Chefes Finalizadas __(28/05/18)__
   - [ ] __[SEMANA 4]__ Conferir demo de entrega da semana 5 __(04/06/18)__
   - [ ] __[SEMANA 5]__ __ENTREGA DA PRIMEIRA FASE DO JOGO__ __(11/06/18)__ __<= DEADLINE__
-  - [ ] __[SEMANA 6]__ Finalização "Completa" de todos os mapas __(18/06/18)__
+  - [ ] __[SEMANA 6]__ Finalização de todos os mapas __(18/06/18)__
   - [ ] __[SEMANA 7]__ Finalização de Diálogos/Cutscenes __(25/06/18)__
   - [ ] __[SEMANA 8]__ Finalização do Alpha __(02/07/18)__
   - [ ] __[SEMANA 9]__ Finalização do Beta __(09/07/18)__
   - [ ] __[SEMANA 10]__ __ENTREGA DO JOGO__ __(16/07/18)__ __<= DEADLINE__
-
-
-## NÃO ESQUECER DE:
-  - [x] Atualizar o Cronograma.
-  - [x] Adicionar o desenho dos mapas!
 
 ## REFERÊNCIAS
 [[1] OpenGameArt](https://opengameart.org/)

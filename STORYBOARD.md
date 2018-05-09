@@ -58,10 +58,10 @@ O jogo possui 3 mapas que são divididos em 3 seções (2 partes + Chefe) e um m
 > <img src="/Extras/img/mapa1.png" width="400px"> [1]
 
 O Primeiro mapa do jogo é em um Planeta deserto. A primeira Seção se passa na Superficie, a segunda se passa no subsolo (cavernas) e a terceira seção é onde ocorre a Luta com o chefe. __[TEMPO TOTAL DO MAPA: 12 min]__
-#### __Seção 1 do mapa 1:__
+#### __Seção 1 do mapa 1__:
   > <img src="/Extras/img/mapa1area1.jpg" width="400px">\
     - A Seção 1 se trata de uma leve exploração pelo planeta, com poucos inimigos para aprender as mecânicas do jogo.
-#### __Seção 2 do mapa 1:__
+#### __Seção 2 do mapa 1__:
   > <img src="/Extras/img/mapa1area2.jpg" width="400px">\
     - A Seção 2 se trata de descidas e subidas dentro das cavernas do planeta.
 
@@ -70,10 +70,10 @@ O Primeiro mapa do jogo é em um Planeta deserto. A primeira Seção se passa na
 > <img src="/Extras/img/mapa2.png" width="400px"> [1]
 
 O Segundo mapa do jogo é em um Planeta com temática Tecnologica. A primeira seção se passa na parte ao ar livre do Planeta, a segunda se passa dentro do laboratório e a terceira seção se passa dentro da sala do Computador Central, onde ocorre a luta com o chefe. __[TEMPO TOTAL DO MAPA: 12 min]__
-#### __Seção 1 do mapa 2__
+#### __Seção 1 do mapa 2__:
   > <img src="/Extras/img/mapa2area1.jpg" width="400px">\
     - A Seção 1 se trata de uma simples descida, tendo que enfrentar muitos inimigos.
-#### __Seção 2 do mapa 2__
+#### __Seção 2 do mapa 2__:
   > <img src="/Extras/img/mapa2area2.jpg" width="400px">\
     - A Seção 2 se trata de uma reta até o laborátorio enfrentando grandes quantidades de inimigos.
 
@@ -82,10 +82,10 @@ O Segundo mapa do jogo é em um Planeta com temática Tecnologica. A primeira se
 > <img src="/Extras/img/mapa3.png" width="400px"> [1]
 
 O Terceiro mapa do jogo é um Planeta com muitas ruínas e templos. A primeira seção se passa no caminho para encontrar o templo, a segunda seção é dentro do templo e a terceira seção é a luta contra o chefe dentro da sala onde o Artefato está. __[TEMPO TOTAL DO MAPA: 12 min]__
-#### __Seção 1 do mapa 3__
+#### __Seção 1 do mapa 3__:
   > <img src="/Extras/img/mapa3area1.jpg" width="400px">\
     - A Seção 1 se trata da subida até entrar no templo.         
-#### __Seção 2 do mapa 3__
+#### __Seção 2 do mapa 3__:
   > <img src="/Extras/img/mapa3area2.jpg" width="400px">\
     - A Seção 2 se trata da descida até encontrar a sala do artefato.
 
@@ -120,13 +120,13 @@ Os inimigos são divididos em 3 tipos, e possuem skins diferentes em cada mapa.
   * __Fighter__: Este inimigo usa ataques corporais e tem uma detecção maior que o _Shooter_. (HP alto)
   * __Bomber__: Este inimigo corre em sua direção e explode ao chegar numa distância próxima ou ao ser morto. (Morre com 1 tiro)
 
-## __Armas__:
+## __Armas__
 Os tipos de armas utilizados pelo Personagem Principal.
    * __Pistol__: É a arma média. Sendo uma ótima arma em todos os ambientes, ela possui uma frequência de tiro e dano médio.
    * __Shotgun__: A arma para combate de perto. O seu tiro é em área, sendo a melhor arma pra acertar de perto mas com uma frequência de tiro bem baixa.
    * __Machine gun__: A arma com maior frequência de tiro, sendo totalmente automática, atira em uma alta frequência mas com o menor dano entre todas as armas.
 
-## __Upgrades__:
+## __Upgrades__
 Tudo que pode ser melhorado no personagem.
 
   > <img src="/Extras/img/upgradeStats.png" width="350px">  

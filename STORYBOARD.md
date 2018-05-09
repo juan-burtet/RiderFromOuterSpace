@@ -6,14 +6,15 @@
 * __Nome do Jogo__: _Rider From Outer Space_
 * __Estilo__: Plataforma 2D (_Run N' Gun_)
 * __Descrição__: Inspirado nos clássicos do NES, _Rider From Outer Space_ é um Jogo de Plataforma 2D (_Run N' Gun_) com gráficos 8 bits.
-## __História__:
+
+## __História__
 O jogo se inicia com _Jaeger_, um caçador de recompensas intergalático que tem sua nava capturada por um misterioso Comandante chamado _Carmack_. _Carmack_ deseja contratar _Jaeger_ para ir em busca de um artefato conhecido apenas como "A Joia".\
 Ao aceitar a missão, _Jaeger_ sai em busca de respostas para encontrar o tal artefato e acaba indo até o planeta _Königsberg_, onde um contrabandista chamado _Dijkstra_, famoso por conhecer grande parte das rotas do Universo, poderia lhe dar alguma pista sobre o artefato. Ao chegar no planeta, encontra muitas criaturas hostis e um caminho dificil até encontrar o contrabandista. Ao encontra-lo, _Jaeger_ pede informações sobre o artefato, _Djikstra_ lhe diz que ninguém deveria saber sobre a "A Joia" e uma luta se inicia. Ao fim da luta, _Dijkstra_ dá a informação que se _Jaeger_ realmente deseja encontrar tal objeto, ele teria respostas no Planeta _Nala_.\
 Ao chegar ao planeta _Nala_, encontra um exercito de máquinas totalmente focados em destruir qualquer ser vivo. Passando por muitas áreas, encontra um ser Alienigena que diz ser chamado de _Turing_. Ele diz ter todas as respostas que _Jaeger_ procura mas nunca entregaria. Ao ser derrotado, _Jaeger_ descobre a localização da "A Joia" no computador central da base e vai em direção ao planeta _Byron_.\
 _Byron_ é um planeta muito antigo onde a tecnologia parece não ter chegado. Inimigos utilizando magias atacam _Jaeger_ enquanto ele anda por uma grande quantidade de labirintos até encontrar a sala onde "A Joia" está. Dentro da Sala, um ser misterioso se apresenta como _Lovelace_, ela diz que o artefato possui um poder que pode destruir o universo e por isso enfrentará qualquer um que tentar pegar "A Joia". Ao fim da luta, antes de morrer, _Lovelace_ pede para _Jaeger_ ter cuidado com esse poder.\
 _Jaeger_ retorna até _Carmack_ para entregar o artefato e recuperar sua recompensa. Ao entregar "A Joia", _Carmack_ trai _Jaeger_ e decide mata-lo pois ninguém poderia saber que ele possui o artefato. Se inicia uma luta, onde _Jaeger_ consegue derrotar _Carmack_ e impedir seus planos de destruir a galáxia. Então, _Jaeger_ decide pegar a "A Joia" e esconder ela novamente para que ninguém tenha a possibilidade de encontrar esse poder novamente.
 
-## __Gameplay__:
+## __Gameplay__
   Todas as ações possiveis dentro do game.
   * __Movimentação__: Por ser um jogo em 2D, os movimentos podem ser para esquerda e para direita.
   * __Mira__: O jogo tem 8 posições de mira disponiveis, que são:
@@ -32,7 +33,7 @@ _Jaeger_ retorna até _Carmack_ para entregar o artefato e recuperar sua recompe
   * __Double Jump__: É possivel utilizar um segundo pulo, onde o personagem é capaz de pular depois de pular.
   * __Especial__: Ao ter uma barra especifica de energia completa, é possivel utilizar um ataque especial que dá dano em todos os personagens que estão em cena.
 
-## __Menus__:
+## __Menus__
 O jogo possui um Menu inicial e um Menu _in-game_.
 
   * __Menu Inicial__: O menu onde o jogo se inicia, que possui 4 opções:
@@ -50,10 +51,10 @@ O jogo possui um Menu inicial e um Menu _in-game_.
     - __Stats__: Ver a lista de _upgrades_.
     - __Quit to Main Menu__: Volta para o menu inicial.
 
-## __Mapas__:
+## __Mapas__
 O jogo possui 3 mapas que são divididos em 3 seções (2 partes + Chefe) e um mapa final que possui apenas uma luta com chefe. Os mapas são:
 
-### __Königsberg__:
+### __Königsberg__
 > <img src="/Extras/img/mapa1.png" width="400px"> [1]
 
 O Primeiro mapa do jogo é em um Planeta deserto. A primeira Seção se passa na Superficie, a segunda se passa no subsolo (cavernas) e a terceira seção é onde ocorre a Luta com o chefe. __[TEMPO TOTAL DO MAPA: 12 min]__
@@ -65,37 +66,37 @@ O Primeiro mapa do jogo é em um Planeta deserto. A primeira Seção se passa na
     - A Seção 2 se trata de descidas e subidas dentro das cavernas do planeta.
 
 
-### __Nala__:
+### __Nala__
 > <img src="/Extras/img/mapa2.png" width="400px"> [1]
 
 O Segundo mapa do jogo é em um Planeta com temática Tecnologica. A primeira seção se passa na parte ao ar livre do Planeta, a segunda se passa dentro do laboratório e a terceira seção se passa dentro da sala do Computador Central, onde ocorre a luta com o chefe. __[TEMPO TOTAL DO MAPA: 12 min]__
-#### __Seção 1 do mapa 2:__
+#### __Seção 1 do mapa 2__
   > <img src="/Extras/img/mapa2area1.jpg" width="400px">\
     - A Seção 1 se trata de uma simples descida, tendo que enfrentar muitos inimigos.
-#### __Seção 2 do mapa 2:__
+#### __Seção 2 do mapa 2__
   > <img src="/Extras/img/mapa2area2.jpg" width="400px">\
     - A Seção 2 se trata de uma reta até o laborátorio enfrentando grandes quantidades de inimigos.
 
 
-### __Byron__:
+### __Byron__
 > <img src="/Extras/img/mapa3.png" width="400px"> [1]
 
 O Terceiro mapa do jogo é um Planeta com muitas ruínas e templos. A primeira seção se passa no caminho para encontrar o templo, a segunda seção é dentro do templo e a terceira seção é a luta contra o chefe dentro da sala onde o Artefato está. __[TEMPO TOTAL DO MAPA: 12 min]__
-#### __Seção 1 do mapa 3:__
+#### __Seção 1 do mapa 3__
   > <img src="/Extras/img/mapa3area1.jpg" width="400px">\
     - A Seção 1 se trata da subida até entrar no templo.         
-#### __Seção 2 do mapa 3:__
+#### __Seção 2 do mapa 3__
   > <img src="/Extras/img/mapa3area2.jpg" width="400px">\
     - A Seção 2 se trata da descida até encontrar a sala do artefato.
 
 
-### __Nave do _Carmack___:
+### __Nave do _Carmack___
 > <img src="/Extras/img/mapafinal.png" width="250px"> [1]
 
 O Mapa Final do jogo é uma luta contra chefe dentro da Nave do _Carmack_. Este mapa é dividido em 3 seções, onde em casa seção a luta é diferente. __[TEMPO TOTAL DO MAPA: 5 min]__
 
 
-## __Personagens__:
+## __Personagens__
 Uma breve descrição de todos os personagens importantes para a história.
   * __Jaeger__: É o personagem principal, um caçador de recompensas intergalático que nunca rejeita uma missão. Sua missão começa ao ser contrato pelo misterioso _Carmack_ para ir atrás de um artefato perdido nos cantos mais remotos da galáxia.
 
@@ -113,7 +114,7 @@ Uma breve descrição de todos os personagens importantes para a história.
 
     > <img src="/Extras/img/lovelaceArtwork.png" width="250px"> [1]
 
-## __Inimigos__:
+## __Inimigos__
 Os inimigos são divididos em 3 tipos, e possuem skins diferentes em cada mapa.
   * __Shooter__: Este inimigo possui armas de fogo e atira ao detectar o personagem principal. (HP baixo)
   * __Fighter__: Este inimigo usa ataques corporais e tem uma detecção maior que o _Shooter_. (HP alto)
@@ -135,7 +136,7 @@ Tudo que pode ser melhorado no personagem.
   * __Shotgun__: Aumenta o dano da _Shotgun_.
   * __Machine Gun__: Aumenta o dano da Metralhadora.
 
-## __Itens__:
+## __Itens__
 Objetos disponiveis pelo mapa que podem ser interagidos pelo Personagem Principal.
   * __Power Ups__: O jogo possui alguns _Power Ups_ que podem ser encontrado durante as fases, que dão algum poder por um tempo limitado. Estes são:
     - __Shield__: Você fica imortal por cerca de 15 segundos. <img src="/Extras/img/shield.png" width="50px">

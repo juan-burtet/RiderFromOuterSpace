@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/quit_game.png-ec0655bcff9c16dd4f23098796d60887.stex"
+
+[deps]
+
+source_file="res://Images/Menus/Main Menu/quit_game.png"
+source_md5="6a37a68a6625a60e14e23ddf16834d31"
+
+dest_files=[ "res://.import/quit_game.png-ec0655bcff9c16dd4f23098796d60887.stex" ]
+dest_md5="4aabaa1102f15b34232e4d14934890bf"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

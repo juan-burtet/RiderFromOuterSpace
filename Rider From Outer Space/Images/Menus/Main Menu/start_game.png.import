@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/start_game.png-6787542f6ca75fc6d456aa2e0bedf2db.stex"
+
+[deps]
+
+source_file="res://Images/Menus/Main Menu/start_game.png"
+source_md5="5c10f31b1e287066963af3c05e22b568"
+
+dest_files=[ "res://.import/start_game.png-6787542f6ca75fc6d456aa2e0bedf2db.stex" ]
+dest_md5="54d1df2f20a3a6afcce907f313491b91"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

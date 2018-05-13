@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/chapter_select_selected.png-e162746dd080667f7ba5dac1223b264a.stex"
+
+[deps]
+
+source_file="res://Images/Menus/Main Menu/chapter_select_selected.png"
+source_md5="f001394a3ff814e43bd31f3682143d5d"
+
+dest_files=[ "res://.import/chapter_select_selected.png-e162746dd080667f7ba5dac1223b264a.stex" ]
+dest_md5="8e5ef96294d810a10f779766ec9c1d31"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

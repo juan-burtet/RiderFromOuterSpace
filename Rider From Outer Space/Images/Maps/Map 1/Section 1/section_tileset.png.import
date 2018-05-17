@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/section_tileset.png-955d163e84b988ca1903842a3f2d3d5d.stex"
+
+[deps]
+
+source_file="res://Images/Maps/Map 1/Section 1/section_tileset.png"
+source_md5="332729bc55c6545d481881a3b9da099c"
+
+dest_files=[ "res://.import/section_tileset.png-955d163e84b988ca1903842a3f2d3d5d.stex" ]
+dest_md5="a39f9b3d8905481507eaea54d7f927bf"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

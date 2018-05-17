@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/map1section2.png-d59aa63b972bc942851cfb345a3ec458.stex"
+path="res://.import/dijkstra.png-d7164e5232157eceff0c7d33afbfb8f0.stex"
 
 [deps]
 
-source_file="res://Images/Maps/Map 1/Section 2/map1section2.png"
-source_md5="b19475276577a678a2739a18ea830d24"
+source_file="res://Images/Maps/Map 1/Section 2/dijkstra.png"
+source_md5="2f43f4661487d2f4e6c4c2961fe3d5b5"
 
-dest_files=[ "res://.import/map1section2.png-d59aa63b972bc942851cfb345a3ec458.stex" ]
-dest_md5="e5146a0975473e11be82bd7a330ceeb6"
+dest_files=[ "res://.import/dijkstra.png-d7164e5232157eceff0c7d33afbfb8f0.stex" ]
+dest_md5="405a341902844657beff68590318b76a"
 
 [params]
 

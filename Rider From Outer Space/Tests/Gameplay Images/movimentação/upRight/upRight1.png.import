@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
+path="res://.import/upRight1.png-671a2da4e6d0e3663ed43945f05eb5a2.stex"
 
 [deps]
 
-source_file="res://icon.png"
-source_md5="ae7e641067601e2184afcade49abd283"
+source_file="res://Tests/Gameplay Images/movimentação/upRight/upRight1.png"
+source_md5="c0e4526c66acefe80b3d892a79739f6e"
 
-dest_files=[ "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex" ]
-dest_md5="37fab264f7edd819d74f710b6a7c22dc"
+dest_files=[ "res://.import/upRight1.png-671a2da4e6d0e3663ed43945f05eb5a2.stex" ]
+dest_md5="37c4a5fbe11f1419199113e6b96b110c"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
+path="res://.import/up2.png-5e89d19584ee43d2756e331b0fa67ba6.stex"
 
 [deps]
 
-source_file="res://icon.png"
-source_md5="ae7e641067601e2184afcade49abd283"
+source_file="res://Tests/Gameplay Images/movimentação/up/up2.png"
+source_md5="5636caf2ce05fd1a9fdeb0d2523d832d"
 
-dest_files=[ "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex" ]
-dest_md5="37fab264f7edd819d74f710b6a7c22dc"
+dest_files=[ "res://.import/up2.png-5e89d19584ee43d2756e331b0fa67ba6.stex" ]
+dest_md5="108c57e704fb3065219b55f705f91560"
 
 [params]
 
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

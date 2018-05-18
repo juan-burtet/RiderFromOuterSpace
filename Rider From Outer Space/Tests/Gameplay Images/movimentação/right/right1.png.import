@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
+path="res://.import/right1.png-266314d058d29b5025a06cceae9fe309.stex"
 
 [deps]
 
-source_file="res://icon.png"
-source_md5="ae7e641067601e2184afcade49abd283"
+source_file="res://Tests/Gameplay Images/movimentação/right/right1.png"
+source_md5="5aa3813b216bd0e9719d01707b3cfcf0"
 
-dest_files=[ "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex" ]
-dest_md5="37fab264f7edd819d74f710b6a7c22dc"
+dest_files=[ "res://.import/right1.png-266314d058d29b5025a06cceae9fe309.stex" ]
+dest_md5="cbfd06233cda66b9f5b59f47511e4083"
 
 [params]
 

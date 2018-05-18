@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
+path="res://.import/Idle3.png-78be9581198cf3f324553c93f77a9697.stex"
 
 [deps]
 
-source_file="res://icon.png"
-source_md5="ae7e641067601e2184afcade49abd283"
+source_file="res://Tests/Gameplay Images/movimentação/idle/Idle3.png"
+source_md5="5375934d8cef449478298d0d9dc25e5b"
 
-dest_files=[ "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex" ]
-dest_md5="37fab264f7edd819d74f710b6a7c22dc"
+dest_files=[ "res://.import/Idle3.png-78be9581198cf3f324553c93f77a9697.stex" ]
+dest_md5="b18b7b08caad6bd08a316f81c5ac3019"
 
 [params]
 

@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/down3.png-a368879d4a3e7f86ff6736ba60070b83.stex"
+
+[deps]
+
+source_file="res://Tests/Gameplay Images/movimentação/down/down3.png"
+source_md5="a4f9ac094d7aa41f48919bbf2fe50557"
+
+dest_files=[ "res://.import/down3.png-a368879d4a3e7f86ff6736ba60070b83.stex" ]
+dest_md5="e3ceee8248281cca08089a12e2cf883c"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

@@ -5,9 +5,9 @@ const UP = Vector2(0,-1)
 # Constante que indica a aceleração da gravidade
 const GRAVITY = 20
 # Constante que indica a velocidade do personagem
-const MAX_SPEED = 200
+const MAX_SPEED = 600
 # Constante que indica o tamanho do pulo
-const JUMP_HEIGHT = -400
+const JUMP_HEIGHT = -500
 # Constante que indica a aceleração
 const ACCELERATION = 50
 # Variavel que indica a posição na tela do Personagem (x,y)

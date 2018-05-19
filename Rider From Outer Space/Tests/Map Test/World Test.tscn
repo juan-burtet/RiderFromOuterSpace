@@ -5,7 +5,7 @@
 [ext_resource path="res://Images/Maps/Map 1/Section 2/dijkstra.png" type="Texture" id=3]
 [ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=4]
 
-[node name="World Test" type="Node" index="0"]
+[node name="World Test" type="Node"]
 
 [node name="Background" type="Sprite" parent="." index="0"]
 

@@ -10,16 +10,16 @@ source_file="res://Images/Maps/Map 1/Section 2/cave_wall.png"
 source_md5="5ba24b2551fbed037d9e1423f54aab3c"
 
 dest_files=[ "res://.import/cave_wall.png-95bb45b04c333ab8b08c37fa4a5e4fcd.stex" ]
-dest_md5="c667941e2c64a6a317c2cfe29c8d3732"
+dest_md5="dfc3f00428e9be85079a390c35e60a98"
 
 [params]
 
-compress/mode=0
+compress/mode=3
 compress/lossy_quality=0.7
-compress/hdr_mode=0
+compress/hdr_mode=1
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

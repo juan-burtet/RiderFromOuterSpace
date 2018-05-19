@@ -29,7 +29,7 @@
   > Completo.
 
 * [Storyboard](https://github.com/juan-burtet/PeC-IV-Jogos/blob/master/STORYBOARD.md)
-  > Em processo.
+  > Completo.
 
 * Divisão das Tarefas do Grupo.
   > Apenas eu.

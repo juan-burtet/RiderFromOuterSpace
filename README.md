@@ -47,3 +47,12 @@
 - [ ] __[SEMANA 8]__ Finalização do Alpha __(02/07/18)__
 - [ ] __[SEMANA 9]__ Finalização do Beta __(09/07/18)__
 - [ ] __[SEMANA 10]__ __ENTREGA DO JOGO__ __(16/07/18)__ __<= DEADLINE__
+
+
+## Finalizar:
+  - Atirar projeteis
+  - melhorar o gameplay do personagem
+  - IA dos inimigos
+  - IA do primeiro chefe
+  - finalizar mapa 1 seção 2
+  - artes do personagem/inimigos/chefe

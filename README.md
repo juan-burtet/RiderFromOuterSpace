@@ -54,5 +54,4 @@
   - melhorar o gameplay do personagem
   - IA dos inimigos
   - IA do primeiro chefe
-  - finalizar mapa 1 seção 2
   - artes do personagem/inimigos/chefe

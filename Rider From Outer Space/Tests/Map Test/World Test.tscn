@@ -47,4 +47,6 @@ _sections_unfolded = [ "Offset" ]
 
 [node name="PlayerTest" parent="." index="3" instance=ExtResource( 4 )]
 
+position = Vector2( 234, 235 )
+
 

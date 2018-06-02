@@ -56,7 +56,7 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 32, 32 )
+extents = Vector2( 16, 32 )
 
 [node name="PlayerTest" type="KinematicBody2D"]
 
@@ -74,16 +74,10 @@ __meta__ = {
 
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 3
+frame = 5
 playing = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
-
-visible = false
-scale = Vector2( 0.5, 0.5 )
-shape = SubResource( 2 )
-
-[node name="Camera2D" type="Camera2D" parent="." index="2"]
+[node name="Camera2D" type="Camera2D" parent="." index="1"]
 
 offset = Vector2( 190, -170 )
 anchor_mode = 1
@@ -108,5 +102,16 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
+
+[node name="top" type="Sprite" parent="." index="2"]
+
+position = Vector2( 0, -32 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
+
+position = Vector2( 0, -16 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
 
 

@@ -7,7 +7,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 16, 16 )
 
-[node name="Map1_Section2_Tiles" type="Node" index="0"]
+[node name="Map1_Section2_Tiles" type="Node"]
 
 [node name="EdgeLeft" type="Sprite" parent="." index="0"]
 
@@ -130,7 +130,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Middle" type="Sprite" parent="." index="4"]
 
-editor/display_folded = true
 position = Vector2( 64, 64 )
 texture = ExtResource( 1 )
 centered = false
@@ -140,23 +139,6 @@ _sections_unfolded = [ "Region" ]
 __meta__ = {
 "_edit_group_": true
 }
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Middle" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Middle/StaticBody2D" index="0"]
-
-visible = false
-position = Vector2( 16, 16 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
 
 [node name="WallRight" type="Sprite" parent="." index="5"]
 
@@ -280,7 +262,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="leftTop" type="Sprite" parent="." index="9"]
 
-editor/display_folded = true
 position = Vector2( 192, 0 )
 texture = ExtResource( 1 )
 centered = false
@@ -291,26 +272,8 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="leftTop" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="leftTop/StaticBody2D" index="0"]
-
-visible = false
-position = Vector2( 16, 16 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
-
 [node name="leftBottom" type="Sprite" parent="." index="10"]
 
-editor/display_folded = true
 position = Vector2( 192, 64 )
 texture = ExtResource( 1 )
 centered = false
@@ -321,26 +284,8 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="leftBottom" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="leftBottom/StaticBody2D" index="0"]
-
-visible = false
-position = Vector2( 16, 16 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
-
 [node name="rightTop" type="Sprite" parent="." index="11"]
 
-editor/display_folded = true
 position = Vector2( 256, 0 )
 texture = ExtResource( 1 )
 centered = false
@@ -350,23 +295,6 @@ _sections_unfolded = [ "Region" ]
 __meta__ = {
 "_edit_group_": true
 }
-
-[node name="StaticBody2D" type="StaticBody2D" parent="rightTop" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="rightTop/StaticBody2D" index="0"]
-
-visible = false
-position = Vector2( 16, 16 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
 
 [node name="rightBottom" type="Sprite" parent="." index="12"]
 
@@ -379,22 +307,5 @@ _sections_unfolded = [ "Region" ]
 __meta__ = {
 "_edit_group_": true
 }
-
-[node name="StaticBody2D" type="StaticBody2D" parent="rightBottom" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="rightBottom/StaticBody2D" index="0"]
-
-visible = false
-position = Vector2( 16, 16 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
 
 

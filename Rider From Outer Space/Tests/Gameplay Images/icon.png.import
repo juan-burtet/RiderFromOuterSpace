@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/icon.png-09860d572d66ec3ea30a4f4cf20cf828.stex"
+
+[deps]
+
+source_file="res://Tests/Gameplay Images/icon.png"
+source_md5="86aa1d9e8afaf5ec9cabb7e89945c7a8"
+
+dest_files=[ "res://.import/icon.png-09860d572d66ec3ea30a4f4cf20cf828.stex" ]
+dest_md5="eb30d211c3ac73d20d9266208145d4d4"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

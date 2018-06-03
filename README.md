@@ -50,8 +50,6 @@
 
 
 ## Finalizar:
-  - Atirar projeteis
-  - melhorar o gameplay do personagem
   - IA dos inimigos
   - IA do primeiro chefe
   - artes do personagem/inimigos/chefe

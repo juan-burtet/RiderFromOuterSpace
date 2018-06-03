@@ -1,21 +1,26 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Images/Maps/Map 1/Section 1/fase1area1.png" type="Texture" id=1]
-[ext_resource path="res://Tilesets/Map1/Section 1/Map1_Section1_TileSet.tres" type="TileSet" id=2]
-[ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Images/Maps/Map 1/Section 1/fase1area1.png" type="Texture" id=2]
+[ext_resource path="res://Tilesets/Map1/Section 1/Map1_Section1_TileSet.tres" type="TileSet" id=3]
 
-[node name="Map 1 Section 1" type="Node"]
+[node name="Map 1 Section 1" type="Node" index="0"]
 
-[node name="Sprite" type="Sprite" parent="." index="0"]
+[node name="PlayerTest" parent="." index="0" instance=ExtResource( 1 )]
 
+position = Vector2( 128, 192 )
+
+[node name="Sprite" type="Sprite" parent="." index="1"]
+
+visible = false
 position = Vector2( 2316, 1272 )
 scale = Vector2( 6.81111, 5.36667 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
-[node name="TileMap" type="TileMap" parent="." index="1"]
+[node name="TileMap" type="TileMap" parent="." index="2"]
 
 mode = 0
-tile_set = ExtResource( 2 )
+tile_set = ExtResource( 3 )
 cell_size = Vector2( 32, 32 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -35,9 +40,5 @@ _sections_unfolded = [ "Cell" ]
 __meta__ = {
 "_edit_lock_": true
 }
-
-[node name="PlayerTest" parent="." index="2" instance=ExtResource( 3 )]
-
-position = Vector2( 128, 192 )
 
 

@@ -88,7 +88,6 @@ func restart_timer():
 	pass
 	# END restart_timer
 
-
 # Função que movimenta o personagem pra esquerda
 func move_left():
 	# Aumenta a aceleração

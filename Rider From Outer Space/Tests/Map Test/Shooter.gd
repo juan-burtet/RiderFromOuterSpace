@@ -41,7 +41,7 @@ func teste(node):
 				shoot(Vector2(1,0))
 				motion.x = SPEED
 			elif node.get_name() == "up":
-				shoot(Vector2(0,1))
+				shoot(Vector2(0,-1))
 				motion.x = 0
 			elif node.get_name() == "rightUp":
 				shoot(Vector2(1,-1))

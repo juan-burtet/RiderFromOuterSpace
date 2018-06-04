@@ -52,8 +52,7 @@ _sections_unfolded = [ "Scroll" ]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
 
-editor/display_folded = true
-motion_scale = Vector2( 0.05, 0.05 )
+motion_scale = Vector2( 0.2, 0.2 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 735, 479 )
 _sections_unfolded = [ "Motion", "Transform" ]

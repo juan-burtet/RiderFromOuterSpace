@@ -1,15 +1,22 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Images/Menus/Space Background/parallax-space-backgound.png" type="Texture" id=1]
 [ext_resource path="res://Images/Menus/Space Background/parallax-space-stars.png" type="Texture" id=2]
 [ext_resource path="res://Images/Menus/Space Background/parallax-space-far-planets.png" type="Texture" id=3]
 [ext_resource path="res://Images/Menus/Space Background/parallax-space-big-planet.png" type="Texture" id=4]
 [ext_resource path="res://Images/Menus/Space Background/parallax-space-ring-planet.png" type="Texture" id=5]
+[ext_resource path="res://Images/Menus/Main Menu/start_game.png" type="Texture" id=6]
+[ext_resource path="res://Images/Menus/Main Menu/load_game.png" type="Texture" id=7]
+[ext_resource path="res://Images/Menus/Main Menu/chapter_select.png" type="Texture" id=8]
+[ext_resource path="res://Images/Menus/Main Menu/options.png" type="Texture" id=9]
+[ext_resource path="res://Images/Menus/Main Menu/quit_game.png" type="Texture" id=10]
+[ext_resource path="res://Images/Menus/Main Menu/gameLogo.png" type="Texture" id=11]
 
-[node name="MainMenu" type="Node" index="0"]
+[node name="MainMenu" type="Node"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="0"]
 
+editor/display_folded = true
 layer = -1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -21,6 +28,7 @@ scroll_base_scale = Vector2( 1, 1 )
 scroll_limit_begin = Vector2( 0, 0 )
 scroll_limit_end = Vector2( 0, 0 )
 scroll_ignore_camera_zoom = true
+_sections_unfolded = [ "Scroll" ]
 
 [node name="layer1" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
 
@@ -87,5 +95,137 @@ motion_mirroring = Vector2( 0, 0 )
 position = Vector2( -318, -14 )
 scale = Vector2( 2.37255, 2.44348 )
 texture = ExtResource( 5 )
+
+[node name="Button" type="Button" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.30435
+anchor_bottom = 0.53333
+margin_left = 288.0
+margin_top = 288.0
+margin_right = 212.998
+margin_bottom = 53.0016
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+icon = ExtResource( 6 )
+flat = true
+align = 1
+
+[node name="Button2" type="Button" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.30435
+anchor_bottom = 0.53333
+margin_left = 288.0
+margin_top = 320.0
+margin_right = 212.998
+margin_bottom = 85.0016
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+icon = ExtResource( 7 )
+flat = true
+align = 1
+
+[node name="Button3" type="Button" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.30435
+anchor_bottom = 0.53333
+margin_left = 288.0
+margin_top = 352.0
+margin_right = 212.998
+margin_bottom = 117.002
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+icon = ExtResource( 8 )
+flat = true
+align = 1
+
+[node name="Button4" type="Button" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.30435
+anchor_bottom = 0.53333
+margin_left = 288.0
+margin_top = 384.0
+margin_right = 265.998
+margin_bottom = 149.002
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+icon = ExtResource( 9 )
+flat = true
+align = 1
+
+[node name="Button5" type="Button" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.30435
+anchor_bottom = 0.53333
+margin_left = 288.0
+margin_top = 416.0
+margin_right = 265.998
+margin_bottom = 181.002
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+icon = ExtResource( 10 )
+flat = true
+align = 1
+
+[node name="Sprite" type="Sprite" parent="." index="6"]
+
+position = Vector2( 384, 128 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 11 )
+_sections_unfolded = [ "Region", "Transform" ]
 
 

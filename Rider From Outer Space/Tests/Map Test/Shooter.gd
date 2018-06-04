@@ -32,22 +32,23 @@ func _process(delta):
 	pass
 
 func teste(node):
-	if node.get_collider().get_name() == "PlayerTest":
-		if node.get_name() == "left":
-			shoot(Vector2(-1,0))
-			motion.x = -SPEED
-		elif node.get_name() == "right":
-			shoot(Vector2(1,0))
-			motion.x = SPEED
-		elif node.get_name() == "up":
-			shoot(Vector2(0,1))
-			motion.x = 0
-		elif node.get_name() == "rightUp":
-			shoot(Vector2(1,-1))
-			motion.x = SPEED
-		elif node.get_name() == "leftUp":
-			shoot(Vector2(-1,-1))
-			motion.x = -SPEED
+	if node.get_collider() != null:
+		if node.get_collider().get_name() == "PlayerTest":
+			if node.get_name() == "left":
+				shoot(Vector2(-1,0))
+				motion.x = -SPEED
+			elif node.get_name() == "right":
+				shoot(Vector2(1,0))
+				motion.x = SPEED
+			elif node.get_name() == "up":
+				shoot(Vector2(0,1))
+				motion.x = 0
+			elif node.get_name() == "rightUp":
+				shoot(Vector2(1,-1))
+				motion.x = SPEED
+			elif node.get_name() == "leftUp":
+				shoot(Vector2(-1,-1))
+				motion.x = -SPEED
 		
 	pass
 	

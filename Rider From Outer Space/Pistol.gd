@@ -20,7 +20,7 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 func _on_Pistol_area_entered(area):
 	#area.queue_free()
-	#queue_free()
+	queue_free()
 	pass
 
 func _on_Pistol_body_entered(body):

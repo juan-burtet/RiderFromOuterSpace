@@ -6,7 +6,7 @@
 [ext_resource path="res://Tests/Map Test/Shooter.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Tests/Map Test/Fighter.tscn" type="PackedScene" id=5]
 
-[node name="Map 1 Section 1" type="Node" index="0"]
+[node name="Map 1 Section 1" type="Node"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 

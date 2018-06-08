@@ -19,10 +19,10 @@ config/icon="res://icon.png"
 
 window/size/width=736
 window/size/height=480
-window/size/test_width=736
-window/size/test_height=480
+window/size/fullscreen=true
 window/stretch/mode="2d"
-window/stretch/aspect="keep"
+window/stretch/aspect="expand"
+window/stretch/shrink="1"
 
 [input]
 

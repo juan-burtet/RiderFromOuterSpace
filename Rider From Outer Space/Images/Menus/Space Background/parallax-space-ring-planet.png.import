@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/parallax-space-ring-planet.png-adc831fafa1a7b538bfb23d235ceaf2b.stex"
+
+[deps]
+
+source_file="res://Images/Menus/Space Background/parallax-space-ring-planet.png"
+source_md5="7c8bce09cb6df570a0ad5ce13d700d7d"
+
+dest_files=[ "res://.import/parallax-space-ring-planet.png-adc831fafa1a7b538bfb23d235ceaf2b.stex" ]
+dest_md5="4b0f3abc2175dfd41640a8c731a51115"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

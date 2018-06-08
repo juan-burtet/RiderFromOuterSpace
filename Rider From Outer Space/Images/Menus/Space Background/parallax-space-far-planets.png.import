@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/parallax-space-far-planets.png-1c2ab1e67a52496c959a683118ec4174.stex"
+
+[deps]
+
+source_file="res://Images/Menus/Space Background/parallax-space-far-planets.png"
+source_md5="1b0d2acd623da4c7f265c91d164041e8"
+
+dest_files=[ "res://.import/parallax-space-far-planets.png-1c2ab1e67a52496c959a683118ec4174.stex" ]
+dest_md5="5c61ee9820914f055bc6dd0b64e9528b"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

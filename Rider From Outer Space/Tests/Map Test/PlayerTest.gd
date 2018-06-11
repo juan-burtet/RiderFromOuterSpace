@@ -2,8 +2,9 @@
 extends KinematicBody2D
 
 # Cenas das armas
-const PISTOL_SCENE = preload("res://Tests/Map Test/Pistol.tscn") # Pistola
-const MACHINEGUN_SCENE = preload("res://Tests/Map Test/MachineGun.tscn") # Metralhadora
+const PISTOL_SCENE = preload("res://Tests/Map Test/Pistol.tscn")
+const SHOTGUN_SCENE = preload("res://Scenes/Player/Weapons/Shotgun.tscn")
+const MACHINEGUN_SCENE = preload("res://Scenes/Player/Weapons/MachineGun.tscn")
 
 # Constante de auxilio no gameplay
 const UP = Vector2(0,-1) # Indica a direção pra cima
@@ -12,19 +13,30 @@ const MAX_SPEED = 300 # Velocidade Máxima
 const JUMP_HEIGHT = -500 # Altura do pulo
 const ACCELERATION = 50 # Aceleração
 const DASH_SPEED = 1000 # Dash
+const PISTOL_TIME = 0.3 # Tempo da Pistola
+const SHOTGUN_TIME = 1.0 # Tempo da Shotgun
+const MACHINEGUN_TIME = 0.1 # Tempo da Metralhadora
 
 # Variaveis utilizadas no gameplay
 var motion = Vector2() # Movimento
 var doubleJump = false # Pode dar pulo duplo
 var direction = Vector2(1,0) # Direção do tiro
+var gun_mode # Escolha da arma
+var direcao_padrao = 1 # Direção padrao da arma
+var hp = 6 # vida do personagem
 
 # Timers 
-onready var timer = get_node("gun_timer") # timer da arma
+onready var pistol_timer = get_node("Timers/pistol_timer")
+onready var shotgun_timer = get_node("Timers/shotgun_timer")
+onready var machinegun_timer = get_node("Timers/machinegun_timer")
 
 # Função ativada quando o nó é iniciado
 func _ready():
 	set_process(true)
-	timer.set_one_shot(false)
+	pistol_timer.set_one_shot(false)
+	shotgun_timer.set_one_shot(false)
+	machinegun_timer.set_one_shot(false)
+	gun_mode = 1
 	pass
 	# END _ready
 
@@ -34,21 +46,35 @@ func _physics_process(delta):
 	motion.y += GRAVITY
 	# Indica que tu parou de se movimentar
 	var friction = false
+	# Para ficar sempre parado no eixo x
+	direction.y = 0
+	direction.x = direcao_padrao
+	
+	# Confere se alguma direção de tiro foi pega
+	get_shot_direction()
 	
 	# Se a tecla esquerda foi pressionada, movimenta pra esquerda
 	if Input.is_action_pressed("ui_left"):
 		# Movimenta o personagem pra esquerda
 		move_left()
 		
-		if Input.is_action_just_pressed("ui_dash"):
-				dash(-DASH_SPEED)
+		# Só faz o dash se o lock não tiver habilitado
+		if !Input.is_action_pressed("ui_lock"):
+			if Input.is_action_just_pressed("ui_dash"):
+				if $GUI.is_complete():
+					dash(-DASH_SPEED)
+					$GUI.usou_dash()
 	# Se a teclada direita foi pressionada, movimenta pra direita
 	elif Input.is_action_pressed("ui_right"):
 		# Movimenta o personagem pra direita
 		move_right()
 		
-		if Input.is_action_just_pressed("ui_dash"):
-				dash(DASH_SPEED)
+		# Só faz o dash se o lock não tiver habilitado
+		if !Input.is_action_pressed("ui_lock"):
+			if Input.is_action_just_pressed("ui_dash"):
+				if $GUI.is_complete():
+					dash(DASH_SPEED)
+					$GUI.usou_dash()
 
 	# Se nenhuma tecla foi digitada, o personagem fica parado
 	else:
@@ -60,29 +86,60 @@ func _physics_process(delta):
 	# Controla os comandos do pulo
 	jump_control(friction)
 
-	# Movimenta o personagem
-	motion = move_and_slide(motion, UP)
+	# Movimenta o personagem se o lock não tiver apertado
+	if !Input.is_action_pressed("ui_lock"):
+		motion = move_and_slide(motion, UP)
 	
-	# Se apertou pra atirar, atire
-	if Input.is_action_just_pressed("ui_fire"):
-		shot_pistol(direction)
+	# Escolha da arma
+	choose_weapon()
+	
+	# Faz a ação de tiro se o botão foi pressionado
+	check_shoot()
+	
 	pass
 	# END physics_process
 
-# Função que atira uma pistola
-func shot_pistol(direction):
-	if !timer.is_one_shot():
-		var pistol = PISTOL_SCENE.instance()
-		pistol.init(direction)
-		get_parent().add_child(pistol)
-		pistol.set_position($Gun.get_global_position() + direction*10)
-		restart_timer()
+# Função que escolhe a arma
+func choose_weapon():
+	if Input.is_action_just_pressed("ui_1"):
+		$GUI.get_node("Weapon").play("Pistol")
+		gun_mode = 1
+	elif Input.is_action_just_pressed("ui_2"):
+		$GUI.get_node("Weapon").play("Shotgun")
+		gun_mode = 2
+	elif Input.is_action_just_pressed("ui_3"):
+		$GUI.get_node("Weapon").play("MachineGun")
+		gun_mode = 3
 	pass
-	# END shot_pistol
+	# END choose_weapon
+
+# Função que checa se o botão de atirar foi apertado
+func check_shoot():
+	# Se apertou pra atirar, atire
+	if Input.is_action_pressed("ui_fire"):
+		if gun_mode == 1: # Pistola
+			shot_gun(pistol_timer, PISTOL_SCENE, PISTOL_TIME, direction)
+		elif gun_mode == 2: # Shotgun
+			shot_gun(shotgun_timer, SHOTGUN_SCENE, SHOTGUN_TIME, direction)
+		else: # Machinegun
+			shot_gun(machinegun_timer, MACHINEGUN_SCENE, MACHINEGUN_TIME, direction)
+	pass
+	# END check_shoot
+
+# Função para atirar com a arma
+func shot_gun(timer, gun_scene, gun_time, direction):
+	if !timer.is_one_shot():
+		var gun = gun_scene.instance()
+		gun.init(direction)
+		get_parent().add_child(gun)
+		gun.set_position($Gun.get_global_position() + direction*10)
+		restart_timer(timer, gun_time)
+	pass
+	# END shot_gun
 
 # Função que seta o timer da arma
-func restart_timer():
-	timer.set_wait_time(0.1)
+func restart_timer(timer, s):
+	timer.set_wait_time(s)
 	timer.set_one_shot(true)
 	timer.start()
 	pass
@@ -143,7 +200,6 @@ func jump_control(friction):
 				motion.y = JUMP_HEIGHT
 				# DoubleJump retorna pra falso
 				doubleJump = false
-				print("double jump!")
 		
 		# Se o Personagem estiver subindo
 		if motion.y < 0:
@@ -169,8 +225,58 @@ func dash(speed):
 	move_and_slide(motion, UP) 
 	# END dash
 
-# Signal pra saber se o timer da arma acabou
-func _on_gun_timer_timeout():
-	timer.set_one_shot(false)
+func get_shot_direction():
+	var cima = Input.is_action_pressed("ui_up") 
+	var esquerda = Input.is_action_pressed("ui_left")
+	var direita = Input.is_action_pressed("ui_right")
+	var baixo = Input.is_action_pressed("ui_down")
+	
+	if cima and esquerda:
+		direction.x = -1
+		direction.y = -1
+		direcao_padrao = -1
+	elif cima and direita:
+		direction.x = +1
+		direction.y = -1
+		direcao_padrao = +1
+	elif baixo and esquerda:
+		direction.x = -1
+		direction.y = +1
+		direcao_padrao = -1
+	elif baixo and direita:
+		direction.x = +1
+		direction.y = +1
+		direcao_padrao = 1
+	elif cima:
+		direction.x = 0
+		direction.y = -1
+	elif baixo:
+		direction.x = 0
+		direction.y = +1
+	elif esquerda:
+		direction.x = -1
+		direction.y = 0
+		direcao_padrao = -1
+	elif direita:
+		direction.x = +1
+		direction.y = 0
+		direcao_padrao = 1
+	
+	pass
+
+
+
+# Signal que indica quando acabou o tempo (pistola)
+func _on_pistol_timer_timeout():
+	pistol_timer.set_one_shot(false)
 	pass 
-	# END _on_gun_timer_timeout
+
+# Signal que indica quando acabou o tempo (shotgun)
+func _on_shotgun_timer_timeout():
+	shotgun_timer.set_one_shot(false)
+	pass # replace with function body
+
+# Signal que indica quando acabou o tempo (metralhadora)
+func _on_machinegun_timer_timeout():
+	machinegun_timer.set_one_shot(false)
+	pass # replace with function body

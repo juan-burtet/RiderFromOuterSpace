@@ -1,0 +1,82 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Enemies/Bomber.gd" type="Script" id=1]
+[ext_resource path="res://Tests/Gameplay Images/icon.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 100.0
+
+[node name="Bomber" type="KinematicBody2D"]
+
+input_pickable = false
+collision_layer = 2
+collision_mask = 5
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="Collision" type="CollisionShape2D" parent="." index="1"]
+
+shape = SubResource( 1 )
+
+[node name="left" type="RayCast2D" parent="." index="2"]
+
+enabled = true
+exclude_parent = true
+cast_to = Vector2( -500, 0 )
+collision_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="LeftTop" type="RayCast2D" parent="." index="3"]
+
+enabled = true
+exclude_parent = true
+cast_to = Vector2( -500, -200 )
+collision_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="right" type="RayCast2D" parent="." index="4"]
+
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 500, 0 )
+collision_mask = 1
+
+[node name="rightTop" type="RayCast2D" parent="." index="5"]
+
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 500, -200 )
+collision_mask = 1
+
+[node name="AreaExplode" type="Area2D" parent="." index="6"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 8
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="Explosion" type="CollisionShape2D" parent="AreaExplode" index="0"]
+
+shape = SubResource( 2 )
+_sections_unfolded = [ "Material" ]
+
+[connection signal="body_entered" from="AreaExplode" to="." method="_on_AreaExplode_body_entered"]
+
+

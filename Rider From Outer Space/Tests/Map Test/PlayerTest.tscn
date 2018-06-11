@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Tests/Map Test/PlayerTest.gd" type="Script" id=1]
 [ext_resource path="res://Tests/Gameplay Images/movimentação/idle/Idle0.png" type="Texture" id=2]
@@ -7,27 +7,28 @@
 [ext_resource path="res://Tests/Gameplay Images/movimentação/idle/Idle3.png" type="Texture" id=5]
 [ext_resource path="res://Tests/Gameplay Images/movimentação/idle/Idle4.png" type="Texture" id=6]
 [ext_resource path="res://Tests/Gameplay Images/movimentação/idle/Idle5.png" type="Texture" id=7]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/right/right0.png" type="Texture" id=8]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/right/right1.png" type="Texture" id=9]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/right/right2.png" type="Texture" id=10]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/right/right3.png" type="Texture" id=11]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/right/right4.png" type="Texture" id=12]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/right/right5.png" type="Texture" id=13]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/right/right6.png" type="Texture" id=14]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/down/down0.png" type="Texture" id=15]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/down/down1.png" type="Texture" id=16]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/down/down2.png" type="Texture" id=17]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/down/down3.png" type="Texture" id=18]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/down/down4.png" type="Texture" id=19]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/down/down5.png" type="Texture" id=20]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/down/down6.png" type="Texture" id=21]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/up/up0.png" type="Texture" id=22]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/up/up1.png" type="Texture" id=23]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/up/up2.png" type="Texture" id=24]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/up/up3.png" type="Texture" id=25]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/up/up4.png" type="Texture" id=26]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/up/up5.png" type="Texture" id=27]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/up/up6.png" type="Texture" id=28]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/up/up0.png" type="Texture" id=8]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/up/up1.png" type="Texture" id=9]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/up/up2.png" type="Texture" id=10]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/up/up3.png" type="Texture" id=11]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/up/up4.png" type="Texture" id=12]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/up/up5.png" type="Texture" id=13]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/up/up6.png" type="Texture" id=14]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/right/right0.png" type="Texture" id=15]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/right/right1.png" type="Texture" id=16]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/right/right2.png" type="Texture" id=17]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/right/right3.png" type="Texture" id=18]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/right/right4.png" type="Texture" id=19]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/right/right5.png" type="Texture" id=20]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/right/right6.png" type="Texture" id=21]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/down/down0.png" type="Texture" id=22]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/down/down1.png" type="Texture" id=23]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/down/down2.png" type="Texture" id=24]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/down/down3.png" type="Texture" id=25]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/down/down4.png" type="Texture" id=26]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/down/down5.png" type="Texture" id=27]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/down/down6.png" type="Texture" id=28]
+[ext_resource path="res://Scenes/Player/GUI/GUI.tscn" type="PackedScene" id=29]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -39,17 +40,17 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
 "loop": true,
-"name": "Walking",
+"name": "Jump",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
 "loop": true,
-"name": "Fall",
+"name": "Walking",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ) ],
 "loop": true,
-"name": "Jump",
+"name": "Fall",
 "speed": 10.0
 } ]
 
@@ -58,11 +59,11 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 16, 32 )
 
-[node name="PlayerTest" type="KinematicBody2D"]
+[node name="PlayerTest" type="KinematicBody2D" index="0"]
 
 input_pickable = true
 collision_layer = 1
-collision_mask = 1
+collision_mask = 14
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Material", "Pickable", "Transform", "Visibility" ]
@@ -84,6 +85,7 @@ texture = ExtResource( 2 )
 
 frames = SubResource( 1 )
 animation = "Idle"
+frame = 3
 playing = true
 
 [node name="camera" type="Camera2D" parent="." index="3"]
@@ -97,16 +99,16 @@ limit_left = -10000000
 limit_top = -10000
 limit_right = 10000000
 limit_bottom = 10000000
-limit_smoothed = false
+limit_smoothed = true
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 smoothing_enabled = false
-smoothing_speed = 5.0
+smoothing_speed = 10.0
 offset_v = 0.0
 offset_h = 0.0
-drag_margin_left = 0.1
+drag_margin_left = 0.0
 drag_margin_top = 0.6
-drag_margin_right = 0.1
+drag_margin_right = 0.0
 drag_margin_bottom = 0.3
 editor_draw_screen = true
 editor_draw_limits = true
@@ -119,20 +121,35 @@ position = Vector2( 0, -16 )
 shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="gun_timer" type="Timer" parent="." index="5"]
+[node name="GUI" parent="." index="5" instance=ExtResource( 29 )]
+
+[node name="Timers" type="Node" parent="." index="6"]
+
+[node name="pistol_timer" type="Timer" parent="Timers" index="0"]
 
 process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = false
 
-[node name="dash_timer" type="Timer" parent="." index="6"]
+[node name="shotgun_timer" type="Timer" parent="Timers" index="1"]
 
 process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = false
 
-[connection signal="timeout" from="gun_timer" to="." method="_on_gun_timer_timeout"]
+[node name="machinegun_timer" type="Timer" parent="Timers" index="2"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[connection signal="timeout" from="Timers/pistol_timer" to="." method="_on_pistol_timer_timeout"]
+
+[connection signal="timeout" from="Timers/shotgun_timer" to="." method="_on_shotgun_timer_timeout"]
+
+[connection signal="timeout" from="Timers/machinegun_timer" to="." method="_on_machinegun_timer_timeout"]
 
 

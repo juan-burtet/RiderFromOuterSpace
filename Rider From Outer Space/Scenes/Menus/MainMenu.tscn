@@ -1,18 +1,29 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://Images/Menus/Space Background/parallax-space-backgound.png" type="Texture" id=1]
-[ext_resource path="res://Images/Menus/Space Background/parallax-space-stars.png" type="Texture" id=2]
-[ext_resource path="res://Images/Menus/Space Background/parallax-space-far-planets.png" type="Texture" id=3]
-[ext_resource path="res://Images/Menus/Space Background/parallax-space-big-planet.png" type="Texture" id=4]
-[ext_resource path="res://Images/Menus/Space Background/parallax-space-ring-planet.png" type="Texture" id=5]
-[ext_resource path="res://Images/Menus/Main Menu/start_game.png" type="Texture" id=6]
-[ext_resource path="res://Images/Menus/Main Menu/load_game.png" type="Texture" id=7]
-[ext_resource path="res://Images/Menus/Main Menu/chapter_select.png" type="Texture" id=8]
-[ext_resource path="res://Images/Menus/Main Menu/options.png" type="Texture" id=9]
-[ext_resource path="res://Images/Menus/Main Menu/quit_game.png" type="Texture" id=10]
-[ext_resource path="res://Images/Menus/Main Menu/gameLogo.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/Menus/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://Images/Menus/Space Background/parallax-space-backgound.png" type="Texture" id=2]
+[ext_resource path="res://Images/Menus/Space Background/parallax-space-stars.png" type="Texture" id=3]
+[ext_resource path="res://Images/Menus/Space Background/parallax-space-far-planets.png" type="Texture" id=4]
+[ext_resource path="res://Images/Menus/Space Background/parallax-space-big-planet.png" type="Texture" id=5]
+[ext_resource path="res://Images/Menus/Space Background/parallax-space-ring-planet.png" type="Texture" id=6]
+[ext_resource path="res://Images/Menus/Main Menu/gameLogo.png" type="Texture" id=7]
+[ext_resource path="res://Images/Menus/Demo/pressioneEnter.png" type="Texture" id=8]
+[ext_resource path="res://Images/Menus/Demo/pressioneEnterWHITE.png" type="Texture" id=9]
+[ext_resource path="res://Images/Menus/Demo/DEMO.png" type="Texture" id=10]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+} ]
+_sections_unfolded = [ "Resource" ]
 
 [node name="MainMenu" type="Node"]
+
+script = ExtResource( 1 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="0"]
 
@@ -41,8 +52,8 @@ _sections_unfolded = [ "Motion", "Transform" ]
 
 position = Vector2( 380, 248 )
 scale = Vector2( 2.85294, 3.3 )
-texture = ExtResource( 1 )
-_sections_unfolded = [ "Offset" ]
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="layer2" type="ParallaxLayer" parent="ParallaxBackground" index="1"]
 
@@ -56,7 +67,7 @@ motion_mirroring = Vector2( 0, 0 )
 
 position = Vector2( 252, 200 )
 scale = Vector2( 2.85294, 3.5 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="layer3" type="ParallaxLayer" parent="ParallaxBackground" index="2"]
 
@@ -69,7 +80,7 @@ motion_mirroring = Vector2( 0, 0 )
 
 position = Vector2( 25.9999, -12 )
 scale = Vector2( 2.77941, 3.05 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="layer4" type="ParallaxLayer" parent="ParallaxBackground" index="3"]
 
@@ -81,7 +92,7 @@ motion_mirroring = Vector2( 0, 0 )
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/layer4" index="0"]
 
 position = Vector2( 448, -96 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="layer5" type="ParallaxLayer" parent="ParallaxBackground" index="4"]
 
@@ -94,138 +105,30 @@ motion_mirroring = Vector2( 0, 0 )
 
 position = Vector2( -318, -14 )
 scale = Vector2( 2.37255, 2.44348 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
-[node name="Button" type="Button" parent="." index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.30435
-anchor_bottom = 0.53333
-margin_left = 288.0
-margin_top = 288.0
-margin_right = 212.998
-margin_bottom = 53.0016
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-icon = ExtResource( 6 )
-flat = true
-align = 1
-
-[node name="Button2" type="Button" parent="." index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.30435
-anchor_bottom = 0.53333
-margin_left = 288.0
-margin_top = 320.0
-margin_right = 212.998
-margin_bottom = 85.0016
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-icon = ExtResource( 7 )
-flat = true
-align = 1
-
-[node name="Button3" type="Button" parent="." index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.30435
-anchor_bottom = 0.53333
-margin_left = 288.0
-margin_top = 352.0
-margin_right = 212.998
-margin_bottom = 117.002
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-icon = ExtResource( 8 )
-flat = true
-align = 1
-
-[node name="Button4" type="Button" parent="." index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.30435
-anchor_bottom = 0.53333
-margin_left = 288.0
-margin_top = 384.0
-margin_right = 265.998
-margin_bottom = 149.002
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-icon = ExtResource( 9 )
-flat = true
-align = 1
-
-[node name="Button5" type="Button" parent="." index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.30435
-anchor_bottom = 0.53333
-margin_left = 288.0
-margin_top = 416.0
-margin_right = 265.998
-margin_bottom = 181.002
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-icon = ExtResource( 10 )
-flat = true
-align = 1
-
-[node name="Sprite" type="Sprite" parent="." index="6"]
+[node name="GameLogo" type="Sprite" parent="." index="1"]
 
 position = Vector2( 384, 128 )
-scale = Vector2( 5, 5 )
-texture = ExtResource( 11 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 7 )
 _sections_unfolded = [ "Region", "Transform" ]
+
+[node name="pressioneEnter" type="AnimatedSprite" parent="." index="2"]
+
+position = Vector2( 384, 350 )
+scale = Vector2( 3, 3 )
+frames = SubResource( 1 )
+animation = "default"
+playing = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="Demo" type="Sprite" parent="." index="3"]
+
+position = Vector2( 610, 205 )
+rotation = -0.349066
+scale = Vector2( 4, 4 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Offset", "Transform" ]
 
 

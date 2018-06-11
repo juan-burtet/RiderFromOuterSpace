@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Player/Weapons/Shotgun.gd" type="Script" id=1]
+[ext_resource path="res://Images/Shots/shotgun.png" type="Texture" id=2]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "Explode",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Fire",
+"speed": 5.0
+} ]
+
+[node name="Shotgun" type="Area2D"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_mask = 14
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="Visibility" type="VisibilityNotifier2D" parent="." index="0"]
+
+rect = Rect2( -10, -10, 20, 20 )
+
+[node name="Bullet" type="AnimatedSprite" parent="." index="1"]
+
+position = Vector2( 0, -3 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 1 )
+animation = "Fire"
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="2"]
+
+position = Vector2( 0, -3 )
+scale = Vector2( 2, 2 )
+build_mode = 0
+polygon = PoolVector2Array( -7.875, -15.9571, -5.375, -15.9571, 4.875, -10.2071, 7.75, -4.33212, 7.875, 3.41788, 4.875, 9.91788, -5.125, 16.0429, -8, 15.7929, -8.125, 14.1679, 0.625, 4.54288, 0.875, -4.08212, -8, -13.8321 )
+_sections_unfolded = [ "Transform" ]
+
+[connection signal="body_entered" from="." to="." method="_on_Shotgun_body_entered"]
+
+[connection signal="screen_exited" from="Visibility" to="." method="_on_Visibility_screen_exited"]
+
+

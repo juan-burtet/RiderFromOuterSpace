@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Player/Weapons/MachineGun.gd" type="Script" id=1]
+[ext_resource path="res://Images/Shots/machinegun.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 4, 4 )
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "Explode",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Fire",
+"speed": 5.0
+} ]
+
+[node name="MachineGun" type="Area2D" index="0"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_mask = 14
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="Collision" type="CollisionShape2D" parent="." index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Visibility" type="VisibilityNotifier2D" parent="." index="1"]
+
+rect = Rect2( -10, -10, 20, 20 )
+
+[node name="Bullet" type="AnimatedSprite" parent="." index="2"]
+
+frames = SubResource( 2 )
+animation = "Fire"
+
+[connection signal="body_entered" from="." to="." method="_on_MachineGun_body_entered"]
+
+[connection signal="screen_exited" from="Visibility" to="." method="_on_Visibility_screen_exited"]
+
+

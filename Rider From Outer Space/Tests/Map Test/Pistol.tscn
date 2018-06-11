@@ -15,18 +15,20 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision_mask = 14
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+[node name="Collision" type="CollisionShape2D" parent="." index="0"]
 
 shape = SubResource( 1 )
 
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="1"]
+[node name="Visibility" type="VisibilityNotifier2D" parent="." index="1"]
 
 rect = Rect2( -10, -10, 20, 20 )
 
@@ -34,10 +36,8 @@ rect = Rect2( -10, -10, 20, 20 )
 
 texture = ExtResource( 2 )
 
-[connection signal="area_entered" from="." to="." method="_on_Pistol_area_entered"]
-
 [connection signal="body_entered" from="." to="." method="_on_Pistol_body_entered"]
 
-[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
+[connection signal="screen_exited" from="Visibility" to="." method="_on_Visibility_screen_exited"]
 
 

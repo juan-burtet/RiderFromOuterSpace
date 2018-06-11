@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 # Cenas das armas
-const PISTOL_SCENE = preload("res://Tests/Map Test/Pistol.tscn") # Pistola
+const PISTOL_SCENE = preload("res://Scenes/Enemies/EnemyGun.tscn")
 
 
 const UP = Vector2(0,-1)

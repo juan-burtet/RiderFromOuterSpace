@@ -10,7 +10,7 @@ source_file="res://Images/Shots/pistol.png"
 source_md5="21c40db16df43245de736e18d83a0fb1"
 
 dest_files=[ "res://.import/pistol.png-38a361c681eb683ce8d3d88b85903003.stex" ]
-dest_md5="055f39970d55e6d14962b8865fbe4888"
+dest_md5="e285d40827bc84fd35a874f74822cbb5"
 
 [params]
 
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

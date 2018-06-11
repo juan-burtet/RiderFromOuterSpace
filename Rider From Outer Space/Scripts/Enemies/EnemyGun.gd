@@ -22,4 +22,4 @@ func _on_Visibility_screen_exited():
 func _on_EnemyGun_body_entered(body):
 	queue_free()
 	if body.get_name() != "TileMap":
-		print("acertou o personagem")
+		body.receive_damage()

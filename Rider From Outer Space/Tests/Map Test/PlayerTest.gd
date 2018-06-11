@@ -96,6 +96,7 @@ func _physics_process(delta):
 	# Faz a ação de tiro se o botão foi pressionado
 	check_shoot()
 	
+	$AnimTop.play("Frente")
 	pass
 	# END physics_process
 
@@ -264,7 +265,25 @@ func get_shot_direction():
 	
 	pass
 
-
+# Função feita pro personagem tomar dano
+func receive_damage():
+	hp -= 1
+	hp = max(0,hp)
+	
+	if hp == 5:
+		$GUI.get_node("Hearts/3").play("Half")
+	elif hp == 4:
+		$GUI.get_node("Hearts/3").play("Empty")
+	elif hp == 3:
+		$GUI.get_node("Hearts/2").play("Half")
+	elif hp == 2:
+		$GUI.get_node("Hearts/2").play("Empty")
+	elif hp == 1:
+		$GUI.get_node("Hearts/1").play("Half")
+	elif hp == 0:
+		$GUI.get_node("Hearts/1").play("Empty")
+	
+	pass
 
 # Signal que indica quando acabou o tempo (pistola)
 func _on_pistol_timer_timeout():

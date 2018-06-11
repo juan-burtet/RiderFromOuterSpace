@@ -3,6 +3,7 @@ extends Area2D
 
 const SPEED = 900
 var motion = Vector2()
+var damage = 1
 
 # Inicialização
 func init(direction):
@@ -20,4 +21,4 @@ func _on_Visibility_screen_exited():
 func _on_MachineGun_body_entered(body):
 	queue_free()
 	if body.get_name() != "TileMap":
-		body.queue_free()
+		body.does_damage(damage)

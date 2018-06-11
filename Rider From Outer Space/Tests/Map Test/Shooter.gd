@@ -9,6 +9,8 @@ const GRAVITY = 20
 const SPEED = 200
 
 var motion = Vector2(0,0)
+var maxHp = 100
+var hp = 100
 onready var timer = $Timer
 
 func _ready():
@@ -16,6 +18,11 @@ func _ready():
 
 func _process(delta):
 	motion.y += GRAVITY
+	
+	# Se o hp zerou, morre
+	if !hp:
+		dies()
+	
 	
 	if $right.is_colliding():
 		teste($right)
@@ -28,8 +35,16 @@ func _process(delta):
 	if $rightUp.is_colliding():
 		teste($rightUp)
 	
+	
+	print_hp()
+	
 	motion = move_and_slide(motion, UP)
 	pass
+
+func print_hp():
+	$HP.set_value(hp)
+
+
 
 func teste(node):
 	if node.get_collider() != null:
@@ -68,3 +83,12 @@ func restart_timer():
 func _on_Timer_timeout():
 	timer.set_one_shot(false)
 	pass # replace with function body
+
+
+func does_damage(damage):
+	hp -= damage
+	hp = max(0, hp)
+	pass
+
+func dies():
+	queue_free()

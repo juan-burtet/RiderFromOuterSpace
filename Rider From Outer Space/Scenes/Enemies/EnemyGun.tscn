@@ -11,18 +11,18 @@ extents = Vector2( 4, 4 )
 [sub_resource type="SpriteFrames" id=2]
 
 animations = [ {
-"frames": [  ],
-"loop": true,
-"name": "Explode",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
 "name": "Fire",
 "speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "Explode",
+"speed": 5.0
 } ]
 
-[node name="EnemyGun" type="Area2D"]
+[node name="EnemyGun" type="Area2D" index="0"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )

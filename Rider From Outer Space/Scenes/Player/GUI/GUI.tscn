@@ -1,11 +1,11 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/Player/GUI/GUI.gd" type="Script" id=1]
-[ext_resource path="res://Images/Player/Weapons/shotgun.png" type="Texture" id=2]
-[ext_resource path="res://Images/Player/Weapons/pistol.png" type="Texture" id=3]
+[ext_resource path="res://Images/Player/Weapons/pistol.png" type="Texture" id=2]
+[ext_resource path="res://Images/Player/Weapons/shotgun.png" type="Texture" id=3]
 [ext_resource path="res://Images/Player/Weapons/machinegun.png" type="Texture" id=4]
-[ext_resource path="res://Images/Player/GUI/heart_half_16x16.png" type="Texture" id=5]
-[ext_resource path="res://Images/Player/GUI/heart_full_16x16.png" type="Texture" id=6]
+[ext_resource path="res://Images/Player/GUI/heart_full_16x16.png" type="Texture" id=5]
+[ext_resource path="res://Images/Player/GUI/heart_half_16x16.png" type="Texture" id=6]
 [ext_resource path="res://Images/Player/GUI/heart_empty_16x16.png" type="Texture" id=7]
 [ext_resource path="res://Images/Player/GUI/lifebar_bg.png" type="Texture" id=8]
 [ext_resource path="res://Images/Player/GUI/lifebar_fill.png" type="Texture" id=9]
@@ -15,12 +15,12 @@
 animations = [ {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
-"name": "Shotgun",
+"name": "Pistol",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "Pistol",
+"name": "Shotgun",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
@@ -34,12 +34,12 @@ animations = [ {
 animations = [ {
 "frames": [ ExtResource( 5 ) ],
 "loop": true,
-"name": "Half",
+"name": "Full",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ) ],
 "loop": true,
-"name": "Full",
+"name": "Half",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ) ],
@@ -68,8 +68,6 @@ animation = "Pistol"
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Hearts" type="Node" parent="." index="1"]
-
-editor/display_folded = true
 
 [node name="1" type="AnimatedSprite" parent="Hearts" index="0"]
 

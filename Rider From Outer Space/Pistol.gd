@@ -3,6 +3,7 @@ extends Area2D
 
 const SPEED = 900
 var motion = Vector2()
+var damage = 15
 
 func init(direction):
 	motion = direction
@@ -14,7 +15,7 @@ func _process(delta):
 func _on_Pistol_body_entered(body):
 	queue_free()
 	if body.get_name() != "TileMap":
-		body.queue_free()
+		body.does_damage(damage)
 	pass
 
 # Quando a bala sair da tela, ela é destruida

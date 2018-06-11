@@ -1,63 +1,201 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://Tests/Map Test/PlayerTest.gd" type="Script" id=1]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/idle/Idle0.png" type="Texture" id=2]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/idle/Idle1.png" type="Texture" id=3]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/idle/Idle2.png" type="Texture" id=4]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/idle/Idle3.png" type="Texture" id=5]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/idle/Idle4.png" type="Texture" id=6]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/idle/Idle5.png" type="Texture" id=7]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/up/up0.png" type="Texture" id=8]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/up/up1.png" type="Texture" id=9]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/up/up2.png" type="Texture" id=10]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/up/up3.png" type="Texture" id=11]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/up/up4.png" type="Texture" id=12]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/up/up5.png" type="Texture" id=13]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/up/up6.png" type="Texture" id=14]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/right/right0.png" type="Texture" id=15]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/right/right1.png" type="Texture" id=16]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/right/right2.png" type="Texture" id=17]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/right/right3.png" type="Texture" id=18]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/right/right4.png" type="Texture" id=19]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/right/right5.png" type="Texture" id=20]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/right/right6.png" type="Texture" id=21]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/down/down0.png" type="Texture" id=22]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/down/down1.png" type="Texture" id=23]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/down/down2.png" type="Texture" id=24]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/down/down3.png" type="Texture" id=25]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/down/down4.png" type="Texture" id=26]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/down/down5.png" type="Texture" id=27]
-[ext_resource path="res://Tests/Gameplay Images/movimentação/down/down6.png" type="Texture" id=28]
-[ext_resource path="res://Scenes/Player/GUI/GUI.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Images/Player/SNES - Contra 3 The Alien Wars - Lance Bean.png" type="Texture" id=2]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/idle/Idle0.png" type="Texture" id=3]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/idle/Idle1.png" type="Texture" id=4]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/idle/Idle2.png" type="Texture" id=5]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/idle/Idle3.png" type="Texture" id=6]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/idle/Idle4.png" type="Texture" id=7]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/idle/Idle5.png" type="Texture" id=8]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/down/down0.png" type="Texture" id=9]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/down/down1.png" type="Texture" id=10]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/down/down2.png" type="Texture" id=11]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/down/down3.png" type="Texture" id=12]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/down/down4.png" type="Texture" id=13]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/down/down5.png" type="Texture" id=14]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/down/down6.png" type="Texture" id=15]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/right/right0.png" type="Texture" id=16]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/right/right1.png" type="Texture" id=17]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/right/right2.png" type="Texture" id=18]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/right/right3.png" type="Texture" id=19]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/right/right4.png" type="Texture" id=20]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/right/right5.png" type="Texture" id=21]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/right/right6.png" type="Texture" id=22]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/up/up0.png" type="Texture" id=23]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/up/up1.png" type="Texture" id=24]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/up/up2.png" type="Texture" id=25]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/up/up3.png" type="Texture" id=26]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/up/up4.png" type="Texture" id=27]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/up/up5.png" type="Texture" id=28]
+[ext_resource path="res://Tests/Gameplay Images/movimentação/up/up6.png" type="Texture" id=29]
+[ext_resource path="res://Scenes/Player/GUI/GUI.tscn" type="PackedScene" id=30]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
 "loop": true,
-"name": "Jump",
+"name": "Fall",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
+"frames": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
 "loop": true,
 "name": "Walking",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ) ],
+"frames": [ ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ],
 "loop": true,
-"name": "Fall",
+"name": "Jump",
 "speed": 10.0
 } ]
+_sections_unfolded = [ "Resource" ]
 
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 16, 32 )
+
+[sub_resource type="Animation" id=3]
+
+resource_name = "Cima"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("top:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("top:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -32 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("top:region_enabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=4]
+
+resource_name = "Frente"
+length = 0.5
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("top:region_enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("top:centered")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("top:offset")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0, 3 ), Vector2( 0, 3 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+
+resource_name = "FrenteBaixo"
+length = 1.0
+loop = false
+step = 0.1
+
+[sub_resource type="Animation" id=6]
+
+resource_name = "FrenteCima"
+length = 0.5
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("top:region_enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("top:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 3 ), Vector2( 0, 3 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("top:centered")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
 
 [node name="PlayerTest" type="KinematicBody2D" index="0"]
 
@@ -80,16 +218,22 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( 0, -32 )
 texture = ExtResource( 2 )
+offset = Vector2( 0, 3 )
+region_enabled = true
+region_rect = Rect2( 6, 170, 32, 25 )
+_sections_unfolded = [ "Animation", "Offset", "Region" ]
 
 [node name="Sprite" type="AnimatedSprite" parent="." index="2"]
 
+visible = false
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 3
+frame = 5
 playing = true
 
 [node name="camera" type="Camera2D" parent="." index="3"]
 
+visible = false
 offset = Vector2( 0, -100 )
 anchor_mode = 1
 rotating = false
@@ -121,9 +265,11 @@ position = Vector2( 0, -16 )
 shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="GUI" parent="." index="5" instance=ExtResource( 29 )]
+[node name="GUI" parent="." index="5" instance=ExtResource( 30 )]
 
 [node name="Timers" type="Node" parent="." index="6"]
+
+editor/display_folded = true
 
 [node name="pistol_timer" type="Timer" parent="Timers" index="0"]
 
@@ -145,6 +291,19 @@ process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = false
+
+[node name="AnimTop" type="AnimationPlayer" parent="." index="7"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Cima = SubResource( 3 )
+anims/Frente = SubResource( 4 )
+anims/FrenteBaixo = SubResource( 5 )
+anims/FrenteCima = SubResource( 6 )
+blend_times = [  ]
 
 [connection signal="timeout" from="Timers/pistol_timer" to="." method="_on_pistol_timer_timeout"]
 

@@ -3,6 +3,7 @@ extends Area2D
 
 const SPEED = 700
 var motion = Vector2()
+var damage = 45
 
 # Inicialização
 func init(direction):
@@ -48,4 +49,4 @@ func rotate_sprite(x):
 func _on_Shotgun_body_entered(body):
 	queue_free()
 	if body.get_name() != "TileMap":
-		body.queue_free()
+		body.does_damage(damage)

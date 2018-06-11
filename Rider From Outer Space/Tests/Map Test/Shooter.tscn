@@ -1,14 +1,32 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Tests/Map Test/Shooter.gd" type="Script" id=1]
-[ext_resource path="res://Tests/Gameplay Images/icon.png" type="Texture" id=2]
-[ext_resource path="res://Images/Player/GUI/lifebar_bg.png" type="Texture" id=3]
-[ext_resource path="res://Images/Player/GUI/lifebar_fill.png" type="Texture" id=4]
+[ext_resource path="res://Images/Enemies/idle.png" type="Texture" id=2]
+[ext_resource path="res://Images/Enemies/0.png" type="Texture" id=3]
+[ext_resource path="res://Images/Enemies/1.png" type="Texture" id=4]
+[ext_resource path="res://Images/Enemies/2.png" type="Texture" id=5]
+[ext_resource path="res://Images/Enemies/3.png" type="Texture" id=6]
+[ext_resource path="res://Images/Player/GUI/lifebar_bg.png" type="Texture" id=7]
+[ext_resource path="res://Images/Player/GUI/lifebar_fill.png" type="Texture" id=8]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 32, 32 )
+extents = Vector2( 20, 30 )
 
 [node name="Shooter" type="KinematicBody2D" index="0"]
 
@@ -19,15 +37,22 @@ collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision" ]
 
-[node name="Sprite" type="Sprite" parent="." index="0"]
+[node name="Sprite" type="AnimatedSprite" parent="." index="0"]
 
-modulate = Color( 1, 0, 0, 1 )
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Visibility" ]
+modulate = Color( 0.972656, 0.208969, 0.208969, 1 )
+scale = Vector2( 1.5, 1.5 )
+frames = SubResource( 1 )
+animation = "Walk"
+frame = 1
+playing = true
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-shape = SubResource( 1 )
+visible = false
+scale = Vector2( 1.5, 1.5 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="right" type="RayCast2D" parent="." index="2"]
 
@@ -90,10 +115,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -30.0
-margin_top = -50.0
-margin_right = 366.0
-margin_bottom = 3.0
+margin_left = -32.0
+margin_top = -64.0
+margin_right = 364.0
+margin_bottom = -11.0
 rect_scale = Vector2( 0.15, 0.15 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -102,15 +127,15 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 min_value = 0.0
-max_value = 100.0
+max_value = 50.0
 step = 1.0
 page = 0.0
-value = 100.0
+value = 50.0
 exp_edit = false
 rounded = false
-texture_under = ExtResource( 3 )
+texture_under = ExtResource( 7 )
 texture_over = null
-texture_progress = ExtResource( 4 )
+texture_progress = ExtResource( 8 )
 radial_fill_degrees = 360.0
 radial_center_offset = Vector2( 0, 0 )
 nine_patch_stretch = false

@@ -1,19 +1,37 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/Enemies/Bomber.gd" type="Script" id=1]
-[ext_resource path="res://Tests/Gameplay Images/icon.png" type="Texture" id=2]
+[ext_resource path="res://Images/Enemies/idle.png" type="Texture" id=2]
+[ext_resource path="res://Images/Enemies/0.png" type="Texture" id=3]
+[ext_resource path="res://Images/Enemies/1.png" type="Texture" id=4]
+[ext_resource path="res://Images/Enemies/2.png" type="Texture" id=5]
+[ext_resource path="res://Images/Enemies/3.png" type="Texture" id=6]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="CircleShape2D" id=3]
 
 custom_solver_bias = 0.0
 radius = 100.0
 
-[node name="Bomber" type="KinematicBody2D"]
+[node name="Bomber" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 2
@@ -22,13 +40,16 @@ collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision" ]
 
-[node name="Sprite" type="Sprite" parent="." index="0"]
+[node name="Sprite" type="AnimatedSprite" parent="." index="0"]
 
-texture = ExtResource( 2 )
+frames = SubResource( 1 )
+animation = "Idle"
+_sections_unfolded = [ "Visibility" ]
 
 [node name="Collision" type="CollisionShape2D" parent="." index="1"]
 
-shape = SubResource( 1 )
+visible = false
+shape = SubResource( 2 )
 
 [node name="left" type="RayCast2D" parent="." index="2"]
 
@@ -62,6 +83,7 @@ collision_mask = 1
 
 [node name="AreaExplode" type="Area2D" parent="." index="6"]
 
+visible = false
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -74,7 +96,7 @@ _sections_unfolded = [ "Collision" ]
 
 [node name="Explosion" type="CollisionShape2D" parent="AreaExplode" index="0"]
 
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 _sections_unfolded = [ "Material" ]
 
 [connection signal="body_entered" from="AreaExplode" to="." method="_on_AreaExplode_body_entered"]

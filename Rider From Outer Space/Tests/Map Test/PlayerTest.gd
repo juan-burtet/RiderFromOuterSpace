@@ -42,6 +42,8 @@ func _ready():
 
 # Função que roda a cada frame
 func _physics_process(delta):
+	print(RID(self))
+	
 	# Eixo Y é atualizado com a gravidade
 	motion.y += GRAVITY
 	# Indica que tu parou de se movimentar
@@ -59,22 +61,23 @@ func _physics_process(delta):
 		move_left()
 		
 		# Só faz o dash se o lock não tiver habilitado
-		if !Input.is_action_pressed("ui_lock"):
-			if Input.is_action_just_pressed("ui_dash"):
-				if $GUI.is_complete():
-					dash(-DASH_SPEED)
-					$GUI.usou_dash()
+		#if !Input.is_action_pressed("ui_lock"):
+		if Input.is_action_just_pressed("ui_dash"):
+			if $GUI.is_complete():
+				dash(-DASH_SPEED)
+				$GUI.usou_dash()
 	# Se a teclada direita foi pressionada, movimenta pra direita
 	elif Input.is_action_pressed("ui_right"):
+		# Só faz o dash se o lock não tiver habilitado
+		#if !Input.is_action_pressed("ui_lock"):
+			
 		# Movimenta o personagem pra direita
 		move_right()
-		
-		# Só faz o dash se o lock não tiver habilitado
-		if !Input.is_action_pressed("ui_lock"):
-			if Input.is_action_just_pressed("ui_dash"):
-				if $GUI.is_complete():
-					dash(DASH_SPEED)
-					$GUI.usou_dash()
+			
+		if Input.is_action_just_pressed("ui_dash"):
+			if $GUI.is_complete():
+				dash(DASH_SPEED)
+				$GUI.usou_dash()
 
 	# Se nenhuma tecla foi digitada, o personagem fica parado
 	else:
@@ -86,9 +89,8 @@ func _physics_process(delta):
 	# Controla os comandos do pulo
 	jump_control(friction)
 
-	# Movimenta o personagem se o lock não tiver apertado
-	if !Input.is_action_pressed("ui_lock"):
-		motion = move_and_slide(motion, UP)
+	# movimenta o personagem
+	motion = move_and_slide(motion, UP)
 	
 	# Escolha da arma
 	choose_weapon()
@@ -96,9 +98,34 @@ func _physics_process(delta):
 	# Faz a ação de tiro se o botão foi pressionado
 	check_shoot()
 	
-	$AnimTop.play("Frente")
+	# Atualiza as sprites
+	atualiza_sprites()
+	
 	pass
 	# END physics_process
+
+func atualiza_sprites():
+	var x = direction.x
+	var y = direction.y
+	
+	# cima
+	if x == 0 and y == -1:
+		$Top.play("Cima")
+		#$Top.set_offset(Vector2(0,0))
+	# Frente
+	elif (x == 1 or x == -1) and y == 0:
+		$Top.play("Frente")
+		#$Top.set_offset(Vector2(2,6))
+	# FrenteCima
+	elif (x == 1 or x == -1) and y == -1:
+		$Top.play("FrenteCima")
+		#$Top.set_offset(Vector2(2,3))
+	
+	
+	pass
+
+
+
 
 # Função que escolhe a arma
 func choose_weapon():
@@ -153,6 +180,7 @@ func move_left():
 	motion.x = max(motion.x - ACCELERATION, -MAX_SPEED)
 	# Inverte a Sprite pois está indo pra esquerda
 	$Sprite.flip_h = true
+	$Top.flip_h = true
 	# Toca a Sprite de Movimento
 	$Sprite.play("Walking")
 	# Atualiza a direção
@@ -167,6 +195,7 @@ func move_right():
 	motion.x = min(motion.x + ACCELERATION, MAX_SPEED)
 	# Não inverte a sprite
 	$Sprite.flip_h = false
+	$Top.flip_h = false
 	# Toca a Sprite de Movimento
 	$Sprite.play("Walking")
 	# Muda a direção

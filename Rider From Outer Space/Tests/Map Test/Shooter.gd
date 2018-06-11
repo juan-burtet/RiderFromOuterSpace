@@ -6,11 +6,11 @@ const PISTOL_SCENE = preload("res://Scenes/Enemies/EnemyGun.tscn")
 
 const UP = Vector2(0,-1)
 const GRAVITY = 20
-const SPEED = 200
+const SPEED = 100
 
 var motion = Vector2(0,0)
-var maxHp = 100
-var hp = 100
+var maxHp = 50
+var hp = 50
 onready var timer = $Timer
 
 func _ready():
@@ -37,6 +37,16 @@ func _process(delta):
 	
 	
 	print_hp()
+	
+	if motion.x > 0:
+		$Sprite.flip_h = false
+		$Sprite.play("Walk")
+	elif motion.x < 0:
+		$Sprite.flip_h = true
+		$Sprite.play("Walk")
+	else:
+		$Sprite.play("Idle")
+	
 	
 	motion = move_and_slide(motion, UP)
 	pass

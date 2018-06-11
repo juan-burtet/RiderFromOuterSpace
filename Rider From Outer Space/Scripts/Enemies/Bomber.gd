@@ -3,11 +3,13 @@ extends KinematicBody2D
 
 # Constantes
 const UP = Vector2(0,-1)
-const SPEED = 400
+const SPEED = 200
 const GRAVITY = 20
 
 # Movimento
 var motion = Vector2()
+var maxHp = 1
+var hp = 1
 
 func _process(delta):
 	motion.y += GRAVITY
@@ -17,7 +19,16 @@ func _process(delta):
 	elif $right.is_colliding() or $rightTop.is_colliding():
 		motion.y = SPEED
 	
-	move_and_slide(motion, UP)
+	if motion.x > 0:
+		$Sprite.flip_h = false
+		$Sprite.play("Walk")
+	elif motion.x < 0:
+		$Sprite.flip_h = true
+		$Sprite.play("Walk")
+	else:
+		$Sprite.play("Idle")
+	
+	motion = move_and_slide(motion, UP)
 	pass
 
 

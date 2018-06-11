@@ -3,7 +3,7 @@ extends Area2D
 
 const SPEED = 900
 var motion = Vector2()
-var damage = 1
+var damage = 5
 
 # Inicialização
 func init(direction):

@@ -1,17 +1,18 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Tilesets/Map1/Section 1/Map1_Section1_TileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Images/Maps/Map 1/Section 1/fase1area1.png" type="Texture" id=3]
 [ext_resource path="res://Scripts/Maps/Change Level/ChangeLevel.gd" type="Script" id=4]
-[ext_resource path="res://Tests/Map Test/Shooter.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Tests/Map Test/Fighter.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Enemies/Bomber.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 22.3209, 21.7955 )
 
-[node name="Map 1 Section 1" type="Node"]
+[node name="Map 1 Section 1" type="Node" index="0"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -93,9 +94,13 @@ shape = SubResource( 1 )
 
 [node name="Enemies" type="Node" parent="." index="4"]
 
-[node name="Shooter4" parent="Enemies" index="0" instance=ExtResource( 5 )]
+[node name="Fighter" parent="Enemies" index="0" instance=ExtResource( 5 )]
 
-position = Vector2( 896, 416 )
+position = Vector2( 896.242, 402.805 )
+
+[node name="Bomber" parent="Enemies" index="1" instance=ExtResource( 6 )]
+
+position = Vector2( 702.391, 427.98 )
 
 [connection signal="body_entered" from="ChangeLevel" to="ChangeLevel" method="_on_ChangeLevel_body_entered"]
 

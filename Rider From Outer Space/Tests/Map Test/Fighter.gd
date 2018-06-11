@@ -1,16 +1,22 @@
 extends KinematicBody2D
 
 const UP = Vector2(0,-1)
-const SPEED = 300
+const SPEED = 100
 const GRAVITY = 20
 
-var maxHp = 100
-var hp = 100
+var maxHp = 50
+var hp = 50
 
 var motion = Vector2(SPEED, 0)
 
 func _process(delta):
 	motion.y += GRAVITY
+	
+	print_hp()
+	
+	
+	if !hp:
+		dies()
 	
 	if $left.is_colliding() or !$leftDown.is_colliding():
 		motion.x = SPEED
@@ -33,6 +39,12 @@ func _process(delta):
 	test_collision()
 	
 	pass
+
+func print_hp():
+	$HP.set_value(hp)
+
+func dies():
+	queue_free()
 
 func does_damage(damage):
 	hp -= damage

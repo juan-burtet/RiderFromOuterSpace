@@ -28,7 +28,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="Fighter" type="KinematicBody2D" index="0"]
+[node name="Fighter" type="KinematicBody2D"]
 
 input_pickable = true
 collision_layer = 2
@@ -109,7 +109,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 min_value = 0.0
-max_value = 100.0
+max_value = 50.0
 step = 1.0
 page = 0.0
 value = 50.0

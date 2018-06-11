@@ -1,6 +1,10 @@
 # PlayerTest.gd
 extends KinematicBody2D
 
+const firstLevel = "res://Scenes/Maps/Map 1/Section 1/Map 1 Section 1.tscn"
+const SecondLevel = "res://Scenes/Maps/Map 1/Section 2/Map 1 Section 2.tscn"
+const mainMenu = "res://Scenes/Menus/MainMenu.tscn"
+
 # Cenas das armas
 const PISTOL_SCENE = preload("res://Tests/Map Test/Pistol.tscn")
 const SHOTGUN_SCENE = preload("res://Scenes/Player/Weapons/Shotgun.tscn")
@@ -42,7 +46,11 @@ func _ready():
 
 # Função que roda a cada frame
 func _physics_process(delta):
-	print(RID(self))
+	if !hp:
+		if get_parent().get_name() == "Map 1 Section 1":
+			get_tree().change_scene(firstLevel)
+		else:
+			get_tree().change_scene(SecondLevel)
 	
 	# Eixo Y é atualizado com a gravidade
 	motion.y += GRAVITY
@@ -123,9 +131,6 @@ func atualiza_sprites():
 	
 	
 	pass
-
-
-
 
 # Função que escolhe a arma
 func choose_weapon():
@@ -269,20 +274,20 @@ func get_shot_direction():
 		direction.x = +1
 		direction.y = -1
 		direcao_padrao = +1
-	elif baixo and esquerda:
-		direction.x = -1
-		direction.y = +1
-		direcao_padrao = -1
-	elif baixo and direita:
-		direction.x = +1
-		direction.y = +1
-		direcao_padrao = 1
+	#elif baixo and esquerda:
+	#	direction.x = -1
+	#	direction.y = +1
+	#	direcao_padrao = -1
+	#elif baixo and direita:
+	#	direction.x = +1
+	#	direction.y = +1
+	#	direcao_padrao = 1
 	elif cima:
 		direction.x = 0
 		direction.y = -1
-	elif baixo:
-		direction.x = 0
-		direction.y = +1
+	#elif baixo:
+	#	direction.x = 0
+	#	direction.y = +1
 	elif esquerda:
 		direction.x = -1
 		direction.y = 0

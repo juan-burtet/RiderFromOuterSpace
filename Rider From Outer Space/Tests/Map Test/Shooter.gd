@@ -55,7 +55,6 @@ func print_hp():
 	$HP.set_value(hp)
 
 
-
 func teste(node):
 	if node.get_collider() != null:
 		if node.get_collider().get_name() == "PlayerTest":
@@ -86,7 +85,7 @@ func shoot(direction):
 		restart_timer()
 
 func restart_timer():
-	timer.set_wait_time(1)
+	timer.set_wait_time(2)
 	timer.set_one_shot(true)
 	timer.start()
 

@@ -2,7 +2,7 @@
 extends Area2D
 
 # Velocidade da Bala
-const SPEED = 400
+const SPEED = 300
 # Direção da bala
 var motion = Vector2()
 

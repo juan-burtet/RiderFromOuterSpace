@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/Enemies/Bomber.gd" type="Script" id=1]
 [ext_resource path="res://Images/Enemies/idle.png" type="Texture" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://Images/Enemies/1.png" type="Texture" id=4]
 [ext_resource path="res://Images/Enemies/2.png" type="Texture" id=5]
 [ext_resource path="res://Images/Enemies/3.png" type="Texture" id=6]
+[ext_resource path="res://Images/Player/GUI/lifebar_bg.png" type="Texture" id=7]
+[ext_resource path="res://Images/Player/GUI/lifebar_fill.png" type="Texture" id=8]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -24,14 +26,14 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 32, 32 )
+extents = Vector2( 32, 40 )
 
 [sub_resource type="CircleShape2D" id=3]
 
 custom_solver_bias = 0.0
 radius = 100.0
 
-[node name="Bomber" type="KinematicBody2D" index="0"]
+[node name="Bomber" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 2
@@ -42,13 +44,13 @@ _sections_unfolded = [ "Collision" ]
 
 [node name="Sprite" type="AnimatedSprite" parent="." index="0"]
 
+scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 1 )
 animation = "Idle"
-_sections_unfolded = [ "Visibility" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Collision" type="CollisionShape2D" parent="." index="1"]
 
-visible = false
 shape = SubResource( 2 )
 
 [node name="left" type="RayCast2D" parent="." index="2"]
@@ -83,6 +85,7 @@ collision_mask = 1
 
 [node name="AreaExplode" type="Area2D" parent="." index="6"]
 
+editor/display_folded = true
 visible = false
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -99,6 +102,71 @@ _sections_unfolded = [ "Collision" ]
 shape = SubResource( 3 )
 _sections_unfolded = [ "Material" ]
 
+[node name="HP" type="TextureProgress" parent="." index="7"]
+
+modulate = Color( 1, 0, 0, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -32.0
+margin_top = -64.0
+margin_right = 364.0
+margin_bottom = -11.0
+rect_scale = Vector2( 0.15, 0.15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+min_value = 0.0
+max_value = 1.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+texture_under = ExtResource( 7 )
+texture_over = null
+texture_progress = ExtResource( 8 )
+radial_fill_degrees = 360.0
+radial_center_offset = Vector2( 0, 0 )
+nine_patch_stretch = false
+_sections_unfolded = [ "Rect", "Textures", "Visibility" ]
+
+[node name="Explode" type="Label" parent="." index="8"]
+
+modulate = Color( 1, 0, 0, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -128.0
+margin_top = -32.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_styles" ]
+
+[node name="Timer" type="Timer" parent="." index="9"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
 [connection signal="body_entered" from="AreaExplode" to="." method="_on_AreaExplode_body_entered"]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
 

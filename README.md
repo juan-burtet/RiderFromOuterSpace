@@ -53,12 +53,9 @@
   - IA dos inimigos
   - IA do primeiro chefe
   - artes do personagem/inimigos/chefe
-
-  Personagem: está em 1
-  		toca em Inimigos e Mapa e Explosão
-  Inimigos: Estão em 2
-  		toca em Personagem e Mapa
-  Mapa: Estão em 3
-  		toca em Inimigos e Personagem
-  Explosão: Esta em 4
-  		toca em Personagem
+  
+## Colisões dos Personagens
+  * __Personagem[1]__: Toca em Inimigos e Mapa e Explosão
+  * __Inimigos[2]__: Toca em Personagem e Mapa
+  * __Mapa[3]__: Toca em Inimigos e Personagem
+  * __Explosão[4]__: Toca em Personagem

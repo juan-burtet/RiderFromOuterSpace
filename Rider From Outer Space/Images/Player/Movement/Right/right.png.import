@@ -7,10 +7,7 @@ path="res://.import/right.png-dc7cb5cde79ba8efc7f76b6017409e11.stex"
 [deps]
 
 source_file="res://Images/Player/Movement/Right/right.png"
-source_md5="ff4a586a37a31fce43820157291c9694"
-
 dest_files=[ "res://.import/right.png-dc7cb5cde79ba8efc7f76b6017409e11.stex" ]
-dest_md5="3bdadd1c36b964be1c17a0f72385d977"
 
 [params]
 

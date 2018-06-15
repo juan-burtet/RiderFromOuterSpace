@@ -7,10 +7,7 @@ path="res://.import/load_game.png-6ae77f2c2d09240297cb91d2c2a532c1.stex"
 [deps]
 
 source_file="res://Images/Menus/Main Menu/load_game.png"
-source_md5="dfcfea8d7fef776497b5e075804d8ce6"
-
 dest_files=[ "res://.import/load_game.png-6ae77f2c2d09240297cb91d2c2a532c1.stex" ]
-dest_md5="efddaf80d611b5783102779741bf2883"
 
 [params]
 

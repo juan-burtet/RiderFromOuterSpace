@@ -7,10 +7,7 @@ path="res://.import/heart_empty_16x16.png-5360cce76e170815ddac3d9bd8bddc02.stex"
 [deps]
 
 source_file="res://Images/Player/GUI/heart_empty_16x16.png"
-source_md5="58c36e82ad2e729ac3b43d1093466238"
-
 dest_files=[ "res://.import/heart_empty_16x16.png-5360cce76e170815ddac3d9bd8bddc02.stex" ]
-dest_md5="b77843a7a59efd4ef9e4bee3b8ed98ff"
 
 [params]
 

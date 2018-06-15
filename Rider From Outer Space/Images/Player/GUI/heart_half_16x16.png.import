@@ -7,10 +7,7 @@ path="res://.import/heart_half_16x16.png-5483a854dfc131652d8f2a63c787b5b1.stex"
 [deps]
 
 source_file="res://Images/Player/GUI/heart_half_16x16.png"
-source_md5="83266d01236b35bdf4e64f9073725386"
-
 dest_files=[ "res://.import/heart_half_16x16.png-5483a854dfc131652d8f2a63c787b5b1.stex" ]
-dest_md5="682409dae11e07e5bbacc0dc6c6e1e9f"
 
 [params]
 

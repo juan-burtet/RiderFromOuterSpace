@@ -7,10 +7,7 @@ path="res://.import/machinegun.png-3013f1d1d6a8f233e0e87f15ae593bbc.stex"
 [deps]
 
 source_file="res://Images/Player/Weapons/machinegun.png"
-source_md5="ab9b8da25292a1b42f8b2acb06d9c912"
-
 dest_files=[ "res://.import/machinegun.png-3013f1d1d6a8f233e0e87f15ae593bbc.stex" ]
-dest_md5="7046723b0651bb4f91d419920d2a9cda"
 
 [params]
 

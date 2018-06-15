@@ -7,10 +7,7 @@ path="res://.import/fase1area1.png-0cdd3783157a6a35f9f666efd286122c.stex"
 [deps]
 
 source_file="res://Images/Maps/Map 1/Section 1/fase1area1.png"
-source_md5="49a89305d1275f67edc08ecc014770d2"
-
 dest_files=[ "res://.import/fase1area1.png-0cdd3783157a6a35f9f666efd286122c.stex" ]
-dest_md5="2dd29d841173524f374e5321d31db2f6"
 
 [params]
 

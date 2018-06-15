@@ -19,9 +19,7 @@ config/icon="res://icon.png"
 
 window/size/width=736
 window/size/height=480
-window/size/fullscreen=true
 window/stretch/mode="2d"
-window/stretch/aspect="expand"
 window/stretch/shrink="1"
 
 [input]
@@ -55,6 +53,10 @@ ui_2=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","
 ui_3=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":51,"unicode":0,"echo":false,"script":null)
  ]
 ui_lock=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":73,"unicode":0,"echo":false,"script":null)
+ ]
+ui_upMenu=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777232,"unicode":0,"echo":false,"script":null)
+ ]
+ui_downMenu=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777234,"unicode":0,"echo":false,"script":null)
  ]
 
 [rendering]

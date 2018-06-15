@@ -7,10 +7,7 @@ path="res://.import/upRight.png-3746bee3d57a6874e778fecb95583caf.stex"
 [deps]
 
 source_file="res://Images/Player/Movement/UpRight/upRight.png"
-source_md5="86bd1eae779f13016d2f87d9d3f87244"
-
 dest_files=[ "res://.import/upRight.png-3746bee3d57a6874e778fecb95583caf.stex" ]
-dest_md5="1bc378a63011c616d9e89d0c7bc7d203"
 
 [params]
 

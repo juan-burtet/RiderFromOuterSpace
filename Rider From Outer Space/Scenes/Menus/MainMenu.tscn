@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Scenes/Menus/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Images/Menus/Space Background/parallax-space-backgound.png" type="Texture" id=2]
@@ -9,7 +9,16 @@
 [ext_resource path="res://Images/Menus/Main Menu/gameLogo.png" type="Texture" id=7]
 [ext_resource path="res://Images/Menus/Demo/pressioneEnter.png" type="Texture" id=8]
 [ext_resource path="res://Images/Menus/Demo/pressioneEnterWHITE.png" type="Texture" id=9]
-[ext_resource path="res://Images/Menus/Demo/DEMO.png" type="Texture" id=10]
+[ext_resource path="res://Images/Menus/Main Menu/start_game.png" type="Texture" id=10]
+[ext_resource path="res://Images/Menus/Main Menu/start_game_selected.png" type="Texture" id=11]
+[ext_resource path="res://Images/Menus/Main Menu/load_game.png" type="Texture" id=12]
+[ext_resource path="res://Images/Menus/Main Menu/load_game_selected.png" type="Texture" id=13]
+[ext_resource path="res://Images/Menus/Main Menu/chapter_select.png" type="Texture" id=14]
+[ext_resource path="res://Images/Menus/Main Menu/chapter_select_selected.png" type="Texture" id=15]
+[ext_resource path="res://Images/Menus/Main Menu/options.png" type="Texture" id=16]
+[ext_resource path="res://Images/Menus/Main Menu/options_selected.png" type="Texture" id=17]
+[ext_resource path="res://Images/Menus/Main Menu/quit_game.png" type="Texture" id=18]
+[ext_resource path="res://Images/Menus/Main Menu/quit_game_selected.png" type="Texture" id=19]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -21,13 +30,82 @@ animations = [ {
 } ]
 _sections_unfolded = [ "Resource" ]
 
-[node name="MainMenu" type="Node"]
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "not",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "selected",
+"speed": 3.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+
+animations = [ {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "not",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "selected",
+"speed": 3.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+
+animations = [ {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "not",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "selected",
+"speed": 3.0
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+
+animations = [ {
+"frames": [ ExtResource( 16 ) ],
+"loop": true,
+"name": "not",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "selected",
+"speed": 3.0
+} ]
+
+[sub_resource type="SpriteFrames" id=6]
+
+animations = [ {
+"frames": [ ExtResource( 18 ) ],
+"loop": true,
+"name": "not",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "selected",
+"speed": 3.0
+} ]
+
+[node name="MainMenu" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="0"]
+[node name="Parallax" type="ParallaxBackground" parent="." index="0"]
 
-editor/display_folded = true
 layer = -1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -41,21 +119,22 @@ scroll_limit_end = Vector2( 0, 0 )
 scroll_ignore_camera_zoom = true
 _sections_unfolded = [ "Scroll" ]
 
-[node name="layer1" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
+[node name="Background" type="ParallaxLayer" parent="Parallax" index="0"]
 
+editor/display_folded = true
 motion_scale = Vector2( 1, 1 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 0, 0 )
 _sections_unfolded = [ "Motion", "Transform" ]
 
-[node name="Sprite" type="Sprite" parent="ParallaxBackground/layer1" index="0"]
+[node name="Sprite" type="Sprite" parent="Parallax/Background" index="0"]
 
-position = Vector2( 380, 248 )
+position = Vector2( 384, 256 )
 scale = Vector2( 2.85294, 3.3 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Offset", "Transform" ]
 
-[node name="layer2" type="ParallaxLayer" parent="ParallaxBackground" index="1"]
+[node name="Stars" type="ParallaxLayer" parent="Parallax" index="1"]
 
 editor/display_folded = true
 position = Vector2( 128, 32 )
@@ -63,49 +142,54 @@ motion_scale = Vector2( 1, 1 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 0, 0 )
 
-[node name="Sprite" type="Sprite" parent="ParallaxBackground/layer2" index="0"]
+[node name="Sprite" type="Sprite" parent="Parallax/Stars" index="0"]
 
 position = Vector2( 252, 200 )
 scale = Vector2( 2.85294, 3.5 )
 texture = ExtResource( 3 )
 
-[node name="layer3" type="ParallaxLayer" parent="ParallaxBackground" index="2"]
+[node name="PlanetsBack" type="ParallaxLayer" parent="Parallax" index="2"]
 
+editor/display_folded = true
 position = Vector2( 352, 256 )
 motion_scale = Vector2( 1, 1 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 0, 0 )
 
-[node name="Sprite" type="Sprite" parent="ParallaxBackground/layer3" index="0"]
+[node name="Sprite" type="Sprite" parent="Parallax/PlanetsBack" index="0"]
 
 position = Vector2( 25.9999, -12 )
 scale = Vector2( 2.77941, 3.05 )
 texture = ExtResource( 4 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="layer4" type="ParallaxLayer" parent="ParallaxBackground" index="3"]
+[node name="PlanetFront" type="ParallaxLayer" parent="Parallax" index="3"]
 
+editor/display_folded = true
 position = Vector2( 128, 384 )
 motion_scale = Vector2( 1, 1 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 0, 0 )
 
-[node name="Sprite" type="Sprite" parent="ParallaxBackground/layer4" index="0"]
+[node name="Sprite" type="Sprite" parent="Parallax/PlanetFront" index="0"]
 
 position = Vector2( 448, -96 )
 texture = ExtResource( 5 )
 
-[node name="layer5" type="ParallaxLayer" parent="ParallaxBackground" index="4"]
+[node name="PlanetRing" type="ParallaxLayer" parent="Parallax" index="4"]
 
+editor/display_folded = true
 position = Vector2( 544, 352 )
 motion_scale = Vector2( 1, 1 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 0, 0 )
 
-[node name="Sprite" type="Sprite" parent="ParallaxBackground/layer5" index="0"]
+[node name="Sprite" type="Sprite" parent="Parallax/PlanetRing" index="0"]
 
 position = Vector2( -318, -14 )
 scale = Vector2( 2.37255, 2.44348 )
 texture = ExtResource( 6 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="GameLogo" type="Sprite" parent="." index="1"]
 
@@ -116,19 +200,64 @@ _sections_unfolded = [ "Region", "Transform" ]
 
 [node name="pressioneEnter" type="AnimatedSprite" parent="." index="2"]
 
-position = Vector2( 384, 350 )
-scale = Vector2( 3, 3 )
+position = Vector2( 384, -32 )
+scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "default"
+frame = 1
 playing = true
 _sections_unfolded = [ "Transform" ]
 
-[node name="Demo" type="Sprite" parent="." index="3"]
+[node name="MenuOptions" type="Node" parent="." index="3"]
 
-position = Vector2( 610, 205 )
-rotation = -0.349066
-scale = Vector2( 4, 4 )
-texture = ExtResource( 10 )
-_sections_unfolded = [ "Offset", "Transform" ]
+[node name="StartGame" type="AnimatedSprite" parent="MenuOptions" index="0"]
+
+position = Vector2( 384, 256 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 2 )
+animation = "selected"
+frame = 1
+playing = true
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="LoadGame" type="AnimatedSprite" parent="MenuOptions" index="1"]
+
+position = Vector2( 384, 288 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 3 )
+animation = "not"
+playing = true
+offset = Vector2( 0, 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="ChapterSelect" type="AnimatedSprite" parent="MenuOptions" index="2"]
+
+position = Vector2( 384, 320 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 4 )
+animation = "not"
+playing = true
+offset = Vector2( 0, 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Options" type="AnimatedSprite" parent="MenuOptions" index="3"]
+
+position = Vector2( 384, 352 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 5 )
+animation = "not"
+playing = true
+offset = Vector2( 0, 6 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="QuitGame" type="AnimatedSprite" parent="MenuOptions" index="4"]
+
+position = Vector2( 384, 384 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 6 )
+animation = "not"
+playing = true
+offset = Vector2( 0, 8 )
+_sections_unfolded = [ "Transform" ]
 
 

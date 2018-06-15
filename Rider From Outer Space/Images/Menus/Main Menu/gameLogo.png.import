@@ -7,10 +7,7 @@ path="res://.import/gameLogo.png-2394ec1e0c407dea6ec582f6e2c02511.stex"
 [deps]
 
 source_file="res://Images/Menus/Main Menu/gameLogo.png"
-source_md5="0e0d2c5ce175d0294a7ee37f82e67744"
-
 dest_files=[ "res://.import/gameLogo.png-2394ec1e0c407dea6ec582f6e2c02511.stex" ]
-dest_md5="153825c5e444f5e2f2a8aacaeb849e0b"
 
 [params]
 

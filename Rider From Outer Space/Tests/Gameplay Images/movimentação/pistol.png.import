@@ -7,10 +7,7 @@ path="res://.import/pistol.png-04c9636a72669b507087de0f16b63ec2.stex"
 [deps]
 
 source_file="res://Tests/Gameplay Images/movimentação/pistol.png"
-source_md5="88bc783b47e86da6ffc3500eeae5cab2"
-
 dest_files=[ "res://.import/pistol.png-04c9636a72669b507087de0f16b63ec2.stex" ]
-dest_md5="0d964b4f1f84bb55a4b2de7c728dfe07"
 
 [params]
 

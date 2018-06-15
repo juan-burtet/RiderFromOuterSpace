@@ -7,10 +7,7 @@ path="res://.import/down1.png-5fb2698fed7a4bcce7bf7e3b4bb8b179.stex"
 [deps]
 
 source_file="res://Tests/Gameplay Images/movimentação/down/down1.png"
-source_md5="fa2109fff8401f71b7a032e2e35c166d"
-
 dest_files=[ "res://.import/down1.png-5fb2698fed7a4bcce7bf7e3b4bb8b179.stex" ]
-dest_md5="37aec6158b9c5b748bd278d5be30f89d"
 
 [params]
 

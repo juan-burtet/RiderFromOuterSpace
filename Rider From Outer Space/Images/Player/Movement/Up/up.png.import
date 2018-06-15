@@ -7,10 +7,7 @@ path="res://.import/up.png-1bf6140cdb5e67ef7a8883d63a82da4a.stex"
 [deps]
 
 source_file="res://Images/Player/Movement/Up/up.png"
-source_md5="5802c339deb9408516be05a7d91db004"
-
 dest_files=[ "res://.import/up.png-1bf6140cdb5e67ef7a8883d63a82da4a.stex" ]
-dest_md5="8c527a870df7e900a27285d6fd3cab9c"
 
 [params]
 

@@ -7,10 +7,7 @@ path="res://.import/pressioneEnter.png-b5092813884157ff2195125aa11b6f4c.stex"
 [deps]
 
 source_file="res://Images/Menus/Demo/pressioneEnter.png"
-source_md5="64566b517cc1a809a566880e41c96e45"
-
 dest_files=[ "res://.import/pressioneEnter.png-b5092813884157ff2195125aa11b6f4c.stex" ]
-dest_md5="5ca8e61b2faf2e3a6485d9183a0db608"
 
 [params]
 

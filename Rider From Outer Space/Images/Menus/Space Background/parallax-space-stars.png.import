@@ -7,10 +7,7 @@ path="res://.import/parallax-space-stars.png-e19eacc68e4f16e4828c667609b52fb7.st
 [deps]
 
 source_file="res://Images/Menus/Space Background/parallax-space-stars.png"
-source_md5="f1406c25be3ed06706b44667f59892c0"
-
 dest_files=[ "res://.import/parallax-space-stars.png-e19eacc68e4f16e4828c667609b52fb7.stex" ]
-dest_md5="ce3a5c8d1c4ca6ed5b5e4f69baca3029"
 
 [params]
 

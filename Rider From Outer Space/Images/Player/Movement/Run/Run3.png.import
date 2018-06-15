@@ -7,10 +7,7 @@ path="res://.import/Run3.png-9366af019dd7d2e667e2f3fe8f5893ed.stex"
 [deps]
 
 source_file="res://Images/Player/Movement/Run/Run3.png"
-source_md5="360e324af6a37310a946a9e63576b8d9"
-
 dest_files=[ "res://.import/Run3.png-9366af019dd7d2e667e2f3fe8f5893ed.stex" ]
-dest_md5="fd045563bc5315144a5bd25d76df3b3a"
 
 [params]
 

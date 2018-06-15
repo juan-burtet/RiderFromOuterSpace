@@ -7,10 +7,7 @@ path="res://.import/M484BulletCollection1.png-ed6c43b8aa733ec28df66479beaf5485.s
 [deps]
 
 source_file="res://Images/Shots/M484BulletCollection1.png"
-source_md5="e2048a32079c065db8d47715ca975136"
-
 dest_files=[ "res://.import/M484BulletCollection1.png-ed6c43b8aa733ec28df66479beaf5485.stex" ]
-dest_md5="8e980e6f4c8e17c4502f6cf3984bdc07"
 
 [params]
 

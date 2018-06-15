@@ -7,10 +7,7 @@ path="res://.import/machinegun.png-56175d6f5761da384d17ad6df38fc1e7.stex"
 [deps]
 
 source_file="res://Tests/Gameplay Images/movimentação/machinegun.png"
-source_md5="a3319800ccfc672328c4a2668d4d4c4e"
-
 dest_files=[ "res://.import/machinegun.png-56175d6f5761da384d17ad6df38fc1e7.stex" ]
-dest_md5="442cbd87209a63615390dff64c829a7c"
 
 [params]
 

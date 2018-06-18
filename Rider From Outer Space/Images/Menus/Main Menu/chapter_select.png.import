@@ -7,7 +7,10 @@ path="res://.import/chapter_select.png-3814b8d8c8d73dac3c342131e77d0e51.stex"
 [deps]
 
 source_file="res://Images/Menus/Main Menu/chapter_select.png"
+source_md5="5f660465c935e50613ec266f8e24566e"
+
 dest_files=[ "res://.import/chapter_select.png-3814b8d8c8d73dac3c342131e77d0e51.stex" ]
+dest_md5="8a4c260224ea864d13301ecdbe3e1df4"
 
 [params]
 

@@ -7,7 +7,10 @@ path="res://.import/right6.png-e5eb2c8d49fb4be22c89dbe944d78803.stex"
 [deps]
 
 source_file="res://Tests/Gameplay Images/movimentação/right/right6.png"
+source_md5="b078df404e90d3f0ee147b56d96256a4"
+
 dest_files=[ "res://.import/right6.png-e5eb2c8d49fb4be22c89dbe944d78803.stex" ]
+dest_md5="2102530c3a2abd68197b9f57e76d1a51"
 
 [params]
 

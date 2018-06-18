@@ -7,7 +7,10 @@ path="res://.import/parallax-space-ring-planet.png-adc831fafa1a7b538bfb23d235cea
 [deps]
 
 source_file="res://Images/Menus/Space Background/parallax-space-ring-planet.png"
+source_md5="7c8bce09cb6df570a0ad5ce13d700d7d"
+
 dest_files=[ "res://.import/parallax-space-ring-planet.png-adc831fafa1a7b538bfb23d235ceaf2b.stex" ]
+dest_md5="4b0f3abc2175dfd41640a8c731a51115"
 
 [params]
 

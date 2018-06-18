@@ -7,7 +7,10 @@ path="res://.import/quit_game_selected.png-9fe81e2f5a0457672639b975c12ad203.stex
 [deps]
 
 source_file="res://Images/Menus/Main Menu/quit_game_selected.png"
+source_md5="b05713ef3dec3b97d06143570d35cc34"
+
 dest_files=[ "res://.import/quit_game_selected.png-9fe81e2f5a0457672639b975c12ad203.stex" ]
+dest_md5="21106a3a423a026235ab483b909436d9"
 
 [params]
 

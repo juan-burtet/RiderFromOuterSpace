@@ -7,7 +7,10 @@ path="res://.import/Idle5.png-e4b70cd8a2cb87d7b1bb060fc3cee55e.stex"
 [deps]
 
 source_file="res://Tests/Gameplay Images/movimentação/idle/Idle5.png"
+source_md5="7d7a683b835456ec84fd5e8acdb4ae7b"
+
 dest_files=[ "res://.import/Idle5.png-e4b70cd8a2cb87d7b1bb060fc3cee55e.stex" ]
+dest_md5="e08d6c3c4d5e4efbc5df1fa7b539facd"
 
 [params]
 

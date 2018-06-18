@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sfx_sounds_interaction14.wav-9a50b4cf8c05d5d38334c45266901d35.sample"
+
+[deps]
+
+source_file="res://Sounds/Music/MainMenu/sfx_sounds_interaction14.wav"
+source_md5="46253f07ac4dcbf04bc101685369b83a"
+
+dest_files=[ "res://.import/sfx_sounds_interaction14.wav-9a50b4cf8c05d5d38334c45266901d35.sample" ]
+dest_md5="3653a90d9535f1fb082e440326570ac4"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

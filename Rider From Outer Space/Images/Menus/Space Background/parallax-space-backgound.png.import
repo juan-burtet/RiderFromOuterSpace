@@ -7,7 +7,10 @@ path="res://.import/parallax-space-backgound.png-ac88c62622a70570bd03637736e33bd
 [deps]
 
 source_file="res://Images/Menus/Space Background/parallax-space-backgound.png"
+source_md5="918e8c7d852073bdfbb631c45d156c68"
+
 dest_files=[ "res://.import/parallax-space-backgound.png-ac88c62622a70570bd03637736e33bd3.stex" ]
+dest_md5="a4aabccbe62d7e1d49f4084306c425db"
 
 [params]
 

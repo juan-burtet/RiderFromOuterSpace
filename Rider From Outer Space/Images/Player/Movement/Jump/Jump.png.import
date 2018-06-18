@@ -7,7 +7,10 @@ path="res://.import/Jump.png-c423486c89f94acec9c6ed6853360b20.stex"
 [deps]
 
 source_file="res://Images/Player/Movement/Jump/Jump.png"
+source_md5="d5d0e3c9f3e1546a1f12e1300e440914"
+
 dest_files=[ "res://.import/Jump.png-c423486c89f94acec9c6ed6853360b20.stex" ]
+dest_md5="6f7baf65eaf2cef1d64581fa1036a8cc"
 
 [params]
 

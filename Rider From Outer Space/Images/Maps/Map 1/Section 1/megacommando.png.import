@@ -7,7 +7,10 @@ path="res://.import/megacommando.png-a3b3c0d8d803ccc8dd24d420d4999aa9.stex"
 [deps]
 
 source_file="res://Images/Maps/Map 1/Section 1/megacommando.png"
+source_md5="b170a42f131b9ef35bd2346f3052a990"
+
 dest_files=[ "res://.import/megacommando.png-a3b3c0d8d803ccc8dd24d420d4999aa9.stex" ]
+dest_md5="975bde18fd00d6c27c3a40d609da1709"
 
 [params]
 

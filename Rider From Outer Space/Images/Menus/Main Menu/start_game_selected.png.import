@@ -7,7 +7,10 @@ path="res://.import/start_game_selected.png-c8a5a330825175ded671b477a3b36cbf.ste
 [deps]
 
 source_file="res://Images/Menus/Main Menu/start_game_selected.png"
+source_md5="a16ae1dbba79fa1782a97f23aa3a7327"
+
 dest_files=[ "res://.import/start_game_selected.png-c8a5a330825175ded671b477a3b36cbf.stex" ]
+dest_md5="a75528c716688c84c981ac70abef07e2"
 
 [params]
 

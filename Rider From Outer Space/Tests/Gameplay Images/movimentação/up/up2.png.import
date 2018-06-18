@@ -7,7 +7,10 @@ path="res://.import/up2.png-5e89d19584ee43d2756e331b0fa67ba6.stex"
 [deps]
 
 source_file="res://Tests/Gameplay Images/movimentação/up/up2.png"
+source_md5="5636caf2ce05fd1a9fdeb0d2523d832d"
+
 dest_files=[ "res://.import/up2.png-5e89d19584ee43d2756e331b0fa67ba6.stex" ]
+dest_md5="108c57e704fb3065219b55f705f91560"
 
 [params]
 

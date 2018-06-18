@@ -9,14 +9,11 @@ func _ready():
 	menu = 0
 	scaling = 5
 	all_sprites_on_not()
+	$MenuSounds/Music.play()
 	pass
 
 
 func _process(delta):
-	
-	# Desliga todas as sprites
-	#all_sprites_on_not()
-	
 	# Move a opção no Menu
 	move_menu()
 	
@@ -42,14 +39,20 @@ func all_sprites_on_not():
 
 # Função que move a opção escolhida no menu
 func move_menu():
+	var sound = false
 	if Input.is_action_just_pressed("ui_upMenu"):
+		sound = true
 		menu -= 1
 		if menu < 0: menu = 4
 		all_sprites_on_not()
 	elif Input.is_action_just_pressed("ui_downMenu"):
+		sound = true
 		menu += 1
 		if menu > 4: menu = 0
 		all_sprites_on_not()
+	
+	if sound:
+		$MenuSounds/ChangeOption.play()
 	pass
 
 # Função que liga a Sprite da opção selecionada
@@ -61,7 +64,7 @@ func option_selected():
 		3: $MenuOptions/Options.play("selected")
 		4: $MenuOptions/QuitGame.play("selected")
 	pass
-	
+
 # Função para pressionar uma opção
 func option_pressed():
 	if Input.is_action_just_pressed("ui_accept"):
@@ -126,3 +129,7 @@ func change_planet_size(sprite):
 		scaling = 5
 	
 	pass
+
+# Função que é ativada quando a musica acabou
+func _on_Music_finished():
+	$MenuSounds/Music.play()

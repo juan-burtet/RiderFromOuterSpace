@@ -7,7 +7,10 @@ path="res://.import/cave_wall.png-95bb45b04c333ab8b08c37fa4a5e4fcd.stex"
 [deps]
 
 source_file="res://Images/Maps/Map 1/Section 2/cave_wall.png"
+source_md5="5ba24b2551fbed037d9e1423f54aab3c"
+
 dest_files=[ "res://.import/cave_wall.png-95bb45b04c333ab8b08c37fa4a5e4fcd.stex" ]
+dest_md5="dfc3f00428e9be85079a390c35e60a98"
 
 [params]
 

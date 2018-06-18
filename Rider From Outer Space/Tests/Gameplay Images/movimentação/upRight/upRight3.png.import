@@ -7,7 +7,10 @@ path="res://.import/upRight3.png-60ae4c2f40a620a6f6c6c1afd0c6c5a4.stex"
 [deps]
 
 source_file="res://Tests/Gameplay Images/movimentação/upRight/upRight3.png"
+source_md5="fd818bd760f9fd82f67c293c3732d02c"
+
 dest_files=[ "res://.import/upRight3.png-60ae4c2f40a620a6f6c6c1afd0c6c5a4.stex" ]
+dest_md5="491eea9480543e32a9032525435224bf"
 
 [params]
 

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/wyver9_Arcade Title.wav-f63992ca235cca4275c676e608185f5c.sample"
+
+[deps]
+
+source_file="res://Sounds/Music/MainMenu/wyver9_Arcade Title.wav"
+source_md5="581eebd67e6e6335c225ddc6c7908abb"
+
+dest_files=[ "res://.import/wyver9_Arcade Title.wav-f63992ca235cca4275c676e608185f5c.sample" ]
+dest_md5="6fa57cb8e9dca4367e97b5b721efbc07"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

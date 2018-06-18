@@ -7,7 +7,10 @@ path="res://.import/map1section2.png-d59aa63b972bc942851cfb345a3ec458.stex"
 [deps]
 
 source_file="res://Images/Maps/Map 1/Section 2/map1section2.png"
+source_md5="b19475276577a678a2739a18ea830d24"
+
 dest_files=[ "res://.import/map1section2.png-d59aa63b972bc942851cfb345a3ec458.stex" ]
+dest_md5="e5146a0975473e11be82bd7a330ceeb6"
 
 [params]
 

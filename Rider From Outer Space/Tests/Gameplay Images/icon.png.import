@@ -7,7 +7,10 @@ path="res://.import/icon.png-09860d572d66ec3ea30a4f4cf20cf828.stex"
 [deps]
 
 source_file="res://Tests/Gameplay Images/icon.png"
+source_md5="86aa1d9e8afaf5ec9cabb7e89945c7a8"
+
 dest_files=[ "res://.import/icon.png-09860d572d66ec3ea30a4f4cf20cf828.stex" ]
+dest_md5="eb30d211c3ac73d20d9266208145d4d4"
 
 [params]
 

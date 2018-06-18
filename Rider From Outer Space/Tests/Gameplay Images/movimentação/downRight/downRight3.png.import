@@ -7,7 +7,10 @@ path="res://.import/downRight3.png-de1901953fa0b949785d7c429fa92616.stex"
 [deps]
 
 source_file="res://Tests/Gameplay Images/movimentação/downRight/downRight3.png"
+source_md5="0fe4f9b7820bce875920cdae884fee77"
+
 dest_files=[ "res://.import/downRight3.png-de1901953fa0b949785d7c429fa92616.stex" ]
+dest_md5="af46aadece7edbc6ee1c9ee46f7c4324"
 
 [params]
 

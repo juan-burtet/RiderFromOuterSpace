@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Scenes/Menus/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Images/Menus/Space Background/parallax-space-backgound.png" type="Texture" id=2]
@@ -19,6 +19,8 @@
 [ext_resource path="res://Images/Menus/Main Menu/options_selected.png" type="Texture" id=17]
 [ext_resource path="res://Images/Menus/Main Menu/quit_game.png" type="Texture" id=18]
 [ext_resource path="res://Images/Menus/Main Menu/quit_game_selected.png" type="Texture" id=19]
+[ext_resource path="res://Sounds/Music/MainMenu/wyver9_Arcade Title.wav" type="AudioStream" id=20]
+[ext_resource path="res://Sounds/Music/MainMenu/sfx_sounds_interaction14.wav" type="AudioStream" id=21]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -106,6 +108,7 @@ script = ExtResource( 1 )
 
 [node name="Parallax" type="ParallaxBackground" parent="." index="0"]
 
+editor/display_folded = true
 layer = -1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -213,17 +216,15 @@ _sections_unfolded = [ "Transform" ]
 [node name="StartGame" type="AnimatedSprite" parent="MenuOptions" index="0"]
 
 position = Vector2( 384, 256 )
-scale = Vector2( 2, 2 )
+scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 2 )
 animation = "selected"
-frame = 1
-playing = true
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="LoadGame" type="AnimatedSprite" parent="MenuOptions" index="1"]
 
 position = Vector2( 384, 288 )
-scale = Vector2( 2, 2 )
+scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 3 )
 animation = "not"
 playing = true
@@ -233,7 +234,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="ChapterSelect" type="AnimatedSprite" parent="MenuOptions" index="2"]
 
 position = Vector2( 384, 320 )
-scale = Vector2( 2, 2 )
+scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 4 )
 animation = "not"
 playing = true
@@ -243,7 +244,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="Options" type="AnimatedSprite" parent="MenuOptions" index="3"]
 
 position = Vector2( 384, 352 )
-scale = Vector2( 2, 2 )
+scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 5 )
 animation = "not"
 playing = true
@@ -253,11 +254,31 @@ _sections_unfolded = [ "Transform" ]
 [node name="QuitGame" type="AnimatedSprite" parent="MenuOptions" index="4"]
 
 position = Vector2( 384, 384 )
-scale = Vector2( 2, 2 )
+scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 6 )
 animation = "not"
 playing = true
 offset = Vector2( 0, 8 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="MenuSounds" type="Node" parent="." index="4"]
+
+[node name="Music" type="AudioStreamPlayer" parent="MenuSounds" index="0"]
+
+stream = ExtResource( 20 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "MUSIC"
+
+[node name="ChangeOption" type="AudioStreamPlayer" parent="MenuSounds" index="1"]
+
+stream = ExtResource( 21 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "SFX"
+
+[connection signal="finished" from="MenuSounds/Music" to="." method="_on_Music_finished"]
 
 

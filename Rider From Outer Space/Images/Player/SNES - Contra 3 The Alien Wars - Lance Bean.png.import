@@ -7,7 +7,10 @@ path="res://.import/SNES - Contra 3 The Alien Wars - Lance Bean.png-df1dda046242
 [deps]
 
 source_file="res://Images/Player/SNES - Contra 3 The Alien Wars - Lance Bean.png"
+source_md5="bd3e6811da8a1f101368c3b45ff2aa5f"
+
 dest_files=[ "res://.import/SNES - Contra 3 The Alien Wars - Lance Bean.png-df1dda046242a8b6a6f4a9c28a9c2ca5.stex" ]
+dest_md5="d9bd48384d236b8801e43a26c753fc5c"
 
 [params]
 

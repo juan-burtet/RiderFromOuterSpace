@@ -2,14 +2,15 @@ extends Node
 
 const firstLevel = "res://Scenes/Maps/Map 1/Section 1/Map 1 Section 1.tscn"
 
-var menu
-var scaling 
+var menu = 0
+var scaling = 5
 
 func _ready():
 	menu = 0
 	scaling = 5
 	all_sprites_on_not()
 	$MenuSounds/Music.play()
+	set_process(true)
 	pass
 
 

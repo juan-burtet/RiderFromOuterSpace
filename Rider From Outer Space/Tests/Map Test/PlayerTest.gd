@@ -1,9 +1,11 @@
 # PlayerTest.gd
 extends KinematicBody2D
 
+# cenas das fases
 const firstLevel = "res://Scenes/Maps/Map 1/Section 1/Map 1 Section 1.tscn"
 const SecondLevel = "res://Scenes/Maps/Map 1/Section 2/Map 1 Section 2.tscn"
 const mainMenu = "res://Scenes/Menus/MainMenu.tscn"
+const PAUSE_SCENE = preload("res://Scenes/Player/Pause/Pause.tscn")
 
 # Cenas das armas
 const PISTOL_SCENE = preload("res://Tests/Map Test/Pistol.tscn")
@@ -28,6 +30,7 @@ var direction = Vector2(1,0) # Direção do tiro
 var gun_mode # Escolha da arma
 var direcao_padrao = 1 # Direção padrao da arma
 var hp = 6 # vida do personagem
+var friction = false # Indica que tu parou de se movimentar
 
 # Timers 
 onready var pistol_timer = get_node("Timers/pistol_timer")
@@ -46,23 +49,65 @@ func _ready():
 
 # Função que roda a cada frame
 func _physics_process(delta):
+	# verifica se o personagem morreu
+	check_life()
+	
+	# atualiza informacoes do jogador
+	update_player()
+	
+	# Confere se o pause foi selecionado
+	pause_menu()
+	
+	# Confere se alguma direção de tiro foi pega
+	get_shot_direction()
+	
+	# mover o personagem
+	move_player()
+
+	# Controla os comandos do pulo
+	jump_control()
+
+	# movimenta o personagem
+	motion = move_and_slide(motion, UP)
+	
+	# Escolha da arma
+	choose_weapon()
+	
+	# Faz a ação de tiro se o botão foi pressionado
+	check_shoot()
+	
+	# Atualiza as sprites
+	atualiza_sprites()
+	
+	pass
+	# END physics_process
+
+# verifica se o personagem morreu
+func check_life():
 	if !hp:
 		if get_parent().get_name() == "Map 1 Section 1":
 			get_tree().change_scene(firstLevel)
 		else:
 			get_tree().change_scene(SecondLevel)
-	
+	pass
+
+# Funcao que atualiza algumas opcoes do player
+func update_player():
 	# Eixo Y é atualizado com a gravidade
 	motion.y += GRAVITY
-	# Indica que tu parou de se movimentar
-	var friction = false
 	# Para ficar sempre parado no eixo x
 	direction.y = 0
 	direction.x = direcao_padrao
-	
-	# Confere se alguma direção de tiro foi pega
-	get_shot_direction()
-	
+	pass
+
+func pause_menu():
+	if Input.is_action_just_pressed("ui_esc"):
+		get_tree().paused = true
+		get_parent().add_child(PAUSE_SCENE.instance())
+	pass
+
+# Funcao que move o personagem 
+func move_player():
 	# Se a tecla esquerda foi pressionada, movimenta pra esquerda
 	if Input.is_action_pressed("ui_left"):
 		# Movimenta o personagem pra esquerda
@@ -93,25 +138,9 @@ func _physics_process(delta):
 		friction = true
 		# Toca a Sprite parado
 		$Sprite.play("Idle")
-
-	# Controla os comandos do pulo
-	jump_control(friction)
-
-	# movimenta o personagem
-	motion = move_and_slide(motion, UP)
-	
-	# Escolha da arma
-	choose_weapon()
-	
-	# Faz a ação de tiro se o botão foi pressionado
-	check_shoot()
-	
-	# Atualiza as sprites
-	atualiza_sprites()
-	
 	pass
-	# END physics_process
 
+# Funcao para atualizar as sprites do personagem
 func atualiza_sprites():
 	var x = direction.x
 	var y = direction.y
@@ -209,7 +238,7 @@ func move_right():
 	# END move_right
 
 # Função que faz o controle do pulo
-func jump_control(friction):
+func jump_control():
 	# Se o personagem estiver no chão
 	if is_on_floor():
 		# Se a tecla espaço foi pressionada, pula

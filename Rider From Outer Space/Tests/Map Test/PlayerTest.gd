@@ -98,6 +98,8 @@ func update_player():
 	# Para ficar sempre parado no eixo x
 	direction.y = 0
 	direction.x = direcao_padrao
+	# friction só é real ao ṕparar de movimentar
+	friction = false
 	pass
 
 func pause_menu():

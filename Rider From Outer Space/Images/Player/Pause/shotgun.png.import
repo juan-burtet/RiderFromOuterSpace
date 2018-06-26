@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/upgraded.png-af91470e2700ea53fbd52db0c21e7316.stex"
+path="res://.import/shotgun.png-4a830499b70714af4341565cedd7befe.stex"
 
 [deps]
 
-source_file="res://Images/Player/Pause/upgraded.png"
-source_md5="f5f467e9e11063bca695cde6c39b2d84"
+source_file="res://Images/Player/Pause/shotgun.png"
+source_md5="e9ac4a60a1c31ebff491a2a82e79b3ea"
 
-dest_files=[ "res://.import/upgraded.png-af91470e2700ea53fbd52db0c21e7316.stex" ]
-dest_md5="da46eb11f897e5085184902ff2556713"
+dest_files=[ "res://.import/shotgun.png-4a830499b70714af4341565cedd7befe.stex" ]
+dest_md5="6d02dad73ebc033b4f16eda73725d46f"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

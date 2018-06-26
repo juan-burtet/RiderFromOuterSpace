@@ -102,7 +102,7 @@ animations = [ {
 "speed": 3.0
 } ]
 
-[node name="MainMenu" type="Node" index="0"]
+[node name="MainMenu" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -208,7 +208,6 @@ position = Vector2( 384, -32 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "default"
-frame = 1
 playing = true
 _sections_unfolded = [ "Transform" ]
 

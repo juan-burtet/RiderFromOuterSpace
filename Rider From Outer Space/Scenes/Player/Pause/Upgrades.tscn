@@ -1,13 +1,140 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://Images/Player/Pause/raw.png" type="Texture" id=1]
+[ext_resource path="res://Images/Player/Pause/jetpack.png" type="Texture" id=1]
+[ext_resource path="res://Images/Player/Pause/raw.png" type="Texture" id=2]
+[ext_resource path="res://Images/Player/Pause/pistol.png" type="Texture" id=3]
+[ext_resource path="res://Images/Player/Pause/shotgun.png" type="Texture" id=4]
+[ext_resource path="res://Images/Player/Pause/machineGun.png" type="Texture" id=5]
+[ext_resource path="res://Images/Player/Pause/life.png" type="Texture" id=6]
+[ext_resource path="res://Images/Player/Pause/up_1.png" type="Texture" id=7]
+[ext_resource path="res://Images/Player/Pause/up_3.png" type="Texture" id=8]
+[ext_resource path="res://Images/Player/Pause/up_2.png" type="Texture" id=9]
 
-[node name="Upgrades" type="Node" index="0"]
+[sub_resource type="SpriteFrames" id=1]
 
-[node name="raw" type="Sprite" parent="." index="0"]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "Jetpack",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Pistol",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "Shotgun",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "MachineGun",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "Life",
+"speed": 3.0
+} ]
 
-texture = ExtResource( 1 )
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "3",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "2",
+"speed": 5.0
+} ]
+
+[node name="Upgrades" type="Node"]
+
+[node name="Background" type="AnimatedSprite" parent="." index="0"]
+
+frames = SubResource( 1 )
+animation = "Life"
+playing = true
 centered = false
 _sections_unfolded = [ "Offset", "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Points" type="Node" parent="." index="1"]
+
+editor/display_folded = true
+
+[node name="Life" type="AnimatedSprite" parent="Points" index="0"]
+
+position = Vector2( 228, 147 )
+frames = SubResource( 2 )
+animation = "0"
+playing = true
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Jetpack" type="AnimatedSprite" parent="Points" index="1"]
+
+position = Vector2( 464, 147 )
+frames = SubResource( 2 )
+animation = "0"
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Pistol" type="AnimatedSprite" parent="Points" index="2"]
+
+position = Vector2( 135, 249 )
+frames = SubResource( 2 )
+animation = "0"
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Shotgun" type="AnimatedSprite" parent="Points" index="3"]
+
+position = Vector2( 345, 249 )
+frames = SubResource( 2 )
+animation = "0"
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MachineGun" type="AnimatedSprite" parent="Points" index="4"]
+
+position = Vector2( 595, 249 )
+frames = SubResource( 2 )
+animation = "0"
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Info" type="Node" parent="." index="2"]
+
+[node name="Image" type="AnimatedSprite" parent="Info" index="0"]
+
+animation = "Life"
 
 

@@ -7,10 +7,7 @@ path="res://.import/life.png-6d6406d053621bcb7ab13dd00c04515f.stex"
 [deps]
 
 source_file="res://Images/Player/Pause/life.png"
-source_md5="314fc90af678aaef2a1f9c548d3ad264"
-
 dest_files=[ "res://.import/life.png-6d6406d053621bcb7ab13dd00c04515f.stex" ]
-dest_md5="708e4e0aad69cf56721ed467e9b04e50"
 
 [params]
 

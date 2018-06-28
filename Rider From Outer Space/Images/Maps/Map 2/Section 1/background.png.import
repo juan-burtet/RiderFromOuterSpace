@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pistol.png-51a8bd3e963a0bec58229255550ac535.stex"
+path="res://.import/background.png-a01407240d23933538a98dfca34e700f.stex"
 
 [deps]
 
-source_file="res://Images/Player/Pause/pistol.png"
-dest_files=[ "res://.import/pistol.png-51a8bd3e963a0bec58229255550ac535.stex" ]
+source_file="res://Images/Maps/Map 2/Section 1/background.png"
+dest_files=[ "res://.import/background.png-a01407240d23933538a98dfca34e700f.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -48,5 +48,5 @@ func rotate_sprite(x):
 
 func _on_Shotgun_body_entered(body):
 	queue_free()
-	if body.get_name() != "TileMap":
+	if body.get_name() != "TileMap" and body.get_name() != "TileMap2":
 		body.does_damage(damage)

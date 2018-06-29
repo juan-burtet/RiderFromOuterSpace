@@ -20,5 +20,5 @@ func _on_Visibility_screen_exited():
 
 func _on_MachineGun_body_entered(body):
 	queue_free()
-	if body.get_name() != "TileMap":
+	if body.get_name() != "TileMap" and body.get_name() != "TileMap2":
 		body.does_damage(damage)

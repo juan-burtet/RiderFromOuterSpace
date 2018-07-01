@@ -7,7 +7,10 @@ path="res://.import/up_3.png-948314bb380fb461e71a1194372aeb20.stex"
 [deps]
 
 source_file="res://Images/Player/Pause/up_3.png"
+source_md5="6fee5040464dba5d1240faa870614c8f"
+
 dest_files=[ "res://.import/up_3.png-948314bb380fb461e71a1194372aeb20.stex" ]
+dest_md5="cf8245325aa2ed196d192a8bb0ded825"
 
 [params]
 

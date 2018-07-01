@@ -7,7 +7,10 @@ path="res://.import/pause_menu.png-29570a03dcb882cdfe07ae49f363d5d4.stex"
 [deps]
 
 source_file="res://Images/Player/Pause/pause_menu.png"
+source_md5="e76250729b82ab7b98b68bee41c30a8a"
+
 dest_files=[ "res://.import/pause_menu.png-29570a03dcb882cdfe07ae49f363d5d4.stex" ]
+dest_md5="945753465c7d7c4c758fa05e0c7b853a"
 
 [params]
 

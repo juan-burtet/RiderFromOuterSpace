@@ -7,7 +7,10 @@ path="res://.import/omegateam2.png-fb1fd87184d1c492b8090e1f6eb06d1a.stex"
 [deps]
 
 source_file="res://Images/Maps/Map 2/Section 2/omegateam2.png"
+source_md5="d9427d091274fb27f61a27322d4de53f"
+
 dest_files=[ "res://.import/omegateam2.png-fb1fd87184d1c492b8090e1f6eb06d1a.stex" ]
+dest_md5="360da23ef75d3251889ccd364f26ed37"
 
 [params]
 

@@ -7,7 +7,10 @@ path="res://.import/lifeImage.png-baa0a1316d97c2dc52a094cfebe99bd0.stex"
 [deps]
 
 source_file="res://Images/Player/Pause/lifeImage.png"
+source_md5="d7b3784e3e11a98cdb9fe5ea767846d0"
+
 dest_files=[ "res://.import/lifeImage.png-baa0a1316d97c2dc52a094cfebe99bd0.stex" ]
+dest_md5="668dfe7c1a5214dd6280163386df8c3d"
 
 [params]
 

@@ -7,7 +7,10 @@ path="res://.import/raw.png-7d10779a91c48bc90b6e56e9b262a247.stex"
 [deps]
 
 source_file="res://Images/Player/Pause/raw.png"
+source_md5="857b4daccaeb812f4a19f803f202e011"
+
 dest_files=[ "res://.import/raw.png-7d10779a91c48bc90b6e56e9b262a247.stex" ]
+dest_md5="c125f2f20092881127e5da960ec85700"
 
 [params]
 

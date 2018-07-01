@@ -7,7 +7,10 @@ path="res://.import/jetpack.png-ba97446ead18abc5eb13539f25d55a6a.stex"
 [deps]
 
 source_file="res://Images/Player/Pause/jetpack.png"
+source_md5="ad314fb9dd9544966f9f281836c39e7c"
+
 dest_files=[ "res://.import/jetpack.png-ba97446ead18abc5eb13539f25d55a6a.stex" ]
+dest_md5="3a46f97502349faec4c25f3d4477e37e"
 
 [params]
 

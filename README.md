@@ -50,9 +50,12 @@
 
 
 ## Finalizar:
-  - IA dos inimigos
-  - IA do primeiro chefe
-  - artes do personagem/inimigos/chefe
+
+- [ ] Modificar mapa 2 seção 1 (está feito visualmente)
+- [ ] Tela de Morte
+- [ ] Animações
+- [ ] Finalizar os mapas!
+= [ ] Adicionar dialogos/história
   
 ## Colisões dos Personagens
   * __Personagem[1]__: Toca em Inimigos e Mapa e Explosão

@@ -7,10 +7,7 @@ path="res://.import/background.png-cd6920fb9a3ebfe77592d2d03a2d53c5.stex"
 [deps]
 
 source_file="res://Images/Maps/Map 3/Section 1/background.png"
-source_md5="f45e1ecb15db248306376d805bdbd97e"
-
 dest_files=[ "res://.import/background.png-cd6920fb9a3ebfe77592d2d03a2d53c5.stex" ]
-dest_md5="7fe8823d847665ff5b1c70a09ec0163a"
 
 [params]
 
@@ -19,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

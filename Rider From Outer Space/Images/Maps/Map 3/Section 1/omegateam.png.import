@@ -7,10 +7,7 @@ path="res://.import/omegateam.png-64412e2322c702e6eacd396f6f6affac.stex"
 [deps]
 
 source_file="res://Images/Maps/Map 3/Section 1/omegateam.png"
-source_md5="d9427d091274fb27f61a27322d4de53f"
-
 dest_files=[ "res://.import/omegateam.png-64412e2322c702e6eacd396f6f6affac.stex" ]
-dest_md5="319a612d16e416eaf89f99c469724854"
 
 [params]
 
@@ -19,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

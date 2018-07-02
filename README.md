@@ -55,7 +55,7 @@
 - [ ] Tela de Morte
 - [ ] Animações
 - [ ] Finalizar os mapas!
-= [ ] Adicionar dialogos/história
+- [ ] Adicionar dialogos/história
   
 ## Colisões dos Personagens
   * __Personagem[1]__: Toca em Inimigos e Mapa e Explosão

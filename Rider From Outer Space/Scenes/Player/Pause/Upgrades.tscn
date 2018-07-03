@@ -1,18 +1,18 @@
 [gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scripts/Player/Pause/Upgrades.gd" type="Script" id=1]
-[ext_resource path="res://Images/Player/Pause/shotgun.png" type="Texture" id=2]
+[ext_resource path="res://Images/Player/Pause/pistol.png" type="Texture" id=2]
 [ext_resource path="res://Images/Player/Pause/raw.png" type="Texture" id=3]
-[ext_resource path="res://Images/Player/Pause/machineGun.png" type="Texture" id=4]
-[ext_resource path="res://Images/Player/Pause/pistol.png" type="Texture" id=5]
+[ext_resource path="res://Images/Player/Pause/shotgun.png" type="Texture" id=4]
+[ext_resource path="res://Images/Player/Pause/machineGun.png" type="Texture" id=5]
 [ext_resource path="res://Images/Player/Pause/jetpack.png" type="Texture" id=6]
 [ext_resource path="res://Images/Player/Pause/life.png" type="Texture" id=7]
-[ext_resource path="res://Images/Player/Pause/up_2.png" type="Texture" id=8]
-[ext_resource path="res://Images/Player/Pause/up_1.png" type="Texture" id=9]
+[ext_resource path="res://Images/Player/Pause/up_1.png" type="Texture" id=8]
+[ext_resource path="res://Images/Player/Pause/up_2.png" type="Texture" id=9]
 [ext_resource path="res://Images/Player/Pause/up_3.png" type="Texture" id=10]
-[ext_resource path="res://Images/Player/Pause/shotgunImage.png" type="Texture" id=11]
-[ext_resource path="res://Images/Player/Pause/machineGunImage.png" type="Texture" id=12]
-[ext_resource path="res://Images/Player/Pause/pistolImage.png" type="Texture" id=13]
+[ext_resource path="res://Images/Player/Pause/pistolImage.png" type="Texture" id=11]
+[ext_resource path="res://Images/Player/Pause/shotgunImage.png" type="Texture" id=12]
+[ext_resource path="res://Images/Player/Pause/machineGunImage.png" type="Texture" id=13]
 [ext_resource path="res://Images/Player/Pause/jetPackImage.png" type="Texture" id=14]
 [ext_resource path="res://Images/Player/Pause/lifeImage.png" type="Texture" id=15]
 [ext_resource path="res://Fonts/PressStart2P.ttf" type="DynamicFontData" id=16]
@@ -22,17 +22,17 @@
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
 "loop": true,
-"name": "Shotgun",
+"name": "Pistol",
 "speed": 3.0
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 3 ) ],
 "loop": true,
-"name": "MachineGun",
+"name": "Shotgun",
 "speed": 3.0
 }, {
 "frames": [ ExtResource( 5 ), ExtResource( 3 ) ],
 "loop": true,
-"name": "Pistol",
+"name": "MachineGun",
 "speed": 3.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 3 ) ],
@@ -49,24 +49,24 @@ animations = [ {
 [sub_resource type="SpriteFrames" id=2]
 
 animations = [ {
-"frames": [  ],
-"loop": true,
-"name": "0",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 8 ) ],
 "loop": true,
-"name": "2",
+"name": "1",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 9 ) ],
 "loop": true,
-"name": "1",
+"name": "2",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 10 ) ],
 "loop": true,
 "name": "3",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "0",
 "speed": 5.0
 } ]
 
@@ -75,17 +75,17 @@ animations = [ {
 animations = [ {
 "frames": [ ExtResource( 11 ) ],
 "loop": true,
-"name": "Shotgun",
+"name": "Pistol",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 12 ) ],
 "loop": true,
-"name": "MachineGun",
+"name": "Shotgun",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 13 ) ],
 "loop": true,
-"name": "Pistol",
+"name": "MachineGun",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 14 ) ],
@@ -117,7 +117,7 @@ extra_spacing_space = -2
 font_data = ExtResource( 16 )
 _sections_unfolded = [ "Font" ]
 
-[node name="Upgrades" type="Node" index="0"]
+[node name="Upgrades" type="Node"]
 
 script = ExtResource( 1 )
 

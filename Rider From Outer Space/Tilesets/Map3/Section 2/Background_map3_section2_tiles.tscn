@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Images/Maps/Map 3/Section 2/omegateam.png" type="Texture" id=1]
+
+[node name="Background_map3_section2_tiles" type="Node" index="0"]
+
+[node name="bg" type="Sprite" parent="." index="0"]
+
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 592, 64, 48, 48 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+[node name="bg2" type="Sprite" parent="." index="1"]
+
+position = Vector2( 160, 0 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 688, 16, 48, 48 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+

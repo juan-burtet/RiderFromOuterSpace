@@ -7,7 +7,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 8, 8 )
 
-[node name="Map3_Section2_Tiles" type="Node"]
+[node name="Map3_Section2_Tiles" type="Node" index="0"]
 
 [node name="ground0" type="Sprite" parent="." index="0"]
 
@@ -352,6 +352,19 @@ texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 608, 128, 16, 16 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="full" type="Sprite" parent="." index="19"]
+
+position = Vector2( 480, 0 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 592, 80, 32, 32 )
 _sections_unfolded = [ "Offset", "Region", "Transform" ]
 __meta__ = {
 "_edit_group_": true

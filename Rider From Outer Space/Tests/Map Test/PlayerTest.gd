@@ -31,6 +31,7 @@ var gun_mode # Escolha da arma
 var direcao_padrao = 1 # Direção padrao da arma
 var hp = 6 # vida do personagem
 var friction = false # Indica que tu parou de se movimentar
+var can_move = true
 
 # Timers 
 onready var pistol_timer = get_node("Timers/pistol_timer")
@@ -39,13 +40,32 @@ onready var machinegun_timer = get_node("Timers/machinegun_timer")
 
 # Função ativada quando o nó é iniciado
 func _ready():
-	set_process(true)
+	set_process(false)
 	pistol_timer.set_one_shot(false)
 	shotgun_timer.set_one_shot(false)
 	machinegun_timer.set_one_shot(false)
 	gun_mode = 1
 	pass
 	# END _ready
+
+func _process(delta):
+	update_player()
+	atualiza_sprites()
+	
+	if not is_on_floor():
+		if motion.y < 0:
+			# Toca a Sprite do Pulo
+			$Sprite.play("Jump")
+			
+		# Se o Personagem estiver caindo
+		else:
+			# Toca a Sprite de Queda
+			$Sprite.play("Fall")
+	else:
+		$Sprite.play("Idle")
+	
+	motion = move_and_slide(motion, UP)
+
 
 # Função que roda a cada frame
 func _physics_process(delta):
@@ -121,14 +141,15 @@ func move_player():
 			if $GUI.is_complete():
 				dash(-DASH_SPEED)
 				$GUI.usou_dash()
+
 	# Se a teclada direita foi pressionada, movimenta pra direita
 	elif Input.is_action_pressed("ui_right"):
 		# Só faz o dash se o lock não tiver habilitado
 		#if !Input.is_action_pressed("ui_lock"):
-			
+		
 		# Movimenta o personagem pra direita
 		move_right()
-			
+		
 		if Input.is_action_just_pressed("ui_dash"):
 			if $GUI.is_complete():
 				dash(DASH_SPEED)
@@ -364,3 +385,11 @@ func _on_shotgun_timer_timeout():
 func _on_machinegun_timer_timeout():
 	machinegun_timer.set_one_shot(false)
 	pass # replace with function body
+
+# indica se tu pode se movimentar
+func set_can_move(value):
+	can_move = value
+
+# retorna o valor de can_move
+func get_can_move():
+	return can_move

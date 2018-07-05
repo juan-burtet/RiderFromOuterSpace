@@ -33,7 +33,7 @@ extents = Vector2( 32, 40 )
 custom_solver_bias = 0.0
 radius = 100.0
 
-[node name="Bomber" type="KinematicBody2D"]
+[node name="Bomber" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 2

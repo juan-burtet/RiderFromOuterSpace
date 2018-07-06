@@ -38,7 +38,7 @@ custom_solver_bias = 0.0
 radius = 30.0
 height = 83.0
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 256 )
@@ -130,7 +130,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/Barrier" index="0"]
 
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="PlayerTest" parent="." index="3" instance=ExtResource( 17 )]
 

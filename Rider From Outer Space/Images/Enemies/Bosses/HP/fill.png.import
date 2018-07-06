@@ -7,7 +7,10 @@ path="res://.import/fill.png-061abb6908c7dfde1ac9aa5fb927a194.stex"
 [deps]
 
 source_file="res://Images/Enemies/Bosses/HP/fill.png"
+source_md5="29b38670791b0e87fe2c5ca7a2e987b0"
+
 dest_files=[ "res://.import/fill.png-061abb6908c7dfde1ac9aa5fb927a194.stex" ]
+dest_md5="cf9c1345d301c3b3072ff807fcd1b53a"
 
 [params]
 

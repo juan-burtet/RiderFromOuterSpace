@@ -7,7 +7,10 @@ path="res://.import/3.png-58492089529ba38c19ad1f71a7687923.stex"
 [deps]
 
 source_file="res://Images/Enemies/Bosses/3/Ultra/3.png"
+source_md5="5f5e11c5679296658d904760230b2442"
+
 dest_files=[ "res://.import/3.png-58492089529ba38c19ad1f71a7687923.stex" ]
+dest_md5="854ec3e59cfa332413e9b302f8a6f014"
 
 [params]
 

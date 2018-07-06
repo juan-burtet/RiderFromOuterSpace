@@ -7,7 +7,10 @@ path="res://.import/under.png-3c916b09a79113be5d44ac2fe071451e.stex"
 [deps]
 
 source_file="res://Images/Enemies/Bosses/HP/under.png"
+source_md5="dc079ac67c446da9b27321b052354d96"
+
 dest_files=[ "res://.import/under.png-3c916b09a79113be5d44ac2fe071451e.stex" ]
+dest_md5="ceed7a8d60f9c66ad8138dac090ed589"
 
 [params]
 

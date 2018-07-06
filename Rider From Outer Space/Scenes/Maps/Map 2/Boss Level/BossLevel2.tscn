@@ -31,17 +31,17 @@ animations = [ {
 "speed": 15.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 40, 80 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 5, 290 )
 
-[node name="BossLevel2" type="Node" index="0"]
+[node name="BossLevel2" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -88,7 +88,7 @@ position = Vector2( 0, -25 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "default"
-frame = 6
+frame = 8
 playing = true
 flip_h = true
 _sections_unfolded = [ "Transform" ]
@@ -96,7 +96,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/Turing" index="1"]
 
 position = Vector2( 0, -25 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Info" parent="Boss/Turing" index="2" instance=ExtResource( 20 )]
@@ -114,7 +114,7 @@ _sections_unfolded = [ "Collision" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/Barrier" index="0"]
 
 position = Vector2( 32, -96 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="PlayerTest" parent="." index="2" instance=ExtResource( 21 )]
 

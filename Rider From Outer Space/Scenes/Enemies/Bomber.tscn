@@ -86,7 +86,6 @@ collision_mask = 1
 [node name="AreaExplode" type="Area2D" parent="." index="6"]
 
 editor/display_folded = true
-visible = false
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0

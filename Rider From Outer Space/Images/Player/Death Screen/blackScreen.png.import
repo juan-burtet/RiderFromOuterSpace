@@ -7,7 +7,10 @@ path="res://.import/blackScreen.png-e8f766a6dabfe97474d49338f457ee9b.stex"
 [deps]
 
 source_file="res://Images/Player/Death Screen/blackScreen.png"
+source_md5="84574fa291e72b637e6e2061e2e4b6fe"
+
 dest_files=[ "res://.import/blackScreen.png-e8f766a6dabfe97474d49338f457ee9b.stex" ]
+dest_md5="65cb3b754e14d65e77d52f3c1a8c625b"
 
 [params]
 

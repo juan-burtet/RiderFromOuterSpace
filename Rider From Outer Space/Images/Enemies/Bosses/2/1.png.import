@@ -7,7 +7,10 @@ path="res://.import/1.png-f96c0a08ca0d231a073bd26247c5b160.stex"
 [deps]
 
 source_file="res://Images/Enemies/Bosses/2/1.png"
+source_md5="4c44b08e35f395506531c491d629b82a"
+
 dest_files=[ "res://.import/1.png-f96c0a08ca0d231a073bd26247c5b160.stex" ]
+dest_md5="2014f7147f16c9ef04e6c41daaa0dc47"
 
 [params]
 

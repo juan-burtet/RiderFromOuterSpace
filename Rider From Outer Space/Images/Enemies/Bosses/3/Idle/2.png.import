@@ -7,7 +7,10 @@ path="res://.import/2.png-b75b5180713c5e8872d726275fea718d.stex"
 [deps]
 
 source_file="res://Images/Enemies/Bosses/3/Idle/2.png"
+source_md5="9c0ff007d73bf0c04a3e4cfb21d11648"
+
 dest_files=[ "res://.import/2.png-b75b5180713c5e8872d726275fea718d.stex" ]
+dest_md5="aa5ae697693efb8f3fc95e7e9ac8c027"
 
 [params]
 

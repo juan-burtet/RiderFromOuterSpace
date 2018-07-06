@@ -7,7 +7,10 @@ path="res://.import/death4.png-7bdad895137a7c0995f9acee58668683.stex"
 [deps]
 
 source_file="res://Images/Enemies/Bosses/1/Death/death4.png"
+source_md5="33a807c30627b3d0e44dba28a5ee4dd8"
+
 dest_files=[ "res://.import/death4.png-7bdad895137a7c0995f9acee58668683.stex" ]
+dest_md5="fd1fe86f5af925d74c26bcf7d168e167"
 
 [params]
 

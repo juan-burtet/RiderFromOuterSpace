@@ -7,7 +7,10 @@ path="res://.import/life4.png-f14633feb5846acca7106e01d550e5ef.stex"
 [deps]
 
 source_file="res://Images/Enemies/Bosses/1/Life/life4.png"
+source_md5="f39bc1fd579109536837d115bd585326"
+
 dest_files=[ "res://.import/life4.png-f14633feb5846acca7106e01d550e5ef.stex" ]
+dest_md5="9e466bc36395c856a50d2dbac40bcd22"
 
 [params]
 

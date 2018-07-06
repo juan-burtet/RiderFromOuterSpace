@@ -7,7 +7,10 @@ path="res://.import/youDied.png-84fec08a94a3f205e728b8d08c6ede5d.stex"
 [deps]
 
 source_file="res://Images/Player/Death Screen/youDied.png"
+source_md5="14b05a1a1cd3dc3c26d924b628dc9d04"
+
 dest_files=[ "res://.import/youDied.png-84fec08a94a3f205e728b8d08c6ede5d.stex" ]
+dest_md5="7adfd420feb971737f5f6801bed8b05e"
 
 [params]
 

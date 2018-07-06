@@ -48,7 +48,7 @@ modulate = Color( 0.429688, 1, 0, 1 )
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 2 )
 animation = "Walk"
-frame = 3
+frame = 1
 playing = true
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -59,7 +59,7 @@ rotation = 1.5708
 enabled = true
 exclude_parent = true
 cast_to = Vector2( 0, 10 )
-collision_mask = 1
+collision_mask = 5
 _sections_unfolded = [ "Transform" ]
 
 [node name="leftDown" type="RayCast2D" parent="." index="3"]
@@ -68,7 +68,7 @@ position = Vector2( -36, 32 )
 enabled = true
 exclude_parent = true
 cast_to = Vector2( 0, 10 )
-collision_mask = 1
+collision_mask = 5
 _sections_unfolded = [ "Transform" ]
 
 [node name="rightDown" type="RayCast2D" parent="." index="4"]
@@ -77,7 +77,7 @@ position = Vector2( 36, 32 )
 enabled = true
 exclude_parent = true
 cast_to = Vector2( 0, 10 )
-collision_mask = 1
+collision_mask = 5
 _sections_unfolded = [ "Transform" ]
 
 [node name="right" type="RayCast2D" parent="." index="5"]
@@ -87,7 +87,7 @@ rotation = 4.71239
 enabled = true
 exclude_parent = true
 cast_to = Vector2( 0, 10 )
-collision_mask = 1
+collision_mask = 5
 _sections_unfolded = [ "Transform" ]
 
 [node name="HP" type="TextureProgress" parent="." index="6"]

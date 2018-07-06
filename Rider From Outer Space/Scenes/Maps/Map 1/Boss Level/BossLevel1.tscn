@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scripts/Maps/Map1/BossLevel/BossLevel1.gd" type="Script" id=1]
 [ext_resource path="res://Images/Maps/Map 1/Section 2/cave_wall.png" type="Texture" id=2]
@@ -15,10 +15,8 @@
 [ext_resource path="res://Images/Enemies/Bosses/1/Life/life2.png" type="Texture" id=13]
 [ext_resource path="res://Images/Enemies/Bosses/1/Life/life3.png" type="Texture" id=14]
 [ext_resource path="res://Images/Enemies/Bosses/1/Life/life4.png" type="Texture" id=15]
-[ext_resource path="res://Images/Enemies/Bosses/HP/under.png" type="Texture" id=16]
-[ext_resource path="res://Images/Enemies/Bosses/HP/fill.png" type="Texture" id=17]
-[ext_resource path="res://Fonts/PressStart2P.ttf" type="DynamicFontData" id=18]
-[ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/Enemies/Info.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=17]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -34,26 +32,18 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=3]
+[sub_resource type="CapsuleShape2D" id=2]
 
 custom_solver_bias = 0.0
 radius = 30.0
 height = 83.0
-
-[sub_resource type="DynamicFont" id=2]
-
-size = 9
-use_mipmaps = false
-use_filter = false
-font_data = ExtResource( 18 )
-_sections_unfolded = [ "Extra Spacing", "Settings" ]
 
 [sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 256 )
 
-[node name="BossLevel1" type="Node" index="0"]
+[node name="BossLevel1" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -102,6 +92,9 @@ collision_mask = 5
 collision/safe_margin = 0.08
 script = ExtResource( 4 )
 _sections_unfolded = [ "Collision" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="AnimatedSprite" parent="Boss/Djikstra" index="0"]
 
@@ -109,7 +102,7 @@ position = Vector2( 0, -14 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "Life"
-frame = 3
+frame = 4
 playing = true
 flip_h = true
 _sections_unfolded = [ "Transform" ]
@@ -117,88 +110,29 @@ _sections_unfolded = [ "Transform" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/Djikstra" index="1"]
 
 position = Vector2( 5, -7 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Info" type="CanvasLayer" parent="Boss/Djikstra" index="2"]
+[node name="Info" parent="Boss/Djikstra" index="2" instance=ExtResource( 16 )]
+
+[node name="Barrier" type="KinematicBody2D" parent="Boss" index="1"]
 
 editor/display_folded = true
-layer = 1
-offset = Vector2( 0, 0 )
-rotation = 0.0
-scale = Vector2( 1, 1 )
-transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-
-[node name="TextureProgress" type="TextureProgress" parent="Boss/Djikstra/Info" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 32.0
-margin_top = 460.0
-margin_right = 704.0
-margin_bottom = 476.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-min_value = 0.0
-max_value = 100.0
-step = 1.0
-page = 0.0
-value = 100.0
-exp_edit = false
-rounded = false
-texture_under = ExtResource( 16 )
-texture_over = null
-texture_progress = ExtResource( 17 )
-radial_fill_degrees = 360.0
-radial_center_offset = Vector2( 0, 0 )
-nine_patch_stretch = false
-_sections_unfolded = [ "Rect", "Textures" ]
-
-[node name="Name" type="Label" parent="Boss/Djikstra/Info" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 278.0
-margin_top = 462.0
-margin_right = 458.0
-margin_bottom = 476.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
-text = "DIJKSTRA, THE WIZARD"
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Rect", "custom_fonts" ]
-
-[node name="barrier" type="KinematicBody2D" parent="Boss" index="1"]
-
 position = Vector2( 576, 288 )
 input_pickable = false
 collision_layer = 16
 collision_mask = 16
 collision/safe_margin = 0.08
 _sections_unfolded = [ "Collision" ]
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/barrier" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/Barrier" index="0"]
 
 shape = SubResource( 4 )
 
-[node name="PlayerTest" parent="." index="3" instance=ExtResource( 19 )]
+[node name="PlayerTest" parent="." index="3" instance=ExtResource( 17 )]
 
 position = Vector2( 128, -32 )
 

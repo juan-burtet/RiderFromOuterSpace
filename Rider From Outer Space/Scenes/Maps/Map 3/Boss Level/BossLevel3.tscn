@@ -1,0 +1,163 @@
+[gd_scene load_steps=34 format=2]
+
+[ext_resource path="res://Scripts/Maps/Map3/BossLevel/BossLevel3.gd" type="Script" id=1]
+[ext_resource path="res://Tilesets/Map3/Section 2/Map3_Section2_TileSet.tres" type="TileSet" id=2]
+[ext_resource path="res://Tilesets/Map3/Section 1/Map3_Section1_TileSet.tres" type="TileSet" id=3]
+[ext_resource path="res://Scripts/Enemies/Bosses/3/Lovelace.gd" type="Script" id=4]
+[ext_resource path="res://Images/Enemies/Bosses/3/Idle/0.png" type="Texture" id=5]
+[ext_resource path="res://Images/Enemies/Bosses/3/Idle/1.png" type="Texture" id=6]
+[ext_resource path="res://Images/Enemies/Bosses/3/Idle/2.png" type="Texture" id=7]
+[ext_resource path="res://Images/Enemies/Bosses/3/Idle/3.png" type="Texture" id=8]
+[ext_resource path="res://Images/Enemies/Bosses/3/Idle/4.png" type="Texture" id=9]
+[ext_resource path="res://Images/Enemies/Bosses/3/Idle/5.png" type="Texture" id=10]
+[ext_resource path="res://Images/Enemies/Bosses/3/Idle/6.png" type="Texture" id=11]
+[ext_resource path="res://Images/Enemies/Bosses/3/Idle/7.png" type="Texture" id=12]
+[ext_resource path="res://Images/Enemies/Bosses/3/Ultra/0.png" type="Texture" id=13]
+[ext_resource path="res://Images/Enemies/Bosses/3/Ultra/1.png" type="Texture" id=14]
+[ext_resource path="res://Images/Enemies/Bosses/3/Ultra/2.png" type="Texture" id=15]
+[ext_resource path="res://Images/Enemies/Bosses/3/Ultra/3.png" type="Texture" id=16]
+[ext_resource path="res://Images/Enemies/Bosses/3/Ultra/4.png" type="Texture" id=17]
+[ext_resource path="res://Images/Enemies/Bosses/3/Ultra/5.png" type="Texture" id=18]
+[ext_resource path="res://Images/Enemies/Bosses/3/Ultra/6.png" type="Texture" id=19]
+[ext_resource path="res://Images/Enemies/Bosses/3/Ultra/7.png" type="Texture" id=20]
+[ext_resource path="res://Images/Enemies/Bosses/3/Attack/0.png" type="Texture" id=21]
+[ext_resource path="res://Images/Enemies/Bosses/3/Attack/1.png" type="Texture" id=22]
+[ext_resource path="res://Images/Enemies/Bosses/3/Attack/2.png" type="Texture" id=23]
+[ext_resource path="res://Images/Enemies/Bosses/3/Attack/3.png" type="Texture" id=24]
+[ext_resource path="res://Images/Enemies/Bosses/3/Attack/4.png" type="Texture" id=25]
+[ext_resource path="res://Images/Enemies/Bosses/3/Attack/5.png" type="Texture" id=26]
+[ext_resource path="res://Images/Enemies/Bosses/3/Attack/6.png" type="Texture" id=27]
+[ext_resource path="res://Images/Enemies/Bosses/3/Attack/7.png" type="Texture" id=28]
+[ext_resource path="res://Scenes/Enemies/Info.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=30]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "Ultra",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "Attack",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 40, 60 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 3, 240 )
+
+[node name="BossLevel3" type="Node" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+scale = Vector2( 2, 2 )
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 0, 536870915, 0, 1, 5, 0, 2, 16, 0, 3, 15, 0, 4, 16, 0, 5, 15, 0, 6, 16, 0, 7, 15, 0, 8, 16, 0, 9, 15, 0, 10, 16, 0, 11, 15, 0, 12, 16, 0, 13, 15, 0, 14, 16, 0, 15, 15, 0, 16, 16, 0, 17, 15, 0, 18, 16, 0, 19, 15, 0, 20, 16, 0, 21, 15, 0, 22, 3, 0, 65537, 1610612752, 0, 65538, 1610612751, 0, 65539, 1610612752, 0, 65540, 1610612751, 0, 65541, 1610612752, 0, 65542, 1610612751, 0, 65543, 1610612752, 0, 65544, 1610612751, 0, 65545, 1610612752, 0, 65546, 1610612751, 0, 65547, 1610612752, 0, 65548, 1610612751, 0, 65549, 1610612752, 0, 65550, 1610612751, 0, 65551, 1610612752, 0, 65552, 1610612751, 0, 65553, 1610612752, 0, 65554, 1610612751, 0, 65555, 1610612752, 0, 65556, 1610612751, 0, 65557, 1610612752, 0, 131073, 11, 0, 131074, 12, 0, 131075, 17, 0, 131076, 18, 0, 131077, 11, 0, 131078, 12, 0, 131079, 18, 0, 131080, 17, 0, 131081, 11, 0, 131082, 12, 0, 131083, 17, 0, 131084, 18, 0, 131085, 11, 0, 131086, 12, 0, 131087, 18, 0, 131088, 17, 0, 131089, 11, 0, 131090, 12, 0, 131091, 17, 0, 131092, 18, 0, 131093, 11, 0, 196609, 13, 0, 196610, 14, 0, 196611, 11, 0, 196612, 12, 0, 196613, 13, 0, 196614, 14, 0, 196615, 11, 0, 196616, 12, 0, 196617, 13, 0, 196618, 14, 0, 196619, 11, 0, 196620, 12, 0, 196621, 13, 0, 196622, 14, 0, 196623, 11, 0, 196624, 12, 0, 196625, 13, 0, 196626, 14, 0, 196627, 11, 0, 196628, 12, 0, 196629, 13, 0, 262145, 11, 0, 262146, 12, 0, 262147, 13, 0, 262148, 14, 0, 262149, 11, 0, 262150, 12, 0, 262151, 13, 0, 262152, 14, 0, 262153, 11, 0, 262154, 12, 0, 262155, 13, 0, 262156, 14, 0, 262157, 11, 0, 262158, 12, 0, 262159, 13, 0, 262160, 14, 0, 262161, 11, 0, 262162, 12, 0, 262163, 13, 0, 262164, 14, 0, 262165, 11, 0, 327681, 13, 0, 327682, 14, 0, 327683, 11, 0, 327684, 12, 0, 327685, 13, 0, 327686, 14, 0, 327687, 11, 0, 327688, 12, 0, 327689, 13, 0, 327690, 14, 0, 327691, 11, 0, 327692, 12, 0, 327693, 13, 0, 327694, 14, 0, 327695, 11, 0, 327696, 12, 0, 327697, 13, 0, 327698, 14, 0, 327699, 11, 0, 327700, 12, 0, 327701, 13, 0, 393217, 11, 0, 393218, 12, 0, 393219, 13, 0, 393220, 14, 0, 393221, 11, 0, 393222, 12, 0, 393223, 13, 0, 393224, 14, 0, 393225, 11, 0, 393226, 12, 0, 393227, 13, 0, 393228, 14, 0, 393229, 11, 0, 393230, 12, 0, 393231, 13, 0, 393232, 14, 0, 393233, 11, 0, 393234, 12, 0, 393235, 13, 0, 393236, 14, 0, 393237, 11, 0, 458753, 13, 0, 458754, 14, 0, 458755, 11, 0, 458756, 12, 0, 458757, 13, 0, 458758, 14, 0, 458759, 11, 0, 458760, 12, 0, 458761, 13, 0, 458762, 14, 0, 458763, 11, 0, 458764, 12, 0, 458765, 13, 0, 458766, 14, 0, 458767, 11, 0, 458768, 12, 0, 458769, 13, 0, 458770, 14, 0, 458771, 11, 0, 458772, 12, 0, 458773, 13, 0, 524289, 11, 0, 524290, 12, 0, 524291, 13, 0, 524292, 14, 0, 524293, 11, 0, 524294, 12, 0, 524295, 13, 0, 524296, 14, 0, 524297, 11, 0, 524298, 12, 0, 524299, 13, 0, 524300, 14, 0, 524301, 11, 0, 524302, 12, 0, 524303, 13, 0, 524304, 14, 0, 524305, 11, 0, 524306, 12, 0, 524307, 13, 0, 524308, 14, 0, 524309, 11, 0, 589825, 13, 0, 589826, 14, 0, 589827, 11, 0, 589828, 12, 0, 589829, 13, 0, 589830, 14, 0, 589831, 11, 0, 589832, 12, 0, 589833, 13, 0, 589834, 14, 0, 589835, 11, 0, 589836, 12, 0, 589837, 13, 0, 589838, 14, 0, 589839, 11, 0, 589840, 12, 0, 589841, 13, 0, 589842, 14, 0, 589843, 11, 0, 589844, 12, 0, 589845, 13, 0, 655361, 11, 0, 655362, 12, 0, 655363, 13, 0, 655364, 14, 0, 655365, 11, 0, 655366, 12, 0, 655367, 13, 0, 655368, 14, 0, 655369, 11, 0, 655370, 12, 0, 655371, 13, 0, 655372, 14, 0, 655373, 11, 0, 655374, 12, 0, 655375, 13, 0, 655376, 14, 0, 655377, 11, 0, 655378, 12, 0, 655379, 13, 0, 655380, 14, 0, 655381, 11, 0, 720897, 13, 0, 720898, 14, 0, 720899, 11, 0, 720900, 12, 0, 720901, 13, 0, 720902, 14, 0, 720903, 11, 0, 720904, 12, 0, 720905, 13, 0, 720906, 14, 0, 720907, 11, 0, 720908, 12, 0, 720909, 13, 0, 720910, 14, 0, 720911, 11, 0, 720912, 12, 0, 720913, 13, 0, 720914, 14, 0, 720915, 11, 0, 720916, 12, 0, 720917, 13, 0, 786433, 11, 0, 786434, 12, 0, 786435, 13, 0, 786436, 14, 0, 786437, 11, 0, 786438, 12, 0, 786439, 13, 0, 786440, 14, 0, 786441, 11, 0, 786442, 12, 0, 786443, 13, 0, 786444, 14, 0, 786445, 11, 0, 786446, 12, 0, 786447, 13, 0, 786448, 14, 0, 786449, 11, 0, 786450, 12, 0, 786451, 13, 0, 786452, 14, 0, 786453, 11, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="TileMap2" type="TileMap" parent="." index="1"]
+
+scale = Vector2( 2, 2 )
+mode = 0
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 0, 2, 0, 22, 2, 0, 65536, 2, 0, 65558, 2, 0, 131072, 2, 0, 131094, 2, 0, 196608, 2, 0, 196630, 2, 0, 262144, 2, 0, 262147, 13, 0, 262148, -1610612723, 0, 262149, -1610612722, 0, 262150, -1610612723, 0, 262151, -1610612722, 0, 262152, -1610612723, 0, 262153, -1610612722, 0, 262154, -1610612723, 0, 262155, -1610612722, 0, 262156, -1610612723, 0, 262157, -1610612722, 0, 262158, -1610612723, 0, 262159, -1610612722, 0, 262160, -1610612723, 0, 262161, -1610612722, 0, 262162, -1610612723, 0, 262163, 13, 0, 262166, 2, 0, 327680, 2, 0, 327683, 14, 0, 327684, -1610612721, 0, 327685, -1610612721, 0, 327686, -1610612721, 0, 327687, -1610612721, 0, 327688, -1610612721, 0, 327689, -1610612721, 0, 327690, -1610612721, 0, 327691, -1610612721, 0, 327692, -1610612721, 0, 327693, -1610612721, 0, 327694, -1610612721, 0, 327695, -1610612721, 0, 327696, -1610612721, 0, 327697, -1610612721, 0, 327698, -1610612721, 0, 327699, 14, 0, 327702, 2, 0, 393216, 2, 0, 393219, 13, 0, 393220, -1610612721, 0, 393221, -1610612721, 0, 393222, -1610612721, 0, 393223, -1610612721, 0, 393224, -1610612721, 0, 393225, -1610612721, 0, 393226, -1610612721, 0, 393227, -1610612721, 0, 393228, -1610612721, 0, 393229, -1610612721, 0, 393230, -1610612721, 0, 393231, -1610612721, 0, 393232, -1610612721, 0, 393233, -1610612721, 0, 393234, -1610612721, 0, 393235, 13, 0, 393238, 2, 0, 458752, 2, 0, 458755, 14, 0, 458756, -1610612721, 0, 458757, -1610612721, 0, 458758, -1610612721, 0, 458759, -1610612721, 0, 458760, -1610612721, 0, 458761, -1610612721, 0, 458762, -1610612721, 0, 458763, -1610612721, 0, 458764, -1610612721, 0, 458765, -1610612721, 0, 458766, -1610612721, 0, 458767, -1610612721, 0, 458768, -1610612721, 0, 458769, -1610612721, 0, 458770, -1610612721, 0, 458771, 14, 0, 458774, 2, 0, 524288, 2, 0, 524291, 13, 0, 524292, -1610612721, 0, 524293, -1610612721, 0, 524294, -1610612721, 0, 524295, -1610612721, 0, 524296, -1610612721, 0, 524297, -1610612721, 0, 524298, -1610612721, 0, 524299, -1610612721, 0, 524300, -1610612721, 0, 524301, -1610612721, 0, 524302, -1610612721, 0, 524303, -1610612721, 0, 524304, -1610612721, 0, 524305, -1610612721, 0, 524306, -1610612721, 0, 524307, 13, 0, 524310, 2, 0, 589824, 2, 0, 589827, 14, 0, 589828, -1610612721, 0, 589829, -1610612721, 0, 589830, -1610612721, 0, 589831, -1610612721, 0, 589832, -1610612721, 0, 589833, -1610612721, 0, 589834, -1610612721, 0, 589835, -1610612721, 0, 589836, -1610612721, 0, 589837, -1610612721, 0, 589838, -1610612721, 0, 589839, -1610612721, 0, 589840, -1610612721, 0, 589841, -1610612721, 0, 589842, -1610612721, 0, 589843, 14, 0, 589846, 2, 0, 655360, 2, 0, 655361, 12, 0, 655363, 13, 0, 655364, -1610612721, 0, 655365, -1610612721, 0, 655366, -1610612721, 0, 655367, -1610612721, 0, 655368, -1610612721, 0, 655369, -1610612721, 0, 655370, -1610612721, 0, 655371, -1610612721, 0, 655372, -1610612721, 0, 655373, -1610612721, 0, 655374, -1610612721, 0, 655375, -1610612721, 0, 655376, -1610612721, 0, 655377, -1610612721, 0, 655378, -1610612721, 0, 655379, 13, 0, 655381, 12, 0, 655382, 2, 0, 720896, 2, 0, 720897, 14, 0, 720899, 14, 0, 720900, -1610612721, 0, 720901, -1610612721, 0, 720902, -1610612721, 0, 720903, -1610612721, 0, 720904, -1610612721, 0, 720905, -1610612721, 0, 720906, -1610612721, 0, 720907, -1610612721, 0, 720908, -1610612721, 0, 720909, -1610612721, 0, 720910, -1610612721, 0, 720911, -1610612721, 0, 720912, -1610612721, 0, 720913, -1610612721, 0, 720914, -1610612721, 0, 720915, 14, 0, 720917, 14, 0, 720918, 2, 0, 786432, 2, 0, 786433, 13, 0, 786435, 13, 0, 786436, -1610612721, 0, 786437, -1610612721, 0, 786438, -1610612721, 0, 786439, -1610612721, 0, 786440, -1610612721, 0, 786441, -1610612721, 0, 786442, -1610612721, 0, 786443, -1610612721, 0, 786444, -1610612721, 0, 786445, -1610612721, 0, 786446, -1610612721, 0, 786447, -1610612721, 0, 786448, -1610612721, 0, 786449, -1610612721, 0, 786450, -1610612721, 0, 786451, 13, 0, 786453, 13, 0, 786454, 2, 0, 851968, 1, 0, 851969, 0, 0, 851970, 1, 0, 851971, 0, 0, 851972, 1, 0, 851973, 0, 0, 851974, 1, 0, 851975, 0, 0, 851976, 1, 0, 851977, 0, 0, 851978, 1, 0, 851979, 0, 0, 851980, 1, 0, 851981, 0, 0, 851982, 1, 0, 851983, 0, 0, 851984, 1, 0, 851985, 0, 0, 851986, 1, 0, 851987, 0, 0, 851988, 1, 0, 851989, 0, 0, 851990, 0, 0, 917504, 5, 0, 917505, 5, 0, 917506, 5, 0, 917507, 5, 0, 917508, 5, 0, 917509, 5, 0, 917510, 5, 0, 917511, 5, 0, 917512, 5, 0, 917513, 5, 0, 917514, 5, 0, 917515, 5, 0, 917516, 5, 0, 917517, 5, 0, 917518, 5, 0, 917519, 5, 0, 917520, 5, 0, 917521, 5, 0, 917522, 5, 0, 917523, 5, 0, 917524, 5, 0, 917525, 5, 0, 917526, 5, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
+
+[node name="Boss" type="Node" parent="." index="2"]
+
+[node name="Lovelace" type="KinematicBody2D" parent="Boss" index="0"]
+
+position = Vector2( 640, 352 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 5
+collision/safe_margin = 0.08
+script = ExtResource( 4 )
+_sections_unfolded = [ "Collision" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="AnimatedSprite" parent="Boss/Lovelace" index="0"]
+
+scale = Vector2( 1.5, 1.5 )
+frames = SubResource( 1 )
+animation = "Idle"
+frame = 1
+playing = true
+flip_h = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/Lovelace" index="1"]
+
+shape = SubResource( 2 )
+
+[node name="Info" parent="Boss/Lovelace" index="2" instance=ExtResource( 29 )]
+
+[node name="Barrier" type="KinematicBody2D" parent="Boss" index="1"]
+
+editor/display_folded = true
+position = Vector2( 550, 256 )
+input_pickable = false
+collision_layer = 16
+collision_mask = 16
+collision/safe_margin = 0.08
+_sections_unfolded = [ "Collision", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/Barrier" index="0"]
+
+shape = SubResource( 3 )
+
+[node name="PlayerTest" parent="." index="3" instance=ExtResource( 30 )]
+
+position = Vector2( 96, 32 )
+
+

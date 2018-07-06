@@ -1,0 +1,93 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Player/Death Screen/DeathScreen.gd" type="Script" id=1]
+[ext_resource path="res://Images/Player/Death Screen/blackScreen.png" type="Texture" id=2]
+[ext_resource path="res://Images/Player/Death Screen/youDied.png" type="Texture" id=3]
+[ext_resource path="res://Fonts/PressStart2P.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 20
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 4 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="DeathScreen" type="CanvasLayer" index="0"]
+
+pause_mode = 2
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Pause" ]
+
+[node name="BlackScreen" type="Sprite" parent="." index="0"]
+
+modulate = Color( 1, 1, 1, 0.867412 )
+texture = ExtResource( 2 )
+centered = false
+_sections_unfolded = [ "Offset", "Visibility" ]
+
+[node name="YouDied" type="Sprite" parent="." index="1"]
+
+position = Vector2( 368, 240 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Options" type="Node" parent="." index="2"]
+
+[node name="Continue" type="Label" parent="Options" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 288.0
+margin_top = 350.0
+margin_right = 448.0
+margin_bottom = 370.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "CONTINUE"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="GoMenu" type="Label" parent="Options" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 218.0
+margin_top = 380.0
+margin_right = 518.0
+margin_bottom = 400.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "GO TO MAIN MENU"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+

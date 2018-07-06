@@ -6,6 +6,7 @@ const firstLevel = "res://Scenes/Maps/Map 1/Section 1/Map 1 Section 1.tscn"
 const SecondLevel = "res://Scenes/Maps/Map 1/Section 2/Map 1 Section 2.tscn"
 const mainMenu = "res://Scenes/Menus/MainMenu.tscn"
 const PAUSE_SCENE = preload("res://Scenes/Player/Pause/Pause.tscn")
+const DEATH_SCENE = preload("res://Scenes/Player/Death Screen/DeathScreen.tscn")
 
 # Cenas das armas
 const PISTOL_SCENE = preload("res://Tests/Map Test/Pistol.tscn")
@@ -105,10 +106,10 @@ func _physics_process(delta):
 # verifica se o personagem morreu
 func check_life():
 	if !hp:
-		if get_parent().get_name() == "Map 1 Section 1":
-			get_tree().change_scene(firstLevel)
-		else:
-			get_tree().change_scene(SecondLevel)
+		$Sprite.set_visible(false)
+		$Top.set_visible(false)
+		get_tree().paused = true
+		get_parent().add_child(DEATH_SCENE.instance())
 	pass
 
 # Funcao que atualiza algumas opcoes do player

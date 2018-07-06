@@ -1,50 +1,66 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=32 format=2]
 
-[ext_resource path="res://Scripts/Maps/FinalBoss/Background.gd" type="Script" id=1]
-[ext_resource path="res://Images/Menus/Space Background/parallax-space-backgound.png" type="Texture" id=2]
-[ext_resource path="res://Images/Menus/Space Background/parallax-space-stars.png" type="Texture" id=3]
-[ext_resource path="res://Images/Menus/Space Background/parallax-space-far-planets.png" type="Texture" id=4]
-[ext_resource path="res://Images/Menus/Space Background/parallax-space-big-planet.png" type="Texture" id=5]
-[ext_resource path="res://Images/Menus/Space Background/parallax-space-ring-planet.png" type="Texture" id=6]
-[ext_resource path="res://Tilesets/FinalBoss/FinalBoss_TileSet.tres" type="TileSet" id=7]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/0.png" type="Texture" id=8]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/1.png" type="Texture" id=9]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/2.png" type="Texture" id=10]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/3.png" type="Texture" id=11]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/4.png" type="Texture" id=12]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/5.png" type="Texture" id=13]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/6.png" type="Texture" id=14]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/7.png" type="Texture" id=15]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/8.png" type="Texture" id=16]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/9.png" type="Texture" id=17]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/10.png" type="Texture" id=18]
-[ext_resource path="res://Images/Enemies/Bosses/4/Life/0.png" type="Texture" id=19]
-[ext_resource path="res://Images/Enemies/Bosses/4/Life/1.png" type="Texture" id=20]
-[ext_resource path="res://Images/Enemies/Bosses/4/Life/2.png" type="Texture" id=21]
-[ext_resource path="res://Images/Enemies/Bosses/4/Life/3.png" type="Texture" id=22]
-[ext_resource path="res://Images/Enemies/Bosses/4/Life/4.png" type="Texture" id=23]
-[ext_resource path="res://Images/Enemies/Bosses/4/Life/5.png" type="Texture" id=24]
-[ext_resource path="res://Scenes/Enemies/Info.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Scripts/Maps/FinalBoss/FinalBoss.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Maps/FinalBoss/Background.gd" type="Script" id=2]
+[ext_resource path="res://Images/Menus/Space Background/parallax-space-backgound.png" type="Texture" id=3]
+[ext_resource path="res://Images/Menus/Space Background/parallax-space-stars.png" type="Texture" id=4]
+[ext_resource path="res://Images/Menus/Space Background/parallax-space-far-planets.png" type="Texture" id=5]
+[ext_resource path="res://Images/Menus/Space Background/parallax-space-big-planet.png" type="Texture" id=6]
+[ext_resource path="res://Images/Menus/Space Background/parallax-space-ring-planet.png" type="Texture" id=7]
+[ext_resource path="res://Tilesets/FinalBoss/FinalBoss_TileSet.tres" type="TileSet" id=8]
+[ext_resource path="res://Scripts/Enemies/Bosses/4/Carmack.gd" type="Script" id=9]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/0.png" type="Texture" id=10]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/1.png" type="Texture" id=11]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/2.png" type="Texture" id=12]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/3.png" type="Texture" id=13]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/4.png" type="Texture" id=14]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/5.png" type="Texture" id=15]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/6.png" type="Texture" id=16]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/7.png" type="Texture" id=17]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/8.png" type="Texture" id=18]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/9.png" type="Texture" id=19]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/10.png" type="Texture" id=20]
+[ext_resource path="res://Images/Enemies/Bosses/4/Life/0.png" type="Texture" id=21]
+[ext_resource path="res://Images/Enemies/Bosses/4/Life/1.png" type="Texture" id=22]
+[ext_resource path="res://Images/Enemies/Bosses/4/Life/2.png" type="Texture" id=23]
+[ext_resource path="res://Images/Enemies/Bosses/4/Life/3.png" type="Texture" id=24]
+[ext_resource path="res://Images/Enemies/Bosses/4/Life/4.png" type="Texture" id=25]
+[ext_resource path="res://Images/Enemies/Bosses/4/Life/5.png" type="Texture" id=26]
+[ext_resource path="res://Scenes/Enemies/Info.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=28]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ],
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ) ],
 "loop": true,
 "name": "Death",
-"speed": 5.0
+"speed": 7.0
 }, {
-"frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ) ],
+"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ) ],
 "loop": true,
 "name": "Life",
-"speed": 5.0
+"speed": 10.0
 } ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 40, 55 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 5, 240 )
 
 [node name="FinalBoss" type="Node" index="0"]
 
+script = ExtResource( 1 )
+
 [node name="Background" type="Node" parent="." index="0"]
 
-script = ExtResource( 1 )
+editor/display_folded = true
+script = ExtResource( 2 )
 
 [node name="Parallax" type="ParallaxBackground" parent="Background" index="0"]
 
@@ -72,7 +88,7 @@ motion_mirroring = Vector2( 0, 0 )
 
 position = Vector2( 384, 256 )
 scale = Vector2( 2.85294, 3.3 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="Stars" type="ParallaxLayer" parent="Background/Parallax" index="1"]
@@ -88,7 +104,7 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( 252, 200 )
 scale = Vector2( 2.85294, 3.5 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="PlanetsBack" type="ParallaxLayer" parent="Background/Parallax" index="2"]
@@ -104,7 +120,7 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( 25.9999, -12 )
 scale = Vector2( 2.77941, 3.05 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="PlanetFront" type="ParallaxLayer" parent="Background/Parallax" index="3"]
@@ -119,7 +135,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="Sprite" type="Sprite" parent="Background/Parallax/PlanetFront" index="0"]
 
 position = Vector2( 448, -96 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="PlanetRing" type="ParallaxLayer" parent="Background/Parallax" index="4"]
@@ -133,14 +149,14 @@ motion_mirroring = Vector2( 0, 0 )
 
 position = Vector2( -318, -14 )
 scale = Vector2( 2.37255, 2.44348 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="TileMap" type="TileMap" parent="." index="1"]
 
 scale = Vector2( 2, 2 )
 mode = 0
-tile_set = ExtResource( 7 )
+tile_set = ExtResource( 8 )
 cell_size = Vector2( 16, 16 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -155,8 +171,11 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 0, 11, 0, 1, 12, 0, 2, 12, 0, 3, 12, 0, 4, 12, 0, 5, 12, 0, 6, 12, 0, 7, 9, 0, 8, 21, 0, 9, 22, 0, 10, 21, 0, 11, 22, 0, 12, 21, 0, 13, 22, 0, 14, 21, 0, 15, 9, 0, 16, 12, 0, 17, 12, 0, 18, 12, 0, 19, 12, 0, 20, 12, 0, 21, 12, 0, 22, 13, 0, 65536, 1610612751, 0, 65537, 1610612751, 0, 65538, 1610612755, 0, 65539, 1610612751, 0, 65540, 1610612755, 0, 65541, 1610612751, 0, 65542, 1610612755, 0, 65543, 1610612751, 0, 65544, 1610612755, 0, 65545, 1610612751, 0, 65546, 1610612755, 0, 65547, 1610612751, 0, 65548, 1610612755, 0, 65549, 1610612751, 0, 65550, 1610612755, 0, 65551, 1610612751, 0, 65552, 1610612755, 0, 65553, 1610612751, 0, 65554, 1610612755, 0, 65555, 1610612751, 0, 65556, 1610612755, 0, 65557, 1610612751, 0, 65558, 1610612751, 0, 131072, -1610612721, 0, 131073, 1610612754, 0, 131074, 1610612753, 0, 131075, 1610612753, 0, 131076, 1610612753, 0, 131077, 1610612753, 0, 131078, 1610612753, 0, 131079, 1610612753, 0, 131080, 1610612753, 0, 131081, 1610612753, 0, 131082, 1610612753, 0, 131083, 1610612753, 0, 131084, 1610612753, 0, 131085, 1610612753, 0, 131086, 1610612753, 0, 131087, 1610612753, 0, 131088, 1610612753, 0, 131089, 1610612753, 0, 131090, 1610612753, 0, 131091, 1610612753, 0, 131092, 1610612753, 0, 131093, 1610612752, 0, 131094, -1610612721, 0, 196608, -1610612721, 0, 196630, -1073741809, 0, 262144, -1610612721, 0, 262166, -1073741809, 0, 327680, -1610612721, 0, 327702, -1073741809, 0, 393216, -1610612721, 0, 393238, -1073741809, 0, 458752, -1610612721, 0, 458774, -1073741809, 0, 524288, -1610612721, 0, 524310, -1073741809, 0, 589824, -1610612721, 0, 589846, -1073741809, 0, 655360, -1610612721, 0, 655382, -1073741809, 0, 720896, 15, 0, 720897, 16, 0, 720898, 17, 0, 720899, 17, 0, 720900, 17, 0, 720901, 17, 0, 720902, 17, 0, 720903, 17, 0, 720904, 17, 0, 720905, 17, 0, 720906, 17, 0, 720907, 17, 0, 720908, 17, 0, 720909, 17, 0, 720910, 17, 0, 720911, 17, 0, 720912, 17, 0, 720913, 17, 0, 720914, 17, 0, 720915, 17, 0, 720916, 17, 0, 720917, 18, 0, 720918, 15, 0, 786432, 15, 0, 786433, 15, 0, 786434, 15, 0, 786435, 15, 0, 786436, 15, 0, 786437, 15, 0, 786438, 15, 0, 786439, 15, 0, 786440, 15, 0, 786441, 15, 0, 786442, 15, 0, 786443, 15, 0, 786444, 15, 0, 786445, 15, 0, 786446, 15, 0, 786447, 15, 0, 786448, 15, 0, 786449, 15, 0, 786450, 15, 0, 786451, 15, 0, 786452, 15, 0, 786453, 15, 0, 786454, 15, 0, 851968, 0, 0, 851969, 1, 0, 851970, 2, 0, 851971, 3, 0, 851972, 3, 0, 851973, 3, 0, 851974, 3, 0, 851975, 3, 0, 851976, 3, 0, 851977, 3, 0, 851978, 3, 0, 851979, 3, 0, 851980, 3, 0, 851981, 3, 0, 851982, 3, 0, 851983, 3, 0, 851984, 3, 0, 851985, 3, 0, 851986, 3, 0, 851987, 3, 0, 851988, 4, 0, 851989, 5, 0, 851990, 6, 0, 917504, 17, 0, 917505, 10, 0, 917506, 11, 0, 917507, 12, 0, 917508, 12, 0, 917509, 12, 0, 917510, 12, 0, 917511, 12, 0, 917512, 12, 0, 917513, 12, 0, 917514, 12, 0, 917515, 12, 0, 917516, 12, 0, 917517, 12, 0, 917518, 12, 0, 917519, 12, 0, 917520, 12, 0, 917521, 12, 0, 917522, 12, 0, 917523, 12, 0, 917524, 13, 0, 917525, 14, 0, 917526, 17, 0 )
+tile_data = PoolIntArray( 65535, 9, 0, 0, 11, 0, 1, 12, 0, 2, 12, 0, 3, 12, 0, 4, 12, 0, 5, 12, 0, 6, 12, 0, 7, 9, 0, 8, 21, 0, 9, 22, 0, 10, 21, 0, 11, 22, 0, 12, 21, 0, 13, 22, 0, 14, 21, 0, 15, 9, 0, 16, 12, 0, 17, 12, 0, 18, 12, 0, 19, 12, 0, 20, 12, 0, 21, 12, 0, 22, 13, 0, 23, 9, 0, 131071, 9, 0, 65536, 1610612751, 0, 65537, 1610612751, 0, 65538, 1610612755, 0, 65539, 1610612751, 0, 65540, 1610612755, 0, 65541, 1610612751, 0, 65542, 1610612755, 0, 65543, 1610612751, 0, 65544, 1610612755, 0, 65545, 1610612751, 0, 65546, 1610612755, 0, 65547, 1610612751, 0, 65548, 1610612755, 0, 65549, 1610612751, 0, 65550, 1610612755, 0, 65551, 1610612751, 0, 65552, 1610612755, 0, 65553, 1610612751, 0, 65554, 1610612755, 0, 65555, 1610612751, 0, 65556, 1610612755, 0, 65557, 1610612751, 0, 65558, 1610612751, 0, 65559, 9, 0, 196607, 9, 0, 131072, -1610612721, 0, 131073, 1610612754, 0, 131074, 1610612753, 0, 131075, 1610612753, 0, 131076, 1610612753, 0, 131077, 1610612753, 0, 131078, 1610612753, 0, 131079, 1610612753, 0, 131080, 1610612753, 0, 131081, 1610612753, 0, 131082, 1610612753, 0, 131083, 1610612753, 0, 131084, 1610612753, 0, 131085, 1610612753, 0, 131086, 1610612753, 0, 131087, 1610612753, 0, 131088, 1610612753, 0, 131089, 1610612753, 0, 131090, 1610612753, 0, 131091, 1610612753, 0, 131092, 1610612753, 0, 131093, 1610612752, 0, 131094, -1610612721, 0, 131095, 9, 0, 262143, 9, 0, 196608, -1610612721, 0, 196630, -1073741809, 0, 196631, 9, 0, 327679, 9, 0, 262144, -1610612721, 0, 262166, -1073741809, 0, 262167, 9, 0, 393215, 9, 0, 327680, -1610612721, 0, 327702, -1073741809, 0, 327703, 9, 0, 458751, 9, 0, 393216, -1610612721, 0, 393238, -1073741809, 0, 393239, 9, 0, 524287, 9, 0, 458752, -1610612721, 0, 458774, -1073741809, 0, 458775, 9, 0, 589823, 9, 0, 524288, -1610612721, 0, 524310, -1073741809, 0, 524311, 9, 0, 655359, 9, 0, 589824, -1610612721, 0, 589846, -1073741809, 0, 589847, 9, 0, 720895, 9, 0, 655360, -1610612721, 0, 655382, -1073741809, 0, 655383, 9, 0, 786431, 9, 0, 720896, 15, 0, 720897, 16, 0, 720898, 17, 0, 720899, 17, 0, 720900, 17, 0, 720901, 17, 0, 720902, 17, 0, 720903, 17, 0, 720904, 17, 0, 720905, 17, 0, 720906, 17, 0, 720907, 17, 0, 720908, 17, 0, 720909, 17, 0, 720910, 17, 0, 720911, 17, 0, 720912, 17, 0, 720913, 17, 0, 720914, 17, 0, 720915, 17, 0, 720916, 17, 0, 720917, 18, 0, 720918, 15, 0, 720919, 9, 0, 851967, 9, 0, 786432, 15, 0, 786433, 15, 0, 786434, 15, 0, 786435, 15, 0, 786436, 15, 0, 786437, 15, 0, 786438, 15, 0, 786439, 15, 0, 786440, 15, 0, 786441, 15, 0, 786442, 15, 0, 786443, 15, 0, 786444, 15, 0, 786445, 15, 0, 786446, 15, 0, 786447, 15, 0, 786448, 15, 0, 786449, 15, 0, 786450, 15, 0, 786451, 15, 0, 786452, 15, 0, 786453, 15, 0, 786454, 15, 0, 786455, 9, 0, 917503, 9, 0, 851968, 0, 0, 851969, 1, 0, 851970, 2, 0, 851971, 3, 0, 851972, 3, 0, 851973, 3, 0, 851974, 3, 0, 851975, 3, 0, 851976, 3, 0, 851977, 3, 0, 851978, 3, 0, 851979, 3, 0, 851980, 3, 0, 851981, 3, 0, 851982, 3, 0, 851983, 3, 0, 851984, 3, 0, 851985, 3, 0, 851986, 3, 0, 851987, 3, 0, 851988, 4, 0, 851989, 5, 0, 851990, 6, 0, 851991, 9, 0, 983039, 9, 0, 917504, 17, 0, 917505, 10, 0, 917506, 11, 0, 917507, 12, 0, 917508, 12, 0, 917509, 12, 0, 917510, 12, 0, 917511, 12, 0, 917512, 12, 0, 917513, 12, 0, 917514, 12, 0, 917515, 12, 0, 917516, 12, 0, 917517, 12, 0, 917518, 12, 0, 917519, 12, 0, 917520, 12, 0, 917521, 12, 0, 917522, 12, 0, 917523, 12, 0, 917524, 13, 0, 917525, 14, 0, 917526, 17, 0, 917527, 9, 0, 983063, 9, 0 )
 _sections_unfolded = [ "Cell", "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Boss" type="Node" parent="." index="2"]
 
@@ -164,9 +183,11 @@ _sections_unfolded = [ "Cell", "Transform" ]
 
 position = Vector2( 640, 320 )
 input_pickable = false
-collision_layer = 1
-collision_mask = 1
+collision_layer = 2
+collision_mask = 5
 collision/safe_margin = 0.08
+script = ExtResource( 9 )
+_sections_unfolded = [ "Collision" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -177,13 +198,38 @@ position = Vector2( 0, 14 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "Death"
-frame = 9
+frame = 11
 playing = true
 flip_h = true
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/Carmack" index="1"]
 
-[node name="Info" parent="Boss/Carmack" index="2" instance=ExtResource( 25 )]
+position = Vector2( 15, 36 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Info" parent="Boss/Carmack" index="2" instance=ExtResource( 27 )]
+
+[node name="Barrier" type="KinematicBody2D" parent="Boss" index="1"]
+
+editor/display_folded = true
+position = Vector2( 576, 256 )
+input_pickable = false
+collision_layer = 16
+collision_mask = 16
+collision/safe_margin = 0.08
+_sections_unfolded = [ "Collision" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/Barrier" index="0"]
+
+shape = SubResource( 3 )
+
+[node name="PlayerTest" parent="." index="3" instance=ExtResource( 28 )]
+
+position = Vector2( 384, 352 )
 
 

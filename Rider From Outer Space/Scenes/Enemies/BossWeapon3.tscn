@@ -23,6 +23,7 @@ extents = Vector2( 3, 3 )
 
 [node name="BossWeapon3" type="Area2D" index="0"]
 
+scale = Vector2( 2, 2 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -31,12 +32,12 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" type="AnimatedSprite" parent="." index="0"]
 
 frames = SubResource( 1 )
 animation = "default"
-frame = 5
 playing = true
 
 [node name="Collision" type="CollisionShape2D" parent="." index="1"]

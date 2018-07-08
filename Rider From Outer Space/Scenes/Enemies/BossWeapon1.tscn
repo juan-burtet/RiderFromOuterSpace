@@ -20,7 +20,7 @@ animations = [ {
 custom_solver_bias = 0.0
 radius = 6.0
 
-[node name="BossWeapon1" type="Area2D" index="0"]
+[node name="BossWeapon1" type="Area2D"]
 
 rotation = 1.5708
 scale = Vector2( 4, 4 )
@@ -40,7 +40,7 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 frames = SubResource( 1 )
 animation = "default"
-frame = 1
+frame = 2
 playing = true
 
 [node name="Collision" type="CollisionShape2D" parent="." index="1"]

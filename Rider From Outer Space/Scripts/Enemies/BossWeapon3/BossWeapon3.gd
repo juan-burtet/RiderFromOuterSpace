@@ -1,7 +1,7 @@
 extends Area2D
 
 # Velocidade da Bala
-const SPEED = 300
+const SPEED = 600
 # Direção da bala
 var motion = Vector2()
 
@@ -20,5 +20,5 @@ func _on_Visibility_screen_exited():
 
 func _on_BossWeapon3_body_entered(body):
 	queue_free()
-	if body.get_name() != "TileMap":
+	if body.get_name() != "TileMap" and body.get_name() != "TileMap2":
 		body.receive_damage()

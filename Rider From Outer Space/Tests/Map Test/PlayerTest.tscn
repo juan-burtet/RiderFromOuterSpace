@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Tests/Map Test/PlayerTest.gd" type="Script" id=1]
 [ext_resource path="res://Images/Player/Movement/Idle/Idle.png" type="Texture" id=2]
@@ -22,7 +22,7 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "Jump",
+"name": "Fall",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
@@ -32,7 +32,7 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "Fall",
+"name": "Jump",
 "speed": 10.0
 } ]
 _sections_unfolded = [ "Resource" ]
@@ -61,6 +61,37 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 24, 42 )
 
+[sub_resource type="Animation" id=4]
+
+resource_name = "hit"
+length = 0.4
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Top:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
 [node name="PlayerTest" type="KinematicBody2D" index="0"]
 
 input_pickable = true
@@ -84,14 +115,14 @@ position = Vector2( 0, 32 )
 frames = SubResource( 1 )
 animation = "Idle"
 playing = true
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Top" type="AnimatedSprite" parent="." index="2"]
 
 position = Vector2( 0, -32 )
 frames = SubResource( 2 )
 animation = "Frente"
-_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform", "Visibility" ]
 
 [node name="camera" type="Camera2D" parent="." index="3"]
 
@@ -152,6 +183,16 @@ process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = false
+
+[node name="Animation" type="AnimationPlayer" parent="." index="7"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/hit = SubResource( 4 )
+blend_times = [  ]
 
 [connection signal="timeout" from="Timers/pistol_timer" to="." method="_on_pistol_timer_timeout"]
 

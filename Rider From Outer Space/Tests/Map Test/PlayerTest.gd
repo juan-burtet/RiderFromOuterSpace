@@ -354,6 +354,7 @@ func get_shot_direction():
 
 # Função feita pro personagem tomar dano
 func receive_damage():
+	$Animation.play("hit")
 	hp -= 1
 	hp = max(0,hp)
 	

@@ -22,9 +22,6 @@ func _process(delta):
 	
 	print_hp()
 	
-	if !hp:
-		dies()
-	
 	if $left.is_colliding() or $LeftTop.is_colliding():
 		motion.x = -SPEED
 	elif $right.is_colliding() or $rightTop.is_colliding():
@@ -52,14 +49,16 @@ func start_timer():
 	pass
 
 func dies():
-	$Explode.set_text("BOOM!")
-	while(timer.is_one_shot()):
-		pass
+	$Sprite.set_visible(false)
+	$Explosion.play("death")
+	yield($Explosion, "animation_finished")
 	queue_free()
 
 func does_damage(damage):
 	hp -= damage
 	hp = max(0, hp)
+	if !hp:
+		dies()
 	pass
 
 # Entrou na Area do inimigo

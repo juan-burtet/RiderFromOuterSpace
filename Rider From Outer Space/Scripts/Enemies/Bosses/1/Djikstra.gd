@@ -79,6 +79,7 @@ func update_hp():
 	$Info/TextureProgress.set_value(hp)
 
 func does_damage(damage):
+	$Animation.play("damage")
 	hp -= damage
 	hp = max(0,hp)
 	update_hp()

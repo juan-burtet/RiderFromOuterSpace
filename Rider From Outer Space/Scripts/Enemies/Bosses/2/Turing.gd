@@ -131,6 +131,7 @@ func random_pos():
 	return pos
 
 func does_damage(damage):
+	$AnimationPlayer.play("damage")
 	hp -= damage
 	hp = max(0,hp)
 	update_hp()
@@ -151,4 +152,6 @@ func restart_timer():
 func is_dead():
 	if !hp:
 		can_shot = false
+		$AnimationPlayer.play("death")
+		yield($AnimationPlayer, "animation_finished")
 		get_parent().queue_free()

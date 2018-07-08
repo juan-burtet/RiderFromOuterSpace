@@ -18,26 +18,61 @@ func _ready():
 	hp = MAX_HP
 	
 	update_hp()
-	restart_timer()
+	restart_timer_atirar()
+	restart_timer_sequencia()
 	pass
 
 func _process(delta):
-	$Info/TextureProgress.set_value(hp)
+	if !timer_atirar.is_one_shot() and can_shot:
+		$Sprite.play("Attack")
+		restart_timer_atirar()
+		var position = random_pos()
+		shot(position)
+		yield(timer_sequencia, "timeout")
+		shot(position)
+		yield(timer_sequencia, "timeout")
+		shot(position)
+		yield(timer_sequencia, "timeout")
+		shot(position)
+		yield(timer_sequencia, "timeout")
+		shot(position)
+		yield(timer_sequencia, "timeout")
+		$Sprite.play("Idle")
+		
 	pass
+
+func shot(pos):
+	var fireball = FIREBALL_SCENE.instance()
+	fireball.init(Vector2(-1,0))
+	get_parent().add_child(fireball)
+	match pos:
+		0:
+			fireball.set_position($Pos0.get_global_position())
+			print(0)
+		1:
+			fireball.set_position($Pos1.get_global_position())
+			print(1)
+		2:
+			fireball.set_position($Pos2.get_global_position())
+			print(2)
+	
+	restart_timer_sequencia()
+
 
 func random_pos():
 	randomize()
-	var random = randi()%8
+	var random = randi()%3
 	
 	if random == pos:
 		random += 1
-		if random > 7:
+		if random > 2:
 			random = 0
 	
 	pos = random
 	return pos
 
 func does_damage(damage):
+	$Animation.play("Damage")
 	hp -= damage
 	hp = max(0,hp)
 	update_hp()
@@ -59,11 +94,11 @@ func _on_sequencia_tiros_timeout():
 	timer_sequencia.set_one_shot(false)
 
 func restart_timer_atirar():
-	timer_atirar.set_wait_time(3)
+	timer_atirar.set_wait_time(2)
 	timer_atirar.set_one_shot(true)
 	timer_atirar.start()
 
 func restart_timer_sequencia():
-	timer_sequencia.set_wait_time(3)
+	timer_sequencia.set_wait_time(0.2)
 	timer_sequencia.set_one_shot(true)
 	timer_sequencia.start()

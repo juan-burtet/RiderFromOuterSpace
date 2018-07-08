@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scripts/Enemies/Bomber.gd" type="Script" id=1]
 [ext_resource path="res://Images/Enemies/idle.png" type="Texture" id=2]
@@ -6,8 +6,16 @@
 [ext_resource path="res://Images/Enemies/1.png" type="Texture" id=4]
 [ext_resource path="res://Images/Enemies/2.png" type="Texture" id=5]
 [ext_resource path="res://Images/Enemies/3.png" type="Texture" id=6]
-[ext_resource path="res://Images/Player/GUI/lifebar_bg.png" type="Texture" id=7]
-[ext_resource path="res://Images/Player/GUI/lifebar_fill.png" type="Texture" id=8]
+[ext_resource path="res://Images/Enemies/Explosion/0.png" type="Texture" id=7]
+[ext_resource path="res://Images/Enemies/Explosion/1.png" type="Texture" id=8]
+[ext_resource path="res://Images/Enemies/Explosion/2.png" type="Texture" id=9]
+[ext_resource path="res://Images/Enemies/Explosion/3.png" type="Texture" id=10]
+[ext_resource path="res://Images/Enemies/Explosion/4.png" type="Texture" id=11]
+[ext_resource path="res://Images/Enemies/Explosion/5.png" type="Texture" id=12]
+[ext_resource path="res://Images/Enemies/Explosion/6.png" type="Texture" id=13]
+[ext_resource path="res://Images/Enemies/Explosion/7.png" type="Texture" id=14]
+[ext_resource path="res://Images/Player/GUI/lifebar_bg.png" type="Texture" id=15]
+[ext_resource path="res://Images/Player/GUI/lifebar_fill.png" type="Texture" id=16]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -23,17 +31,31 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "death",
+"speed": 20.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 40 )
 
-[sub_resource type="CircleShape2D" id=3]
+[sub_resource type="CircleShape2D" id=4]
 
 custom_solver_bias = 0.0
 radius = 100.0
 
-[node name="Bomber" type="KinematicBody2D" index="0"]
+[node name="Bomber" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 2
@@ -47,13 +69,23 @@ _sections_unfolded = [ "Collision" ]
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 1 )
 animation = "Idle"
+playing = true
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="Collision" type="CollisionShape2D" parent="." index="1"]
+[node name="Explosion" type="AnimatedSprite" parent="." index="1"]
 
-shape = SubResource( 2 )
+scale = Vector2( 6, 6 )
+frames = SubResource( 2 )
+animation = "default"
+playing = true
+_sections_unfolded = [ "Transform" ]
 
-[node name="left" type="RayCast2D" parent="." index="2"]
+[node name="Collision" type="CollisionShape2D" parent="." index="2"]
+
+visible = false
+shape = SubResource( 3 )
+
+[node name="left" type="RayCast2D" parent="." index="3"]
 
 enabled = true
 exclude_parent = true
@@ -61,7 +93,7 @@ cast_to = Vector2( -500, 0 )
 collision_mask = 1
 _sections_unfolded = [ "Transform" ]
 
-[node name="LeftTop" type="RayCast2D" parent="." index="3"]
+[node name="LeftTop" type="RayCast2D" parent="." index="4"]
 
 enabled = true
 exclude_parent = true
@@ -69,23 +101,22 @@ cast_to = Vector2( -500, -200 )
 collision_mask = 1
 _sections_unfolded = [ "Transform" ]
 
-[node name="right" type="RayCast2D" parent="." index="4"]
+[node name="right" type="RayCast2D" parent="." index="5"]
 
 enabled = true
 exclude_parent = true
 cast_to = Vector2( 500, 0 )
 collision_mask = 1
 
-[node name="rightTop" type="RayCast2D" parent="." index="5"]
+[node name="rightTop" type="RayCast2D" parent="." index="6"]
 
 enabled = true
 exclude_parent = true
 cast_to = Vector2( 500, -200 )
 collision_mask = 1
 
-[node name="AreaExplode" type="Area2D" parent="." index="6"]
+[node name="AreaExplode" type="Area2D" parent="." index="7"]
 
-editor/display_folded = true
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -98,10 +129,10 @@ _sections_unfolded = [ "Collision" ]
 
 [node name="Explosion" type="CollisionShape2D" parent="AreaExplode" index="0"]
 
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 _sections_unfolded = [ "Material" ]
 
-[node name="HP" type="TextureProgress" parent="." index="7"]
+[node name="HP" type="TextureProgress" parent="." index="8"]
 
 modulate = Color( 1, 0, 0, 1 )
 anchor_left = 0.0
@@ -126,15 +157,15 @@ page = 0.0
 value = 0.0
 exp_edit = false
 rounded = false
-texture_under = ExtResource( 7 )
+texture_under = ExtResource( 15 )
 texture_over = null
-texture_progress = ExtResource( 8 )
+texture_progress = ExtResource( 16 )
 radial_fill_degrees = 360.0
 radial_center_offset = Vector2( 0, 0 )
 nine_patch_stretch = false
 _sections_unfolded = [ "Rect", "Textures", "Visibility" ]
 
-[node name="Explode" type="Label" parent="." index="8"]
+[node name="Explode" type="Label" parent="." index="9"]
 
 modulate = Color( 1, 0, 0, 1 )
 anchor_left = 0.0
@@ -157,7 +188,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "Visibility", "custom_styles" ]
 
-[node name="Timer" type="Timer" parent="." index="9"]
+[node name="Timer" type="Timer" parent="." index="10"]
 
 process_mode = 1
 wait_time = 1.0

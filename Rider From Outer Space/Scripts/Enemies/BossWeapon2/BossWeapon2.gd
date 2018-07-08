@@ -19,7 +19,9 @@ func _on_Visibility_screen_entered():
 	#queue_free()
 
 func _on_BossWeapon2_body_entered(body):
-	queue_free()
-	print("destruiu")
+	$Collision.queue_free()
 	if body.get_name() != "TileMap":
 		body.receive_damage()
+	$Animation.play("destroy")
+	yield($Animation, "animation_finished")
+	queue_free()

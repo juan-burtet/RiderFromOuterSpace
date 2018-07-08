@@ -1,0 +1,90 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/Enemies/BossWeapon4/BossWeapon4.gd" type="Script" id=1]
+[ext_resource path="res://Images/Enemies/Bosses/Weapon1/0.png" type="Texture" id=2]
+[ext_resource path="res://Images/Enemies/Bosses/Weapon1/1.png" type="Texture" id=3]
+[ext_resource path="res://Images/Enemies/Bosses/Weapon1/2.png" type="Texture" id=4]
+[ext_resource path="res://Images/Enemies/Bosses/Weapon1/3.png" type="Texture" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 15.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 6.0
+
+[sub_resource type="Animation" id=3]
+
+resource_name = "destroy"
+length = 0.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="BossWeapon4" type="Area2D"]
+
+scale = Vector2( 4, 4 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite" type="AnimatedSprite" parent="." index="0"]
+
+modulate = Color( 0.324951, 0, 0.34375, 1 )
+frames = SubResource( 1 )
+animation = "default"
+frame = 1
+playing = true
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Collision" type="CollisionShape2D" parent="." index="1"]
+
+visible = false
+position = Vector2( 0, 7 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Visibility" type="VisibilityNotifier2D" parent="." index="2"]
+
+visible = false
+rect = Rect2( -10, -10, 20, 20 )
+
+[node name="Animation" type="AnimationPlayer" parent="." index="3"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/destroy = SubResource( 3 )
+blend_times = [  ]
+
+[connection signal="body_entered" from="." to="." method="_on_BossWeapon4_body_entered"]
+
+[connection signal="screen_exited" from="Visibility" to="." method="_on_Visibility_screen_exited"]
+
+

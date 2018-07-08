@@ -1,34 +1,34 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scripts/Maps/Map1/BossLevel/BossLevel1.gd" type="Script" id=1]
 [ext_resource path="res://Images/Maps/Map 1/Section 2/cave_wall.png" type="Texture" id=2]
 [ext_resource path="res://Tilesets/Map1/Section 2/Map1_Section2_TileSet.tres" type="TileSet" id=3]
 [ext_resource path="res://Scripts/Enemies/Bosses/1/Djikstra.gd" type="Script" id=4]
-[ext_resource path="res://Images/Enemies/Bosses/1/Life/life0.png" type="Texture" id=5]
-[ext_resource path="res://Images/Enemies/Bosses/1/Life/life1.png" type="Texture" id=6]
-[ext_resource path="res://Images/Enemies/Bosses/1/Life/life2.png" type="Texture" id=7]
-[ext_resource path="res://Images/Enemies/Bosses/1/Life/life3.png" type="Texture" id=8]
-[ext_resource path="res://Images/Enemies/Bosses/1/Life/life4.png" type="Texture" id=9]
-[ext_resource path="res://Images/Enemies/Bosses/1/Death/death0.png" type="Texture" id=10]
-[ext_resource path="res://Images/Enemies/Bosses/1/Death/death1.png" type="Texture" id=11]
-[ext_resource path="res://Images/Enemies/Bosses/1/Death/death2.png" type="Texture" id=12]
-[ext_resource path="res://Images/Enemies/Bosses/1/Death/death3.png" type="Texture" id=13]
-[ext_resource path="res://Images/Enemies/Bosses/1/Death/death4.png" type="Texture" id=14]
-[ext_resource path="res://Images/Enemies/Bosses/1/Death/death5.png" type="Texture" id=15]
+[ext_resource path="res://Images/Enemies/Bosses/1/Death/death0.png" type="Texture" id=5]
+[ext_resource path="res://Images/Enemies/Bosses/1/Death/death1.png" type="Texture" id=6]
+[ext_resource path="res://Images/Enemies/Bosses/1/Death/death2.png" type="Texture" id=7]
+[ext_resource path="res://Images/Enemies/Bosses/1/Death/death3.png" type="Texture" id=8]
+[ext_resource path="res://Images/Enemies/Bosses/1/Death/death4.png" type="Texture" id=9]
+[ext_resource path="res://Images/Enemies/Bosses/1/Death/death5.png" type="Texture" id=10]
+[ext_resource path="res://Images/Enemies/Bosses/1/Life/life0.png" type="Texture" id=11]
+[ext_resource path="res://Images/Enemies/Bosses/1/Life/life1.png" type="Texture" id=12]
+[ext_resource path="res://Images/Enemies/Bosses/1/Life/life2.png" type="Texture" id=13]
+[ext_resource path="res://Images/Enemies/Bosses/1/Life/life3.png" type="Texture" id=14]
+[ext_resource path="res://Images/Enemies/Bosses/1/Life/life4.png" type="Texture" id=15]
 [ext_resource path="res://Scenes/Enemies/Info.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=17]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "Life",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "Death",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "Life",
 "speed": 5.0
 } ]
 
@@ -38,7 +38,26 @@ custom_solver_bias = 0.0
 radius = 30.0
 height = 83.0
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="Animation" id=3]
+
+resource_name = "damage"
+length = 0.4
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 256 )
@@ -101,10 +120,10 @@ position = Vector2( 0, -14 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "Life"
-frame = 6
+frame = 5
 playing = true
 flip_h = true
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/Djikstra" index="1"]
 
@@ -136,6 +155,16 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( -100, -120 )
 _sections_unfolded = [ "Transform" ]
 
+[node name="Animation" type="AnimationPlayer" parent="Boss/Djikstra" index="7"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/damage = SubResource( 3 )
+blend_times = [  ]
+
 [node name="Barrier" type="KinematicBody2D" parent="Boss" index="1"]
 
 editor/display_folded = true
@@ -151,7 +180,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/Barrier" index="0"]
 
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="PlayerTest" parent="." index="3" instance=ExtResource( 17 )]
 

@@ -60,7 +60,7 @@ extents = Vector2( 40, 60 )
 custom_solver_bias = 0.0
 extents = Vector2( 3, 240 )
 
-[node name="BossLevel3" type="Node"]
+[node name="BossLevel3" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -128,6 +128,7 @@ __meta__ = {
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 1 )
 animation = "Idle"
+frame = 2
 playing = true
 flip_h = true
 _sections_unfolded = [ "Transform" ]
@@ -137,6 +138,20 @@ _sections_unfolded = [ "Transform" ]
 shape = SubResource( 2 )
 
 [node name="Info" parent="Boss/Lovelace" index="2" instance=ExtResource( 29 )]
+
+[node name="atirar" type="Timer" parent="Boss/Lovelace" index="3"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="sequencia_tiros" type="Timer" parent="Boss/Lovelace" index="4"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
 
 [node name="Barrier" type="KinematicBody2D" parent="Boss" index="1"]
 
@@ -158,5 +173,9 @@ shape = SubResource( 3 )
 [node name="PlayerTest" parent="." index="3" instance=ExtResource( 30 )]
 
 position = Vector2( 96, 32 )
+
+[connection signal="timeout" from="Boss/Lovelace/atirar" to="Boss/Lovelace" method="_on_atirar_timeout"]
+
+[connection signal="timeout" from="Boss/Lovelace/sequencia_tiros" to="Boss/Lovelace" method="_on_sequencia_tiros_timeout"]
 
 

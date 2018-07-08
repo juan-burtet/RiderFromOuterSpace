@@ -1,4 +1,3 @@
-# EnemyGun.gd
 extends Area2D
 
 # Velocidade da Bala
@@ -19,7 +18,7 @@ func _process(delta):
 func _on_Visibility_screen_exited():
 	queue_free()
 
-func _on_EnemyGun_body_entered(body):
+func _on_BossWeapon1_body_entered(body):
 	queue_free()
 	if body.get_name() != "TileMap":
 		body.receive_damage()

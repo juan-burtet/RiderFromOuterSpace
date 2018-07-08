@@ -2,11 +2,12 @@
 
 [ext_resource path="res://Tilesets/Map1/Section 2/Map1_Section2_TileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Images/Maps/Map 1/Section 2/cave_wall.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/Maps/Change Level/ChangeLevel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Enemies/Maps/Change Level/ChangeLevel.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Enemies/Bomber.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Tests/Map Test/Fighter.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Tests/Map Test/Shooter.tscn" type="PackedScene" id=7]
+
 
 [node name="Map 1 Section 2" type="Node"]
 
@@ -75,6 +76,8 @@ next_world = "res://Scenes/Menus/MainMenu.tscn"
 position = Vector2( -415, 188 )
 
 [node name="Enemies" type="Node" parent="." index="4"]
+
+editor/display_folded = true
 
 [node name="Bomber" parent="Enemies" index="0" instance=ExtResource( 5 )]
 

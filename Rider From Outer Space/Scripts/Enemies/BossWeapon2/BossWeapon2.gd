@@ -1,8 +1,7 @@
-# EnemyGun.gd
 extends Area2D
 
 # Velocidade da Bala
-const SPEED = 300
+const SPEED = 125
 # Direção da bala
 var motion = Vector2()
 
@@ -15,11 +14,12 @@ func _process(delta):
 	translate(motion * SPEED * delta)
 	pass
 
-# Destroi a bala quando sair da tela
-func _on_Visibility_screen_exited():
-	queue_free()
+func _on_Visibility_screen_entered():
+	print("sumiu")
+	#queue_free()
 
-func _on_EnemyGun_body_entered(body):
+func _on_BossWeapon2_body_entered(body):
 	queue_free()
+	print("destruiu")
 	if body.get_name() != "TileMap":
 		body.receive_damage()

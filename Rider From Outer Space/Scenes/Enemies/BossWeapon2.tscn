@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scripts/Enemies/BossWeapon2/BossWeapon2.gd" type="Script" id=1]
+[ext_resource path="res://Images/Enemies/Bosses/Weapon1/0.png" type="Texture" id=2]
+[ext_resource path="res://Images/Enemies/Bosses/Weapon1/1.png" type="Texture" id=3]
+[ext_resource path="res://Images/Enemies/Bosses/Weapon1/2.png" type="Texture" id=4]
+[ext_resource path="res://Images/Enemies/Bosses/Weapon1/3.png" type="Texture" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 20.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 6.0
+
+[node name="BossWeapon2" type="Area2D"]
+
+scale = Vector2( 4, 4 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite" type="AnimatedSprite" parent="." index="0"]
+
+modulate = Color( 0.553818, 0.980469, 0.417465, 1 )
+frames = SubResource( 1 )
+animation = "default"
+playing = true
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Collision" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( 0, 7 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Visibility" type="VisibilityNotifier2D" parent="." index="2"]
+
+rect = Rect2( -5, 0, 10, 10 )
+
+[connection signal="body_entered" from="." to="." method="_on_BossWeapon2_body_entered"]
+
+[connection signal="screen_entered" from="Visibility" to="." method="_on_Visibility_screen_entered"]
+
+

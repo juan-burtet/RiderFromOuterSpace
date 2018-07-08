@@ -9,38 +9,38 @@
 [ext_resource path="res://Images/Menus/Space Background/parallax-space-ring-planet.png" type="Texture" id=7]
 [ext_resource path="res://Tilesets/FinalBoss/FinalBoss_TileSet.tres" type="TileSet" id=8]
 [ext_resource path="res://Scripts/Enemies/Bosses/4/Carmack.gd" type="Script" id=9]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/0.png" type="Texture" id=10]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/1.png" type="Texture" id=11]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/2.png" type="Texture" id=12]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/3.png" type="Texture" id=13]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/4.png" type="Texture" id=14]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/5.png" type="Texture" id=15]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/6.png" type="Texture" id=16]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/7.png" type="Texture" id=17]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/8.png" type="Texture" id=18]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/9.png" type="Texture" id=19]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/10.png" type="Texture" id=20]
-[ext_resource path="res://Images/Enemies/Bosses/4/Life/0.png" type="Texture" id=21]
-[ext_resource path="res://Images/Enemies/Bosses/4/Life/1.png" type="Texture" id=22]
-[ext_resource path="res://Images/Enemies/Bosses/4/Life/2.png" type="Texture" id=23]
-[ext_resource path="res://Images/Enemies/Bosses/4/Life/3.png" type="Texture" id=24]
-[ext_resource path="res://Images/Enemies/Bosses/4/Life/4.png" type="Texture" id=25]
-[ext_resource path="res://Images/Enemies/Bosses/4/Life/5.png" type="Texture" id=26]
+[ext_resource path="res://Images/Enemies/Bosses/4/Life/0.png" type="Texture" id=10]
+[ext_resource path="res://Images/Enemies/Bosses/4/Life/1.png" type="Texture" id=11]
+[ext_resource path="res://Images/Enemies/Bosses/4/Life/2.png" type="Texture" id=12]
+[ext_resource path="res://Images/Enemies/Bosses/4/Life/3.png" type="Texture" id=13]
+[ext_resource path="res://Images/Enemies/Bosses/4/Life/4.png" type="Texture" id=14]
+[ext_resource path="res://Images/Enemies/Bosses/4/Life/5.png" type="Texture" id=15]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/0.png" type="Texture" id=16]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/1.png" type="Texture" id=17]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/2.png" type="Texture" id=18]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/3.png" type="Texture" id=19]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/4.png" type="Texture" id=20]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/5.png" type="Texture" id=21]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/6.png" type="Texture" id=22]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/7.png" type="Texture" id=23]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/8.png" type="Texture" id=24]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/9.png" type="Texture" id=25]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/10.png" type="Texture" id=26]
 [ext_resource path="res://Scenes/Enemies/Info.tscn" type="PackedScene" id=27]
 [ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=28]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ) ],
-"loop": true,
-"name": "Death",
-"speed": 7.0
-}, {
-"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ) ],
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "Life",
 "speed": 10.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "Death",
+"speed": 7.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -53,7 +53,7 @@ extents = Vector2( 40, 55 )
 custom_solver_bias = 0.0
 extents = Vector2( 5, 240 )
 
-[node name="FinalBoss" type="Node" index="0"]
+[node name="FinalBoss" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -198,7 +198,7 @@ position = Vector2( 0, 14 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "Life"
-frame = 1
+frame = 4
 playing = true
 flip_h = true
 _sections_unfolded = [ "Transform" ]

@@ -41,7 +41,7 @@ extents = Vector2( 40, 80 )
 custom_solver_bias = 0.0
 extents = Vector2( 5, 290 )
 
-[node name="BossLevel2" type="Node"]
+[node name="BossLevel2" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -88,7 +88,6 @@ position = Vector2( 0, -25 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "default"
-frame = 8
 playing = true
 flip_h = true
 _sections_unfolded = [ "Transform" ]
@@ -100,6 +99,53 @@ shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Info" parent="Boss/Turing" index="2" instance=ExtResource( 20 )]
+
+[node name="Timer" type="Timer" parent="Boss/Turing" index="3"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="Pos0" type="Position2D" parent="Boss/Turing" index="4"]
+
+position = Vector2( -100, -300 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Pos1" type="Position2D" parent="Boss/Turing" index="5"]
+
+position = Vector2( -170, -300 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Pos2" type="Position2D" parent="Boss/Turing" index="6"]
+
+position = Vector2( -240, -300 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Pos3" type="Position2D" parent="Boss/Turing" index="7"]
+
+position = Vector2( -310, -300 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Pos4" type="Position2D" parent="Boss/Turing" index="8"]
+
+position = Vector2( -380, -300 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Pos5" type="Position2D" parent="Boss/Turing" index="9"]
+
+position = Vector2( -450, -300 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Pos6" type="Position2D" parent="Boss/Turing" index="10"]
+
+position = Vector2( -520, -300 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Pos7" type="Position2D" parent="Boss/Turing" index="11"]
+
+position = Vector2( -579, -300 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Barrier" type="KinematicBody2D" parent="Boss" index="1"]
 
@@ -119,5 +165,7 @@ shape = SubResource( 3 )
 [node name="PlayerTest" parent="." index="2" instance=ExtResource( 21 )]
 
 position = Vector2( 64, 352 )
+
+[connection signal="timeout" from="Boss/Turing/Timer" to="Boss/Turing" method="_on_Timer_timeout"]
 
 

@@ -4,31 +4,31 @@
 [ext_resource path="res://Images/Maps/Map 1/Section 2/cave_wall.png" type="Texture" id=2]
 [ext_resource path="res://Tilesets/Map1/Section 2/Map1_Section2_TileSet.tres" type="TileSet" id=3]
 [ext_resource path="res://Scripts/Enemies/Bosses/1/Djikstra.gd" type="Script" id=4]
-[ext_resource path="res://Images/Enemies/Bosses/1/Death/death0.png" type="Texture" id=5]
-[ext_resource path="res://Images/Enemies/Bosses/1/Death/death1.png" type="Texture" id=6]
-[ext_resource path="res://Images/Enemies/Bosses/1/Death/death2.png" type="Texture" id=7]
-[ext_resource path="res://Images/Enemies/Bosses/1/Death/death3.png" type="Texture" id=8]
-[ext_resource path="res://Images/Enemies/Bosses/1/Death/death4.png" type="Texture" id=9]
-[ext_resource path="res://Images/Enemies/Bosses/1/Death/death5.png" type="Texture" id=10]
-[ext_resource path="res://Images/Enemies/Bosses/1/Life/life0.png" type="Texture" id=11]
-[ext_resource path="res://Images/Enemies/Bosses/1/Life/life1.png" type="Texture" id=12]
-[ext_resource path="res://Images/Enemies/Bosses/1/Life/life2.png" type="Texture" id=13]
-[ext_resource path="res://Images/Enemies/Bosses/1/Life/life3.png" type="Texture" id=14]
-[ext_resource path="res://Images/Enemies/Bosses/1/Life/life4.png" type="Texture" id=15]
+[ext_resource path="res://Images/Enemies/Bosses/1/Life/life0.png" type="Texture" id=5]
+[ext_resource path="res://Images/Enemies/Bosses/1/Life/life1.png" type="Texture" id=6]
+[ext_resource path="res://Images/Enemies/Bosses/1/Life/life2.png" type="Texture" id=7]
+[ext_resource path="res://Images/Enemies/Bosses/1/Life/life3.png" type="Texture" id=8]
+[ext_resource path="res://Images/Enemies/Bosses/1/Life/life4.png" type="Texture" id=9]
+[ext_resource path="res://Images/Enemies/Bosses/1/Death/death0.png" type="Texture" id=10]
+[ext_resource path="res://Images/Enemies/Bosses/1/Death/death1.png" type="Texture" id=11]
+[ext_resource path="res://Images/Enemies/Bosses/1/Death/death2.png" type="Texture" id=12]
+[ext_resource path="res://Images/Enemies/Bosses/1/Death/death3.png" type="Texture" id=13]
+[ext_resource path="res://Images/Enemies/Bosses/1/Death/death4.png" type="Texture" id=14]
+[ext_resource path="res://Images/Enemies/Bosses/1/Death/death5.png" type="Texture" id=15]
 [ext_resource path="res://Scenes/Enemies/Info.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=17]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "Death",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "Life",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "Death",
 "speed": 5.0
 } ]
 
@@ -84,7 +84,6 @@ __meta__ = {
 
 [node name="Djikstra" type="KinematicBody2D" parent="Boss" index="0"]
 
-editor/display_folded = true
 position = Vector2( 640, 384 )
 input_pickable = false
 collision_layer = 2
@@ -102,7 +101,7 @@ position = Vector2( 0, -14 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "Life"
-frame = 4
+frame = 6
 playing = true
 flip_h = true
 _sections_unfolded = [ "Transform" ]
@@ -114,6 +113,28 @@ shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Info" parent="Boss/Djikstra" index="2" instance=ExtResource( 16 )]
+
+[node name="Timer" type="Timer" parent="Boss/Djikstra" index="3"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="Pos0" type="Position2D" parent="Boss/Djikstra" index="4"]
+
+position = Vector2( -100, 20 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Pos1" type="Position2D" parent="Boss/Djikstra" index="5"]
+
+position = Vector2( -100, -50 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Pos2" type="Position2D" parent="Boss/Djikstra" index="6"]
+
+position = Vector2( -100, -120 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Barrier" type="KinematicBody2D" parent="Boss" index="1"]
 
@@ -135,5 +156,7 @@ shape = SubResource( 3 )
 [node name="PlayerTest" parent="." index="3" instance=ExtResource( 17 )]
 
 position = Vector2( 128, -32 )
+
+[connection signal="timeout" from="Boss/Djikstra/Timer" to="Boss/Djikstra" method="_on_Timer_timeout"]
 
 

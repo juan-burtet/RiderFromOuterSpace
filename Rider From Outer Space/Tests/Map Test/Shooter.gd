@@ -1,8 +1,8 @@
+# Shooter.gd
 extends KinematicBody2D
 
 # Cenas das armas
 const PISTOL_SCENE = preload("res://Scenes/Enemies/EnemyGun.tscn")
-
 
 const UP = Vector2(0,-1)
 const GRAVITY = 20

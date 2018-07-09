@@ -12,7 +12,7 @@ use_filter = false
 font_data = ExtResource( 3 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[node name="Pause" type="CanvasLayer" index="0"]
+[node name="Pause" type="CanvasLayer"]
 
 pause_mode = 2
 layer = 2

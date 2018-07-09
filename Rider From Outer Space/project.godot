@@ -15,6 +15,10 @@ run/main_scene="res://Scenes/Menus/MainMenu.tscn"
 run/low_processor_mode=true
 config/icon="res://icon.png"
 
+[autoload]
+
+global="*res://Scripts/global.gd"
+
 [display]
 
 window/size/width=736

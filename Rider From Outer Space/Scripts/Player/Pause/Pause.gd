@@ -2,28 +2,31 @@
 extends CanvasLayer
 
 const mainMenu = "res://Scenes/Menus/MainMenu.tscn"
+const UPGRADE_SCENE = preload("res://Scenes/Player/Pause/Upgrades.tscn")
 
-
+var move
 var option
 var yellow = Color(1,1,0,1)
 var white = Color(1,1,1,1)
 
 func _ready():
+	move = true
 	option = 0
 	pass
 
 func _process(delta):
-	# Pinta todos opcoes de branco
-	modulate_options()
-	
-	# Move a opcao escolhida
-	move_options()
-	
-	# Pinta opcao escolhida de Amarelo
-	modulate_choice()
-	
-	# Escolhe a opcao
-	pick_option()
+	if move:
+		# Pinta todos opcoes de branco
+		modulate_options()
+		
+		# Move a opcao escolhida
+		move_options()
+		
+		# Pinta opcao escolhida de Amarelo
+		modulate_choice()
+		
+		# Escolhe a opcao
+		pick_option()
 	
 	pass
 
@@ -76,7 +79,11 @@ func returnGame():
 
 # Mostra os status do personagem
 func stats():
-	print("Not yet implemented")
+	var upgrade = UPGRADE_SCENE.instance()
+	add_child(upgrade)
+	move = false
+	yield(upgrade, "saiu")
+	move = true
 	pass
 
 # Volta para o menu inicial

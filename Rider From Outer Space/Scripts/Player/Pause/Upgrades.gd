@@ -25,6 +25,8 @@ const MACHINE_GUN_DESCRIPTION = "UPGRADE THIS TO DO MORE DAMAGE WITH THE MACHINE
 # Option
 var option 
 
+signal saiu
+
 func _ready():
 	option = 0
 	set_option()
@@ -34,6 +36,11 @@ func _process(delta):
 	# move a opcao
 	move_option()
 	pass
+
+func _input(event):
+	if event.is_action_pressed("ui_esc"):
+		emit_signal("saiu")
+		queue_free()
 
 # movimenta uma opcao
 func move_option():

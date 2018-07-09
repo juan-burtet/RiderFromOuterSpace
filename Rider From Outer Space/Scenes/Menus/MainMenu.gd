@@ -15,6 +15,7 @@ func _ready():
 
 
 func _process(delta):
+	
 	# Move a opção no Menu
 	move_menu()
 	

@@ -10,6 +10,8 @@ var pos
 onready var timer = $Timer
 var mode
 
+signal dead
+
 func _ready():
 	mode = 0
 	pos = 0
@@ -181,7 +183,8 @@ func is_dead():
 		if mode != 0:
 			$Animation.play("die")
 			yield($Animation, "animation_finished")
-			queue_free()
+			emit_signal("dead")
+			get_parent().queue_free()
 		else:
 			mode = 1
 			$Sprite.play("Death")
@@ -195,3 +198,6 @@ func is_dead():
 			$CollisionShape2D.set_disabled(false)
 			can_shot = true
 			restart_timer_shadow()
+
+func _on_FinalBoss_apertou():
+	pass # replace with function body

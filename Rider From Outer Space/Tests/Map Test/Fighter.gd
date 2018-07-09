@@ -15,9 +15,6 @@ func _process(delta):
 	print_hp()
 	
 	
-	if !hp:
-		dies()
-	
 	if $left.is_colliding() or !$leftDown.is_colliding():
 		motion.x = SPEED
 	elif $right.is_colliding() or !$rightDown.is_colliding():
@@ -44,11 +41,18 @@ func print_hp():
 	$HP.set_value(hp)
 
 func dies():
+	$Animation.play("death")
+	yield($Animation,"animation_finished")
 	queue_free()
 
 func does_damage(damage):
-	hp -= damage
-	hp = max(0, hp)
+	if hp > 0:
+		hp -= damage
+		hp = max(0, hp)
+		$Animation.play("hit")
+		if !hp:
+			dies()
+	
 	pass
 
 func test_collision():

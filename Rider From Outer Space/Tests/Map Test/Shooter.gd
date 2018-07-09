@@ -19,10 +19,6 @@ func _ready():
 func _process(delta):
 	motion.y += GRAVITY
 	
-	# Se o hp zerou, morre
-	if !hp:
-		dies()
-	
 	
 	if $right.is_colliding():
 		teste($right)
@@ -95,9 +91,16 @@ func _on_Timer_timeout():
 
 
 func does_damage(damage):
-	hp -= damage
-	hp = max(0, hp)
+	if hp > 0:
+		hp -= damage
+		hp = max(0, hp)
+		$Animation.play("hit")
+		# Se o hp zerou, morre
+		if !hp:
+			dies()
 	pass
 
 func dies():
+	$Animation.play("death")
+	yield($Animation,"animation_finished")
 	queue_free()

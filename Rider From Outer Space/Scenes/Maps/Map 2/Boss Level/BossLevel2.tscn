@@ -79,7 +79,7 @@ tracks/0/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 5, 290 )
 
-[node name="BossLevel2" type="Node" index="0"]
+[node name="BossLevel2" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -126,7 +126,7 @@ position = Vector2( 0, -25 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "default"
-frame = 14
+frame = 10
 playing = true
 flip_h = true
 _sections_unfolded = [ "Transform", "Visibility" ]

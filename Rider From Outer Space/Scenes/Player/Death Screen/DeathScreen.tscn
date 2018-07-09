@@ -16,7 +16,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 [node name="DeathScreen" type="CanvasLayer" index="0"]
 
 pause_mode = 2
-layer = 1
+layer = 2
 offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )

@@ -1,26 +1,30 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://Tilesets/Map1/Section 1/Map1_Section1_TileSet.tres" type="TileSet" id=1]
-[ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Images/Maps/Map 1/Section 1/fase1area1.png" type="Texture" id=3]
-[ext_resource path="res://Scripts/Maps/Change Level/ChangeLevel.gd" type="Script" id=4]
-[ext_resource path="res://Scenes/Collect/MasterUpgrade.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Collect/Coins.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Tests/Map Test/Fighter.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/Enemies/Bomber.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Tests/Map Test/Shooter.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scripts/Maps/Map1/Map 1 Section 1.gd" type="Script" id=1]
+[ext_resource path="res://Tilesets/Map1/Section 1/Map1_Section1_TileSet.tres" type="TileSet" id=2]
+[ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Images/Maps/Map 1/Section 1/fase1area1.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/Maps/Change Level/ChangeLevel.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/Collect/MasterUpgrade.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Collect/Coins.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Tests/Map Test/Fighter.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Enemies/Bomber.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Tests/Map Test/Shooter.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 22.3209, 21.7955 )
 
-[node name="Map 1 Section 1" type="Node"]
+[node name="Map 1 Section 1" type="Node" index="0"]
+
+script = ExtResource( 1 )
+next_world = "res://Scenes/Maps/Map 1/Section 2/Map 1 Section 2.tscn"
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
 mode = 0
-tile_set = ExtResource( 1 )
+tile_set = ExtResource( 2 )
 cell_size = Vector2( 32, 32 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -41,7 +45,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="PlayerTest" parent="." index="1" instance=ExtResource( 2 )]
+[node name="PlayerTest" parent="." index="1" instance=ExtResource( 3 )]
 
 position = Vector2( 128, 192 )
 
@@ -71,11 +75,10 @@ _sections_unfolded = [ "Motion" ]
 
 position = Vector2( 1128, 626.234 )
 scale = Vector2( 4.13333, 3.60931 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="ChangeLevel" type="Area2D" parent="." index="3"]
 
-editor/display_folded = true
 position = Vector2( 4862.25, 2048.82 )
 scale = Vector2( 2.94546, 2.97423 )
 input_pickable = true
@@ -85,11 +88,10 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
 }
-next_world = "res://Scenes/Maps/Map 1/Section 2/Map 1 Section 2.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChangeLevel" index="0"]
 
@@ -99,106 +101,110 @@ shape = SubResource( 1 )
 
 editor/display_folded = true
 
-[node name="MasterUpgrade" parent="Collect" index="0" instance=ExtResource( 5 )]
+[node name="MasterUpgrade" parent="Collect" index="0" instance=ExtResource( 6 )]
 
-[node name="Coins" parent="Collect" index="1" instance=ExtResource( 6 )]
+[node name="Coins" parent="Collect" index="1" instance=ExtResource( 7 )]
 
 position = Vector2( 352, 416 )
 
-[node name="Coins2" parent="Collect" index="2" instance=ExtResource( 6 )]
+[node name="Coins2" parent="Collect" index="2" instance=ExtResource( 7 )]
 
 position = Vector2( 1056, 992 )
 
 [node name="Enemies" type="Node" parent="." index="5"]
 
-[node name="Fighter" parent="Enemies" index="0" instance=ExtResource( 7 )]
+editor/display_folded = true
+
+[node name="Fighter" parent="Enemies" index="0" instance=ExtResource( 8 )]
 
 position = Vector2( 1312, 384 )
 
-[node name="Fighter4" parent="Enemies" index="1" instance=ExtResource( 7 )]
+[node name="Fighter4" parent="Enemies" index="1" instance=ExtResource( 8 )]
 
 position = Vector2( 2560, 1600 )
 
-[node name="Fighter5" parent="Enemies" index="2" instance=ExtResource( 7 )]
+[node name="Fighter5" parent="Enemies" index="2" instance=ExtResource( 8 )]
 
 position = Vector2( 2880, 864 )
 
-[node name="Fighter3" parent="Enemies" index="3" instance=ExtResource( 7 )]
+[node name="Fighter3" parent="Enemies" index="3" instance=ExtResource( 8 )]
 
 position = Vector2( 960, 1792 )
 
-[node name="Bomber" parent="Enemies" index="4" instance=ExtResource( 8 )]
+[node name="Bomber" parent="Enemies" index="4" instance=ExtResource( 9 )]
 
 position = Vector2( 768, 992 )
 
-[node name="Bomber2" parent="Enemies" index="5" instance=ExtResource( 8 )]
+[node name="Bomber2" parent="Enemies" index="5" instance=ExtResource( 9 )]
 
 position = Vector2( 1344, 1280 )
 
-[node name="Shooter" parent="Enemies" index="6" instance=ExtResource( 9 )]
+[node name="Shooter" parent="Enemies" index="6" instance=ExtResource( 10 )]
 
 position = Vector2( 2080, 2400 )
 
-[node name="Shooter6" parent="Enemies" index="7" instance=ExtResource( 9 )]
+[node name="Shooter6" parent="Enemies" index="7" instance=ExtResource( 10 )]
 
 position = Vector2( 2816, 2272 )
 
-[node name="Shooter8" parent="Enemies" index="8" instance=ExtResource( 9 )]
+[node name="Shooter8" parent="Enemies" index="8" instance=ExtResource( 10 )]
 
 position = Vector2( 2720, 2016 )
 
-[node name="Shooter9" parent="Enemies" index="9" instance=ExtResource( 9 )]
+[node name="Shooter9" parent="Enemies" index="9" instance=ExtResource( 10 )]
 
 position = Vector2( 2432, 2016 )
 
-[node name="Shooter10" parent="Enemies" index="10" instance=ExtResource( 9 )]
+[node name="Shooter10" parent="Enemies" index="10" instance=ExtResource( 10 )]
 
 position = Vector2( 2112, 2016 )
 
-[node name="Shooter11" parent="Enemies" index="11" instance=ExtResource( 9 )]
+[node name="Shooter11" parent="Enemies" index="11" instance=ExtResource( 10 )]
 
 position = Vector2( 1760, 1984 )
 
-[node name="Shooter12" parent="Enemies" index="12" instance=ExtResource( 9 )]
+[node name="Shooter12" parent="Enemies" index="12" instance=ExtResource( 10 )]
 
 position = Vector2( 1408, 1888 )
 
-[node name="Shooter14" parent="Enemies" index="13" instance=ExtResource( 9 )]
+[node name="Shooter14" parent="Enemies" index="13" instance=ExtResource( 10 )]
 
 position = Vector2( 2112, 1376 )
 
-[node name="Shooter15" parent="Enemies" index="14" instance=ExtResource( 9 )]
+[node name="Shooter15" parent="Enemies" index="14" instance=ExtResource( 10 )]
 
 position = Vector2( 2592, 1120 )
 
-[node name="Shooter16" parent="Enemies" index="15" instance=ExtResource( 9 )]
+[node name="Shooter16" parent="Enemies" index="15" instance=ExtResource( 10 )]
 
 position = Vector2( 3360, 1056 )
 
-[node name="Shooter17" parent="Enemies" index="16" instance=ExtResource( 9 )]
+[node name="Shooter17" parent="Enemies" index="16" instance=ExtResource( 10 )]
 
 position = Vector2( 3840, 1824 )
 
-[node name="Shooter18" parent="Enemies" index="17" instance=ExtResource( 9 )]
+[node name="Shooter18" parent="Enemies" index="17" instance=ExtResource( 10 )]
 
 position = Vector2( 4640, 2112 )
 
-[node name="Shooter2" parent="Enemies" index="18" instance=ExtResource( 9 )]
+[node name="Shooter2" parent="Enemies" index="18" instance=ExtResource( 10 )]
 
 position = Vector2( 1792, 2400 )
 
-[node name="Shooter3" parent="Enemies" index="19" instance=ExtResource( 9 )]
+[node name="Shooter3" parent="Enemies" index="19" instance=ExtResource( 10 )]
 
 position = Vector2( 1408, 2400 )
 
-[node name="Shooter4" parent="Enemies" index="20" instance=ExtResource( 9 )]
+[node name="Shooter4" parent="Enemies" index="20" instance=ExtResource( 10 )]
 
 position = Vector2( 960, 2400 )
 
-[node name="Shooter5" parent="Enemies" index="21" instance=ExtResource( 9 )]
+[node name="Shooter5" parent="Enemies" index="21" instance=ExtResource( 10 )]
 
 position = Vector2( 960, 2400 )
 
 [connection signal="body_entered" from="ChangeLevel" to="ChangeLevel" method="_on_ChangeLevel_body_entered"]
+
+[connection signal="next_world" from="ChangeLevel" to="." method="_on_ChangeLevel_next_world"]
 
 

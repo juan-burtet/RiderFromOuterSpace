@@ -1,16 +1,21 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Tilesets/Map2/Section 1/Map2_Section1_TileSet.tres" type="TileSet" id=1]
-[ext_resource path="res://Images/Maps/Map 2/Section 1/background.png" type="Texture" id=2]
-[ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/Maps/Map2/Map 2 Section 1.gd" type="Script" id=1]
+[ext_resource path="res://Tilesets/Map2/Section 1/Map2_Section1_TileSet.tres" type="TileSet" id=2]
+[ext_resource path="res://Images/Maps/Map 2/Section 1/background.png" type="Texture" id=3]
+[ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Maps/Change Level/ChangeLevel.tscn" type="PackedScene" id=5]
 
-[node name="Map 2 Section 1" type="Node" index="0"]
+[node name="Map 2 Section 1" type="Node"]
+
+script = ExtResource( 1 )
+next_world = "res://Scenes/Maps/Map 2/Section 2/Map 2 Section 2.tscn"
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
 scale = Vector2( 2, 2 )
 mode = 0
-tile_set = ExtResource( 1 )
+tile_set = ExtResource( 2 )
 cell_size = Vector2( 16, 16 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -54,14 +59,21 @@ _sections_unfolded = [ "Motion" ]
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
 
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="PlayerTest" parent="." index="2" instance=ExtResource( 3 )]
+[node name="PlayerTest" parent="." index="2" instance=ExtResource( 4 )]
 
 position = Vector2( -288, 32 )
+
+[node name="ChangeLevel" parent="." index="3" instance=ExtResource( 5 )]
+
+position = Vector2( 6614, 1938 )
+scale = Vector2( 2.94546, 7.40625 )
+
+[connection signal="next_world" from="ChangeLevel" to="." method="_on_ChangeLevel_next_world"]
 
 

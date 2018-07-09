@@ -85,6 +85,9 @@ func update_hp():
 func is_dead():
 	if !hp:
 		can_shot = false
+		$CollisionShape2D.queue_free()
+		$Animation.play("Death")
+		yield($Animation,"animation_finished")
 		get_parent().queue_free()
 
 func _on_atirar_timeout():

@@ -7,9 +7,8 @@
 custom_solver_bias = 0.0
 extents = Vector2( 22.3209, 21.7955 )
 
-[node name="ChangeLevel" type="Area2D" index="0"]
+[node name="ChangeLevel" type="Area2D"]
 
-editor/display_folded = true
 scale = Vector2( 2.94546, 2.97423 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -23,7 +22,6 @@ _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
-next_world = "res://Scenes/Maps/Map 1/Section 2/Map 1 Section 2.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 

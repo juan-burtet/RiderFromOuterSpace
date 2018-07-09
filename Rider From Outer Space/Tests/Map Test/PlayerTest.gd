@@ -30,7 +30,7 @@ var doubleJump = false # Pode dar pulo duplo
 var direction = Vector2(1,0) # Direção do tiro
 var gun_mode # Escolha da arma
 var direcao_padrao = 1 # Direção padrao da arma
-var hp = 6 # vida do personagem
+var hp = 6# vida do personagem
 var friction = false # Indica que tu parou de se movimentar
 var can_move = true
 
@@ -44,6 +44,7 @@ func _ready():
 	set_process(false)
 	pistol_timer.set_one_shot(false)
 	shotgun_timer.set_one_shot(false)
+	hp = global.get_hp() 
 	machinegun_timer.set_one_shot(false)
 	gun_mode = 1
 	pass
@@ -358,7 +359,19 @@ func receive_damage():
 	hp -= 1
 	hp = max(0,hp)
 	
-	if hp == 5:
+	if hp == 11:
+		$GUI.get_node("Hearts/6").play("Half")
+	elif hp == 10:
+		$GUI.get_node("Hearts/6").play("Empty")
+	elif hp == 9:
+		$GUI.get_node("Hearts/5").play("Half")
+	elif hp == 8:
+		$GUI.get_node("Hearts/5").play("Empty")
+	elif hp == 7:
+		$GUI.get_node("Hearts/4").play("Half")
+	elif hp == 6:
+		$GUI.get_node("Hearts/4").play("Empty")
+	elif hp == 5:
 		$GUI.get_node("Hearts/3").play("Half")
 	elif hp == 4:
 		$GUI.get_node("Hearts/3").play("Empty")

@@ -13,6 +13,11 @@ func _ready():
 	set_process(true)
 	pass
 
+func _input(event):
+	if event.is_action_pressed("ui_esc"):
+		pass
+	pass
+
 
 func _process(delta):
 	
@@ -72,11 +77,12 @@ func option_pressed():
 	if Input.is_action_just_pressed("ui_accept"):
 		match menu:
 			0: get_tree().change_scene(firstLevel)
-			1: print("Load Game not yet implemented")
-			2: print("Chapter Select not yet implemented")
-			3: print("Options not yet implemented")
+			1: $Animation.play("load")
+			2: $Animation.play("chapter")
+			3: $Animation.play("options")
 			4: get_tree().quit()
 	pass
+
 
 # Função que anima o plano de fundo
 func animate_background():

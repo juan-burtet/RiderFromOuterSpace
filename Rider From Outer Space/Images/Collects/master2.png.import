@@ -7,10 +7,7 @@ path="res://.import/master2.png-4cbe073edd6586e7614b60dbb7c70d57.stex"
 [deps]
 
 source_file="res://Images/Collects/master2.png"
-source_md5="319a9c90fdd010289dcd9783b50dfdb2"
-
 dest_files=[ "res://.import/master2.png-4cbe073edd6586e7614b60dbb7c70d57.stex" ]
-dest_md5="26950b5e903caa2fbd42b4092d86c564"
 
 [params]
 

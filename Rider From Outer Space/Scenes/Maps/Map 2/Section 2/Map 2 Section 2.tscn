@@ -8,7 +8,7 @@
 [ext_resource path="res://Scenes/Enemies/Bomber2.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Enemies/Shooter2.tscn" type="PackedScene" id=7]
 
-[node name="Map 2 Section 2" type="Node" index="0"]
+[node name="Map 2 Section 2" type="Node"]
 
 script = ExtResource( 1 )
 next_world = "res://Scenes/Maps/Map 2/Boss Level/BossLevel2.tscn"

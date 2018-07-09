@@ -13,6 +13,27 @@ func _process(delta):
 	value = $DashBar.get_value()
 	if value != 100:
 		$DashBar.set_value(value + delta*100)
+	$Upgrades/qt.set_text(str(global.get_upgrades()))
+	$Coins/qt.set_text(str(global.get_coins()))
+	
+	update_hp()
+	pass
+
+func update_hp():
+	var x = global.get_heart()
+	match x:
+		1:
+			$Hearts/'4'.set_visible(true)
+			pass
+		2:
+			$Hearts/'4'.set_visible(true)
+			$Hearts/'5'.set_visible(true)
+			pass
+		3:
+			$Hearts/'4'.set_visible(true)
+			$Hearts/'5'.set_visible(true)
+			$Hearts/'6'.set_visible(true)
+			pass
 
 # Função que indica que a barra está completa
 func is_complete():

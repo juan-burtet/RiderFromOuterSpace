@@ -7,10 +7,7 @@ path="res://.import/3.png-cd2d1839d478f33ec1749966cbe9f556.stex"
 [deps]
 
 source_file="res://Images/Enemies/Explosion/3.png"
-source_md5="797922191f8cef810d46e036b1962c6a"
-
 dest_files=[ "res://.import/3.png-cd2d1839d478f33ec1749966cbe9f556.stex" ]
-dest_md5="594950124e34873fdcb12a44163338d1"
 
 [params]
 

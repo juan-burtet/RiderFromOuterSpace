@@ -35,7 +35,62 @@ func _ready():
 func _process(delta):
 	# move a opcao
 	move_option()
+	
+	#atualiza o valor
+	$n_upgrades/qt.set_text(str(global.get_upgrades()))
+	
+	
+	if Input.is_action_just_pressed("ui_accept"):
+		choose_option()
+	
+	update_points()
 	pass
+
+func update_points():
+	
+	update_sprite($Points/Life, global.get_heart())
+	update_sprite($Points/Jetpack, global.get_jetpack())
+	update_sprite($Points/Pistol, global.get_pistol())
+	update_sprite($Points/Shotgun, global.get_shotgun())
+	update_sprite($Points/MachineGun, global.get_machinegun())
+	
+	pass
+
+
+func update_sprite(sprite, value):
+	sprite.play(str(value))
+	#match value:
+	#	0:pass
+	#	1:pass
+	#	2:pass
+	#	3:pass
+	pass
+
+
+func choose_option():
+	if global.get_upgrades() < 1:
+		$Animation.play("machinegun")
+	else:
+		match option:
+			0:
+				global.add_heart()
+				pass
+			1:
+				global.add_jetpack()
+				pass
+			2:
+				global.add_pistol()
+				pass
+			3:
+				global.add_shotgun()
+				pass
+			4:
+				global.add_machinegun()
+				pass
+		pass
+	pass
+
+
 
 func _input(event):
 	if event.is_action_pressed("ui_esc"):

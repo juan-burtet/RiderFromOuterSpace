@@ -2,6 +2,9 @@ extends Area2D
 
 func _on_Coins_body_entered(body):
 	if body.get_name() == "PlayerTest":
+		global.imprime()
+		global.add_coin()
+		print(str(global.get_coins()))
 		destroy_coin()
 	pass # replace with function body
 

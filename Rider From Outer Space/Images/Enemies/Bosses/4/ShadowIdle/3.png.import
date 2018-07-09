@@ -7,10 +7,7 @@ path="res://.import/3.png-184fcb3e09817ba9638885d9cf2ee790.stex"
 [deps]
 
 source_file="res://Images/Enemies/Bosses/4/ShadowIdle/3.png"
-source_md5="ccad982268bb544d28f9d873d275521f"
-
 dest_files=[ "res://.import/3.png-184fcb3e09817ba9638885d9cf2ee790.stex" ]
-dest_md5="08f809be579d7b6865e578104a9152ef"
 
 [params]
 

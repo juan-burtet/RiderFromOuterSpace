@@ -1,4 +1,4 @@
-# Map 3 Section 2.gd
+# Map 3 Section 1.gd
 extends Node
 
 export(String, FILE, "*.tscn") var next_world
@@ -6,7 +6,17 @@ export(String, FILE, "*.tscn") var next_world
 const DIALOG_SCENE = preload("res://Scenes/Dialog/Dialog.tscn")
 const BLACK_SCREEN = preload("res://Scenes/BlackScreen/BlackScreen.tscn")
 
-const TEXT1 = "I'M INSIDE THE TEMPLE. THE GEM MUST BE CLOSE"
+const BLACK_POSITION = Vector2(0,-300)
+
+const TEXT1 = "WHAT HAPPEN???"
+const TEXT2 = "HELLO RIDER. MY NAME IS CARMACK. YOUR SHIP WAS AMBUSHED BY ME."
+const TEXT3 = "WHY DID YOU DO THAT?"
+const TEXT4 = "I NEED YOUR SERVICES. YOU ARE THE BEST BOUNTY HUNTER IN THE GALAXY. I NEED TO TAKE SOMETHING CALLED 'THE GEM'."
+const TEXT5 = "NEVER HEARD OF."
+const TEXT6 = "I HAVE THE INFORMATION THAT YOU NEED. YOU HAVE TO GO TO THE PLANET KONISBERG AND FIND DJIKSTRA. HE KNOW WHERE THE GEM ARE."
+const TEXT7 = "DO THIS FOR ME, AND YOU GET A GREAT BOUNTY. I GUARANTEE."
+const TEXT8 = "FINE. I ALWAYS DO MY JOB. I WILL FIND DJIKSTRA AND THE GEM"
+const TEXT9 = "VERY GOOD..."
 
 var yellow = Color(1,1,0,1)
 var red = Color(1, 0, 0, 1)
@@ -19,9 +29,10 @@ signal apertou
 signal fade
 
 func _ready():
+	$PlayerTest/camera.queue_free()
+	$PlayerTest.set_physics_process(false)
 	begin()
 	yield(self, "fade")
-	$PlayerTest.set_physics_process(false)
 	inicia_dialogo()
 	pass
 
@@ -44,8 +55,26 @@ func inicia_dialogo():
 	self.add_child(dialog)
 	cria_dialogo("RIDER", yellow, TEXT1)
 	yield(self, "acabou")
-	
-	$PlayerTest.set_physics_process(true)
+	cria_dialogo("CARMACK", red, TEXT2)
+	yield(self, "acabou")
+	$CanvasLayer/Sprite.set_position(BLACK_POSITION)
+	begin()
+	yield(self, "fade")
+	cria_dialogo("RIDER", yellow, TEXT3)
+	yield(self, "acabou")
+	cria_dialogo("CARMACK", red, TEXT4)
+	yield(self, "acabou")
+	cria_dialogo("RIDER", yellow, TEXT5)
+	yield(self, "acabou")
+	cria_dialogo("CARMACK", red, TEXT6)
+	yield(self, "acabou")
+	cria_dialogo("CARMACK", red, TEXT7)
+	yield(self, "acabou")
+	cria_dialogo("RIDER", yellow, TEXT8)
+	yield(self, "acabou")
+	cria_dialogo("CARMACK", red, TEXT9)
+	yield(self, "acabou")
+	change_level()
 
 func begin():
 	var black = BLACK_SCREEN.instance()
@@ -63,7 +92,7 @@ func end():
 	black.queue_free()
 	emit_signal("fade")
 
-func _on_ChangeLevel_next_world():
+func change_level():
 	end()
 	yield(self, "fade")
 	get_tree().change_scene(next_world)

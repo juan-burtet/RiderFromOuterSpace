@@ -16,7 +16,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 22.3209, 21.7955 )
 
-[node name="Map 1 Section 1" type="Node" index="0"]
+[node name="Map 1 Section 1" type="Node"]
 
 script = ExtResource( 1 )
 next_world = "res://Scenes/Maps/Map 1/Section 2/Map 1 Section 2.tscn"
@@ -79,7 +79,8 @@ texture = ExtResource( 4 )
 
 [node name="ChangeLevel" type="Area2D" parent="." index="3"]
 
-position = Vector2( 4862.25, 2048.82 )
+editor/display_folded = true
+position = Vector2( 4864, 2048 )
 scale = Vector2( 2.94546, 2.97423 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -103,9 +104,11 @@ editor/display_folded = true
 
 [node name="MasterUpgrade" parent="Collect" index="0" instance=ExtResource( 6 )]
 
+position = Vector2( 1280, -512 )
+
 [node name="Coins" parent="Collect" index="1" instance=ExtResource( 7 )]
 
-position = Vector2( 352, 416 )
+position = Vector2( 1056, -512 )
 
 [node name="Coins2" parent="Collect" index="2" instance=ExtResource( 7 )]
 
@@ -115,91 +118,87 @@ position = Vector2( 1056, 992 )
 
 editor/display_folded = true
 
-[node name="Fighter" parent="Enemies" index="0" instance=ExtResource( 8 )]
-
-position = Vector2( 1312, 384 )
-
-[node name="Fighter4" parent="Enemies" index="1" instance=ExtResource( 8 )]
+[node name="Fighter4" parent="Enemies" index="0" instance=ExtResource( 8 )]
 
 position = Vector2( 2560, 1600 )
 
-[node name="Fighter5" parent="Enemies" index="2" instance=ExtResource( 8 )]
+[node name="Fighter5" parent="Enemies" index="1" instance=ExtResource( 8 )]
 
 position = Vector2( 2880, 864 )
 
-[node name="Fighter3" parent="Enemies" index="3" instance=ExtResource( 8 )]
+[node name="Fighter3" parent="Enemies" index="2" instance=ExtResource( 8 )]
 
 position = Vector2( 960, 1792 )
 
-[node name="Bomber" parent="Enemies" index="4" instance=ExtResource( 9 )]
+[node name="Bomber" parent="Enemies" index="3" instance=ExtResource( 9 )]
 
 position = Vector2( 768, 992 )
 
-[node name="Bomber2" parent="Enemies" index="5" instance=ExtResource( 9 )]
+[node name="Bomber2" parent="Enemies" index="4" instance=ExtResource( 9 )]
 
 position = Vector2( 1344, 1280 )
 
-[node name="Shooter" parent="Enemies" index="6" instance=ExtResource( 10 )]
+[node name="Shooter" parent="Enemies" index="5" instance=ExtResource( 10 )]
 
 position = Vector2( 2080, 2400 )
 
-[node name="Shooter6" parent="Enemies" index="7" instance=ExtResource( 10 )]
+[node name="Shooter6" parent="Enemies" index="6" instance=ExtResource( 10 )]
 
 position = Vector2( 2816, 2272 )
 
-[node name="Shooter8" parent="Enemies" index="8" instance=ExtResource( 10 )]
+[node name="Shooter8" parent="Enemies" index="7" instance=ExtResource( 10 )]
 
 position = Vector2( 2720, 2016 )
 
-[node name="Shooter9" parent="Enemies" index="9" instance=ExtResource( 10 )]
+[node name="Shooter9" parent="Enemies" index="8" instance=ExtResource( 10 )]
 
 position = Vector2( 2432, 2016 )
 
-[node name="Shooter10" parent="Enemies" index="10" instance=ExtResource( 10 )]
+[node name="Shooter10" parent="Enemies" index="9" instance=ExtResource( 10 )]
 
 position = Vector2( 2112, 2016 )
 
-[node name="Shooter11" parent="Enemies" index="11" instance=ExtResource( 10 )]
+[node name="Shooter11" parent="Enemies" index="10" instance=ExtResource( 10 )]
 
 position = Vector2( 1760, 1984 )
 
-[node name="Shooter12" parent="Enemies" index="12" instance=ExtResource( 10 )]
+[node name="Shooter12" parent="Enemies" index="11" instance=ExtResource( 10 )]
 
 position = Vector2( 1408, 1888 )
 
-[node name="Shooter14" parent="Enemies" index="13" instance=ExtResource( 10 )]
+[node name="Shooter14" parent="Enemies" index="12" instance=ExtResource( 10 )]
 
 position = Vector2( 2112, 1376 )
 
-[node name="Shooter15" parent="Enemies" index="14" instance=ExtResource( 10 )]
+[node name="Shooter15" parent="Enemies" index="13" instance=ExtResource( 10 )]
 
 position = Vector2( 2592, 1120 )
 
-[node name="Shooter16" parent="Enemies" index="15" instance=ExtResource( 10 )]
+[node name="Shooter16" parent="Enemies" index="14" instance=ExtResource( 10 )]
 
 position = Vector2( 3360, 1056 )
 
-[node name="Shooter17" parent="Enemies" index="16" instance=ExtResource( 10 )]
+[node name="Shooter17" parent="Enemies" index="15" instance=ExtResource( 10 )]
 
 position = Vector2( 3840, 1824 )
 
-[node name="Shooter18" parent="Enemies" index="17" instance=ExtResource( 10 )]
+[node name="Shooter18" parent="Enemies" index="16" instance=ExtResource( 10 )]
 
 position = Vector2( 4640, 2112 )
 
-[node name="Shooter2" parent="Enemies" index="18" instance=ExtResource( 10 )]
+[node name="Shooter2" parent="Enemies" index="17" instance=ExtResource( 10 )]
 
 position = Vector2( 1792, 2400 )
 
-[node name="Shooter3" parent="Enemies" index="19" instance=ExtResource( 10 )]
+[node name="Shooter3" parent="Enemies" index="18" instance=ExtResource( 10 )]
 
 position = Vector2( 1408, 2400 )
 
-[node name="Shooter4" parent="Enemies" index="20" instance=ExtResource( 10 )]
+[node name="Shooter4" parent="Enemies" index="19" instance=ExtResource( 10 )]
 
 position = Vector2( 960, 2400 )
 
-[node name="Shooter5" parent="Enemies" index="21" instance=ExtResource( 10 )]
+[node name="Shooter5" parent="Enemies" index="20" instance=ExtResource( 10 )]
 
 position = Vector2( 960, 2400 )
 

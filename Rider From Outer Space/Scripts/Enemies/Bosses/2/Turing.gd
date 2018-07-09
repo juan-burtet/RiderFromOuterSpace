@@ -8,6 +8,8 @@ var can_shot
 var pos
 onready var timer = $Timer
 
+signal dead
+
 func _ready():
 	pos = 0
 	can_shot = true
@@ -155,3 +157,4 @@ func is_dead():
 		$AnimationPlayer.play("death")
 		yield($AnimationPlayer, "animation_finished")
 		get_parent().queue_free()
+		emit_signal("dead")

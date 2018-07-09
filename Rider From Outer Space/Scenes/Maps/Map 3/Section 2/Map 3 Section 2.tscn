@@ -6,7 +6,7 @@
 [ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Maps/Change Level/ChangeLevel.tscn" type="PackedScene" id=5]
 
-[node name="Map 3 Section 2" type="Node" index="0"]
+[node name="Map 3 Section 2" type="Node"]
 
 script = ExtResource( 1 )
 next_world = "res://Scenes/Maps/Map 3/Boss Level/BossLevel3.tscn"
@@ -61,7 +61,7 @@ position = Vector2( 96, -96 )
 
 [node name="ChangeLevel" parent="." index="3" instance=ExtResource( 5 )]
 
-position = Vector2( 1551, 2181 )
+position = Vector2( 1553, 2332 )
 scale = Vector2( 1.69148, 3.65899 )
 
 [connection signal="next_world" from="ChangeLevel" to="." method="_on_ChangeLevel_next_world"]

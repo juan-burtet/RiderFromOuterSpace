@@ -82,6 +82,7 @@ extents = Vector2( 5, 290 )
 [node name="BossLevel2" type="Node"]
 
 script = ExtResource( 1 )
+next_world = "res://Scenes/Maps/Map 3/Section 1/Map 3 Section 1.tscn"
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -107,6 +108,8 @@ _sections_unfolded = [ "Cell", "Collision", "Transform" ]
 
 [node name="Boss" type="Node" parent="." index="1"]
 
+editor/display_folded = true
+
 [node name="Turing" type="KinematicBody2D" parent="Boss" index="0"]
 
 position = Vector2( 640, 352 )
@@ -126,7 +129,7 @@ position = Vector2( 0, -25 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "default"
-frame = 10
+frame = 5
 playing = true
 flip_h = true
 _sections_unfolded = [ "Transform", "Visibility" ]
@@ -215,6 +218,15 @@ shape = SubResource( 5 )
 [node name="PlayerTest" parent="." index="2" instance=ExtResource( 21 )]
 
 position = Vector2( 64, 352 )
+
+[node name="Timer" type="Timer" parent="." index="3"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[connection signal="dead" from="Boss/Turing" to="." method="_on_Turing_dead"]
 
 [connection signal="timeout" from="Boss/Turing/Timer" to="Boss/Turing" method="_on_Timer_timeout"]
 

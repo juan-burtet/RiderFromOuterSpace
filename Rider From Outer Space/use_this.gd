@@ -1,4 +1,4 @@
-# Map 3 Section 2.gd
+# Map 1 Section 1.gd
 extends Node
 
 export(String, FILE, "*.tscn") var next_world
@@ -6,7 +6,8 @@ export(String, FILE, "*.tscn") var next_world
 const DIALOG_SCENE = preload("res://Scenes/Dialog/Dialog.tscn")
 const BLACK_SCREEN = preload("res://Scenes/BlackScreen/BlackScreen.tscn")
 
-const TEXT1 = "I'M INSIDE THE TEMPLE. THE GEM MUST BE CLOSE"
+const TEXT1 = "THIS IS THE LOCATION OF THE PLANET KONISBERG"
+const TEXT2 = "NOW I HAVE TO FIND DJIKSTRA AND FIND THE GEM"
 
 var yellow = Color(1,1,0,1)
 var red = Color(1, 0, 0, 1)
@@ -34,8 +35,8 @@ func cria_dialogo(name, color, text):
 	yield(dialog.get_node("Animation"), "animation_finished")
 	emit_signal("acabou")
 
-func _input(event):
-	if event.is_action_pressed("ui_accept"):
+func _process(delta):
+	if Input.is_action_just_pressed("ui_accept"):
 		emit_signal("apertou")
 
 func inicia_dialogo():
@@ -43,6 +44,8 @@ func inicia_dialogo():
 	dialog = DIALOG_SCENE.instance()
 	self.add_child(dialog)
 	cria_dialogo("RIDER", yellow, TEXT1)
+	yield(self, "acabou")
+	cria_dialogo("RIDER", yellow, TEXT2)
 	yield(self, "acabou")
 	
 	$PlayerTest.set_physics_process(true)
@@ -62,8 +65,3 @@ func end():
 	yield(black.get_node("Animation"), "animation_finished")
 	black.queue_free()
 	emit_signal("fade")
-
-func _on_ChangeLevel_next_world():
-	end()
-	yield(self, "fade")
-	get_tree().change_scene(next_world)

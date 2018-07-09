@@ -2,12 +2,13 @@ extends KinematicBody2D
 
 const FIREBALL_SCENE = preload("res://Scenes/Enemies/BossWeapon3.tscn")
 
-const MAX_HP = 2000
+const MAX_HP = 50
 var hp 
 var can_shot
 var pos
 onready var timer_atirar = $atirar
 onready var timer_sequencia = $sequencia_tiros
+signal dead
 
 func _ready():
 	pos = 0
@@ -89,6 +90,7 @@ func is_dead():
 		$Animation.play("Death")
 		yield($Animation,"animation_finished")
 		get_parent().queue_free()
+		emit_signal("dead")
 
 func _on_atirar_timeout():
 	timer_atirar.set_one_shot(false)

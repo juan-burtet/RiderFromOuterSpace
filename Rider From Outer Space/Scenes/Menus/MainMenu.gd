@@ -1,6 +1,6 @@
 extends Node
 
-const firstLevel = "res://Scenes/Maps/Map 1/Section 1/Map 1 Section 1.tscn"
+const firstLevel = "res://Scenes/Prelude/Prelude.tscn"
 
 var menu = 0
 var scaling = 5

@@ -16,6 +16,7 @@ next_world = "res://Scenes/Maps/Map 3/Section 2/Map 3 Section 2.tscn"
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="0"]
 
+editor/display_folded = true
 layer = -1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -68,7 +69,7 @@ position = Vector2( 178, 292 )
 
 [node name="ChangeLevel" parent="." index="3" instance=ExtResource( 5 )]
 
-position = Vector2( 3291, -2378.48 )
+position = Vector2( 3279, -2363 )
 scale = Vector2( 2.94546, 3.67256 )
 
 [connection signal="next_world" from="ChangeLevel" to="." method="_on_ChangeLevel_next_world"]

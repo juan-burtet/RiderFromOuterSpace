@@ -12,7 +12,7 @@ use_filter = false
 font_data = ExtResource( 3 )
 _sections_unfolded = [ "Extra Spacing", "Settings" ]
 
-[node name="Info" type="CanvasLayer" index="0"]
+[node name="Info" type="CanvasLayer"]
 
 layer = 1
 offset = Vector2( 0, 0 )

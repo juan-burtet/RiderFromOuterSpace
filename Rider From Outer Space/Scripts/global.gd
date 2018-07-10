@@ -18,7 +18,7 @@ func double_jump_height():
 	pass
 
 func _ready():
-	heart = 3
+	heart = 0
 	jetpack = 0
 	pistol = 0
 	shotgun = 0

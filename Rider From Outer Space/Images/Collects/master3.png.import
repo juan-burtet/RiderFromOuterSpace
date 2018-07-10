@@ -7,7 +7,10 @@ path="res://.import/master3.png-a60bd7af37d7d12c062eb33f3515305e.stex"
 [deps]
 
 source_file="res://Images/Collects/master3.png"
+source_md5="d8cafaa4840cad502eee6f787e4d435c"
+
 dest_files=[ "res://.import/master3.png-a60bd7af37d7d12c062eb33f3515305e.stex" ]
+dest_md5="78a24a182f54ea1ae9a5ad50bd25e093"
 
 [params]
 

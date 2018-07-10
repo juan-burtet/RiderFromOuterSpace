@@ -149,11 +149,8 @@ _sections_unfolded = [ "Cell", "Transform" ]
 
 [node name="Boss" type="Node" parent="." index="2"]
 
-editor/display_folded = true
-
 [node name="Lovelace" type="KinematicBody2D" parent="Boss" index="0"]
 
-editor/display_folded = true
 position = Vector2( 640, 352 )
 input_pickable = false
 collision_layer = 2
@@ -169,8 +166,8 @@ __meta__ = {
 
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 1 )
-animation = "Idle"
-frame = 3
+animation = "Ultra"
+frame = 1
 playing = true
 flip_h = true
 _sections_unfolded = [ "Transform", "Visibility" ]

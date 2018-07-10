@@ -34,6 +34,8 @@ var dialogo
 var largou
 
 func _ready():
+	$Boss/Carmack/Info/TextureProgress.set_visible(false)
+	$Boss/Carmack/Info/Name.set_visible(false)
 	$PlayerTest/camera.queue_free()
 	$Boss/Carmack.set_process(false)
 	begin()
@@ -80,6 +82,8 @@ func inicia_dialogo():
 	$PlayerTest.set_physics_process(true)
 	$Boss/Carmack.set_process(true)
 	$Boss/Carmack.restart_timer()
+	$Boss/Carmack/Info/TextureProgress.set_visible(true)
+	$Boss/Carmack/Info/Name.set_visible(true)
 
 func begin():
 	var black = BLACK_SCREEN.instance()

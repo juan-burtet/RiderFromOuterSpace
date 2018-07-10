@@ -326,7 +326,6 @@ editor/display_folded = true
 
 stream = ExtResource( 20 )
 volume_db = 0.0
-pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "MUSIC"
@@ -335,7 +334,6 @@ bus = "MUSIC"
 
 stream = ExtResource( 21 )
 volume_db = 0.0
-pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "SFX"

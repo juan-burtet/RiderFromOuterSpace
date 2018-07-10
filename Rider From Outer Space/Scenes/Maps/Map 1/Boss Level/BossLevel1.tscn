@@ -122,6 +122,7 @@ position = Vector2( 0, -14 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "Life"
+frame = 7
 playing = true
 flip_h = true
 _sections_unfolded = [ "Transform", "Visibility" ]

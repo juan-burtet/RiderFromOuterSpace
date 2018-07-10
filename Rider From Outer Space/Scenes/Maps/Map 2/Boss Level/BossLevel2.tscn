@@ -108,8 +108,6 @@ _sections_unfolded = [ "Cell", "Collision", "Transform" ]
 
 [node name="Boss" type="Node" parent="." index="1"]
 
-editor/display_folded = true
-
 [node name="Turing" type="KinematicBody2D" parent="Boss" index="0"]
 
 position = Vector2( 640, 352 )
@@ -129,7 +127,7 @@ position = Vector2( 0, -25 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "default"
-frame = 15
+frame = 11
 playing = true
 flip_h = true
 _sections_unfolded = [ "Transform", "Visibility" ]

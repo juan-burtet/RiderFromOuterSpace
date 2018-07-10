@@ -7,7 +7,10 @@ path="res://.import/2.png-912d9440da31f1bc7f17c1b42227cd02.stex"
 [deps]
 
 source_file="res://Images/Enemies/enemies/3/2.png"
+source_md5="c876be727aced1c393cf4555ceeae141"
+
 dest_files=[ "res://.import/2.png-912d9440da31f1bc7f17c1b42227cd02.stex" ]
+dest_md5="b009dfa44c086fea55674df607bffa7b"
 
 [params]
 

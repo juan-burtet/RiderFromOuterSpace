@@ -7,7 +7,10 @@ path="res://.import/11.png-a7a9ce5290cf20c74dd1207b9f36593d.stex"
 [deps]
 
 source_file="res://Images/Enemies/Bosses/4/ShadowIn/11.png"
+source_md5="1e2cf57902ed32473db0bd680136a7e5"
+
 dest_files=[ "res://.import/11.png-a7a9ce5290cf20c74dd1207b9f36593d.stex" ]
+dest_md5="49ecf045f74629964c62638464ed9808"
 
 [params]
 

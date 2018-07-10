@@ -15,35 +15,35 @@
 [ext_resource path="res://Images/Enemies/Bosses/4/Life/3.png" type="Texture" id=13]
 [ext_resource path="res://Images/Enemies/Bosses/4/Life/4.png" type="Texture" id=14]
 [ext_resource path="res://Images/Enemies/Bosses/4/Life/5.png" type="Texture" id=15]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/0.png" type="Texture" id=16]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/1.png" type="Texture" id=17]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/2.png" type="Texture" id=18]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/3.png" type="Texture" id=19]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/4.png" type="Texture" id=20]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/5.png" type="Texture" id=21]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/6.png" type="Texture" id=22]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/7.png" type="Texture" id=23]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/8.png" type="Texture" id=24]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/9.png" type="Texture" id=25]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/10.png" type="Texture" id=26]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/11.png" type="Texture" id=27]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/12.png" type="Texture" id=28]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/13.png" type="Texture" id=29]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIdle/0.png" type="Texture" id=30]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIdle/1.png" type="Texture" id=31]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIdle/2.png" type="Texture" id=32]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIdle/3.png" type="Texture" id=33]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/0.png" type="Texture" id=34]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/1.png" type="Texture" id=35]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/2.png" type="Texture" id=36]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/3.png" type="Texture" id=37]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/4.png" type="Texture" id=38]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/5.png" type="Texture" id=39]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/6.png" type="Texture" id=40]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/7.png" type="Texture" id=41]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/8.png" type="Texture" id=42]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/9.png" type="Texture" id=43]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/10.png" type="Texture" id=44]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIdle/0.png" type="Texture" id=16]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIdle/1.png" type="Texture" id=17]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIdle/2.png" type="Texture" id=18]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIdle/3.png" type="Texture" id=19]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/0.png" type="Texture" id=20]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/1.png" type="Texture" id=21]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/2.png" type="Texture" id=22]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/3.png" type="Texture" id=23]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/4.png" type="Texture" id=24]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/5.png" type="Texture" id=25]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/6.png" type="Texture" id=26]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/7.png" type="Texture" id=27]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/8.png" type="Texture" id=28]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/9.png" type="Texture" id=29]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/10.png" type="Texture" id=30]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/0.png" type="Texture" id=31]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/1.png" type="Texture" id=32]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/2.png" type="Texture" id=33]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/3.png" type="Texture" id=34]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/4.png" type="Texture" id=35]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/5.png" type="Texture" id=36]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/6.png" type="Texture" id=37]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/7.png" type="Texture" id=38]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/8.png" type="Texture" id=39]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/9.png" type="Texture" id=40]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/10.png" type="Texture" id=41]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/11.png" type="Texture" id=42]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/12.png" type="Texture" id=43]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/13.png" type="Texture" id=44]
 [ext_resource path="res://Scenes/Enemies/Info.tscn" type="PackedScene" id=45]
 [ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=46]
 
@@ -55,19 +55,19 @@ animations = [ {
 "name": "Life",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ],
-"loop": true,
-"name": "Shadow_In",
-"speed": 7.0
-}, {
-"frames": [ ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ) ],
+"frames": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
 "loop": true,
 "name": "Shadow_Idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 44 ) ],
+"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 30 ) ],
 "loop": true,
 "name": "Death",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ) ],
+"loop": true,
+"name": "Shadow_In",
 "speed": 7.0
 } ]
 
@@ -119,7 +119,7 @@ tracks/0/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 5, 240 )
 
-[node name="FinalBoss" type="Node" index="0"]
+[node name="FinalBoss" type="Node"]
 
 script = ExtResource( 1 )
 next_world = "res://Scenes/Menus/MainMenu.tscn"
@@ -243,6 +243,8 @@ __meta__ = {
 }
 
 [node name="Boss" type="Node" parent="." index="2"]
+
+editor/display_folded = true
 
 [node name="Carmack" type="KinematicBody2D" parent="Boss" index="0"]
 

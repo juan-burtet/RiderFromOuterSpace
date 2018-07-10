@@ -2,9 +2,9 @@
 
 [ext_resource path="res://Scripts/Player/GUI/GUI.gd" type="Script" id=1]
 [ext_resource path="res://Images/Player/Death Screen/blackScreen.png" type="Texture" id=2]
-[ext_resource path="res://Images/Player/Weapons/pistol.png" type="Texture" id=3]
-[ext_resource path="res://Images/Player/Weapons/shotgun.png" type="Texture" id=4]
-[ext_resource path="res://Images/Player/Weapons/machinegun.png" type="Texture" id=5]
+[ext_resource path="res://Images/Player/Weapons/pistol2.png" type="Texture" id=3]
+[ext_resource path="res://Images/Player/Weapons/shotgun2.png" type="Texture" id=4]
+[ext_resource path="res://Images/Player/Weapons/machineGun2.png" type="Texture" id=5]
 [ext_resource path="res://Fonts/PressStart2P.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Images/Player/GUI/heart_full_16x16.png" type="Texture" id=7]
 [ext_resource path="res://Images/Player/GUI/heart_half_16x16.png" type="Texture" id=8]
@@ -33,7 +33,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=2]
 
 size = 8
 use_mipmaps = false
@@ -42,7 +42,7 @@ extra_spacing_space = -5
 font_data = ExtResource( 6 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=3]
 
 animations = [ {
 "frames": [ ExtResource( 7 ) ],
@@ -61,7 +61,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=4]
 
 size = 20
 use_mipmaps = false
@@ -69,7 +69,7 @@ use_filter = false
 font_data = ExtResource( 6 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=5]
 
 size = 20
 use_mipmaps = false
@@ -77,7 +77,7 @@ use_filter = false
 font_data = ExtResource( 6 )
 _sections_unfolded = [ "Font" ]
 
-[node name="GUI" type="CanvasLayer" index="0"]
+[node name="GUI" type="CanvasLayer"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -96,8 +96,6 @@ _sections_unfolded = [ "Offset", "Transform", "Visibility" ]
 
 [node name="Weapon" type="AnimatedSprite" parent="." index="1"]
 
-modulate = Color( 0.738281, 0.738281, 0.738281, 1 )
-self_modulate = Color( 0.703125, 0.686646, 0.686646, 1 )
 position = Vector2( 320, 0 )
 scale = Vector2( 0.9, 0.9 )
 frames = SubResource( 1 )
@@ -121,7 +119,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 2 )
 text = "- PISTOL -"
 valign = 1
 percent_visible = 1.0
@@ -135,7 +133,7 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 self_modulate = Color( 0.9375, 0.164795, 0.164795, 1 )
 position = Vector2( 0, 14 )
-frames = SubResource( 2 )
+frames = SubResource( 3 )
 animation = "Full"
 centered = false
 offset = Vector2( 2, 0 )
@@ -145,7 +143,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 self_modulate = Color( 0.9375, 0.164795, 0.164795, 1 )
 position = Vector2( 16, 14 )
-frames = SubResource( 2 )
+frames = SubResource( 3 )
 animation = "Full"
 centered = false
 offset = Vector2( 2, 0 )
@@ -155,7 +153,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 self_modulate = Color( 0.9375, 0.164795, 0.164795, 1 )
 position = Vector2( 32, 14 )
-frames = SubResource( 2 )
+frames = SubResource( 3 )
 animation = "Full"
 centered = false
 offset = Vector2( 2, 0 )
@@ -166,8 +164,8 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 visible = false
 self_modulate = Color( 0.9375, 0.164795, 0.164795, 1 )
 position = Vector2( 48, 14 )
-frames = SubResource( 2 )
-animation = "Empty"
+frames = SubResource( 3 )
+animation = "Full"
 centered = false
 offset = Vector2( 2, 0 )
 _sections_unfolded = [ "Transform", "Visibility" ]
@@ -177,8 +175,8 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 visible = false
 self_modulate = Color( 0.9375, 0.164795, 0.164795, 1 )
 position = Vector2( 64, 14 )
-frames = SubResource( 2 )
-animation = "Empty"
+frames = SubResource( 3 )
+animation = "Full"
 centered = false
 offset = Vector2( 2, 0 )
 _sections_unfolded = [ "Transform", "Visibility" ]
@@ -188,8 +186,8 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 visible = false
 self_modulate = Color( 0.9375, 0.164795, 0.164795, 1 )
 position = Vector2( 80, 14 )
-frames = SubResource( 2 )
-animation = "Empty"
+frames = SubResource( 3 )
+animation = "Full"
 centered = false
 offset = Vector2( 2, 0 )
 _sections_unfolded = [ "Transform", "Visibility" ]
@@ -201,7 +199,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 5.0
-margin_right = 96.0
+margin_right = 54.0
 margin_bottom = 13.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -209,7 +207,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 2 )
 text = "- LIFE -"
 align = 1
 percent_visible = 1.0
@@ -266,7 +264,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 2 )
 text = "- DASH -"
 align = 1
 percent_visible = 1.0
@@ -301,7 +299,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 text = "99"
 percent_visible = 1.0
 lines_skipped = 0
@@ -335,7 +333,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 text = "15"
 valign = 1
 percent_visible = 1.0

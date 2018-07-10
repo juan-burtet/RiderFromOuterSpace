@@ -18,14 +18,39 @@ func double_jump_height():
 	pass
 
 func _ready():
-	heart = 0
+	heart = 3
 	jetpack = 0
 	pistol = 0
 	shotgun = 0
 	machinegun = 0
-	upgrades = 0
+	upgrades = 1
 	coins = 0
 	pass
+
+func get_jump_height():
+	var height = -500
+	return height - get_jetpack()*30
+	pass
+
+func get_dash_speed():
+	var dash = 1000
+	return dash + get_jetpack()*250
+	pass
+
+
+func get_pistol_damage():
+	var damage = 25
+	return damage + get_pistol() * 10
+	pass
+
+func get_shotgun_damage():
+	var damage = 60
+	return damage + get_shotgun() * 10
+
+func get_machinegun_damage():
+	var damage = 5
+	return damage + get_machinegun() * 10
+
 
 func get_upgrades():
 	return upgrades

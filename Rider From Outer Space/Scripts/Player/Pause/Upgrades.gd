@@ -26,8 +26,12 @@ const MACHINE_GUN_DESCRIPTION = "UPGRADE THIS TO DO MORE DAMAGE WITH THE MACHINE
 var option 
 
 signal saiu
+signal aumentou_hp
 
 func _ready():
+	var player = get_parent()
+	player = player.get_parent()
+	connect("aumentou_hp", player, "on_aumentou_hp")
 	option = 0
 	set_option()
 	pass
@@ -74,6 +78,7 @@ func choose_option():
 		match option:
 			0:
 				global.add_heart()
+				emit_signal("aumentou_hp")
 				pass
 			1:
 				global.add_jetpack()

@@ -17,6 +17,19 @@ func _process(delta):
 	$Coins/qt.set_text(str(global.get_coins()))
 	
 	update_hp()
+	update_label()
+	pass
+
+func update_label():
+	match global.get_heart():
+		0:
+			$Hearts/Label.set_size(Vector2(54,8))
+		1:
+			$Hearts/Label.set_size(Vector2(64,8))
+		2:
+			$Hearts/Label.set_size(Vector2(80,8))
+		3:
+			$Hearts/Label.set_size(Vector2(96,8))
 	pass
 
 func update_hp():

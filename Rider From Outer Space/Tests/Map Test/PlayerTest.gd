@@ -71,9 +71,6 @@ func _process(delta):
 
 # Função que roda a cada frame
 func _physics_process(delta):
-	# verifica se o personagem morreu
-	check_life()
-	
 	# atualiza informacoes do jogador
 	update_player()
 	
@@ -127,7 +124,7 @@ func update_player():
 func pause_menu():
 	if Input.is_action_just_pressed("ui_esc"):
 		get_tree().paused = true
-		get_parent().add_child(PAUSE_SCENE.instance())
+		add_child(PAUSE_SCENE.instance())
 	pass
 
 # Funcao que move o personagem 
@@ -141,7 +138,7 @@ func move_player():
 		#if !Input.is_action_pressed("ui_lock"):
 		if Input.is_action_just_pressed("ui_dash"):
 			if $GUI.is_complete():
-				dash(-DASH_SPEED)
+				dash(-global.get_dash_speed())
 				$GUI.usou_dash()
 
 	# Se a teclada direita foi pressionada, movimenta pra direita
@@ -154,7 +151,7 @@ func move_player():
 		
 		if Input.is_action_just_pressed("ui_dash"):
 			if $GUI.is_complete():
-				dash(DASH_SPEED)
+				dash(global.get_dash_speed())
 				$GUI.usou_dash()
 
 	# Se nenhuma tecla foi digitada, o personagem fica parado
@@ -190,12 +187,15 @@ func atualiza_sprites():
 func choose_weapon():
 	if Input.is_action_just_pressed("ui_1"):
 		$GUI.get_node("Weapon").play("Pistol")
+		$GUI.get_node("WeaponLabel").set_text("- PISTOL -")
 		gun_mode = 1
 	elif Input.is_action_just_pressed("ui_2"):
 		$GUI.get_node("Weapon").play("Shotgun")
+		$GUI.get_node("WeaponLabel").set_text("- SHOTGUN -")
 		gun_mode = 2
 	elif Input.is_action_just_pressed("ui_3"):
 		$GUI.get_node("Weapon").play("MachineGun")
+		$GUI.get_node("WeaponLabel").set_text("- MACHINE GUN -")
 		gun_mode = 3
 	pass
 	# END choose_weapon
@@ -269,7 +269,7 @@ func jump_control():
 		# Se a tecla espaço foi pressionada, pula
 		if Input.is_action_just_pressed("ui_select") and is_on_floor():
 			# Aumenta o tamanho do pulo
-			motion.y = JUMP_HEIGHT
+			motion.y = global.get_jump_height()
 			# É possivel dar um double Jump
 			doubleJump = true
 		
@@ -286,7 +286,7 @@ func jump_control():
 			# Se o double jump estiver em True, ele pula
 			if doubleJump:
 				# Aumenta o tamanho do pulo
-				motion.y = JUMP_HEIGHT
+				motion.y = global.get_jump_height()
 				# DoubleJump retorna pra falso
 				doubleJump = false
 		
@@ -359,31 +359,8 @@ func receive_damage():
 	hp -= 1
 	hp = max(0,hp)
 	
-	if hp == 11:
-		$GUI.get_node("Hearts/6").play("Half")
-	elif hp == 10:
-		$GUI.get_node("Hearts/6").play("Empty")
-	elif hp == 9:
-		$GUI.get_node("Hearts/5").play("Half")
-	elif hp == 8:
-		$GUI.get_node("Hearts/5").play("Empty")
-	elif hp == 7:
-		$GUI.get_node("Hearts/4").play("Half")
-	elif hp == 6:
-		$GUI.get_node("Hearts/4").play("Empty")
-	elif hp == 5:
-		$GUI.get_node("Hearts/3").play("Half")
-	elif hp == 4:
-		$GUI.get_node("Hearts/3").play("Empty")
-	elif hp == 3:
-		$GUI.get_node("Hearts/2").play("Half")
-	elif hp == 2:
-		$GUI.get_node("Hearts/2").play("Empty")
-	elif hp == 1:
-		$GUI.get_node("Hearts/1").play("Half")
-	elif hp == 0:
-		$GUI.get_node("Hearts/1").play("Empty")
-	
+	update_hp()
+	check_life()
 	pass
 
 # Signal que indica quando acabou o tempo (pistola)
@@ -408,3 +385,116 @@ func set_can_move(value):
 # retorna o valor de can_move
 func get_can_move():
 	return can_move
+
+func on_aumentou_hp():
+	hp = global.get_hp()
+	update_hp()
+	pass
+
+func update_hp():
+	match hp:
+		0:
+			$GUI.get_node("Hearts/1").play("Empty")
+			$GUI.get_node("Hearts/2").play("Empty")
+			$GUI.get_node("Hearts/3").play("Empty")
+			$GUI.get_node("Hearts/4").play("Empty")
+			$GUI.get_node("Hearts/5").play("Empty")
+			$GUI.get_node("Hearts/6").play("Empty")
+			pass
+		1:
+			$GUI.get_node("Hearts/1").play("Half")
+			$GUI.get_node("Hearts/2").play("Empty")
+			$GUI.get_node("Hearts/3").play("Empty")
+			$GUI.get_node("Hearts/4").play("Empty")
+			$GUI.get_node("Hearts/5").play("Empty")
+			$GUI.get_node("Hearts/6").play("Empty")
+			pass
+		2:
+			$GUI.get_node("Hearts/1").play("Full")
+			$GUI.get_node("Hearts/2").play("Empty")
+			$GUI.get_node("Hearts/3").play("Empty")
+			$GUI.get_node("Hearts/4").play("Empty")
+			$GUI.get_node("Hearts/5").play("Empty")
+			$GUI.get_node("Hearts/6").play("Empty")
+			pass
+		3:
+			$GUI.get_node("Hearts/1").play("Full")
+			$GUI.get_node("Hearts/2").play("Half")
+			$GUI.get_node("Hearts/3").play("Empty")
+			$GUI.get_node("Hearts/4").play("Empty")
+			$GUI.get_node("Hearts/5").play("Empty")
+			$GUI.get_node("Hearts/6").play("Empty")
+			pass
+		4:
+			$GUI.get_node("Hearts/1").play("Full")
+			$GUI.get_node("Hearts/2").play("Full")
+			$GUI.get_node("Hearts/3").play("Empty")
+			$GUI.get_node("Hearts/4").play("Empty")
+			$GUI.get_node("Hearts/5").play("Empty")
+			$GUI.get_node("Hearts/6").play("Empty")
+			pass
+		5:
+			$GUI.get_node("Hearts/1").play("Full")
+			$GUI.get_node("Hearts/2").play("Full")
+			$GUI.get_node("Hearts/3").play("Half")
+			$GUI.get_node("Hearts/4").play("Empty")
+			$GUI.get_node("Hearts/5").play("Empty")
+			$GUI.get_node("Hearts/6").play("Empty")
+			pass
+		6:
+			$GUI.get_node("Hearts/1").play("Full")
+			$GUI.get_node("Hearts/2").play("Full")
+			$GUI.get_node("Hearts/3").play("Full")
+			$GUI.get_node("Hearts/4").play("Empty")
+			$GUI.get_node("Hearts/5").play("Empty")
+			$GUI.get_node("Hearts/6").play("Empty")
+			pass
+		7:
+			$GUI.get_node("Hearts/1").play("Full")
+			$GUI.get_node("Hearts/2").play("Full")
+			$GUI.get_node("Hearts/3").play("Full")
+			$GUI.get_node("Hearts/4").play("Half")
+			$GUI.get_node("Hearts/5").play("Empty")
+			$GUI.get_node("Hearts/6").play("Empty")
+			pass
+		8:
+			$GUI.get_node("Hearts/1").play("Full")
+			$GUI.get_node("Hearts/2").play("Full")
+			$GUI.get_node("Hearts/3").play("Full")
+			$GUI.get_node("Hearts/4").play("Full")
+			$GUI.get_node("Hearts/5").play("Empty")
+			$GUI.get_node("Hearts/6").play("Empty")
+			pass
+		9:
+			$GUI.get_node("Hearts/1").play("Full")
+			$GUI.get_node("Hearts/2").play("Full")
+			$GUI.get_node("Hearts/3").play("Full")
+			$GUI.get_node("Hearts/4").play("Full")
+			$GUI.get_node("Hearts/5").play("Half")
+			$GUI.get_node("Hearts/6").play("Empty")
+			pass
+		10:
+			$GUI.get_node("Hearts/1").play("Full")
+			$GUI.get_node("Hearts/2").play("Full")
+			$GUI.get_node("Hearts/3").play("Full")
+			$GUI.get_node("Hearts/4").play("Full")
+			$GUI.get_node("Hearts/5").play("Full")
+			$GUI.get_node("Hearts/6").play("Empty")
+			pass
+		11:
+			$GUI.get_node("Hearts/1").play("Full")
+			$GUI.get_node("Hearts/2").play("Full")
+			$GUI.get_node("Hearts/3").play("Full")
+			$GUI.get_node("Hearts/4").play("Full")
+			$GUI.get_node("Hearts/5").play("Full")
+			$GUI.get_node("Hearts/6").play("Half")
+			pass
+		12:
+			$GUI.get_node("Hearts/1").play("Full")
+			$GUI.get_node("Hearts/2").play("Full")
+			$GUI.get_node("Hearts/3").play("Full")
+			$GUI.get_node("Hearts/4").play("Full")
+			$GUI.get_node("Hearts/5").play("Full")
+			$GUI.get_node("Hearts/6").play("Full")
+			pass
+	pass

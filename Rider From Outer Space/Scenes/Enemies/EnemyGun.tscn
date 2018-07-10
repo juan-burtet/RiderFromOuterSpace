@@ -11,14 +11,14 @@ extents = Vector2( 4, 4 )
 [sub_resource type="SpriteFrames" id=2]
 
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
-"loop": true,
-"name": "Fire",
-"speed": 5.0
-}, {
 "frames": [  ],
 "loop": true,
 "name": "Explode",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Fire",
 "speed": 5.0
 } ]
 
@@ -49,7 +49,7 @@ rect = Rect2( -10, -10, 20, 20 )
 frames = SubResource( 2 )
 animation = "Fire"
 
-[connection signal="body_entered" from="." to="." method="_on_EnemyGun_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_EnemyGun_body_entered" flags=6]
 
 [connection signal="screen_exited" from="Visibility" to="." method="_on_Visibility_screen_exited"]
 

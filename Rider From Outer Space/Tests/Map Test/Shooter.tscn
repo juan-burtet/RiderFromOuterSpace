@@ -66,7 +66,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[node name="Shooter" type="KinematicBody2D" index="0"]
+[node name="Shooter" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 2
@@ -81,7 +81,7 @@ modulate = Color( 0.972656, 0.208969, 0.208969, 1 )
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 1 )
 animation = "Walk"
-frame = 2
+frame = 3
 playing = true
 _sections_unfolded = [ "Transform", "Visibility" ]
 

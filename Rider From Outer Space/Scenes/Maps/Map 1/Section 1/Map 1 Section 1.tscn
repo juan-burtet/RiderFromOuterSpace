@@ -192,15 +192,11 @@ position = Vector2( 1792, 2400 )
 
 [node name="Shooter3" parent="Enemies" index="18" instance=ExtResource( 10 )]
 
-position = Vector2( 1408, 2400 )
+position = Vector2( 1430.66, 2379.86 )
 
 [node name="Shooter4" parent="Enemies" index="19" instance=ExtResource( 10 )]
 
-position = Vector2( 960, 2400 )
-
-[node name="Shooter5" parent="Enemies" index="20" instance=ExtResource( 10 )]
-
-position = Vector2( 960, 2400 )
+position = Vector2( 977.623, 2379.86 )
 
 [connection signal="body_entered" from="ChangeLevel" to="ChangeLevel" method="_on_ChangeLevel_body_entered"]
 

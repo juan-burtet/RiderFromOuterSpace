@@ -2,11 +2,11 @@
 
 [ext_resource path="res://Tests/Map Test/PlayerTest.gd" type="Script" id=1]
 [ext_resource path="res://Images/Player/Movement/Idle/Idle.png" type="Texture" id=2]
-[ext_resource path="res://Images/Player/Movement/Jump/Jump.png" type="Texture" id=3]
-[ext_resource path="res://Images/Player/Movement/Run/Run0.png" type="Texture" id=4]
-[ext_resource path="res://Images/Player/Movement/Run/Run1.png" type="Texture" id=5]
-[ext_resource path="res://Images/Player/Movement/Run/Run2.png" type="Texture" id=6]
-[ext_resource path="res://Images/Player/Movement/Run/Run3.png" type="Texture" id=7]
+[ext_resource path="res://Images/Player/Movement/Run/Run0.png" type="Texture" id=3]
+[ext_resource path="res://Images/Player/Movement/Run/Run1.png" type="Texture" id=4]
+[ext_resource path="res://Images/Player/Movement/Run/Run2.png" type="Texture" id=5]
+[ext_resource path="res://Images/Player/Movement/Run/Run3.png" type="Texture" id=6]
+[ext_resource path="res://Images/Player/Movement/Jump/Jump.png" type="Texture" id=7]
 [ext_resource path="res://Images/Player/Movement/Up/up.png" type="Texture" id=8]
 [ext_resource path="res://Images/Player/Movement/Right/right.png" type="Texture" id=9]
 [ext_resource path="res://Images/Player/Movement/UpRight/upRight.png" type="Texture" id=10]
@@ -20,19 +20,19 @@ animations = [ {
 "name": "Idle",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "Fall",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "Walking",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 3 ) ],
+"frames": [ ExtResource( 7 ) ],
 "loop": true,
 "name": "Jump",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "Fall",
 "speed": 10.0
 } ]
 _sections_unfolded = [ "Resource" ]
@@ -92,7 +92,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[node name="PlayerTest" type="KinematicBody2D" index="0"]
+[node name="PlayerTest" type="KinematicBody2D"]
 
 input_pickable = true
 collision_layer = 17

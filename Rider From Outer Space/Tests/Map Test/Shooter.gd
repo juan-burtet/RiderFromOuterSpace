@@ -74,11 +74,12 @@ func teste(node):
 	
 func shoot(direction):
 	if !timer.is_one_shot():
-		var pistol = PISTOL_SCENE.instance()
-		pistol.init(direction)
-		get_parent().add_child(pistol)
-		pistol.set_position($Gun.get_global_position())
 		restart_timer()
+		var pistol = PISTOL_SCENE.instance()
+		get_parent().add_child(pistol)
+		pistol.init(direction)
+		pistol.set_position($Gun.get_global_position())
+		
 
 func restart_timer():
 	timer.set_wait_time(2)
@@ -91,6 +92,7 @@ func _on_Timer_timeout():
 
 
 func does_damage(damage):
+	print(damage)
 	if hp > 0:
 		hp -= damage
 		hp = max(0, hp)

@@ -20,6 +20,8 @@ func _on_Visibility_screen_exited():
 	queue_free()
 
 func _on_EnemyGun_body_entered(body):
+	$Collision.set_disabled(true)
 	queue_free()
 	if body.get_name() != "TileMap":
-		body.receive_damage()
+			body.receive_damage()
+			print("acertou")

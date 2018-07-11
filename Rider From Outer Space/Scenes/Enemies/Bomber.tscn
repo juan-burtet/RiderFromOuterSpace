@@ -55,7 +55,7 @@ extents = Vector2( 32, 40 )
 custom_solver_bias = 0.0
 radius = 100.0
 
-[node name="Bomber" type="KinematicBody2D"]
+[node name="Bomber" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 2
@@ -78,11 +78,10 @@ scale = Vector2( 6, 6 )
 frames = SubResource( 2 )
 animation = "default"
 playing = true
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Collision" type="CollisionShape2D" parent="." index="2"]
 
-visible = false
 shape = SubResource( 3 )
 
 [node name="left" type="RayCast2D" parent="." index="3"]

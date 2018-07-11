@@ -187,15 +187,15 @@ func atualiza_sprites():
 func choose_weapon():
 	if Input.is_action_just_pressed("ui_1"):
 		$GUI.get_node("Weapon").play("Pistol")
-		$GUI.get_node("WeaponLabel").set_text("- PISTOL -")
+		$GUI.get_node("WeaponLabel").set_text(" PISTOL")
 		gun_mode = 1
 	elif Input.is_action_just_pressed("ui_2"):
 		$GUI.get_node("Weapon").play("Shotgun")
-		$GUI.get_node("WeaponLabel").set_text("- SHOTGUN -")
+		$GUI.get_node("WeaponLabel").set_text(" SHOTGUN")
 		gun_mode = 2
 	elif Input.is_action_just_pressed("ui_3"):
 		$GUI.get_node("Weapon").play("MachineGun")
-		$GUI.get_node("WeaponLabel").set_text("- MACHINE GUN -")
+		$GUI.get_node("WeaponLabel").set_text(" MACHINE GUN")
 		gun_mode = 3
 	pass
 	# END choose_weapon

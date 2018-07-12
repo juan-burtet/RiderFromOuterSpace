@@ -1,0 +1,1 @@
+https://www.spriters-resource.com/snes/cybernator/sheet/61083/

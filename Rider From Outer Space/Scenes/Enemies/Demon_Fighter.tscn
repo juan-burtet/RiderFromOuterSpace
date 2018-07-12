@@ -1,0 +1,267 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scripts/Enemies/Demon_Fighter.gd" type="Script" id=1]
+[ext_resource path="res://Images/Enemies/enemies/demon-Files/PNG/demon-attack.png" type="Texture" id=2]
+[ext_resource path="res://Images/Enemies/enemies/demon-Files/PNG/demon-idle.png" type="Texture" id=3]
+[ext_resource path="res://Images/Enemies/Bosses/HP/under.png" type="Texture" id=4]
+[ext_resource path="res://Images/Enemies/Bosses/HP/fill.png" type="Texture" id=5]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "attack"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("attack:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+}
+
+[sub_resource type="Animation" id=6]
+
+resource_name = "death"
+length = 0.4
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("attack:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("idle:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+
+resource_name = "hit"
+length = 0.3
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("attack:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("idle:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "idle"
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("idle:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
+
+[sub_resource type="Animation" id=3]
+
+resource_name = "run"
+length = 0.5
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("idle:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 5 ]
+}
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 30, 35 )
+
+[node name="Demon_Fighter" type="KinematicBody2D" index="0"]
+
+scale = Vector2( 2, 2 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 5
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="attack" type="Sprite" parent="." index="0"]
+
+position = Vector2( -32, -32 )
+texture = ExtResource( 2 )
+hframes = 11
+frame = 10
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform", "Visibility" ]
+
+[node name="idle" type="Sprite" parent="." index="1"]
+
+texture = ExtResource( 3 )
+hframes = 6
+frame = 4
+_sections_unfolded = [ "Animation", "Offset", "Transform", "Visibility" ]
+
+[node name="anim" type="AnimationPlayer" parent="." index="2"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/attack = SubResource( 1 )
+anims/death = SubResource( 6 )
+anims/hit = SubResource( 5 )
+anims/idle = SubResource( 2 )
+anims/run = SubResource( 3 )
+blend_times = [  ]
+_sections_unfolded = [ "Playback Options" ]
+
+[node name="Collision" type="CollisionShape2D" parent="." index="3"]
+
+visible = false
+shape = SubResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Left" type="RayCast2D" parent="." index="4"]
+
+enabled = true
+exclude_parent = true
+cast_to = Vector2( -250, 0 )
+collision_mask = 1
+
+[node name="LeftUp" type="RayCast2D" parent="." index="5"]
+
+enabled = true
+exclude_parent = true
+cast_to = Vector2( -250, -200 )
+collision_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="LeftAttack" type="RayCast2D" parent="." index="6"]
+
+position = Vector2( 0, -10 )
+enabled = true
+exclude_parent = true
+cast_to = Vector2( -110, 0 )
+collision_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="Right" type="RayCast2D" parent="." index="7"]
+
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 250, 0 )
+collision_mask = 1
+
+[node name="RightUp" type="RayCast2D" parent="." index="8"]
+
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 250, -200 )
+collision_mask = 1
+
+[node name="RightAttack" type="RayCast2D" parent="." index="9"]
+
+position = Vector2( 0, -10 )
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 110, 0 )
+collision_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="HP" type="TextureProgress" parent="." index="10"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -35.0
+margin_top = -40.0
+margin_right = 637.0
+margin_bottom = -24.0
+rect_scale = Vector2( 0.1, 0.3 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 20.0
+exp_edit = false
+rounded = false
+texture_under = ExtResource( 4 )
+texture_over = null
+texture_progress = ExtResource( 5 )
+radial_fill_degrees = 360.0
+radial_center_offset = Vector2( 0, 0 )
+nine_patch_stretch = false
+_sections_unfolded = [ "Rect", "Textures" ]
+
+[node name="Timer" type="Timer" parent="." index="11"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+

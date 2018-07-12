@@ -37,11 +37,11 @@ frames = SubResource( 1 )
 
 [node name="Collision" parent="." index="2"]
 
-visible = true
 shape = SubResource( 2 )
 
 [node name="AreaExplode" parent="." index="7"]
 
+editor/display_folded = true
 visible = false
 
 

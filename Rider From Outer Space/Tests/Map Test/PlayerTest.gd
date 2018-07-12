@@ -13,6 +13,16 @@ const PISTOL_SCENE = preload("res://Tests/Map Test/Pistol.tscn")
 const SHOTGUN_SCENE = preload("res://Scenes/Player/Weapons/Shotgun.tscn")
 const MACHINEGUN_SCENE = preload("res://Scenes/Player/Weapons/MachineGun.tscn")
 
+# Posição para sair as armas
+const UP_POSITION = Vector2(0,-50)
+const UPRIGHT_POSITION = Vector2(20,-30)
+const RIGHT_POSITION = Vector2(30,0)
+const DOWNRIGHT_POSITION = Vector2(20,35)
+const UPLEFT_POSITION = Vector2(-20,-30)
+const LEFT_POSITION = Vector2(-30,0)
+const DOWNLEFT_POSITION = Vector2(-20,35)
+
+
 # Constante de auxilio no gameplay
 const UP = Vector2(0,-1) # Indica a direção pra cima
 const GRAVITY = 20 # Gravidade
@@ -33,6 +43,9 @@ var direcao_padrao = 1 # Direção padrao da arma
 var hp = 6# vida do personagem
 var friction = false # Indica que tu parou de se movimentar
 var can_move = true
+var idle
+var dir
+var jump
 
 # Timers 
 onready var pistol_timer = get_node("Timers/pistol_timer")
@@ -50,27 +63,12 @@ func _ready():
 	pass
 	# END _ready
 
-func _process(delta):
-	update_player()
-	atualiza_sprites()
-	
-	if not is_on_floor():
-		if motion.y < 0:
-			# Toca a Sprite do Pulo
-			$Sprite.play("Jump")
-			
-		# Se o Personagem estiver caindo
-		else:
-			# Toca a Sprite de Queda
-			$Sprite.play("Fall")
-	else:
-		$Sprite.play("Idle")
-	
-	motion = move_and_slide(motion, UP)
-
 
 # Função que roda a cada frame
 func _physics_process(delta):
+	idle = false
+	jump = false
+	
 	# atualiza informacoes do jogador
 	update_player()
 	
@@ -85,7 +83,7 @@ func _physics_process(delta):
 
 	# Controla os comandos do pulo
 	jump_control()
-
+	
 	# movimenta o personagem
 	motion = move_and_slide(motion, UP)
 	
@@ -159,7 +157,8 @@ func move_player():
 		# Indica que o personagem parou de se movimentar
 		friction = true
 		# Toca a Sprite parado
-		$Sprite.play("Idle")
+		#$Sprite.play("Idle")
+		idle = true
 	pass
 
 # Funcao para atualizar as sprites do personagem
@@ -169,17 +168,85 @@ func atualiza_sprites():
 	
 	# cima
 	if x == 0 and y == -1:
+		dir = "Cima"
 		$Top.play("Cima")
 		#$Top.set_offset(Vector2(0,0))
 	# Frente
 	elif (x == 1 or x == -1) and y == 0:
+		dir = "Frente"
 		$Top.play("Frente")
 		#$Top.set_offset(Vector2(2,6))
 	# FrenteCima
 	elif (x == 1 or x == -1) and y == -1:
+		dir = "FrenteCima"
 		$Top.play("FrenteCima")
 		#$Top.set_offset(Vector2(2,3))
+	# FrenteBaixo
+	elif (x == 1 or x == -1) and y == 1:
+		dir = "BaixoCima"
+		pass
 	
+	update_sprites()
+	
+	pass
+
+# Adicional para mudar as sprites
+func update_sprites():
+	#$Run.set_disabled(true)
+	#$RunDown.set_disabled(true)
+	#$RunUp.set_disabled(true)
+	#$Normal.set_disabled(true)
+	$Player.set_offset(Vector2(0,0))
+	
+	# Se não estiver no chão
+	if jump:
+		match dir:
+			"Frente":
+				$Player.play("JumpRight")
+				pass
+			"Cima":
+				$Player.play("JumpUp")
+				pass
+			"FrenteCima":
+				$Player.play("JumpUpRight")
+				pass
+			"BaixoCima":
+				$Player.play("JumpDownRight")
+				pass
+	# Esta no chão
+	else:
+		# Parado
+		if idle:
+			match dir:
+				"Frente":
+					$Player.play("IdleRight")
+					pass
+				"Cima":
+					$Player.play("IdleUp")
+					pass
+				"FrenteCima":
+					$Player.play("IdleUpRight")
+					pass
+				"BaixoCima":
+					$Player.play("IdleDownRight")
+					pass
+			pass
+		# Movimentando
+		else:
+			$Player.set_offset(Vector2(0,8))
+			match dir:
+				"Frente":
+					$Player.play("RunRight")
+					pass
+				"FrenteCima":
+					$Player.play("RunUpRight")
+					$Player.set_offset(Vector2(0,5))
+					pass
+				"BaixoCima":
+					$Player.play("RunDownRight")
+					pass
+			pass
+		pass
 	
 	pass
 
@@ -217,12 +284,39 @@ func check_shoot():
 func shot_gun(timer, gun_scene, gun_time, direction):
 	if !timer.is_one_shot():
 		var gun = gun_scene.instance()
-		gun.init(direction)
 		get_parent().add_child(gun)
-		gun.set_position($Gun.get_global_position() + direction*10)
+		gun.init(direction)
+		$Gun.set_position(get_gun_position(direction))
+		gun.set_position($Gun.get_global_position())
 		restart_timer(timer, gun_time)
 	pass
 	# END shot_gun
+
+func get_gun_position(value):
+	var x = value.x
+	var y = value.y
+	
+	# Cima
+	if x == 0 and y == -1:
+		return UP_POSITION
+	# Cima + Direita
+	elif x == 1 and y == -1:
+		return UPRIGHT_POSITION
+	# Cima + Esquerda
+	elif x == -1 and y == -1:
+		return UPLEFT_POSITION
+	# Direita
+	elif x == 1 and y == 0:
+		return RIGHT_POSITION
+	# Esquerda
+	elif x == -1 and y == 0:
+		return LEFT_POSITION
+	# Baixo + Direita
+	elif x == 1 and y == 1:
+		return DOWNRIGHT_POSITION
+	# Baixo + Esquerda
+	elif x == -1 and y == 1:
+		return DOWNLEFT_POSITION	 
 
 # Função que seta o timer da arma
 func restart_timer(timer, s):
@@ -240,8 +334,9 @@ func move_left():
 	# Inverte a Sprite pois está indo pra esquerda
 	$Sprite.flip_h = true
 	$Top.flip_h = true
+	$Player.flip_h = true
 	# Toca a Sprite de Movimento
-	$Sprite.play("Walking")
+	#$Sprite.play("Walking")
 	# Atualiza a direção
 	direction.x = -1
 	pass
@@ -255,8 +350,9 @@ func move_right():
 	# Não inverte a sprite
 	$Sprite.flip_h = false
 	$Top.flip_h = false
+	$Player.flip_h = false
 	# Toca a Sprite de Movimento
-	$Sprite.play("Walking")
+	#$Sprite.play("Walking")
 	# Muda a direção
 	direction.x = 1
 	pass
@@ -272,6 +368,7 @@ func jump_control():
 			motion.y = global.get_jump_height()
 			# É possivel dar um double Jump
 			doubleJump = true
+			jump = true
 		
 		# Se o Personagem parou de se movimentar
 		if friction:
@@ -281,6 +378,7 @@ func jump_control():
 	
 	# Se o personagem não estiver no chão
 	else:
+		jump = true
 		# Se a tecla espaço foi pressionada, pula
 		if Input.is_action_just_pressed("ui_select"): # Space
 			# Se o double jump estiver em True, ele pula
@@ -328,14 +426,14 @@ func get_shot_direction():
 		direction.x = +1
 		direction.y = -1
 		direcao_padrao = +1
-	#elif baixo and esquerda:
-	#	direction.x = -1
-	#	direction.y = +1
-	#	direcao_padrao = -1
-	#elif baixo and direita:
-	#	direction.x = +1
-	#	direction.y = +1
-	#	direcao_padrao = 1
+	elif baixo and esquerda:
+		direction.x = -1
+		direction.y = +1
+		direcao_padrao = -1
+	elif baixo and direita:
+		direction.x = +1
+		direction.y = +1
+		direcao_padrao = 1
 	elif cima:
 		direction.x = 0
 		direction.y = -1
@@ -497,4 +595,19 @@ func update_hp():
 			$GUI.get_node("Hearts/5").play("Full")
 			$GUI.get_node("Hearts/6").play("Full")
 			pass
+	pass
+
+func get_attack(string):
+	receive_damage()
+	
+	match string:
+		"left":
+			motion.x = -2000
+			pass
+		"right":
+			motion.x = 2000
+			pass
+	
+	motion = move_and_slide(motion,UP)
+	
 	pass

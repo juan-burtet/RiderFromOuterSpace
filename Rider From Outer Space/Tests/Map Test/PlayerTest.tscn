@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=64 format=2]
 
 [ext_resource path="res://Tests/Map Test/PlayerTest.gd" type="Script" id=1]
 [ext_resource path="res://Images/Player/Movement/Idle/Idle.png" type="Texture" id=2]
@@ -10,7 +10,51 @@
 [ext_resource path="res://Images/Player/Movement/Up/up.png" type="Texture" id=8]
 [ext_resource path="res://Images/Player/Movement/Right/right.png" type="Texture" id=9]
 [ext_resource path="res://Images/Player/Movement/UpRight/upRight.png" type="Texture" id=10]
-[ext_resource path="res://Scenes/Player/GUI/GUI.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Images/Player/NewMovement/RunRight/0.png" type="Texture" id=11]
+[ext_resource path="res://Images/Player/NewMovement/RunRight/1.png" type="Texture" id=12]
+[ext_resource path="res://Images/Player/NewMovement/RunRight/2.png" type="Texture" id=13]
+[ext_resource path="res://Images/Player/NewMovement/RunRight/3.png" type="Texture" id=14]
+[ext_resource path="res://Images/Player/NewMovement/RunRight/4.png" type="Texture" id=15]
+[ext_resource path="res://Images/Player/NewMovement/RunRight/5.png" type="Texture" id=16]
+[ext_resource path="res://Images/Player/NewMovement/RunRight/6.png" type="Texture" id=17]
+[ext_resource path="res://Images/Player/NewMovement/RunRight/7.png" type="Texture" id=18]
+[ext_resource path="res://Images/Player/NewMovement/RunRight/8.png" type="Texture" id=19]
+[ext_resource path="res://Images/Player/NewMovement/RunRight/9.png" type="Texture" id=20]
+[ext_resource path="res://Images/Player/NewMovement/RunRight/10.png" type="Texture" id=21]
+[ext_resource path="res://Images/Player/NewMovement/RunRight/11.png" type="Texture" id=22]
+[ext_resource path="res://Images/Player/NewMovement/RunUpRight/0.png" type="Texture" id=23]
+[ext_resource path="res://Images/Player/NewMovement/RunUpRight/1.png" type="Texture" id=24]
+[ext_resource path="res://Images/Player/NewMovement/RunUpRight/2.png" type="Texture" id=25]
+[ext_resource path="res://Images/Player/NewMovement/RunUpRight/3.png" type="Texture" id=26]
+[ext_resource path="res://Images/Player/NewMovement/RunUpRight/4.png" type="Texture" id=27]
+[ext_resource path="res://Images/Player/NewMovement/RunUpRight/5.png" type="Texture" id=28]
+[ext_resource path="res://Images/Player/NewMovement/RunUpRight/6.png" type="Texture" id=29]
+[ext_resource path="res://Images/Player/NewMovement/RunUpRight/7.png" type="Texture" id=30]
+[ext_resource path="res://Images/Player/NewMovement/RunUpRight/8.png" type="Texture" id=31]
+[ext_resource path="res://Images/Player/NewMovement/RunUpRight/9.png" type="Texture" id=32]
+[ext_resource path="res://Images/Player/NewMovement/RunUpRight/10.png" type="Texture" id=33]
+[ext_resource path="res://Images/Player/NewMovement/RunUpRight/11.png" type="Texture" id=34]
+[ext_resource path="res://Images/Player/NewMovement/RunDownRight/0.png" type="Texture" id=35]
+[ext_resource path="res://Images/Player/NewMovement/RunDownRight/1.png" type="Texture" id=36]
+[ext_resource path="res://Images/Player/NewMovement/RunDownRight/2.png" type="Texture" id=37]
+[ext_resource path="res://Images/Player/NewMovement/RunDownRight/3.png" type="Texture" id=38]
+[ext_resource path="res://Images/Player/NewMovement/RunDownRight/4.png" type="Texture" id=39]
+[ext_resource path="res://Images/Player/NewMovement/RunDownRight/5.png" type="Texture" id=40]
+[ext_resource path="res://Images/Player/NewMovement/RunDownRight/6.png" type="Texture" id=41]
+[ext_resource path="res://Images/Player/NewMovement/RunDownRight/7.png" type="Texture" id=42]
+[ext_resource path="res://Images/Player/NewMovement/RunDownRight/8.png" type="Texture" id=43]
+[ext_resource path="res://Images/Player/NewMovement/RunDownRight/9.png" type="Texture" id=44]
+[ext_resource path="res://Images/Player/NewMovement/RunDownRight/10.png" type="Texture" id=45]
+[ext_resource path="res://Images/Player/NewMovement/RunDownRight/11.png" type="Texture" id=46]
+[ext_resource path="res://Images/Player/NewMovement/jumpDownRight.png" type="Texture" id=47]
+[ext_resource path="res://Images/Player/NewMovement/jumpUpRight.png" type="Texture" id=48]
+[ext_resource path="res://Images/Player/NewMovement/jumpRight.png" type="Texture" id=49]
+[ext_resource path="res://Images/Player/NewMovement/jumpUp.png" type="Texture" id=50]
+[ext_resource path="res://Images/Player/NewMovement/idleRight.png" type="Texture" id=51]
+[ext_resource path="res://Images/Player/NewMovement/idleUpRight.png" type="Texture" id=52]
+[ext_resource path="res://Images/Player/NewMovement/idleUp.png" type="Texture" id=53]
+[ext_resource path="res://Images/Player/NewMovement/idleDownRight.png" type="Texture" id=54]
+[ext_resource path="res://Scenes/Player/GUI/GUI.tscn" type="PackedScene" id=55]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -56,36 +100,98 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="SpriteFrames" id=5]
+
+animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "RunRight",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ) ],
+"loop": true,
+"name": "RunUpRight",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ) ],
+"loop": true,
+"name": "RunDownRight",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 47 ) ],
+"loop": true,
+"name": "JumpDownRight",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 48 ) ],
+"loop": true,
+"name": "JumpUpRight",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 49 ) ],
+"loop": true,
+"name": "JumpRight",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 50 ) ],
+"loop": true,
+"name": "JumpUp",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 51 ) ],
+"loop": true,
+"name": "IdleRight",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 52 ) ],
+"loop": true,
+"name": "IdleUpRight",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 53 ) ],
+"loop": true,
+"name": "IdleUp",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 54 ) ],
+"loop": true,
+"name": "IdleDownRight",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 20, 40 )
+
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 28, 40 )
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 28, 40 )
+
 [sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
-extents = Vector2( 24, 42 )
+extents = Vector2( 28, 40 )
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=9]
 
 resource_name = "hit"
 length = 0.4
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/path = NodePath("Player:self_modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Top:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
 "times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -106,11 +212,12 @@ __meta__ = {
 
 [node name="Gun" type="Position2D" parent="." index="0"]
 
-position = Vector2( 0, -16 )
+position = Vector2( 20, 35 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" type="AnimatedSprite" parent="." index="1"]
 
+visible = false
 position = Vector2( 0, 32 )
 frames = SubResource( 1 )
 animation = "Idle"
@@ -119,13 +226,23 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Top" type="AnimatedSprite" parent="." index="2"]
 
+visible = false
 position = Vector2( 0, -32 )
 frames = SubResource( 2 )
 animation = "Frente"
-_sections_unfolded = [ "Animation", "Offset", "Region", "Transform", "Visibility" ]
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility" ]
 
-[node name="camera" type="Camera2D" parent="." index="3"]
+[node name="Player" type="AnimatedSprite" parent="." index="3"]
 
+scale = Vector2( 2, 2 )
+frames = SubResource( 5 )
+animation = "IdleRight"
+playing = true
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="camera" type="Camera2D" parent="." index="4"]
+
+visible = false
 offset = Vector2( 0, -100 )
 anchor_mode = 1
 rotating = false
@@ -151,15 +268,36 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 _sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Offset", "Smoothing" ]
 
-[node name="collision" type="CollisionShape2D" parent="." index="4"]
+[node name="RunDown" type="CollisionShape2D" parent="." index="5"]
 
-position = Vector2( -5, 0 )
+visible = false
+shape = SubResource( 6 )
+disabled = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="Run" type="CollisionShape2D" parent="." index="6"]
+
+visible = false
+shape = SubResource( 7 )
+disabled = true
+
+[node name="RunUp" type="CollisionShape2D" parent="." index="7"]
+
+visible = false
+position = Vector2( 0, 6 )
+shape = SubResource( 8 )
+disabled = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="Normal" type="CollisionShape2D" parent="." index="8"]
+
+position = Vector2( 0, 16 )
 shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="GUI" parent="." index="5" instance=ExtResource( 11 )]
+[node name="GUI" parent="." index="9" instance=ExtResource( 55 )]
 
-[node name="Timers" type="Node" parent="." index="6"]
+[node name="Timers" type="Node" parent="." index="10"]
 
 editor/display_folded = true
 
@@ -184,14 +322,14 @@ wait_time = 1.0
 one_shot = false
 autostart = false
 
-[node name="Animation" type="AnimationPlayer" parent="." index="7"]
+[node name="Animation" type="AnimationPlayer" parent="." index="11"]
 
 root_node = NodePath("..")
 autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/hit = SubResource( 4 )
+anims/hit = SubResource( 9 )
 blend_times = [  ]
 
 [connection signal="timeout" from="Timers/pistol_timer" to="." method="_on_pistol_timer_timeout"]

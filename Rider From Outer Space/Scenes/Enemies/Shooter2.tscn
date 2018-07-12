@@ -34,7 +34,7 @@ extents = Vector2( 22, 24 )
 
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
-frame = 3
+frame = 1
 
 [node name="CollisionShape2D" parent="." index="1"]
 

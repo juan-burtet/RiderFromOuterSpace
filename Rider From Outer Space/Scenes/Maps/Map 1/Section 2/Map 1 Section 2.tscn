@@ -265,7 +265,7 @@ position = Vector2( 608, 1504 )
 
 [node name="Shooter" parent="Enemies" index="46" instance=ExtResource( 8 )]
 
-position = Vector2( 1696, 544 )
+position = Vector2( 1696, 512 )
 
 [node name="Shooter2" parent="Enemies" index="47" instance=ExtResource( 8 )]
 

@@ -49,16 +49,24 @@
 - [ ] __[SEMANA 10]__ __ENTREGA DO JOGO__ __(16/07/18)__ __<= DEADLINE__
 
 
-## Finalizar:
+## Inimigos:
 
-- [ ] Modificar mapa 2 seção 1 (está feito visualmente)
-- [ ] Tela de Morte
-- [ ] Animações
-- [ ] Finalizar os mapas!
-- [ ] Adicionar dialogos/história
-  
+### Bomber
+  - [ ] Blob
+  - [ ] Fire-Skull
+  - [ ] Ghost
+### Fighter
+  - [ ] Demon
+  - [ ] Iron-Spider
+  - [ ] Floating-Head
+### Shooter
+  - [ ] Wizard
+  - [ ] Robot
+  - [ ] Soldier
+
 ## Colisões dos Personagens
-  * __Personagem[1]__: Toca em Inimigos e Mapa e Explosão
-  * __Inimigos[2]__: Toca em Personagem e Mapa
-  * __Mapa[3]__: Toca em Inimigos e Personagem
+  * __Personagem[1]__: Toca em Inimigos, Mapa e Explosão
+  * __Inimigos[2]__: Toca em Personagem, Mapa e Balas
+  * __Mapa[3]__: Toca em Inimigos, Personagem e Balas
   * __Explosão[4]__: Toca em Personagem
+  * __Balas[5]__: Toca em Inimigos e Mapa

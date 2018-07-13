@@ -7,7 +7,10 @@ path="res://.import/jumpUp.png-19b4fde6ef606aaf3abba810a9782520.stex"
 [deps]
 
 source_file="res://Images/Player/NewMovement/jumpUp.png"
+source_md5="49c98a423b2986ec2f4c0a881cf9d383"
+
 dest_files=[ "res://.import/jumpUp.png-19b4fde6ef606aaf3abba810a9782520.stex" ]
+dest_md5="e1dddb2f9f757ce293ebe8fb4bf6b9f1"
 
 [params]
 

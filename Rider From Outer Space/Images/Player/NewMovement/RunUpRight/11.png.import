@@ -7,7 +7,10 @@ path="res://.import/11.png-61dd19d1dc7f10b0648a842f76c20ed0.stex"
 [deps]
 
 source_file="res://Images/Player/NewMovement/RunUpRight/11.png"
+source_md5="7b7a7dfe7da76cdacc6fc44734224c3b"
+
 dest_files=[ "res://.import/11.png-61dd19d1dc7f10b0648a842f76c20ed0.stex" ]
+dest_md5="8e945b91f177ab7aece02e2fcde87f8d"
 
 [params]
 

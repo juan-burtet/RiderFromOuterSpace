@@ -7,7 +7,10 @@ path="res://.import/idleDownRight.png-0c01117ad4515d455555ced5afc6ce4e.stex"
 [deps]
 
 source_file="res://Images/Player/NewMovement/idleDownRight.png"
+source_md5="1cefbd5306792aaddb109c83c2256d1b"
+
 dest_files=[ "res://.import/idleDownRight.png-0c01117ad4515d455555ced5afc6ce4e.stex" ]
+dest_md5="246458c90c73d33c85e18f92f8ca899c"
 
 [params]
 

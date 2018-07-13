@@ -7,7 +7,10 @@ path="res://.import/breath.png-e1e38ccdfe70e7521654b307b3feacf1.stex"
 [deps]
 
 source_file="res://Images/Enemies/enemies/demon-Files/PNG/breath.png"
+source_md5="1cdf5d147f77b98a48f31ea304d52e60"
+
 dest_files=[ "res://.import/breath.png-e1e38ccdfe70e7521654b307b3feacf1.stex" ]
+dest_md5="0c659a0a5ca5a53f075753c4c30604fb"
 
 [params]
 

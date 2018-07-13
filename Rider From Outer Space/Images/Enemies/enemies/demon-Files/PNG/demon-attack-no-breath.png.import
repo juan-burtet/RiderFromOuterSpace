@@ -7,7 +7,10 @@ path="res://.import/demon-attack-no-breath.png-4d8f781662c94a61c7e3cea7ca1c4930.
 [deps]
 
 source_file="res://Images/Enemies/enemies/demon-Files/PNG/demon-attack-no-breath.png"
+source_md5="c029aaef22d62bb6aff0f58751d76201"
+
 dest_files=[ "res://.import/demon-attack-no-breath.png-4d8f781662c94a61c7e3cea7ca1c4930.stex" ]
+dest_md5="cd5753df7cd31a9868be0f8ea6ea6854"
 
 [params]
 

@@ -75,3 +75,7 @@ func _on_Timer_timeout():
 	timer.set_one_shot(false)
 	#emit_signal(morre)
 	pass # replace with function body
+
+
+func _on_Sprite_frame_changed():
+	pass # replace with function body

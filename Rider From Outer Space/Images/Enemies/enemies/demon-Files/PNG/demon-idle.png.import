@@ -7,7 +7,10 @@ path="res://.import/demon-idle.png-93490ee29665161fe74b1eba50711a0e.stex"
 [deps]
 
 source_file="res://Images/Enemies/enemies/demon-Files/PNG/demon-idle.png"
+source_md5="d27d975006fae2366c372a893faf557f"
+
 dest_files=[ "res://.import/demon-idle.png-93490ee29665161fe74b1eba50711a0e.stex" ]
+dest_md5="a45f1e0cba07356701c91bbd7c530525"
 
 [params]
 

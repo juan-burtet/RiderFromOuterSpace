@@ -7,7 +7,10 @@ path="res://.import/idleUp.png-51445a6f31f360e898f0857cf42d3dde.stex"
 [deps]
 
 source_file="res://Images/Player/NewMovement/idleUp.png"
+source_md5="ddc6e62866c669f2231e9ec43b45418b"
+
 dest_files=[ "res://.import/idleUp.png-51445a6f31f360e898f0857cf42d3dde.stex" ]
+dest_md5="ee1731f086feb9a38a855646cf2db391"
 
 [params]
 

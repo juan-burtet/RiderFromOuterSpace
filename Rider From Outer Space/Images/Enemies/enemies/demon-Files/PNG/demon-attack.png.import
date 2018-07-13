@@ -7,7 +7,10 @@ path="res://.import/demon-attack.png-d92704154413f842d0e01fa4f81a60a3.stex"
 [deps]
 
 source_file="res://Images/Enemies/enemies/demon-Files/PNG/demon-attack.png"
+source_md5="4b0f2f9dcd377543034ad2f2719dc6cb"
+
 dest_files=[ "res://.import/demon-attack.png-d92704154413f842d0e01fa4f81a60a3.stex" ]
+dest_md5="d0c311724c9c14f959be05ebe929cc03"
 
 [params]
 

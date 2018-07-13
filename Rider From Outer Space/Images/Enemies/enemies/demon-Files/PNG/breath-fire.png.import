@@ -7,7 +7,10 @@ path="res://.import/breath-fire.png-751a3ba2741e208e505881f14494e290.stex"
 [deps]
 
 source_file="res://Images/Enemies/enemies/demon-Files/PNG/breath-fire.png"
+source_md5="4f6d40d33056f32fc8488b90a2772e3a"
+
 dest_files=[ "res://.import/breath-fire.png-751a3ba2741e208e505881f14494e290.stex" ]
+dest_md5="ad5fdfd1e0e51aca01942da2954c768c"
 
 [params]
 

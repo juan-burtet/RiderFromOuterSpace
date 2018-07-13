@@ -41,7 +41,7 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=2]
 
 resource_name = "death"
 length = 0.4
@@ -84,12 +84,12 @@ tracks/0/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 30, 35 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
 extents = Vector2( 16, 1 )
 
-[node name="Demon_Fighter" type="KinematicBody2D" index="0"]
+[node name="Demon_Fighter" type="KinematicBody2D"]
 
 scale = Vector2( 2, 2 )
 input_pickable = false
@@ -103,7 +103,7 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 3
+frame = 1
 playing = true
 script = ExtResource( 19 )
 _sections_unfolded = [ "Visibility" ]
@@ -115,7 +115,7 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/death = SubResource( 5 )
+anims/death = SubResource( 2 )
 anims/hit = SubResource( 3 )
 blend_times = [  ]
 
@@ -234,7 +234,7 @@ _sections_unfolded = [ "Collision" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="topLeft" index="0"]
 
 position = Vector2( -17, -23 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="topRight" type="Area2D" parent="." index="12"]
@@ -252,7 +252,7 @@ audio_bus_name = "Master"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="topRight" index="0"]
 
 position = Vector2( 17, -23 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Visibility" type="VisibilityNotifier2D" parent="." index="13"]

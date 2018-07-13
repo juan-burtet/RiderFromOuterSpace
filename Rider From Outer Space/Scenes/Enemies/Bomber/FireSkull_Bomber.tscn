@@ -1,0 +1,10 @@
+[gd_scene format=2]
+
+[node name="FireSkull_Bomber" type="KinematicBody2D" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+
+

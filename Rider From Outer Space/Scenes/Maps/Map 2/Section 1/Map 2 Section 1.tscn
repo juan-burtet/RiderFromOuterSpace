@@ -1,15 +1,12 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Maps/Map2/Map 2 Section 1.gd" type="Script" id=1]
 [ext_resource path="res://Tilesets/Map2/Section 1/Map2_Section1_TileSet.tres" type="TileSet" id=2]
 [ext_resource path="res://Images/Maps/Map 2/Section 1/background.png" type="Texture" id=3]
 [ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Maps/Change Level/ChangeLevel.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Enemies/Bomber2.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Enemies/Shooter2.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/Enemies/Fighter2.tscn" type="PackedScene" id=8]
 
-[node name="Map 2 Section 1" type="Node"]
+[node name="Map 2 Section 1" type="Node" index="0"]
 
 script = ExtResource( 1 )
 next_world = "res://Scenes/Maps/Map 2/Section 2/Map 2 Section 2.tscn"
@@ -76,140 +73,6 @@ position = Vector2( -288, 32 )
 
 position = Vector2( 6615, 1938 )
 scale = Vector2( 2.94546, 7.40625 )
-
-[node name="Enemies" type="Node" parent="." index="4"]
-
-[node name="Bomber" parent="Enemies" index="0" instance=ExtResource( 6 )]
-
-position = Vector2( 1196, 391 )
-
-[node name="Bomber2" parent="Enemies" index="1" instance=ExtResource( 6 )]
-
-position = Vector2( 1984, 324 )
-
-[node name="Bomber3" parent="Enemies" index="2" instance=ExtResource( 6 )]
-
-position = Vector2( 2405, 357 )
-
-[node name="Bomber4" parent="Enemies" index="3" instance=ExtResource( 6 )]
-
-position = Vector2( 2686, 350 )
-
-[node name="Bomber6" parent="Enemies" index="4" instance=ExtResource( 6 )]
-
-position = Vector2( 2633, 1506 )
-
-[node name="Bomber7" parent="Enemies" index="5" instance=ExtResource( 6 )]
-
-position = Vector2( 2105, 1513 )
-
-[node name="Bomber8" parent="Enemies" index="6" instance=ExtResource( 6 )]
-
-position = Vector2( 1370, 1506 )
-
-[node name="Bomber9" parent="Enemies" index="7" instance=ExtResource( 6 )]
-
-position = Vector2( 976, 1506 )
-
-[node name="Bomber5" parent="Enemies" index="8" instance=ExtResource( 6 )]
-
-position = Vector2( 3060, 343 )
-
-[node name="Shooter" parent="Enemies" index="9" instance=ExtResource( 7 )]
-
-position = Vector2( 4219, 328 )
-
-[node name="Shooter2" parent="Enemies" index="10" instance=ExtResource( 7 )]
-
-position = Vector2( 3818, 361 )
-
-[node name="Shooter3" parent="Enemies" index="11" instance=ExtResource( 7 )]
-
-position = Vector2( 4513, 368 )
-
-[node name="Shooter4" parent="Enemies" index="12" instance=ExtResource( 7 )]
-
-position = Vector2( 4914, 315 )
-
-[node name="Shooter5" parent="Enemies" index="13" instance=ExtResource( 7 )]
-
-position = Vector2( 5235, 328 )
-
-[node name="Shooter6" parent="Enemies" index="14" instance=ExtResource( 7 )]
-
-position = Vector2( 6872, 1537 )
-
-[node name="Shooter7" parent="Enemies" index="15" instance=ExtResource( 7 )]
-
-position = Vector2( 5643, 1510 )
-
-[node name="Shooter8" parent="Enemies" index="16" instance=ExtResource( 7 )]
-
-position = Vector2( 4260, 1457 )
-
-[node name="Shooter10" parent="Enemies" index="17" instance=ExtResource( 7 )]
-
-position = Vector2( 3291, 1517 )
-
-[node name="Shooter9" parent="Enemies" index="18" instance=ExtResource( 7 )]
-
-position = Vector2( 1080, 2031 )
-
-[node name="Shooter11" parent="Enemies" index="19" instance=ExtResource( 7 )]
-
-position = Vector2( 1341, 2031 )
-
-[node name="Shooter12" parent="Enemies" index="20" instance=ExtResource( 7 )]
-
-position = Vector2( 1648, 2031 )
-
-[node name="Shooter13" parent="Enemies" index="21" instance=ExtResource( 7 )]
-
-position = Vector2( 1935, 2018 )
-
-[node name="Shooter14" parent="Enemies" index="22" instance=ExtResource( 7 )]
-
-position = Vector2( 2383, 2018 )
-
-[node name="Shooter15" parent="Enemies" index="23" instance=ExtResource( 7 )]
-
-position = Vector2( 2791, 2011 )
-
-[node name="Shooter16" parent="Enemies" index="24" instance=ExtResource( 7 )]
-
-position = Vector2( 3259, 2004 )
-
-[node name="Shooter17" parent="Enemies" index="25" instance=ExtResource( 7 )]
-
-position = Vector2( 3633, 2017 )
-
-[node name="Shooter18" parent="Enemies" index="26" instance=ExtResource( 7 )]
-
-position = Vector2( 3920, 2024 )
-
-[node name="Shooter19" parent="Enemies" index="27" instance=ExtResource( 7 )]
-
-position = Vector2( 4388, 2031 )
-
-[node name="Shooter20" parent="Enemies" index="28" instance=ExtResource( 7 )]
-
-position = Vector2( 4782, 2031 )
-
-[node name="Shooter21" parent="Enemies" index="29" instance=ExtResource( 7 )]
-
-position = Vector2( 5123, 2031 )
-
-[node name="Shooter22" parent="Enemies" index="30" instance=ExtResource( 7 )]
-
-position = Vector2( 5631, 2011 )
-
-[node name="Fighter" parent="Enemies" index="31" instance=ExtResource( 8 )]
-
-position = Vector2( 5985, 424 )
-
-[node name="Fighter2" parent="Enemies" index="32" instance=ExtResource( 8 )]
-
-position = Vector2( 460, 1499 )
 
 [connection signal="next_world" from="ChangeLevel" to="." method="_on_ChangeLevel_next_world"]
 

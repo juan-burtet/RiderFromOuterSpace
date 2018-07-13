@@ -56,7 +56,7 @@
   - [ ] Fire-Skull
   - [ ] Ghost
 ### Fighter
-  - [ ] Demon
+  - [x] Demon
   - [ ] Iron-Spider
   - [ ] Floating-Head
 ### Shooter
@@ -66,7 +66,6 @@
 
 ## Colisões dos Personagens
   * __Personagem[1]__: Toca em Inimigos, Mapa e Explosão
-  * __Inimigos[2]__: Toca em Personagem, Mapa e Balas
-  * __Mapa[3]__: Toca em Inimigos, Personagem e Balas
+  * __Inimigos[2]__: Toca em Personagem, Mapa
+  * __Mapa[3]__: Toca em Inimigos, Personagem
   * __Explosão[4]__: Toca em Personagem
-  * __Balas[5]__: Toca em Inimigos e Mapa

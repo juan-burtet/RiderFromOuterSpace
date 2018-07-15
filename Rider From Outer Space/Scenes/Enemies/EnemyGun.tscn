@@ -22,7 +22,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="EnemyGun" type="Area2D" index="0"]
+[node name="EnemyGun" type="Area2D"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -42,7 +42,7 @@ shape = SubResource( 1 )
 
 [node name="Visibility" type="VisibilityNotifier2D" parent="." index="1"]
 
-rect = Rect2( -10, -10, 20, 20 )
+rect = Rect2( -5, -5, 10, 10 )
 
 [node name="Bullet" type="AnimatedSprite" parent="." index="2"]
 

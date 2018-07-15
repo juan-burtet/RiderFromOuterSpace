@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Maps/Map2/Map 2 Section 2.gd" type="Script" id=1]
 [ext_resource path="res://Tilesets/Map2/Section 2/Map2_Section2_TileSet.tres" type="TileSet" id=2]
 [ext_resource path="res://Tilesets/Map2/Section 1/Map2_Section1_TileSet.tres" type="TileSet" id=3]
 [ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Maps/Change Level/ChangeLevel.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Enemies/Shooter/Wizard_Shooter.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Enemies/Shooter/Soldier_Shooter.tscn" type="PackedScene" id=7]
 
 [node name="Map 2 Section 2" type="Node" index="0"]
 
@@ -63,6 +65,14 @@ position = Vector2( 47, 324 )
 
 position = Vector2( 12736, 288 )
 scale = Vector2( 2.94546, 6.74839 )
+
+[node name="Wizard_Shooter" parent="." index="4" instance=ExtResource( 6 )]
+
+position = Vector2( 1664, 352 )
+
+[node name="Soldier_Shooter" parent="." index="5" instance=ExtResource( 7 )]
+
+position = Vector2( 864, 352 )
 
 [connection signal="next_world" from="ChangeLevel" to="." method="_on_ChangeLevel_next_world"]
 

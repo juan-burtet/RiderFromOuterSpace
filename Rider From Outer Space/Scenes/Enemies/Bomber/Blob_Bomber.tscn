@@ -1,10 +1,186 @@
-[gd_scene format=2]
+[gd_scene load_steps=24 format=2]
 
-[node name="Blob_Bomber" type="KinematicBody2D" index="0"]
+[ext_resource path="res://Scripts/Enemies/Blob_Bomber.gd" type="Script" id=1]
+[ext_resource path="res://Images/Enemies/enemies/Blob_Bomber/0.png" type="Texture" id=2]
+[ext_resource path="res://Images/Enemies/enemies/Blob_Bomber/1.png" type="Texture" id=3]
+[ext_resource path="res://Images/Enemies/enemies/Blob_Bomber/2.png" type="Texture" id=4]
+[ext_resource path="res://Images/Enemies/enemies/Blob_Bomber/3.png" type="Texture" id=5]
+[ext_resource path="res://Images/Enemies/enemies/Blob_Bomber/4.png" type="Texture" id=6]
+[ext_resource path="res://Images/Enemies/enemies/Blob_Bomber/5.png" type="Texture" id=7]
+[ext_resource path="res://Images/Enemies/enemies/Blob_Bomber/6.png" type="Texture" id=8]
+[ext_resource path="res://Images/Enemies/enemies/Blob_Bomber/7.png" type="Texture" id=9]
+[ext_resource path="res://Images/Enemies/Explosion/0.png" type="Texture" id=10]
+[ext_resource path="res://Images/Enemies/Explosion/1.png" type="Texture" id=11]
+[ext_resource path="res://Images/Enemies/Explosion/2.png" type="Texture" id=12]
+[ext_resource path="res://Images/Enemies/Explosion/3.png" type="Texture" id=13]
+[ext_resource path="res://Images/Enemies/Explosion/4.png" type="Texture" id=14]
+[ext_resource path="res://Images/Enemies/Explosion/5.png" type="Texture" id=15]
+[ext_resource path="res://Images/Enemies/Explosion/6.png" type="Texture" id=16]
+[ext_resource path="res://Images/Enemies/Explosion/7.png" type="Texture" id=17]
+[ext_resource path="res://Images/Enemies/Bosses/HP/under.png" type="Texture" id=18]
+[ext_resource path="res://Images/Enemies/Bosses/HP/fill.png" type="Texture" id=19]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "Run",
+"speed": 7.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "die",
+"speed": 20.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 25, 25 )
+
+[sub_resource type="CircleShape2D" id=4]
+
+custom_solver_bias = 0.0
+radius = 81.0
+
+[node name="Blob_Bomber" type="KinematicBody2D"]
 
 input_pickable = false
-collision_layer = 1
-collision_mask = 1
+collision_layer = 2
+collision_mask = 5
 collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Body" type="AnimatedSprite" parent="." index="0"]
+
+frames = SubResource( 1 )
+animation = "Run"
+playing = true
+
+[node name="Explosion" type="AnimatedSprite" parent="." index="1"]
+
+visible = false
+scale = Vector2( 5, 5 )
+frames = SubResource( 2 )
+animation = "die"
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Collision" type="CollisionShape2D" parent="." index="2"]
+
+position = Vector2( 0, -4 )
+shape = SubResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AreaExplode" type="Area2D" parent="." index="3"]
+
+editor/display_folded = true
+visible = false
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 8
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="detect" type="CollisionShape2D" parent="AreaExplode" index="0"]
+
+shape = SubResource( 4 )
+
+[node name="HP" type="TextureProgress" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -32.0
+margin_top = -40.0
+margin_right = 640.0
+rect_scale = Vector2( 0.095, 0.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 20.0
+exp_edit = false
+rounded = false
+texture_under = ExtResource( 18 )
+texture_over = null
+texture_progress = ExtResource( 19 )
+radial_fill_degrees = 360.0
+radial_center_offset = Vector2( 0, 0 )
+nine_patch_stretch = false
+_sections_unfolded = [ "Rect", "Textures" ]
+
+[node name="RayCast" type="Node2D" parent="." index="5"]
+
+[node name="Left" type="RayCast2D" parent="RayCast" index="0"]
+
+position = Vector2( 0, 20 )
+enabled = true
+exclude_parent = true
+cast_to = Vector2( -250, 0 )
+collision_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="LeftUp" type="RayCast2D" parent="RayCast" index="1"]
+
+position = Vector2( 0, 20 )
+enabled = true
+exclude_parent = true
+cast_to = Vector2( -250, -100 )
+collision_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="Right" type="RayCast2D" parent="RayCast" index="2"]
+
+position = Vector2( 0, 20 )
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 250, 0 )
+collision_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="RightUp" type="RayCast2D" parent="RayCast" index="3"]
+
+position = Vector2( 0, 20 )
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 250, -100 )
+collision_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="Down" type="RayCast2D" parent="RayCast" index="4"]
+
+position = Vector2( 0, 20 )
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 0, 50 )
+collision_mask = 4
+_sections_unfolded = [ "Transform" ]
+
+[connection signal="body_entered" from="AreaExplode" to="." method="_on_AreaExplode_body_entered"]
 
 

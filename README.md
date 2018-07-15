@@ -52,17 +52,17 @@
 ## Inimigos:
 
 ### Bomber
-  - [ ] Blob
-  - [ ] Fire-Skull
-  - [ ] Ghost
+  - [x] Blob
+  - [x] Fire-Skull
+  - [x] Ghost
 ### Fighter
   - [x] Demon
   - [ ] Iron-Spider
   - [ ] Floating-Head
 ### Shooter
-  - [ ] Wizard
-  - [ ] Robot
-  - [ ] Soldier
+  - [x] Wizard
+  - [x] Robot
+  - [x] Soldier
 
 ## Colisões dos Personagens
   * __Personagem[1]__: Toca em Inimigos, Mapa e Explosão

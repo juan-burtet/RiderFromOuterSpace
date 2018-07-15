@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Maps/Map3/Map 3 Section 2.gd" type="Script" id=1]
 [ext_resource path="res://Tilesets/Map3/Section 2/background.tres" type="TileSet" id=2]
 [ext_resource path="res://Tilesets/Map3/Section 2/Map3_Section2_TileSet.tres" type="TileSet" id=3]
 [ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Maps/Change Level/ChangeLevel.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Enemies/Fighter/Demon_Fighter.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Enemies/Fighter/IronSpider_Fighter.tscn" type="PackedScene" id=7]
 
 [node name="Map 3 Section 2" type="Node" index="0"]
 
@@ -63,6 +65,14 @@ position = Vector2( 96, -96 )
 
 position = Vector2( 1553, 2332 )
 scale = Vector2( 1.69148, 3.65899 )
+
+[node name="Demon_Fighter" parent="." index="4" instance=ExtResource( 6 )]
+
+position = Vector2( 2701, 247 )
+
+[node name="IronSpider_Fighter" parent="." index="5" instance=ExtResource( 7 )]
+
+position = Vector2( 1332, 293 )
 
 [connection signal="next_world" from="ChangeLevel" to="." method="_on_ChangeLevel_next_world"]
 

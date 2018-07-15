@@ -79,7 +79,6 @@ func shoot(direction):
 		get_parent().add_child(pistol)
 		pistol.init(direction)
 		pistol.set_position($Gun.get_global_position())
-		
 
 func restart_timer():
 	timer.set_wait_time(2)

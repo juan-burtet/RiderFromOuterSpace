@@ -599,20 +599,21 @@ func update_hp():
 
 func get_attack(string):
 	receive_damage()
-	var x
+	var x = 0
+	var y = 0
 	match string:
 		"left":
 			x = -2000
 		"right":
 			x = 2000
+		"up":
+			y = -500
 			pass
-	
-	if !is_on_floor():
-		motion.y = 0
 	
 	motion.x = 0
 	motion = move_and_slide(motion,UP)
 	motion.x = x
+	motion.y = y
 	motion = move_and_slide(motion,UP)
 	
 	pass

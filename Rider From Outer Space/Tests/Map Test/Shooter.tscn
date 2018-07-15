@@ -81,7 +81,7 @@ modulate = Color( 0.972656, 0.208969, 0.208969, 1 )
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 1 )
 animation = "Walk"
-frame = 3
+frame = 1
 playing = true
 _sections_unfolded = [ "Transform", "Visibility" ]
 

@@ -26,21 +26,43 @@ func _ready():
 	$Sprite.set_offset(Vector2(0,0))
 
 func _process(delta):
-	$Sprite.set_offset(Vector2(0,0))
 	
 	motion.y += GRAVITY
 	
-	if $Visibility.is_on_screen():
-		if $Left.is_colliding() or $LeftUp.is_colliding():
+	if $Left.is_colliding() or $LeftUp.is_colliding():
+		var move = false
+		var left = $Left.get_collider()
+		var leftUp = $LeftUp.get_collider()
+		
+		if left != null:
+			if left.get_name() == "PlayerTest":
+				move = true
+		if leftUp != null:
+			if leftUp.get_name() == "PlayerTest":
+				move = true
+		
+		if move:
 			motion.x = -SPEED
 			$Sprite.flip_h = false
 			$Sprite.play("Run")
-		elif $Right.is_colliding() or $RightUp.is_colliding():
+	elif $Right.is_colliding() or $RightUp.is_colliding():
+		var move = false
+		var right = $Right.get_collider()
+		var rightUp = $RightUp.get_collider()
+		
+		if right != null:
+			if right.get_name() == "PlayerTest":
+				move = true
+		if rightUp != null:
+			if rightUp.get_name() == "PlayerTest":
+				move = true
+		
+		if move:
 			motion.x = SPEED
 			$Sprite.flip_h = true
 			$Sprite.play("Run")
-		else:
-			$Sprite.play("Idle")
+	else:
+		$Sprite.play("Idle")
 	
 	if !timer.is_one_shot():
 		if $LeftAttack.is_colliding():
@@ -89,6 +111,7 @@ func do_attack(string):
 	
 	yield($Sprite, "over")
 	restart_timer()
+	$Sprite.set_offset(Vector2(0,0))
 	set_process(true)
 	pass
 
@@ -96,8 +119,7 @@ func print_hp():
 	$HP.set_value(hp)
 
 func dies():
-	$Sprite.play("Idle")
-	set_process(false)
+	$HP.set_visible(false)
 	$anim.play("death")
 	yield($anim, "animation_finished")
 	queue_free()
@@ -108,8 +130,8 @@ func does_damage(damage):
 	print_hp()
 	if !hp:
 		dies()
-	$anim.play("hit")
-	yield($anim,"animation_finished")
+	else:
+		$anim.play("hit")
 	pass
 
 func restart_timer():

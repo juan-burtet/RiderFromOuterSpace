@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://Scripts/Maps/Map3/BossLevel/BossLevel3.gd" type="Script" id=1]
 [ext_resource path="res://Tilesets/Map3/Section 2/Map3_Section2_TileSet.tres" type="TileSet" id=2]
@@ -29,7 +29,8 @@
 [ext_resource path="res://Images/Enemies/Bosses/3/Attack/6.png" type="Texture" id=27]
 [ext_resource path="res://Images/Enemies/Bosses/3/Attack/7.png" type="Texture" id=28]
 [ext_resource path="res://Scenes/Enemies/Info.tscn" type="PackedScene" id=29]
-[ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Sounds/Effects/Enemies/Death/sfx_deathscream_alien1.wav" type="AudioStream" id=30]
+[ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=31]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -98,7 +99,7 @@ tracks/0/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 3, 240 )
 
-[node name="BossLevel3" type="Node"]
+[node name="BossLevel3" type="Node" index="0"]
 
 script = ExtResource( 1 )
 next_world = "res://Scenes/Maps/Final Boss/FinalBoss.tscn"
@@ -166,8 +167,8 @@ __meta__ = {
 
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 1 )
-animation = "Ultra"
-frame = 7
+animation = "Idle"
+frame = 4
 playing = true
 flip_h = true
 _sections_unfolded = [ "Transform", "Visibility" ]
@@ -218,6 +219,14 @@ anims/Damage = SubResource( 3 )
 anims/Death = SubResource( 4 )
 blend_times = [  ]
 
+[node name="death" type="AudioStreamPlayer" parent="Boss/Lovelace" index="9"]
+
+stream = ExtResource( 30 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "SFX"
+
 [node name="Barrier" type="KinematicBody2D" parent="Boss" index="1"]
 
 editor/display_folded = true
@@ -235,7 +244,7 @@ __meta__ = {
 
 shape = SubResource( 5 )
 
-[node name="PlayerTest" parent="." index="3" instance=ExtResource( 30 )]
+[node name="PlayerTest" parent="." index="3" instance=ExtResource( 31 )]
 
 position = Vector2( 96, 32 )
 

@@ -62,7 +62,7 @@ position = Vector2( 0, -8 )
 rotation = -1.5708
 frames = SubResource( 1 )
 animation = "default"
-frame = 2
+frame = 3
 playing = true
 offset = Vector2( -8, -8 )
 _sections_unfolded = [ "Transform", "Visibility" ]
@@ -91,19 +91,17 @@ blend_times = [  ]
 
 stream = ExtResource( 6 )
 volume_db = 0.0
-pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "Master"
+bus = "SFX"
 
 [node name="impact" type="AudioStreamPlayer" parent="Sounds" index="1"]
 
 stream = ExtResource( 7 )
 volume_db = 0.0
-pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "Master"
+bus = "SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_WizardBall_body_entered"]
 

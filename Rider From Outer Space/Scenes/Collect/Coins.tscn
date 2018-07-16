@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/Collects/Coins.gd" type="Script" id=1]
 [ext_resource path="res://Images/Collects/coins0.png" type="Texture" id=2]
 [ext_resource path="res://Images/Collects/coins1.png" type="Texture" id=3]
 [ext_resource path="res://Images/Collects/coins2.png" type="Texture" id=4]
 [ext_resource path="res://Images/Collects/coins3.png" type="Texture" id=5]
+[ext_resource path="res://Sounds/Effects/Collect/sfx_coin_single1.wav" type="AudioStream" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -20,7 +21,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 8, 8 )
 
-[node name="Coins" type="Area2D"]
+[node name="Coins" type="Area2D" index="0"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -38,12 +39,20 @@ _sections_unfolded = [ "Collision" ]
 
 frames = SubResource( 1 )
 animation = "default"
-frame = 2
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
 shape = SubResource( 2 )
+
+[node name="destroy" type="AudioStreamPlayer" parent="." index="2"]
+
+stream = ExtResource( 6 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_Coins_body_entered"]
 

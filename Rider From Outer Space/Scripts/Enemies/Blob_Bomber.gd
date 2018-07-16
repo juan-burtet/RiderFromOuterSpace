@@ -62,6 +62,7 @@ func floating_body():
 	pass
 
 func dies():
+	$Collision.set_disabled(true)
 	$HP.set_visible(false)
 	$Body.set_visible(false)
 	$Explosion.set_visible(true)

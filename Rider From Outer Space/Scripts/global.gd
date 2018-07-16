@@ -96,7 +96,7 @@ func add_coin():
 	coins += 1
 	if coins > 99:
 		coins = 0
-		add_upgrade()
+		add_upgrades()
 
 func imprime():
 	print("oi")

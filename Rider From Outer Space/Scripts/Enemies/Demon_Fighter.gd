@@ -123,6 +123,7 @@ func print_hp():
 
 func dies():
 	set_process(false)
+	$Collision.set_disabled(true)
 	$HP.set_visible(false)
 	$anim.play("death")
 	$Sounds/death.play()

@@ -4,7 +4,7 @@ const LIFE_POSITION = Vector2(0,-14)
 const DEATH_POSITION = Vector2(0,-2)
 const FIREBALL_SCENE = preload("res://Scenes/Enemies/BossWeapon1.tscn")
 
-const MAX_HP = 50
+const MAX_HP = 1000
 
 signal dead
 var hp
@@ -73,6 +73,8 @@ func is_dead():
 		can_shot = false
 		$Sprite.set_position(DEATH_POSITION)
 		$Sprite.play("Death")
+		$death.play()
+		yield($death,"finished")
 		yield($Sprite, "animation_finished")
 		get_parent().queue_free()
 		emit_signal("dead")

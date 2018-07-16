@@ -3,7 +3,7 @@ extends KinematicBody2D
 const FIREBALL_SCENE = preload("res://Scenes/Enemies/BossWeapon4.tscn")
 const SHADOWBALL_SCENE = preload("res://Scenes/Enemies/BossWeapon5.tscn")
 
-const MAX_HP = 30
+const MAX_HP = 3000
 var hp 
 var can_shot
 var pos
@@ -181,6 +181,8 @@ func is_dead():
 		can_shot = false
 		$CollisionShape2D.set_disabled(true)
 		if mode != 0:
+			$death.play()
+			yield($death,"finished")
 			$Animation.play("die")
 			yield($Animation, "animation_finished")
 			emit_signal("dead")
@@ -188,6 +190,7 @@ func is_dead():
 		else:
 			mode = 1
 			$Sprite.play("Death")
+			$death.play()
 			yield($Sprite, "animation_finished")
 			$Sprite.flip_h = false
 			$Sprite.play("Shadow_In")

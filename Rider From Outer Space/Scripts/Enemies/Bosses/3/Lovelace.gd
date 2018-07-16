@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 const FIREBALL_SCENE = preload("res://Scenes/Enemies/BossWeapon3.tscn")
 
-const MAX_HP = 50
+const MAX_HP = 30
 var hp 
 var can_shot
 var pos
@@ -88,7 +88,9 @@ func is_dead():
 		can_shot = false
 		$CollisionShape2D.queue_free()
 		$Animation.play("Death")
+		$death.play()
 		yield($Animation,"animation_finished")
+		yield($death,"finished")
 		get_parent().queue_free()
 		emit_signal("dead")
 

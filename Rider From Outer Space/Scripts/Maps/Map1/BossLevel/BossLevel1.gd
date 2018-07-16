@@ -88,6 +88,8 @@ func end():
 func _on_Djikstra_dead():
 	end()
 	yield(self, "fade")
+	$PlayerTest.queue_free()
+	
 	dialogo = true
 	cria_dialogo_fim()
 	yield(self, "termina_fase")

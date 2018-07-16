@@ -22,8 +22,8 @@
 [ext_resource path="res://Images/Menus/OptionsMenu/music.png" type="Texture" id=20]
 [ext_resource path="res://Images/Menus/OptionsMenu/sfx.png" type="Texture" id=21]
 [ext_resource path="res://Images/Menus/OptionsMenu/fullscreen.png" type="Texture" id=22]
-[ext_resource path="res://Images/Menus/OptionsMenu/off.png" type="Texture" id=23]
-[ext_resource path="res://Images/Menus/OptionsMenu/on.png" type="Texture" id=24]
+[ext_resource path="res://Images/Menus/OptionsMenu/on.png" type="Texture" id=23]
+[ext_resource path="res://Images/Menus/OptionsMenu/off.png" type="Texture" id=24]
 [ext_resource path="res://Images/Menus/OptionsMenu/on_selected.png" type="Texture" id=25]
 [ext_resource path="res://Images/Menus/OptionsMenu/off-selected.png" type="Texture" id=26]
 [ext_resource path="res://Scenes/Menus/ChapterSelect.gd" type="Script" id=27]
@@ -134,20 +134,20 @@ tracks/0/keys = {
 animations = [ {
 "frames": [ ExtResource( 23 ) ],
 "loop": true,
-"name": "off",
+"name": "on",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 24 ) ],
 "loop": true,
-"name": "on",
+"name": "off",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 25 ), ExtResource( 24 ) ],
+"frames": [ ExtResource( 25 ), ExtResource( 23 ) ],
 "loop": true,
 "name": "select_on",
 "speed": 3.0
 }, {
-"frames": [ ExtResource( 26 ), ExtResource( 23 ) ],
+"frames": [ ExtResource( 26 ), ExtResource( 24 ) ],
 "loop": true,
 "name": "select_off",
 "speed": 3.0
@@ -375,12 +375,10 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Principal" type="Node" parent="." index="1"]
 
-editor/display_folded = true
 script = ExtResource( 7 )
 
 [node name="GameLogo" type="Sprite" parent="Principal" index="0"]
 
-visible = false
 position = Vector2( 384, 128 )
 scale = Vector2( 6, 6 )
 texture = ExtResource( 8 )
@@ -390,7 +388,6 @@ _sections_unfolded = [ "Region", "Transform" ]
 
 [node name="StartGame" type="AnimatedSprite" parent="Principal/MenuOptions" index="0"]
 
-visible = false
 position = Vector2( 384, 256 )
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 1 )
@@ -399,7 +396,6 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="LoadGame" type="AnimatedSprite" parent="Principal/MenuOptions" index="1"]
 
-visible = false
 position = Vector2( 384, 288 )
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 2 )
@@ -410,7 +406,6 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="ChapterSelect" type="AnimatedSprite" parent="Principal/MenuOptions" index="2"]
 
-visible = false
 position = Vector2( 384, 320 )
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 3 )
@@ -421,7 +416,6 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Options" type="AnimatedSprite" parent="Principal/MenuOptions" index="3"]
 
-visible = false
 position = Vector2( 384, 352 )
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 4 )
@@ -432,7 +426,6 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="QuitGame" type="AnimatedSprite" parent="Principal/MenuOptions" index="4"]
 
-visible = false
 position = Vector2( 384, 384 )
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 5 )
@@ -525,10 +518,12 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="ChapterSelect" type="Node" parent="." index="3"]
 
+editor/display_folded = true
 script = ExtResource( 27 )
 
 [node name="ChapterSelect" type="Sprite" parent="ChapterSelect" index="0"]
 
+visible = false
 scale = Vector2( 2.5, 2.5 )
 texture = ExtResource( 13 )
 centered = false
@@ -537,6 +532,7 @@ _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="Map1" type="AnimatedSprite" parent="ChapterSelect" index="1"]
 
+visible = false
 position = Vector2( 368, 200 )
 scale = Vector2( 2.5, 2.5 )
 frames = SubResource( 8 )
@@ -546,6 +542,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Map2" type="AnimatedSprite" parent="ChapterSelect" index="2"]
 
+visible = false
 position = Vector2( 368, 250 )
 scale = Vector2( 2.5, 2.5 )
 frames = SubResource( 8 )
@@ -555,6 +552,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Map3" type="AnimatedSprite" parent="ChapterSelect" index="3"]
 
+visible = false
 position = Vector2( 368, 300 )
 scale = Vector2( 2.5, 2.5 )
 frames = SubResource( 8 )
@@ -564,6 +562,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Map4" type="AnimatedSprite" parent="ChapterSelect" index="4"]
 
+visible = false
 position = Vector2( 368, 350 )
 scale = Vector2( 2.5, 2.5 )
 frames = SubResource( 8 )
@@ -590,7 +589,6 @@ blend_times = [  ]
 
 stream = ExtResource( 38 )
 volume_db = 0.0
-pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "MUSIC"
@@ -599,7 +597,6 @@ bus = "MUSIC"
 
 stream = ExtResource( 39 )
 volume_db = 0.0
-pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "SFX"

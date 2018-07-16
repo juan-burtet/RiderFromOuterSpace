@@ -70,7 +70,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[node name="Wizard_Shooter" type="KinematicBody2D"]
+[node name="Wizard_Shooter" type="KinematicBody2D" index="0"]
 
 scale = Vector2( 1.75, 1.75 )
 input_pickable = false
@@ -86,7 +86,7 @@ WAIT_TIME = 1.5
 
 frames = SubResource( 1 )
 animation = "attack"
-frame = 4
+frame = 1
 playing = true
 offset = Vector2( 0, 2 )
 script = ExtResource( 8 )
@@ -194,10 +194,9 @@ rect = Rect2( -10, -10, 20, 20 )
 
 stream = ExtResource( 11 )
 volume_db = 0.0
-pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "Master"
+bus = "SFX"
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 

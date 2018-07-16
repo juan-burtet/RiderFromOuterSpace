@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Scripts/Maps/Map1/BossLevel/BossLevel1.gd" type="Script" id=1]
 [ext_resource path="res://Images/Maps/Map 1/Section 2/cave_wall.png" type="Texture" id=2]
@@ -16,7 +16,8 @@
 [ext_resource path="res://Images/Enemies/Bosses/1/Life/life3.png" type="Texture" id=14]
 [ext_resource path="res://Images/Enemies/Bosses/1/Life/life4.png" type="Texture" id=15]
 [ext_resource path="res://Scenes/Enemies/Info.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Sounds/Effects/Enemies/Death/sfx_deathscream_human14.wav" type="AudioStream" id=17]
+[ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=18]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -62,7 +63,7 @@ tracks/0/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 10, 256 )
 
-[node name="BossLevel1" type="Node"]
+[node name="BossLevel1" type="Node" index="0"]
 
 script = ExtResource( 1 )
 next_world = "res://Scenes/Maps/Map 2/Section 1/Map 2 Section 1.tscn"
@@ -104,7 +105,6 @@ __meta__ = {
 
 [node name="Djikstra" type="KinematicBody2D" parent="Boss" index="0"]
 
-editor/display_folded = true
 position = Vector2( 640, 384 )
 input_pickable = false
 collision_layer = 2
@@ -122,7 +122,6 @@ position = Vector2( 0, -14 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "Life"
-frame = 1
 playing = true
 flip_h = true
 _sections_unfolded = [ "Transform", "Visibility" ]
@@ -167,6 +166,14 @@ playback_speed = 1.0
 anims/damage = SubResource( 3 )
 blend_times = [  ]
 
+[node name="death" type="AudioStreamPlayer" parent="Boss/Djikstra" index="8"]
+
+stream = ExtResource( 17 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "SFX"
+
 [node name="Barrier" type="KinematicBody2D" parent="Boss" index="1"]
 
 editor/display_folded = true
@@ -184,7 +191,7 @@ __meta__ = {
 
 shape = SubResource( 4 )
 
-[node name="PlayerTest" parent="." index="3" instance=ExtResource( 17 )]
+[node name="PlayerTest" parent="." index="3" instance=ExtResource( 18 )]
 
 position = Vector2( 128, -32 )
 

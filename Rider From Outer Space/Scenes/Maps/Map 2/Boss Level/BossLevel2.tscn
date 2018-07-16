@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Scripts/Maps/Map2/BossLevel/BossLevel2.gd" type="Script" id=1]
 [ext_resource path="res://Tilesets/Map2/Section 2/Map2_Section2_TileSet.tres" type="TileSet" id=2]
@@ -20,7 +20,8 @@
 [ext_resource path="res://Images/Enemies/Bosses/2/14.png" type="Texture" id=18]
 [ext_resource path="res://Images/Enemies/Bosses/2/15.png" type="Texture" id=19]
 [ext_resource path="res://Scenes/Enemies/Info.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Sounds/Effects/Enemies/Death/sfx_deathscream_alien3.wav" type="AudioStream" id=21]
+[ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=22]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -79,7 +80,7 @@ tracks/0/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 5, 290 )
 
-[node name="BossLevel2" type="Node"]
+[node name="BossLevel2" type="Node" index="0"]
 
 script = ExtResource( 1 )
 next_world = "res://Scenes/Maps/Map 3/Section 1/Map 3 Section 1.tscn"
@@ -127,7 +128,7 @@ position = Vector2( 0, -25 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "default"
-frame = 6
+frame = 7
 playing = true
 flip_h = true
 _sections_unfolded = [ "Transform", "Visibility" ]
@@ -198,6 +199,14 @@ anims/damage = SubResource( 3 )
 anims/death = SubResource( 4 )
 blend_times = [  ]
 
+[node name="death" type="AudioStreamPlayer" parent="Boss/Turing" index="13"]
+
+stream = ExtResource( 21 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "SFX"
+
 [node name="Barrier" type="KinematicBody2D" parent="Boss" index="1"]
 
 editor/display_folded = true
@@ -213,7 +222,7 @@ _sections_unfolded = [ "Collision" ]
 position = Vector2( 32, -96 )
 shape = SubResource( 5 )
 
-[node name="PlayerTest" parent="." index="2" instance=ExtResource( 21 )]
+[node name="PlayerTest" parent="." index="2" instance=ExtResource( 22 )]
 
 position = Vector2( 64, 352 )
 

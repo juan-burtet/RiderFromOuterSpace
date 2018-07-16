@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/Collects/MasterUpgrade.gd" type="Script" id=1]
 [ext_resource path="res://Images/Collects/master0.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Images/Collects/master3.png" type="Texture" id=5]
 [ext_resource path="res://Images/Collects/master4.png" type="Texture" id=6]
 [ext_resource path="res://Images/Collects/master5.png" type="Texture" id=7]
+[ext_resource path="res://Sounds/Effects/Collect/sfx_coin_single1.wav" type="AudioStream" id=8]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -22,7 +23,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="MasterUpgrade" type="Area2D"]
+[node name="MasterUpgrade" type="Area2D" index="0"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -44,6 +45,14 @@ playing = true
 
 shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="destroy" type="AudioStreamPlayer" parent="." index="2"]
+
+stream = ExtResource( 8 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_MasterUpgrade_body_entered"]
 

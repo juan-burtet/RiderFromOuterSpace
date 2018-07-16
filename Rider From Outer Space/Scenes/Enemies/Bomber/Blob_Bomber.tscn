@@ -26,13 +26,13 @@
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
 "loop": true,
-"name": "Idle",
-"speed": 5.0
+"name": "Run",
+"speed": 7.0
 }, {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
 "loop": true,
-"name": "Run",
-"speed": 7.0
+"name": "Idle",
+"speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=2]
@@ -54,7 +54,7 @@ extents = Vector2( 25, 25 )
 custom_solver_bias = 0.0
 radius = 81.0
 
-[node name="Blob_Bomber" type="KinematicBody2D"]
+[node name="Blob_Bomber" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 2
@@ -89,7 +89,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="AreaExplode" type="Area2D" parent="." index="3"]
 
-editor/display_folded = true
 visible = false
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -191,11 +190,10 @@ _sections_unfolded = [ "Transform" ]
 
 stream = ExtResource( 20 )
 volume_db = 0.0
-pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "Master"
+bus = "SFX"
 
-[connection signal="body_entered" from="AreaExplode" to="." method="_on_AreaExplode_body_entered"]
+[connection signal="body_entered" from="AreaExplode" to="." method="_on_AreaExplode_body_entered" flags=6]
 
 

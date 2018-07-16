@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Scripts/Maps/Map2/BossLevel/BossLevel2.gd" type="Script" id=1]
 [ext_resource path="res://Tilesets/Map2/Section 2/Map2_Section2_TileSet.tres" type="TileSet" id=2]
@@ -22,6 +22,8 @@
 [ext_resource path="res://Scenes/Enemies/Info.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Sounds/Effects/Enemies/Death/sfx_deathscream_alien3.wav" type="AudioStream" id=21]
 [ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Sounds/Music/Boss/BossIntro.wav" type="AudioStream" id=23]
+[ext_resource path="res://Sounds/Music/Boss/BossMain.wav" type="AudioStream" id=24]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -80,7 +82,7 @@ tracks/0/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 5, 290 )
 
-[node name="BossLevel2" type="Node" index="0"]
+[node name="BossLevel2" type="Node"]
 
 script = ExtResource( 1 )
 next_world = "res://Scenes/Maps/Map 3/Section 1/Map 3 Section 1.tscn"
@@ -109,6 +111,8 @@ _sections_unfolded = [ "Cell", "Collision", "Transform" ]
 
 [node name="Boss" type="Node" parent="." index="1"]
 
+editor/display_folded = true
+
 [node name="Turing" type="KinematicBody2D" parent="Boss" index="0"]
 
 position = Vector2( 640, 352 )
@@ -128,7 +132,7 @@ position = Vector2( 0, -25 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "default"
-frame = 7
+frame = 10
 playing = true
 flip_h = true
 _sections_unfolded = [ "Transform", "Visibility" ]
@@ -203,6 +207,7 @@ blend_times = [  ]
 
 stream = ExtResource( 21 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "SFX"
@@ -233,8 +238,30 @@ wait_time = 1.0
 one_shot = false
 autostart = false
 
+[node name="begin" type="AudioStreamPlayer" parent="." index="4"]
+
+stream = ExtResource( 23 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "MUSIC"
+
+[node name="music" type="AudioStreamPlayer" parent="." index="5"]
+
+stream = ExtResource( 24 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "MUSIC"
+
 [connection signal="dead" from="Boss/Turing" to="." method="_on_Turing_dead"]
 
 [connection signal="timeout" from="Boss/Turing/Timer" to="Boss/Turing" method="_on_Timer_timeout"]
+
+[connection signal="finished" from="begin" to="." method="_on_begin_finished"]
+
+[connection signal="finished" from="music" to="." method="_on_music_finished"]
 
 

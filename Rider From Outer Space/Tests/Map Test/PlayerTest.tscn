@@ -2,58 +2,58 @@
 
 [ext_resource path="res://Tests/Map Test/PlayerTest.gd" type="Script" id=1]
 [ext_resource path="res://Images/Player/Movement/Idle/Idle.png" type="Texture" id=2]
-[ext_resource path="res://Images/Player/Movement/Run/Run0.png" type="Texture" id=3]
-[ext_resource path="res://Images/Player/Movement/Run/Run1.png" type="Texture" id=4]
-[ext_resource path="res://Images/Player/Movement/Run/Run2.png" type="Texture" id=5]
-[ext_resource path="res://Images/Player/Movement/Run/Run3.png" type="Texture" id=6]
-[ext_resource path="res://Images/Player/Movement/Jump/Jump.png" type="Texture" id=7]
-[ext_resource path="res://Images/Player/Movement/Right/right.png" type="Texture" id=8]
-[ext_resource path="res://Images/Player/Movement/Up/up.png" type="Texture" id=9]
+[ext_resource path="res://Images/Player/Movement/Jump/Jump.png" type="Texture" id=3]
+[ext_resource path="res://Images/Player/Movement/Run/Run0.png" type="Texture" id=4]
+[ext_resource path="res://Images/Player/Movement/Run/Run1.png" type="Texture" id=5]
+[ext_resource path="res://Images/Player/Movement/Run/Run2.png" type="Texture" id=6]
+[ext_resource path="res://Images/Player/Movement/Run/Run3.png" type="Texture" id=7]
+[ext_resource path="res://Images/Player/Movement/Up/up.png" type="Texture" id=8]
+[ext_resource path="res://Images/Player/Movement/Right/right.png" type="Texture" id=9]
 [ext_resource path="res://Images/Player/Movement/UpRight/upRight.png" type="Texture" id=10]
-[ext_resource path="res://Images/Player/NewMovement/idleUpRight.png" type="Texture" id=11]
-[ext_resource path="res://Images/Player/NewMovement/jumpDownRight.png" type="Texture" id=12]
-[ext_resource path="res://Images/Player/NewMovement/idleDownRight.png" type="Texture" id=13]
-[ext_resource path="res://Images/Player/NewMovement/RunRight/0.png" type="Texture" id=14]
-[ext_resource path="res://Images/Player/NewMovement/RunRight/1.png" type="Texture" id=15]
-[ext_resource path="res://Images/Player/NewMovement/RunRight/2.png" type="Texture" id=16]
-[ext_resource path="res://Images/Player/NewMovement/RunRight/3.png" type="Texture" id=17]
-[ext_resource path="res://Images/Player/NewMovement/RunRight/4.png" type="Texture" id=18]
-[ext_resource path="res://Images/Player/NewMovement/RunRight/5.png" type="Texture" id=19]
-[ext_resource path="res://Images/Player/NewMovement/RunRight/6.png" type="Texture" id=20]
-[ext_resource path="res://Images/Player/NewMovement/RunRight/7.png" type="Texture" id=21]
-[ext_resource path="res://Images/Player/NewMovement/RunRight/8.png" type="Texture" id=22]
-[ext_resource path="res://Images/Player/NewMovement/RunRight/9.png" type="Texture" id=23]
-[ext_resource path="res://Images/Player/NewMovement/RunRight/10.png" type="Texture" id=24]
-[ext_resource path="res://Images/Player/NewMovement/RunRight/11.png" type="Texture" id=25]
-[ext_resource path="res://Images/Player/NewMovement/idleUp.png" type="Texture" id=26]
-[ext_resource path="res://Images/Player/NewMovement/jumpUpRight.png" type="Texture" id=27]
-[ext_resource path="res://Images/Player/NewMovement/RunUpRight/0.png" type="Texture" id=28]
-[ext_resource path="res://Images/Player/NewMovement/RunUpRight/1.png" type="Texture" id=29]
-[ext_resource path="res://Images/Player/NewMovement/RunUpRight/2.png" type="Texture" id=30]
-[ext_resource path="res://Images/Player/NewMovement/RunUpRight/3.png" type="Texture" id=31]
-[ext_resource path="res://Images/Player/NewMovement/RunUpRight/4.png" type="Texture" id=32]
-[ext_resource path="res://Images/Player/NewMovement/RunUpRight/5.png" type="Texture" id=33]
-[ext_resource path="res://Images/Player/NewMovement/RunUpRight/6.png" type="Texture" id=34]
-[ext_resource path="res://Images/Player/NewMovement/RunUpRight/7.png" type="Texture" id=35]
-[ext_resource path="res://Images/Player/NewMovement/RunUpRight/8.png" type="Texture" id=36]
-[ext_resource path="res://Images/Player/NewMovement/RunUpRight/9.png" type="Texture" id=37]
-[ext_resource path="res://Images/Player/NewMovement/RunUpRight/10.png" type="Texture" id=38]
-[ext_resource path="res://Images/Player/NewMovement/RunUpRight/11.png" type="Texture" id=39]
-[ext_resource path="res://Images/Player/NewMovement/RunDownRight/0.png" type="Texture" id=40]
-[ext_resource path="res://Images/Player/NewMovement/RunDownRight/1.png" type="Texture" id=41]
-[ext_resource path="res://Images/Player/NewMovement/RunDownRight/2.png" type="Texture" id=42]
-[ext_resource path="res://Images/Player/NewMovement/RunDownRight/3.png" type="Texture" id=43]
-[ext_resource path="res://Images/Player/NewMovement/RunDownRight/4.png" type="Texture" id=44]
-[ext_resource path="res://Images/Player/NewMovement/RunDownRight/5.png" type="Texture" id=45]
-[ext_resource path="res://Images/Player/NewMovement/RunDownRight/6.png" type="Texture" id=46]
-[ext_resource path="res://Images/Player/NewMovement/RunDownRight/7.png" type="Texture" id=47]
-[ext_resource path="res://Images/Player/NewMovement/RunDownRight/8.png" type="Texture" id=48]
-[ext_resource path="res://Images/Player/NewMovement/RunDownRight/9.png" type="Texture" id=49]
-[ext_resource path="res://Images/Player/NewMovement/RunDownRight/10.png" type="Texture" id=50]
-[ext_resource path="res://Images/Player/NewMovement/RunDownRight/11.png" type="Texture" id=51]
-[ext_resource path="res://Images/Player/NewMovement/jumpUp.png" type="Texture" id=52]
-[ext_resource path="res://Images/Player/NewMovement/jumpRight.png" type="Texture" id=53]
-[ext_resource path="res://Images/Player/NewMovement/idleRight.png" type="Texture" id=54]
+[ext_resource path="res://Images/Player/NewMovement/RunRight/0.png" type="Texture" id=11]
+[ext_resource path="res://Images/Player/NewMovement/RunRight/1.png" type="Texture" id=12]
+[ext_resource path="res://Images/Player/NewMovement/RunRight/2.png" type="Texture" id=13]
+[ext_resource path="res://Images/Player/NewMovement/RunRight/3.png" type="Texture" id=14]
+[ext_resource path="res://Images/Player/NewMovement/RunRight/4.png" type="Texture" id=15]
+[ext_resource path="res://Images/Player/NewMovement/RunRight/5.png" type="Texture" id=16]
+[ext_resource path="res://Images/Player/NewMovement/RunRight/6.png" type="Texture" id=17]
+[ext_resource path="res://Images/Player/NewMovement/RunRight/7.png" type="Texture" id=18]
+[ext_resource path="res://Images/Player/NewMovement/RunRight/8.png" type="Texture" id=19]
+[ext_resource path="res://Images/Player/NewMovement/RunRight/9.png" type="Texture" id=20]
+[ext_resource path="res://Images/Player/NewMovement/RunRight/10.png" type="Texture" id=21]
+[ext_resource path="res://Images/Player/NewMovement/RunRight/11.png" type="Texture" id=22]
+[ext_resource path="res://Images/Player/NewMovement/jumpUpRight.png" type="Texture" id=23]
+[ext_resource path="res://Images/Player/NewMovement/jumpRight.png" type="Texture" id=24]
+[ext_resource path="res://Images/Player/NewMovement/idleDownRight.png" type="Texture" id=25]
+[ext_resource path="res://Images/Player/NewMovement/idleUpRight.png" type="Texture" id=26]
+[ext_resource path="res://Images/Player/NewMovement/idleUp.png" type="Texture" id=27]
+[ext_resource path="res://Images/Player/NewMovement/jumpDownRight.png" type="Texture" id=28]
+[ext_resource path="res://Images/Player/NewMovement/idleRight.png" type="Texture" id=29]
+[ext_resource path="res://Images/Player/NewMovement/RunDownRight/0.png" type="Texture" id=30]
+[ext_resource path="res://Images/Player/NewMovement/RunDownRight/1.png" type="Texture" id=31]
+[ext_resource path="res://Images/Player/NewMovement/RunDownRight/2.png" type="Texture" id=32]
+[ext_resource path="res://Images/Player/NewMovement/RunDownRight/3.png" type="Texture" id=33]
+[ext_resource path="res://Images/Player/NewMovement/RunDownRight/4.png" type="Texture" id=34]
+[ext_resource path="res://Images/Player/NewMovement/RunDownRight/5.png" type="Texture" id=35]
+[ext_resource path="res://Images/Player/NewMovement/RunDownRight/6.png" type="Texture" id=36]
+[ext_resource path="res://Images/Player/NewMovement/RunDownRight/7.png" type="Texture" id=37]
+[ext_resource path="res://Images/Player/NewMovement/RunDownRight/8.png" type="Texture" id=38]
+[ext_resource path="res://Images/Player/NewMovement/RunDownRight/9.png" type="Texture" id=39]
+[ext_resource path="res://Images/Player/NewMovement/RunDownRight/10.png" type="Texture" id=40]
+[ext_resource path="res://Images/Player/NewMovement/RunDownRight/11.png" type="Texture" id=41]
+[ext_resource path="res://Images/Player/NewMovement/jumpUp.png" type="Texture" id=42]
+[ext_resource path="res://Images/Player/NewMovement/RunUpRight/0.png" type="Texture" id=43]
+[ext_resource path="res://Images/Player/NewMovement/RunUpRight/1.png" type="Texture" id=44]
+[ext_resource path="res://Images/Player/NewMovement/RunUpRight/2.png" type="Texture" id=45]
+[ext_resource path="res://Images/Player/NewMovement/RunUpRight/3.png" type="Texture" id=46]
+[ext_resource path="res://Images/Player/NewMovement/RunUpRight/4.png" type="Texture" id=47]
+[ext_resource path="res://Images/Player/NewMovement/RunUpRight/5.png" type="Texture" id=48]
+[ext_resource path="res://Images/Player/NewMovement/RunUpRight/6.png" type="Texture" id=49]
+[ext_resource path="res://Images/Player/NewMovement/RunUpRight/7.png" type="Texture" id=50]
+[ext_resource path="res://Images/Player/NewMovement/RunUpRight/8.png" type="Texture" id=51]
+[ext_resource path="res://Images/Player/NewMovement/RunUpRight/9.png" type="Texture" id=52]
+[ext_resource path="res://Images/Player/NewMovement/RunUpRight/10.png" type="Texture" id=53]
+[ext_resource path="res://Images/Player/NewMovement/RunUpRight/11.png" type="Texture" id=54]
 [ext_resource path="res://Scenes/Player/GUI/GUI.tscn" type="PackedScene" id=55]
 
 [sub_resource type="SpriteFrames" id=1]
@@ -64,17 +64,17 @@ animations = [ {
 "name": "Idle",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "Walking",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 7 ) ],
+"frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "Fall",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 7 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "Walking",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "Jump",
 "speed": 10.0
@@ -86,12 +86,12 @@ _sections_unfolded = [ "Resource" ]
 animations = [ {
 "frames": [ ExtResource( 8 ) ],
 "loop": true,
-"name": "Frente",
+"name": "Cima",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 9 ) ],
 "loop": true,
-"name": "Cima",
+"name": "Frente",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 10 ) ],
@@ -103,60 +103,60 @@ animations = [ {
 [sub_resource type="SpriteFrames" id=3]
 
 animations = [ {
-"frames": [ ExtResource( 11 ) ],
-"loop": true,
-"name": "IdleUpRight",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 12 ) ],
-"loop": true,
-"name": "JumpDownRight",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 13 ) ],
-"loop": true,
-"name": "IdleDownRight",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ) ],
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
 "loop": true,
 "name": "RunRight",
 "speed": 8.0
 }, {
-"frames": [ ExtResource( 26 ) ],
-"loop": true,
-"name": "IdleUp",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 27 ) ],
+"frames": [ ExtResource( 23 ) ],
 "loop": true,
 "name": "JumpUpRight",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ) ],
-"loop": true,
-"name": "RunUpRight",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ) ],
-"loop": true,
-"name": "RunDownRight",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 52 ) ],
-"loop": true,
-"name": "JumpUp",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 53 ) ],
+"frames": [ ExtResource( 24 ) ],
 "loop": true,
 "name": "JumpRight",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 54 ) ],
+"frames": [ ExtResource( 25 ) ],
+"loop": true,
+"name": "IdleDownRight",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ) ],
+"loop": true,
+"name": "IdleUpRight",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 27 ) ],
+"loop": true,
+"name": "IdleUp",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 28 ) ],
+"loop": true,
+"name": "JumpDownRight",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 29 ) ],
 "loop": true,
 "name": "IdleRight",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ) ],
+"loop": true,
+"name": "RunDownRight",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 42 ) ],
+"loop": true,
+"name": "JumpUp",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ) ],
+"loop": true,
+"name": "RunUpRight",
+"speed": 8.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=4]

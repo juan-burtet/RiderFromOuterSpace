@@ -188,6 +188,10 @@ func is_dead():
 			emit_signal("dead")
 			get_parent().queue_free()
 		else:
+			
+			var parent = get_parent()
+			parent = parent.get_parent()
+			parent.get_node("music").stop()
 			mode = 1
 			$Sprite.play("Death")
 			$death.play()
@@ -200,6 +204,7 @@ func is_dead():
 			$Sprite.play("Shadow_Idle")
 			$CollisionShape2D.set_disabled(false)
 			can_shot = true
+			parent.get_node("music").play()
 			restart_timer_shadow()
 
 func _on_FinalBoss_apertou():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/Maps/Map3/Map 3 Section 1.gd" type="Script" id=1]
 [ext_resource path="res://Images/Maps/Map 3/Section 1/background.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scenes/Enemies/Bomber/Ghost_Bomber.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Enemies/Fighter/Demon_Fighter.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Enemies/Shooter/Soldier_Shooter.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Sounds/Music/map3/Map.wav" type="AudioStream" id=9]
 
 [node name="Map 3 Section 1" type="Node" index="0"]
 
@@ -79,6 +80,8 @@ position = Vector2( 3279, -2363 )
 scale = Vector2( 2.94546, 3.67256 )
 
 [node name="Enemies" type="Node" parent="." index="4"]
+
+editor/display_folded = true
 
 [node name="Bomber" type="Node" parent="Enemies" index="0"]
 
@@ -226,6 +229,17 @@ position = Vector2( 4389.25, -107.019 )
 
 position = Vector2( 3958.75, -114.572 )
 
+[node name="music" type="AudioStreamPlayer" parent="." index="5"]
+
+stream = ExtResource( 9 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "MUSIC"
+
 [connection signal="next_world" from="ChangeLevel" to="." method="_on_ChangeLevel_next_world"]
+
+[connection signal="finished" from="music" to="." method="_on_music_finished"]
 
 

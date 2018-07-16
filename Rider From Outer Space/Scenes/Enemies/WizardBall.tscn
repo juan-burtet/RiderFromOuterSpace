@@ -41,7 +41,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="WizardBall" type="Area2D" index="0"]
+[node name="WizardBall" type="Area2D"]
 
 scale = Vector2( 2, 2 )
 input_pickable = true
@@ -62,7 +62,7 @@ position = Vector2( 0, -8 )
 rotation = -1.5708
 frames = SubResource( 1 )
 animation = "default"
-frame = 3
+frame = 2
 playing = true
 offset = Vector2( -8, -8 )
 _sections_unfolded = [ "Transform", "Visibility" ]
@@ -91,6 +91,7 @@ blend_times = [  ]
 
 stream = ExtResource( 6 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "SFX"
@@ -99,6 +100,7 @@ bus = "SFX"
 
 stream = ExtResource( 7 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "SFX"

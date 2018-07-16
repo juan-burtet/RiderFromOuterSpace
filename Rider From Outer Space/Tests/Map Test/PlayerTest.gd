@@ -104,6 +104,7 @@ func check_life():
 	if !hp:
 		$Sprite.set_visible(false)
 		$Top.set_visible(false)
+		get_parent().get_node("music").stop()
 		get_tree().paused = true
 		get_parent().add_child(DEATH_SCENE.instance())
 	pass

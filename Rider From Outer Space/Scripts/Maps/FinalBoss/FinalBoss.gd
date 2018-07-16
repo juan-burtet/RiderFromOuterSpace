@@ -78,6 +78,7 @@ func inicia_dialogo():
 	
 	dialog.queue_free()
 	
+	$music.play()
 	dialogo = false
 	$PlayerTest.set_physics_process(true)
 	$Boss/Carmack.set_process(true)
@@ -114,6 +115,7 @@ func change_level():
 
 func cria_dialogo_fim():
 	# dialogos
+	$music.stop()
 	dialog = DIALOG_SCENE.instance()
 	self.add_child(dialog)
 	$Timer.set_wait_time(0.5)
@@ -143,3 +145,6 @@ func cria_dialogo_fim():
 	
 	dialogo = false
 	emit_signal("termina_fase")
+
+func _on_music_finished():
+	$music.play()

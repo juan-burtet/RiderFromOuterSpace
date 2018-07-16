@@ -83,6 +83,7 @@ func does_damage(damage):
 
 func _on_AreaExplode_body_entered(body):
 	set_process(false)
-	body.receive_damage()
+	if body.get_name() == "PlayerTest":
+		body.receive_damage()
 	$AreaExplode.queue_free()
 	dies()

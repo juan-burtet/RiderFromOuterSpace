@@ -283,7 +283,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[node name="MainMenu" type="Node"]
+[node name="MainMenu" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -375,6 +375,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Principal" type="Node" parent="." index="1"]
 
+editor/display_folded = true
 script = ExtResource( 7 )
 
 [node name="GameLogo" type="Sprite" parent="Principal" index="0"]
@@ -589,6 +590,7 @@ blend_times = [  ]
 
 stream = ExtResource( 38 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "MUSIC"
@@ -597,6 +599,7 @@ bus = "MUSIC"
 
 stream = ExtResource( 39 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "SFX"

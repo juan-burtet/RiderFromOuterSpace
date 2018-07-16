@@ -200,3 +200,5 @@ func shoot(direction):
 			print(direction)
 			pistol.set_position(position)
 			restart_timer()
+	else:
+		restart_timer()

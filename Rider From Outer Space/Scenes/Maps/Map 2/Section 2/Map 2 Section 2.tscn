@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/Maps/Map2/Map 2 Section 2.gd" type="Script" id=1]
 [ext_resource path="res://Tilesets/Map2/Section 2/Map2_Section2_TileSet.tres" type="TileSet" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scenes/Enemies/Shooter/Robot_Shooter.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Collect/MasterUpgrade.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Collect/Coins.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Sounds/Music/map2/Mercury.wav" type="AudioStream" id=11]
 
 [node name="Map 2 Section 2" type="Node" index="0"]
 
@@ -76,6 +77,8 @@ position = Vector2( 12736, 288 )
 scale = Vector2( 2.94546, 6.74839 )
 
 [node name="Enemies" type="Node" parent="." index="4"]
+
+editor/display_folded = true
 
 [node name="Bomber" type="Node" parent="Enemies" index="0"]
 
@@ -234,6 +237,8 @@ position = Vector2( 3113.27, 386.642 )
 position = Vector2( 3360.46, 371.611 )
 
 [node name="Collect" type="Node" parent="." index="5"]
+
+editor/display_folded = true
 
 [node name="MasterUpgrade" parent="Collect" index="0" instance=ExtResource( 9 )]
 
@@ -639,6 +644,17 @@ position = Vector2( 10208, 384 )
 
 position = Vector2( 10144, 384 )
 
+[node name="music" type="AudioStreamPlayer" parent="." index="6"]
+
+stream = ExtResource( 11 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "MUSIC"
+
 [connection signal="next_world" from="ChangeLevel" to="." method="_on_ChangeLevel_next_world"]
+
+[connection signal="finished" from="music" to="." method="_on_music_finished"]
 
 

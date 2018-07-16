@@ -45,6 +45,7 @@ func inicia_dialogo():
 	cria_dialogo("RIDER", yellow, TEXT1)
 	yield(self, "acabou")
 	
+	$music.play()
 	$PlayerTest.set_physics_process(true)
 
 func begin():
@@ -68,3 +69,7 @@ func _on_ChangeLevel_next_world():
 	yield(self, "fade")
 	global.set_loadgame(next_world)
 	get_tree().change_scene(next_world)
+
+
+func _on_music_finished():
+	$music.play()

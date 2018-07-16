@@ -1,35 +1,37 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Scripts/Maps/Map1/BossLevel/BossLevel1.gd" type="Script" id=1]
 [ext_resource path="res://Images/Maps/Map 1/Section 2/cave_wall.png" type="Texture" id=2]
 [ext_resource path="res://Tilesets/Map1/Section 2/Map1_Section2_TileSet.tres" type="TileSet" id=3]
 [ext_resource path="res://Scripts/Enemies/Bosses/1/Djikstra.gd" type="Script" id=4]
-[ext_resource path="res://Images/Enemies/Bosses/1/Death/death0.png" type="Texture" id=5]
-[ext_resource path="res://Images/Enemies/Bosses/1/Death/death1.png" type="Texture" id=6]
-[ext_resource path="res://Images/Enemies/Bosses/1/Death/death2.png" type="Texture" id=7]
-[ext_resource path="res://Images/Enemies/Bosses/1/Death/death3.png" type="Texture" id=8]
-[ext_resource path="res://Images/Enemies/Bosses/1/Death/death4.png" type="Texture" id=9]
-[ext_resource path="res://Images/Enemies/Bosses/1/Death/death5.png" type="Texture" id=10]
-[ext_resource path="res://Images/Enemies/Bosses/1/Life/life0.png" type="Texture" id=11]
-[ext_resource path="res://Images/Enemies/Bosses/1/Life/life1.png" type="Texture" id=12]
-[ext_resource path="res://Images/Enemies/Bosses/1/Life/life2.png" type="Texture" id=13]
-[ext_resource path="res://Images/Enemies/Bosses/1/Life/life3.png" type="Texture" id=14]
-[ext_resource path="res://Images/Enemies/Bosses/1/Life/life4.png" type="Texture" id=15]
+[ext_resource path="res://Images/Enemies/Bosses/1/Life/life0.png" type="Texture" id=5]
+[ext_resource path="res://Images/Enemies/Bosses/1/Life/life1.png" type="Texture" id=6]
+[ext_resource path="res://Images/Enemies/Bosses/1/Life/life2.png" type="Texture" id=7]
+[ext_resource path="res://Images/Enemies/Bosses/1/Life/life3.png" type="Texture" id=8]
+[ext_resource path="res://Images/Enemies/Bosses/1/Life/life4.png" type="Texture" id=9]
+[ext_resource path="res://Images/Enemies/Bosses/1/Death/death0.png" type="Texture" id=10]
+[ext_resource path="res://Images/Enemies/Bosses/1/Death/death1.png" type="Texture" id=11]
+[ext_resource path="res://Images/Enemies/Bosses/1/Death/death2.png" type="Texture" id=12]
+[ext_resource path="res://Images/Enemies/Bosses/1/Death/death3.png" type="Texture" id=13]
+[ext_resource path="res://Images/Enemies/Bosses/1/Death/death4.png" type="Texture" id=14]
+[ext_resource path="res://Images/Enemies/Bosses/1/Death/death5.png" type="Texture" id=15]
 [ext_resource path="res://Scenes/Enemies/Info.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Sounds/Effects/Enemies/Death/sfx_deathscream_human14.wav" type="AudioStream" id=17]
 [ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Sounds/Music/Boss/BossMain.wav" type="AudioStream" id=19]
+[ext_resource path="res://Sounds/Music/Boss/BossIntro.wav" type="AudioStream" id=20]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "Death",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "Life",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "Death",
 "speed": 5.0
 } ]
 
@@ -63,7 +65,7 @@ tracks/0/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 10, 256 )
 
-[node name="BossLevel1" type="Node" index="0"]
+[node name="BossLevel1" type="Node"]
 
 script = ExtResource( 1 )
 next_world = "res://Scenes/Maps/Map 2/Section 1/Map 2 Section 1.tscn"
@@ -122,6 +124,7 @@ position = Vector2( 0, -14 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "Life"
+frame = 3
 playing = true
 flip_h = true
 _sections_unfolded = [ "Transform", "Visibility" ]
@@ -170,6 +173,7 @@ blend_times = [  ]
 
 stream = ExtResource( 17 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "SFX"
@@ -202,8 +206,30 @@ wait_time = 1.0
 one_shot = false
 autostart = false
 
+[node name="music" type="AudioStreamPlayer" parent="." index="5"]
+
+stream = ExtResource( 19 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "MUSIC"
+
+[node name="begin" type="AudioStreamPlayer" parent="." index="6"]
+
+stream = ExtResource( 20 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "MUSIC"
+
 [connection signal="dead" from="Boss/Djikstra" to="." method="_on_Djikstra_dead"]
 
 [connection signal="timeout" from="Boss/Djikstra/Timer" to="Boss/Djikstra" method="_on_Timer_timeout"]
+
+[connection signal="finished" from="music" to="." method="_on_music_finished"]
+
+[connection signal="finished" from="begin" to="." method="_on_begin_finished"]
 
 

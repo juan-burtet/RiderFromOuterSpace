@@ -54,6 +54,7 @@ func inicia_dialogo():
 	cria_dialogo("RIDER", yellow, TEXT2)
 	yield(self, "acabou")
 	
+	$music.play()
 	$PlayerTest.set_physics_process(true)
 
 func begin():
@@ -71,3 +72,6 @@ func end():
 	yield(black.get_node("Animation"), "animation_finished")
 	black.queue_free()
 	emit_signal("fade")
+
+func _on_music_finished():
+	$music.play()

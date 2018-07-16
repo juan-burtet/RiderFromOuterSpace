@@ -8,14 +8,14 @@
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [  ],
-"loop": true,
-"name": "Explode",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
 "name": "Fire",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "Explode",
 "speed": 5.0
 } ]
 
@@ -61,7 +61,7 @@ volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "Master"
+bus = "SFX"
 
 [node name="impact" type="AudioStreamPlayer" parent="Sounds" index="1"]
 
@@ -70,9 +70,9 @@ volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "Master"
+bus = "SFX"
 
-[connection signal="body_entered" from="." to="." method="_on_Shotgun_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_Shotgun_body_entered" flags=6]
 
 [connection signal="screen_exited" from="Visibility" to="." method="_on_Visibility_screen_exited"]
 

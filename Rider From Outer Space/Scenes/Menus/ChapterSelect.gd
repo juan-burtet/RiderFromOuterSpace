@@ -1,5 +1,10 @@
 extends Node
 
+const KONISBERG = "res://Scenes/Maps/Map 1/Section 1/Map 1 Section 1.tscn"
+const NALA = "res://Scenes/Maps/Map 2/Section 1/Map 2 Section 1.tscn"
+const BYRON = "res://Scenes/Maps/Map 3/Section 1/Map 3 Section 1.tscn"
+const CARMACK = "res://Scenes/Maps/Final Boss/FinalBoss.tscn"
+
 var menu
 signal sound
 
@@ -68,33 +73,72 @@ func move_menu():
 	pass
 
 func update_sprites():
-	$Map1.play("unable")
-	$Map2.play("unable")
-	$Map3.play("unable")
-	$Map4.play("unable")
+	if global.get_map1():
+		$Map1.play("konisberg")
+	else:
+		$Map1.play("unable")
+	
+	if global.get_map2():
+		$Map2.play("nala")
+	else:
+		$Map2.play("unable")
+	
+	if global.get_map3():
+		$Map3.play("byron")
+	else:
+		$Map3.play("unable")
+	
+	if global.get_map4():
+		$Map4.play("carmack")
+	else:
+		$Map4.play("unable")
 
 func option_selected():
 	match menu:
 		0:
-			$Map1.play("unable_on")
+			if global.get_map1():
+				$Map1.play("konisberg_on")
+			else:
+				$Map1.play("unable_on")
 		1:
-			$Map2.play("unable_on")
+			if global.get_map2():
+				$Map2.play("nala_on")
+			else:
+				$Map2.play("unable_on")
 		2:
-			$Map3.play("unable_on")
+			if global.get_map3():
+				$Map3.play("byron_on")
+			else:
+				$Map3.play("unable_on")
 		3:
-			$Map4.play("unable_on")
+			if global.get_map4():
+				$Map4.play("carmack_on")
+			else:
+				$Map4.play("unable_on")
 	pass
 
 func choose_option():
 	match menu:
 		0:
-			$anim.play("map1")
+			if global.get_map1():
+				get_tree().change_scene(KONISBERG)
+			else:
+				$anim.play("map1")
 		1:
-			$anim.play("map2")
+			if global.get_map2():
+				get_tree().change_scene(NALA)
+			else:
+				$anim.play("map2")
 		2:
-			$anim.play("map3")
+			if global.get_map3():
+				get_tree().change_scene(BYRON)
+			else:
+				$anim.play("map3")
 		3:
-			$anim.play("map4")
+			if global.get_map4():
+				get_tree().change_scene(CARMACK)
+			else:
+				$anim.play("map4")
 	pass
 
 

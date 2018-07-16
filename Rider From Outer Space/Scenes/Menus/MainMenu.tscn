@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://Scenes/Menus/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Images/Menus/Space Background/parallax-space-backgound.png" type="Texture" id=2]
@@ -22,15 +22,23 @@
 [ext_resource path="res://Images/Menus/OptionsMenu/music.png" type="Texture" id=20]
 [ext_resource path="res://Images/Menus/OptionsMenu/sfx.png" type="Texture" id=21]
 [ext_resource path="res://Images/Menus/OptionsMenu/fullscreen.png" type="Texture" id=22]
-[ext_resource path="res://Images/Menus/OptionsMenu/on.png" type="Texture" id=23]
-[ext_resource path="res://Images/Menus/OptionsMenu/off.png" type="Texture" id=24]
-[ext_resource path="res://Images/Menus/OptionsMenu/off-selected.png" type="Texture" id=25]
-[ext_resource path="res://Images/Menus/OptionsMenu/on_selected.png" type="Texture" id=26]
+[ext_resource path="res://Images/Menus/OptionsMenu/off.png" type="Texture" id=23]
+[ext_resource path="res://Images/Menus/OptionsMenu/on.png" type="Texture" id=24]
+[ext_resource path="res://Images/Menus/OptionsMenu/on_selected.png" type="Texture" id=25]
+[ext_resource path="res://Images/Menus/OptionsMenu/off-selected.png" type="Texture" id=26]
 [ext_resource path="res://Scenes/Menus/ChapterSelect.gd" type="Script" id=27]
-[ext_resource path="res://Images/Menus/chapter_menu/unable.png" type="Texture" id=28]
-[ext_resource path="res://Images/Menus/chapter_menu/unable_select.png" type="Texture" id=29]
-[ext_resource path="res://Sounds/Music/MainMenu/wyver9_Arcade Title.wav" type="AudioStream" id=30]
-[ext_resource path="res://Sounds/Music/MainMenu/sfx_sounds_interaction14.wav" type="AudioStream" id=31]
+[ext_resource path="res://Images/Menus/chapter_menu/carmack.png" type="Texture" id=28]
+[ext_resource path="res://Images/Menus/chapter_menu/nala_on.png" type="Texture" id=29]
+[ext_resource path="res://Images/Menus/chapter_menu/nala.png" type="Texture" id=30]
+[ext_resource path="res://Images/Menus/chapter_menu/unable_select.png" type="Texture" id=31]
+[ext_resource path="res://Images/Menus/chapter_menu/unable.png" type="Texture" id=32]
+[ext_resource path="res://Images/Menus/chapter_menu/byron.png" type="Texture" id=33]
+[ext_resource path="res://Images/Menus/chapter_menu/byron_on.png" type="Texture" id=34]
+[ext_resource path="res://Images/Menus/chapter_menu/carmack_on.png" type="Texture" id=35]
+[ext_resource path="res://Images/Menus/chapter_menu/konisberg.png" type="Texture" id=36]
+[ext_resource path="res://Images/Menus/chapter_menu/konisberg_on.png" type="Texture" id=37]
+[ext_resource path="res://Sounds/Music/MainMenu/wyver9_Arcade Title.wav" type="AudioStream" id=38]
+[ext_resource path="res://Sounds/Music/MainMenu/sfx_sounds_interaction14.wav" type="AudioStream" id=39]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -126,22 +134,22 @@ tracks/0/keys = {
 animations = [ {
 "frames": [ ExtResource( 23 ) ],
 "loop": true,
-"name": "on",
+"name": "off",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 24 ) ],
 "loop": true,
-"name": "off",
+"name": "on",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 25 ), ExtResource( 24 ) ],
 "loop": true,
-"name": "select_off",
+"name": "select_on",
 "speed": 3.0
 }, {
 "frames": [ ExtResource( 26 ), ExtResource( 23 ) ],
 "loop": true,
-"name": "select_on",
+"name": "select_off",
 "speed": 3.0
 } ]
 
@@ -150,13 +158,53 @@ animations = [ {
 animations = [ {
 "frames": [ ExtResource( 28 ) ],
 "loop": true,
-"name": "unable",
+"name": "carmack",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 29 ), ExtResource( 28 ) ],
+"frames": [ ExtResource( 29 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "nala_on",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 31 ), ExtResource( 32 ) ],
 "loop": true,
 "name": "unable_on",
 "speed": 3.0
+}, {
+"frames": [ ExtResource( 32 ) ],
+"loop": true,
+"name": "unable",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 33 ) ],
+"loop": true,
+"name": "byron",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 34 ), ExtResource( 33 ) ],
+"loop": true,
+"name": "byron_on",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 35 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "carmack_on",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 36 ) ],
+"loop": true,
+"name": "konisberg",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 37 ), ExtResource( 36 ) ],
+"loop": true,
+"name": "konisberg_on",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 30 ) ],
+"loop": true,
+"name": "nala",
+"speed": 5.0
 } ]
 
 [sub_resource type="Animation" id=9]
@@ -477,7 +525,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="ChapterSelect" type="Node" parent="." index="3"]
 
-editor/display_folded = true
 script = ExtResource( 27 )
 
 [node name="ChapterSelect" type="Sprite" parent="ChapterSelect" index="0"]
@@ -493,8 +540,7 @@ _sections_unfolded = [ "Offset", "Transform" ]
 position = Vector2( 368, 200 )
 scale = Vector2( 2.5, 2.5 )
 frames = SubResource( 8 )
-animation = "unable_on"
-frame = 1
+animation = "unable"
 playing = true
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -503,8 +549,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 position = Vector2( 368, 250 )
 scale = Vector2( 2.5, 2.5 )
 frames = SubResource( 8 )
-animation = "unable_on"
-frame = 1
+animation = "unable"
 playing = true
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -513,7 +558,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 position = Vector2( 368, 300 )
 scale = Vector2( 2.5, 2.5 )
 frames = SubResource( 8 )
-animation = "unable_on"
+animation = "unable"
 playing = true
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -522,8 +567,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 position = Vector2( 368, 350 )
 scale = Vector2( 2.5, 2.5 )
 frames = SubResource( 8 )
-animation = "unable_on"
-frame = 1
+animation = "unable"
 playing = true
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -544,7 +588,7 @@ blend_times = [  ]
 
 [node name="Music" type="AudioStreamPlayer" parent="MenuSounds" index="0"]
 
-stream = ExtResource( 30 )
+stream = ExtResource( 38 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
@@ -553,7 +597,7 @@ bus = "MUSIC"
 
 [node name="ChangeOption" type="AudioStreamPlayer" parent="MenuSounds" index="1"]
 
-stream = ExtResource( 31 )
+stream = ExtResource( 39 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false

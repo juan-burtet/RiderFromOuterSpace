@@ -89,7 +89,6 @@ func get_machinegun_damage():
 	var damage = 5
 	return damage + get_machinegun() * 10
 
-
 func get_upgrades():
 	return upgrades
 

@@ -1,6 +1,7 @@
 extends Node
 
 const firstLevel = "res://Scenes/Prelude/Prelude.tscn"
+const KONISBERG = "res://Scenes/Maps/Map 1/Section 1/Map 1 Section 1.tscn"
 
 var menu = 0
 var scaling = 5
@@ -91,7 +92,7 @@ func option_pressed():
 			0: 
 				get_tree().change_scene(firstLevel)
 				global.set_map1()
-				global.set_loadgame(firstLevel)
+				global.set_loadgame(KONISBERG)
 			1: 
 				var level = global.get_loadgame()
 				if level != null:

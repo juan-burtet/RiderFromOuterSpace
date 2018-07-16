@@ -20,7 +20,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 8, 8 )
 
-[node name="Coins" type="Area2D" index="0"]
+[node name="Coins" type="Area2D"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -38,6 +38,7 @@ _sections_unfolded = [ "Collision" ]
 
 frames = SubResource( 1 )
 animation = "default"
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]

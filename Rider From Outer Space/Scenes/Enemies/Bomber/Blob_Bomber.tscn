@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Scripts/Enemies/Blob_Bomber.gd" type="Script" id=1]
 [ext_resource path="res://Images/Enemies/enemies/Blob_Bomber/0.png" type="Texture" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Images/Enemies/Explosion/7.png" type="Texture" id=17]
 [ext_resource path="res://Images/Enemies/Bosses/HP/under.png" type="Texture" id=18]
 [ext_resource path="res://Images/Enemies/Bosses/HP/fill.png" type="Texture" id=19]
+[ext_resource path="res://Sounds/Effects/Enemies/Bomber/sfx_exp_short_soft6.wav" type="AudioStream" id=20]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -69,6 +70,7 @@ __meta__ = {
 
 frames = SubResource( 1 )
 animation = "Run"
+frame = 5
 playing = true
 
 [node name="Explosion" type="AnimatedSprite" parent="." index="1"]
@@ -136,6 +138,8 @@ _sections_unfolded = [ "Rect", "Textures" ]
 
 [node name="RayCast" type="Node2D" parent="." index="5"]
 
+editor/display_folded = true
+
 [node name="Left" type="RayCast2D" parent="RayCast" index="0"]
 
 position = Vector2( 0, 20 )
@@ -180,6 +184,17 @@ exclude_parent = true
 cast_to = Vector2( 0, 50 )
 collision_mask = 4
 _sections_unfolded = [ "Transform" ]
+
+[node name="Sounds" type="Node" parent="." index="6"]
+
+[node name="explode" type="AudioStreamPlayer" parent="Sounds" index="0"]
+
+stream = ExtResource( 20 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 [connection signal="body_entered" from="AreaExplode" to="." method="_on_AreaExplode_body_entered"]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/Enemies/Wizard_Shooter.gd" type="Script" id=1]
 [ext_resource path="res://Images/Enemies/enemies/Wizard_Shooter/0.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scripts/Enemies/Sprite_wizard.gd" type="Script" id=8]
 [ext_resource path="res://Images/Enemies/Bosses/HP/under.png" type="Texture" id=9]
 [ext_resource path="res://Images/Enemies/Bosses/HP/fill.png" type="Texture" id=10]
+[ext_resource path="res://Sounds/Effects/Enemies/Death/sfx_deathscream_human14.wav" type="AudioStream" id=11]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -85,7 +86,7 @@ WAIT_TIME = 1.5
 
 frames = SubResource( 1 )
 animation = "attack"
-frame = 2
+frame = 4
 playing = true
 offset = Vector2( 0, 2 )
 script = ExtResource( 8 )
@@ -186,6 +187,17 @@ blend_times = [  ]
 [node name="Visibility" type="VisibilityNotifier2D" parent="." index="11"]
 
 rect = Rect2( -10, -10, 20, 20 )
+
+[node name="Sounds" type="Node" parent="." index="12"]
+
+[node name="death" type="AudioStreamPlayer" parent="Sounds" index="0"]
+
+stream = ExtResource( 11 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 

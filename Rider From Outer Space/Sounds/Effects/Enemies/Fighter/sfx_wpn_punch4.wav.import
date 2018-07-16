@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sfx_wpn_punch4.wav-bdf3d04c4065618ffcf8e2d71015f7ba.sample"
+
+[deps]
+
+source_file="res://Sounds/Effects/Enemies/Fighter/sfx_wpn_punch4.wav"
+dest_files=[ "res://.import/sfx_wpn_punch4.wav-bdf3d04c4065618ffcf8e2d71015f7ba.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

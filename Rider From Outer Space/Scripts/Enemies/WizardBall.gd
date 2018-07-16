@@ -32,6 +32,10 @@ func init(direction):
 	update_dir(direction)
 	set_process(true)
 
+func _ready():
+	$Sounds/shoot.play()
+	pass
+
 func update_dir(dir):
 	match dir:
 		# Direita
@@ -73,5 +77,7 @@ func _on_WizardBall_body_entered(body):
 	if body.get_name() == "PlayerTest":
 			body.receive_damage()
 	$anim.play("destroy")
+	$Sounds/impact.play()
 	yield($anim, "animation_finished")
+	yield($Sounds/impact,"finished")
 	queue_free()

@@ -4,6 +4,10 @@ extends Area2D
 const SPEED = 700
 var motion = Vector2()
 
+func _ready():
+	$Sounds/shoot.play()
+
+
 # Inicialização
 func init(direction):
 	motion = direction
@@ -46,6 +50,12 @@ func rotate_sprite(x):
 	$Bullet.rotate(x)
 
 func _on_Shotgun_body_entered(body):
-	queue_free()
+	$Bullet.set_visible(false)
+	$CollisionPolygon2D.set_disabled(true)
+	
 	if body.get_name() != "TileMap" and body.get_name() != "TileMap2":
 		body.does_damage(global.get_shotgun_damage())
+	$Sounds/impact.play()
+	yield($Sounds/impact,"finished")
+	queue_free()
+

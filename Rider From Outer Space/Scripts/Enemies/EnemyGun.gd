@@ -11,6 +11,9 @@ func init(direction):
 	motion = direction
 	set_process(true)
 
+func _ready():
+	$Sounds/shoot.play()
+
 func _process(delta):
 	translate(motion * SPEED * delta)
 	pass
@@ -21,7 +24,9 @@ func _on_Visibility_screen_exited():
 
 func _on_EnemyGun_body_entered(body):
 	$Collision.set_disabled(true)
-	queue_free()
+	$Bullet.set_visible(false)
 	if body.get_name() == "PlayerTest":
 			body.receive_damage()
-			print("acertou")
+	$Sounds/impact.play()
+	yield($Sounds/impact, "finished")
+	queue_free()

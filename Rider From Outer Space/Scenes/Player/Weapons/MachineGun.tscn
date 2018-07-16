@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Player/Weapons/MachineGun.gd" type="Script" id=1]
 [ext_resource path="res://Images/Shots/machinegun.png" type="Texture" id=2]
+[ext_resource path="res://Sounds/Effects/Player/MachineGun/sfx_wpn_laser8.wav" type="AudioStream" id=3]
+[ext_resource path="res://Sounds/Effects/Player/MachineGun/sfx_sounds_impact12.wav" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -11,18 +13,18 @@ extents = Vector2( 4, 4 )
 [sub_resource type="SpriteFrames" id=2]
 
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
-"loop": true,
-"name": "Fire",
-"speed": 5.0
-}, {
 "frames": [  ],
 "loop": true,
 "name": "Explode",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Fire",
+"speed": 5.0
 } ]
 
-[node name="MachineGun" type="Area2D" index="0"]
+[node name="MachineGun" type="Area2D"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -45,8 +47,30 @@ rect = Rect2( -10, -10, 20, 20 )
 
 [node name="Bullet" type="AnimatedSprite" parent="." index="2"]
 
+modulate = Color( 0.703125, 0.0137329, 0.0137329, 1 )
 frames = SubResource( 2 )
 animation = "Fire"
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Sounds" type="Node" parent="." index="3"]
+
+[node name="shoot" type="AudioStreamPlayer" parent="Sounds" index="0"]
+
+stream = ExtResource( 3 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="impact" type="AudioStreamPlayer" parent="Sounds" index="1"]
+
+stream = ExtResource( 4 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 [connection signal="body_entered" from="." to="." method="_on_MachineGun_body_entered"]
 

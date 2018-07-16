@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sfx_exp_short_soft6.wav-db213465632a8a0fb3bbcf3a7b14d1f6.sample"
+
+[deps]
+
+source_file="res://Sounds/Effects/Enemies/Bomber/sfx_exp_short_soft6.wav"
+dest_files=[ "res://.import/sfx_exp_short_soft6.wav-db213465632a8a0fb3bbcf3a7b14d1f6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

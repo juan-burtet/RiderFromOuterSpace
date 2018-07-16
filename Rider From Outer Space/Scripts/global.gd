@@ -9,21 +9,59 @@ var machinegun
 var upgrades
 var coins
 
+var loadgame
+
+var map1
+var map2
+var map3
+var map4
+
+func get_loadgame():
+	return loadgame
+
+func set_loadgame(value):
+	loadgame = value
+
+func get_map1():
+	return map1
+
+func set_map1():
+	map1 = true
+
+func get_map2():
+	return map2
+
+func set_map2():
+	map2 = true
+
+func get_map3():
+	return map3
+
+func set_map3():
+	map3 = true
+
+func get_map4():
+	return map4
+
+func set_map4():
+	map4 = true
+
 func get_hp():
 	var x = get_heart()
 	return (6 + 2*x)
-	pass
-
-func double_jump_height():
-	pass
 
 func _ready():
-	heart = 3
+	map1 = false
+	map2 = false
+	map3 = false
+	map4 = false
+	loadgame = null
+	heart = 0
 	jetpack = 0
 	pistol = 0
 	shotgun = 0
 	machinegun = 0
-	upgrades = 1
+	upgrades = 0
 	coins = 0
 	pass
 

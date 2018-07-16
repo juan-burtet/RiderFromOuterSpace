@@ -66,7 +66,9 @@ func dies():
 	$Body.set_visible(false)
 	$Explosion.set_visible(true)
 	$Explosion.play("die")
+	$Sounds/explode.play()
 	yield($Explosion, "animation_finished")
+	yield($Sounds/explode,"finished")
 	queue_free()
 
 func does_damage(damage):

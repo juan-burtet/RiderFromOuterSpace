@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sfx_sounds_fanfare1.wav-47563064f6f0190e07e12a3130375016.sample"
+
+[deps]
+
+source_file="res://Sounds/Effects/Enemies/Shooter/sfx_sounds_fanfare1.wav"
+dest_files=[ "res://.import/sfx_sounds_fanfare1.wav-47563064f6f0190e07e12a3130375016.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

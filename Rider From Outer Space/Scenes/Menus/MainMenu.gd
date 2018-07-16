@@ -1,88 +1,20 @@
 extends Node
 
-const firstLevel = "res://Scenes/Prelude/Prelude.tscn"
-
-var menu = 0
-var scaling = 5
-
+var scaling
 func _ready():
-	menu = 0
 	scaling = 5
-	all_sprites_on_not()
 	$MenuSounds/Music.play()
-	set_process(true)
-	pass
-
-func _input(event):
-	if event.is_action_pressed("ui_esc"):
-		pass
+	$Principal.on_menu()
+	$ChapterSelect.off_menu()
+	$Options.off_menu()
 	pass
 
 
 func _process(delta):
-	
-	# Move a opção no Menu
-	move_menu()
-	
-	# Liga a opção selecionada
-	option_selected()
-	
-	# Opção pressionada
-	option_pressed()
-	
 	# movimenta os planetas ao fundo
 	animate_background()
 	
 	pass
-
-# Função que deixa todas as sprites desligadas
-func all_sprites_on_not():
-	$MenuOptions/StartGame.play("not")
-	$MenuOptions/LoadGame.play("not")
-	$MenuOptions/ChapterSelect.play("not")
-	$MenuOptions/Options.play("not")
-	$MenuOptions/QuitGame.play("not")
-	pass
-
-# Função que move a opção escolhida no menu
-func move_menu():
-	var sound = false
-	if Input.is_action_just_pressed("ui_upMenu"):
-		sound = true
-		menu -= 1
-		if menu < 0: menu = 4
-		all_sprites_on_not()
-	elif Input.is_action_just_pressed("ui_downMenu"):
-		sound = true
-		menu += 1
-		if menu > 4: menu = 0
-		all_sprites_on_not()
-	
-	if sound:
-		$MenuSounds/ChangeOption.play()
-	pass
-
-# Função que liga a Sprite da opção selecionada
-func option_selected():
-	match menu:
-		0: $MenuOptions/StartGame.play("selected")
-		1: $MenuOptions/LoadGame.play("selected")
-		2: $MenuOptions/ChapterSelect.play("selected")
-		3: $MenuOptions/Options.play("selected")
-		4: $MenuOptions/QuitGame.play("selected")
-	pass
-
-# Função para pressionar uma opção
-func option_pressed():
-	if Input.is_action_just_pressed("ui_accept"):
-		match menu:
-			0: get_tree().change_scene(firstLevel)
-			1: $Animation.play("load")
-			2: $Animation.play("chapter")
-			3: $Animation.play("options")
-			4: get_tree().quit()
-	pass
-
 
 # Função que anima o plano de fundo
 func animate_background():
@@ -141,3 +73,6 @@ func change_planet_size(sprite):
 # Função que é ativada quando a musica acabou
 func _on_Music_finished():
 	$MenuSounds/Music.play()
+
+func on_sound():
+	$MenuSounds/ChangeOption.play()

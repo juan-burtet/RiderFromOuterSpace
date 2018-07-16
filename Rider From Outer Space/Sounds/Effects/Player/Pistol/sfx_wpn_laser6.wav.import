@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sfx_wpn_laser6.wav-b39f778463a30cd2506f9fba251e49fe.sample"
+
+[deps]
+
+source_file="res://Sounds/Effects/Player/Pistol/sfx_wpn_laser6.wav"
+dest_files=[ "res://.import/sfx_wpn_laser6.wav-b39f778463a30cd2506f9fba251e49fe.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

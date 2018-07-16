@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sfx_sounds_impact12.wav-dc7c9ff28ded862608e4fb2e675c4938.sample"
+
+[deps]
+
+source_file="res://Sounds/Effects/Enemies/Shooter/sfx_sounds_impact12.wav"
+dest_files=[ "res://.import/sfx_sounds_impact12.wav-dc7c9ff28ded862608e4fb2e675c4938.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

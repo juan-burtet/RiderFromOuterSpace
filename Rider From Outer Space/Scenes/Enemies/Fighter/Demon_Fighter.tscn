@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Scripts/Enemies/Demon_Fighter.gd" type="Script" id=1]
 [ext_resource path="res://Images/Enemies/enemies/Demon_Fighter/Idle0.png" type="Texture" id=2]
@@ -21,6 +21,8 @@
 [ext_resource path="res://Scripts/Enemies/Sprite.gd" type="Script" id=19]
 [ext_resource path="res://Images/Enemies/Bosses/HP/under.png" type="Texture" id=20]
 [ext_resource path="res://Images/Enemies/Bosses/HP/fill.png" type="Texture" id=21]
+[ext_resource path="res://Sounds/Effects/Enemies/Death/sfx_deathscream_alien1.wav" type="AudioStream" id=22]
+[ext_resource path="res://Sounds/Effects/Enemies/Fighter/sfx_exp_cluster2.wav" type="AudioStream" id=23]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -97,7 +99,7 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 5
+frame = 4
 playing = true
 script = ExtResource( 19 )
 _sections_unfolded = [ "Visibility" ]
@@ -211,6 +213,26 @@ playback_speed = 1.0
 anims/death = SubResource( 3 )
 anims/hit = SubResource( 4 )
 blend_times = [  ]
+
+[node name="Sounds" type="Node" parent="." index="11"]
+
+[node name="death" type="AudioStreamPlayer" parent="Sounds" index="0"]
+
+stream = ExtResource( 22 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="attack" type="AudioStreamPlayer" parent="Sounds" index="1"]
+
+stream = ExtResource( 23 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 

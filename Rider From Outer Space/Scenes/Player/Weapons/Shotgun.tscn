@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Player/Weapons/Shotgun.gd" type="Script" id=1]
 [ext_resource path="res://Images/Shots/shotgun.png" type="Texture" id=2]
+[ext_resource path="res://Sounds/Effects/Player/Shotgun/sfx_weapon_shotgun2.wav" type="AudioStream" id=3]
+[ext_resource path="res://Sounds/Effects/Player/Shotgun/sfx_sounds_impact12.wav" type="AudioStream" id=4]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -17,7 +19,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="Shotgun" type="Area2D"]
+[node name="Shotgun" type="Area2D" index="0"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -49,6 +51,26 @@ scale = Vector2( 2, 2 )
 build_mode = 0
 polygon = PoolVector2Array( -7.875, -15.9571, -5.375, -15.9571, 4.875, -10.2071, 7.75, -4.33212, 7.875, 3.41788, 4.875, 9.91788, -5.125, 16.0429, -8, 15.7929, -8.125, 14.1679, 0.625, 4.54288, 0.875, -4.08212, -8, -13.8321 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="Sounds" type="Node" parent="." index="3"]
+
+[node name="shoot" type="AudioStreamPlayer" parent="Sounds" index="0"]
+
+stream = ExtResource( 3 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="impact" type="AudioStreamPlayer" parent="Sounds" index="1"]
+
+stream = ExtResource( 4 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 [connection signal="body_entered" from="." to="." method="_on_Shotgun_body_entered"]
 

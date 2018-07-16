@@ -48,11 +48,6 @@ func cria_dialogo(name, color, text):
 	yield(dialog.get_node("Animation"), "animation_finished")
 	emit_signal("acabou")
 
-#func _process(delta):
-#	if dialogo:
-#		if Input.is_action_just_pressed("ui_accept"):
-#			emit_signal("apertou")
-
 func _input(event):
 	if event.is_action_pressed("ui_accept"):
 		emit_signal("apertou")
@@ -100,6 +95,8 @@ func _on_Djikstra_dead():
 	pass # replace with function body
 
 func change_level():
+	global.set_loadgame(next_world)
+	global.set_map2()
 	get_tree().change_scene(next_world)
 
 func cria_dialogo_fim():

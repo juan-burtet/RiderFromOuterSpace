@@ -92,10 +92,12 @@ func do_attack(string):
 				if player.get_name() == "PlayerTest":
 					$Sprite.flip_h = false
 					yield($Sprite, "attack")
+					$Sounds/attack.play()
 					player = $LeftAttack.get_collider()
 					if player != null:
 						if player.get_name() == "PlayerTest":
 							player.get_attack("left")
+							
 			pass
 		"right":
 			player = $RightAttack.get_collider()
@@ -103,6 +105,7 @@ func do_attack(string):
 				if player.get_name() == "PlayerTest":
 					$Sprite.flip_h = true
 					yield($Sprite, "attack")
+					$Sounds/attack.play()
 					player = $RightAttack.get_collider()
 					if player != null:
 						if player.get_name() == "PlayerTest":
@@ -119,9 +122,12 @@ func print_hp():
 	$HP.set_value(hp)
 
 func dies():
+	set_process(false)
 	$HP.set_visible(false)
 	$anim.play("death")
+	$Sounds/death.play()
 	yield($anim, "animation_finished")
+	yield($Sounds/death,"finished")
 	queue_free()
 
 func does_damage(damage):

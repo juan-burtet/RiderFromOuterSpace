@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/Enemies/WizardBall.gd" type="Script" id=1]
 [ext_resource path="res://Images/Enemies/Bosses/Weapon1/0.png" type="Texture" id=2]
 [ext_resource path="res://Images/Enemies/Bosses/Weapon1/1.png" type="Texture" id=3]
 [ext_resource path="res://Images/Enemies/Bosses/Weapon1/2.png" type="Texture" id=4]
 [ext_resource path="res://Images/Enemies/Bosses/Weapon1/3.png" type="Texture" id=5]
+[ext_resource path="res://Sounds/Effects/Enemies/Shooter/sfx_sounds_fanfare1.wav" type="AudioStream" id=6]
+[ext_resource path="res://Sounds/Effects/Enemies/Shooter/sfx_sounds_impact2.wav" type="AudioStream" id=7]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -60,7 +62,7 @@ position = Vector2( 0, -8 )
 rotation = -1.5708
 frames = SubResource( 1 )
 animation = "default"
-frame = 1
+frame = 2
 playing = true
 offset = Vector2( -8, -8 )
 _sections_unfolded = [ "Transform", "Visibility" ]
@@ -82,6 +84,26 @@ playback_default_blend_time = 0.0
 playback_speed = 1.0
 anims/destroy = SubResource( 3 )
 blend_times = [  ]
+
+[node name="Sounds" type="Node" parent="." index="4"]
+
+[node name="shoot" type="AudioStreamPlayer" parent="Sounds" index="0"]
+
+stream = ExtResource( 6 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="impact" type="AudioStreamPlayer" parent="Sounds" index="1"]
+
+stream = ExtResource( 7 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 [connection signal="body_entered" from="." to="." method="_on_WizardBall_body_entered"]
 

@@ -38,7 +38,7 @@ extents = Vector2( 25, 50 )
 
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
-frame = 1
+frame = 5
 offset = Vector2( 0, -10 )
 _sections_unfolded = [ "Transform" ]
 

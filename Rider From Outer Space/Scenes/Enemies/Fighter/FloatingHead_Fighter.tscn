@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/Enemies/FloatingHead_Fighter.gd" type="Script" id=1]
 [ext_resource path="res://Images/Enemies/idle.png" type="Texture" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Images/Enemies/3.png" type="Texture" id=6]
 [ext_resource path="res://Images/Enemies/Bosses/HP/under.png" type="Texture" id=7]
 [ext_resource path="res://Images/Enemies/Bosses/HP/fill.png" type="Texture" id=8]
+[ext_resource path="res://Sounds/Effects/Enemies/Death/sfx_deathscream_alien3.wav" type="AudioStream" id=9]
+[ext_resource path="res://Sounds/Effects/Enemies/Fighter/sfx_wpn_punch4.wav" type="AudioStream" id=10]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -83,7 +85,7 @@ MAXHP = 50
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "Run"
-frame = 3
+frame = 2
 playing = true
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -204,6 +206,26 @@ process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = false
+
+[node name="Sounds" type="Node" parent="." index="12"]
+
+[node name="death" type="AudioStreamPlayer" parent="Sounds" index="0"]
+
+stream = ExtResource( 9 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="attack" type="AudioStreamPlayer" parent="Sounds" index="1"]
+
+stream = ExtResource( 10 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 

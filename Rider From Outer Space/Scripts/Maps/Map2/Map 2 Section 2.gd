@@ -69,4 +69,5 @@ func end():
 func _on_ChangeLevel_next_world():
 	end()
 	yield(self, "fade")
+	global.set_loadgame(next_world)
 	get_tree().change_scene(next_world)

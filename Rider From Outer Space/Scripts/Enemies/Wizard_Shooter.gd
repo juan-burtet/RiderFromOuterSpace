@@ -66,7 +66,9 @@ func dies():
 	set_process(false)
 	$HP.set_visible(false)
 	$anim.play("death")
+	$Sounds/death.play()
 	yield($anim,"animation_finished")
+	yield($Sounds/death,"finished")
 	queue_free()
 
 func teste(node):

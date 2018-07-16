@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scenes/Enemies/Fighter/FloatingHead_Fighter.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Images/Enemies/enemies/IronSpider_Fighter/5.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Images/Enemies/enemies/IronSpider_Fighter/2.png" type="Texture" id=5]
 [ext_resource path="res://Images/Enemies/enemies/IronSpider_Fighter/3.png" type="Texture" id=6]
 [ext_resource path="res://Images/Enemies/enemies/IronSpider_Fighter/4.png" type="Texture" id=7]
+[ext_resource path="res://Sounds/Effects/Enemies/Death/sfx_deathscream_robot1.wav" type="AudioStream" id=8]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -32,6 +33,7 @@ extents = Vector2( 30, 25 )
 [node name="Sprite" parent="." index="0"]
 
 frames = SubResource( 1 )
+frame = 2
 
 [node name="CollisionShape" parent="." index="1"]
 
@@ -53,18 +55,14 @@ position = Vector2( 50, 0 )
 position = Vector2( 0, -20 )
 scale = Vector2( 25, 1 )
 
-[node name="LeftUp" parent="." index="6"]
-
-scale = Vector2( 1, 1 )
-
-[node name="RightUp" parent="." index="8"]
-
-scale = Vector2( 1, 1 )
-
 [node name="HP" parent="." index="9"]
 
 margin_left = -64.0
 margin_right = 1216.0
 rect_scale = Vector2( 0.185, 0.35 )
+
+[node name="death" parent="Sounds" index="0"]
+
+stream = ExtResource( 8 )
 
 

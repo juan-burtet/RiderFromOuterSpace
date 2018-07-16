@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Enemies/EnemyGun.gd" type="Script" id=1]
 [ext_resource path="res://Images/Shots/enemygun.png" type="Texture" id=2]
+[ext_resource path="res://Sounds/Effects/Enemies/Shooter/sfx_wpn_cannon4.wav" type="AudioStream" id=3]
+[ext_resource path="res://Sounds/Effects/Enemies/Shooter/sfx_sounds_impact12.wav" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -48,6 +50,26 @@ rect = Rect2( -5, -5, 10, 10 )
 
 frames = SubResource( 2 )
 animation = "Fire"
+
+[node name="Sounds" type="Node" parent="." index="3"]
+
+[node name="shoot" type="AudioStreamPlayer" parent="Sounds" index="0"]
+
+stream = ExtResource( 3 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="impact" type="AudioStreamPlayer" parent="Sounds" index="1"]
+
+stream = ExtResource( 4 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 [connection signal="body_entered" from="." to="." method="_on_EnemyGun_body_entered" flags=6]
 

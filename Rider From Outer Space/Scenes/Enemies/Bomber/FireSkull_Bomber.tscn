@@ -34,6 +34,7 @@ animations = [ {
 
 frames = SubResource( 1 )
 animation = "Idle"
+frame = 3
 offset = Vector2( 0, -8 )
 
 [node name="RayCast" parent="." index="5"]

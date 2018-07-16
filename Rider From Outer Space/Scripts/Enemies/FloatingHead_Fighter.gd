@@ -81,6 +81,7 @@ func test_attack(node):
 		"UpAttack":
 			player.get_attack("up")
 	
+	$Sounds/attack.play()
 	
 	pass
 
@@ -126,7 +127,9 @@ func does_damage(damage):
 func dies():
 	$HP.set_visible(false)
 	$anim.play("death")
+	$Sounds/death.play()
 	yield($anim,"animation_finished")
+	yield($Sounds/death,"finished")
 	queue_free()
 
 func _on_Timer_timeout():

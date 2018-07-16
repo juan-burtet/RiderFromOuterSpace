@@ -37,15 +37,15 @@
 ## Cronograma
 
 - [x] __[SEMANA 0]__ Entrega Final do Storyboard. __(07/05/18)__
-- [ ] __[SEMANA 1]__ Menus/Mapas Finalizados __(14/05/18)__
-- [ ] __[SEMANA 2]__ Movimentação do Personagem Finalizada __(21/05/18)__
-- [ ] __[SEMANA 3]__ Movimentação dos Inimigos/Chefes Finalizadas __(28/05/18)__
-- [ ] __[SEMANA 4]__ Conferir demo de entrega da semana 5 __(04/06/18)__
-- [ ] __[SEMANA 5]__ __ENTREGA DA PRIMEIRA FASE DO JOGO__ __(11/06/18)__ __<= DEADLINE__
-- [ ] __[SEMANA 6]__ Finalização de todos os mapas __(18/06/18)__
-- [ ] __[SEMANA 7]__ Finalização de Diálogos/Cutscenes __(25/06/18)__
-- [ ] __[SEMANA 8]__ Finalização do Alpha __(02/07/18)__
-- [ ] __[SEMANA 9]__ Finalização do Beta __(09/07/18)__
+- [x] __[SEMANA 1]__ Menus/Mapas Finalizados __(14/05/18)__
+- [x] __[SEMANA 2]__ Movimentação do Personagem Finalizada __(21/05/18)__
+- [x] __[SEMANA 3]__ Movimentação dos Inimigos/Chefes Finalizadas __(28/05/18)__
+- [x] __[SEMANA 4]__ Conferir demo de entrega da semana 5 __(04/06/18)__
+- [x] __[SEMANA 5]__ __ENTREGA DA PRIMEIRA FASE DO JOGO__ __(11/06/18)__ __<= DEADLINE__
+- [x] __[SEMANA 6]__ Finalização de todos os mapas __(18/06/18)__
+- [x] __[SEMANA 7]__ Finalização de Diálogos/Cutscenes __(25/06/18)__
+- [x] __[SEMANA 8]__ Finalização do Alpha __(02/07/18)__
+- [x] __[SEMANA 9]__ Finalização do Beta __(09/07/18)__
 - [ ] __[SEMANA 10]__ __ENTREGA DO JOGO__ __(16/07/18)__ __<= DEADLINE__
 
 
@@ -57,8 +57,8 @@
   - [x] Ghost
 ### Fighter
   - [x] Demon
-  - [ ] Iron-Spider
-  - [ ] Floating-Head
+  - [x] Iron-Spider
+  - [x] Floating-Head
 ### Shooter
   - [x] Wizard
   - [x] Robot
@@ -69,3 +69,22 @@
   * __Inimigos[2]__: Toca em Personagem, Mapa
   * __Mapa[3]__: Toca em Inimigos, Personagem
   * __Explosão[4]__: Toca em Personagem
+
+## O que deve ser feito:
+
+ - [ ] ajeitar o dash
+ - [ ] implementar o lock
+ - [ ] conferir todos os sons
+ - [ ] caixa de dialogo
+ - [ ] atualizar os comandos do jogo
+ - [ ] conferir a camera
+ - [ ] atualizar o hp/velocidade dos inimigos
+ - [ ] adicionar moedas nas ultimas 2 fases
+ - [ ] mensagem na tela indica que o upgrade foi adquirido
+ - [ ] modificar imagem do upgrade/moeda
+ 
+ ## Para pensar:
+ 
+ * As balas dos inimigos são rapidas demais?
+ * O Upgrade fica muito forte?
+ * As músicas combinam com as fases?

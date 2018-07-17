@@ -136,4 +136,11 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Pause", "Rect" ]
 
+[node name="Timer" type="Timer" parent="." index="5"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
 

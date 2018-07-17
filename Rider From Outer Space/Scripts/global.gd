@@ -16,6 +16,10 @@ var map2
 var map3
 var map4
 
+signal on
+signal off
+
+
 func get_loadgame():
 	return loadgame
 
@@ -101,12 +105,23 @@ func add_coin():
 func imprime():
 	print("oi")
 
+func check_upgrade():
+	if upgrades > 0:
+		emit_signal("on")
+	elif upgrades == 0:
+		emit_signal("off")
+
 func add_upgrades():
+	if upgrades == 0:
+		emit_signal("on")
 	upgrades += 1
 	if upgrades > 15:
 		upgrades = 15
 
 func sub_upgrades():
+	if upgrades == 1:
+		emit_signal("off")
+	
 	upgrades -= 1
 	if upgrades < 0:
 		upgrades = 0

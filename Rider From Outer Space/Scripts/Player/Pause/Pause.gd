@@ -9,10 +9,17 @@ var option
 var yellow = Color(1,1,0,1)
 var white = Color(1,1,1,1)
 
+onready var timer = $Timer
+
 func _ready():
 	move = true
 	option = 0
 	pass
+
+func _input(event):
+	if event.is_action_pressed("ui_esc") and move:
+		print("oi")
+		returnGame()
 
 func _process(delta):
 	if move:
@@ -73,6 +80,11 @@ func pick_option():
 
 # Retorna ao game
 func returnGame():
+	set_process(false)
+	timer.set_one_shot(true)
+	timer.set_wait_time(0.1)
+	timer.start()
+	yield(timer,"timeout")
 	get_tree().paused = false
 	queue_free()
 	pass

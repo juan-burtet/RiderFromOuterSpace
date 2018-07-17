@@ -46,6 +46,7 @@ var can_move = true
 var idle
 var dir
 var jump
+var lock
 
 # Timers 
 onready var pistol_timer = get_node("Timers/pistol_timer")
@@ -63,17 +64,24 @@ func _ready():
 	pass
 	# END _ready
 
+func _input(event):
+	if event.is_action_pressed("ui_esc"):
+		print("entrou")
+		pause_menu()
+	pass
 
 # Função que roda a cada frame
 func _physics_process(delta):
 	idle = false
 	jump = false
+	lock = false
+	
+	# Confere se a trava está funcionando
+	if Input.is_action_pressed("ui_lock"):
+		lock = true
 	
 	# atualiza informacoes do jogador
 	update_player()
-	
-	# Confere se o pause foi selecionado
-	pause_menu()
 	
 	# Confere se alguma direção de tiro foi pega
 	get_shot_direction()
@@ -121,9 +129,8 @@ func update_player():
 	pass
 
 func pause_menu():
-	if Input.is_action_just_pressed("ui_esc"):
-		get_tree().paused = true
-		add_child(PAUSE_SCENE.instance())
+	get_tree().paused = true
+	add_child(PAUSE_SCENE.instance())
 	pass
 
 # Funcao que move o personagem 
@@ -136,9 +143,10 @@ func move_player():
 		# Só faz o dash se o lock não tiver habilitado
 		#if !Input.is_action_pressed("ui_lock"):
 		if Input.is_action_just_pressed("ui_dash"):
-			if $GUI.is_complete():
-				dash(-global.get_dash_speed())
-				$GUI.usou_dash()
+			if !lock:
+				if $GUI.is_complete():
+					dash(-global.get_dash_speed())
+					$GUI.usou_dash()
 
 	# Se a teclada direita foi pressionada, movimenta pra direita
 	elif Input.is_action_pressed("ui_right"):
@@ -149,9 +157,10 @@ func move_player():
 		move_right()
 		
 		if Input.is_action_just_pressed("ui_dash"):
-			if $GUI.is_complete():
-				dash(global.get_dash_speed())
-				$GUI.usou_dash()
+			if !lock:
+				if $GUI.is_complete():
+					dash(global.get_dash_speed())
+					$GUI.usou_dash()
 
 	# Se nenhuma tecla foi digitada, o personagem fica parado
 	else:
@@ -331,7 +340,12 @@ func restart_timer(timer, s):
 func move_left():
 	# Aumenta a aceleração
 	# Se ultrapassar a velocidade MAXIMA, fica em MAX
-	motion.x = max(motion.x - ACCELERATION, -MAX_SPEED)
+	if !lock:
+		motion.x = max(motion.x - ACCELERATION, -MAX_SPEED)
+	else:
+		if is_on_floor():
+			motion.x = 0
+		idle = true
 	# Inverte a Sprite pois está indo pra esquerda
 	$Sprite.flip_h = true
 	$Top.flip_h = true
@@ -347,7 +361,12 @@ func move_left():
 func move_right():
 	# Aumenta a aceleração
 	# Se ultrapassar a velocidade MAXIMA, fica em MAX
-	motion.x = min(motion.x + ACCELERATION, MAX_SPEED)
+	if !lock:
+		motion.x = min(motion.x + ACCELERATION, MAX_SPEED)
+	else:
+		if is_on_floor():
+			motion.x = 0
+		idle = true
 	# Não inverte a sprite
 	$Sprite.flip_h = false
 	$Top.flip_h = false
@@ -364,7 +383,7 @@ func jump_control():
 	# Se o personagem estiver no chão
 	if is_on_floor():
 		# Se a tecla espaço foi pressionada, pula
-		if Input.is_action_just_pressed("ui_select") and is_on_floor():
+		if Input.is_action_just_pressed("ui_jump") and is_on_floor():
 			# Aumenta o tamanho do pulo
 			motion.y = global.get_jump_height()
 			# É possivel dar um double Jump
@@ -381,7 +400,7 @@ func jump_control():
 	else:
 		jump = true
 		# Se a tecla espaço foi pressionada, pula
-		if Input.is_action_just_pressed("ui_select"): # Space
+		if Input.is_action_just_pressed("ui_jump"): # Space
 			# Se o double jump estiver em True, ele pula
 			if doubleJump:
 				# Aumenta o tamanho do pulo

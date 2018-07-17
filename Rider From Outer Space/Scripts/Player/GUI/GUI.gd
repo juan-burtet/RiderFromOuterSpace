@@ -7,6 +7,18 @@ var value
 func _ready():
 	set_process(true)
 	$DashBar.set_value(0)
+	global.connect("on", self, "play")
+	global.connect("off", self, "stop")
+	global.check_upgrade()
+
+func play():
+	$anim.play("red")
+	$available.set_visible(true)
+
+func stop():
+	$anim.stop()
+	$available.set_visible(false)
+
 
 # Função que roda a cada frame
 func _process(delta):

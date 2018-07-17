@@ -10,7 +10,7 @@
 [ext_resource path="res://Scenes/Enemies/Shooter/Soldier_Shooter.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Sounds/Music/map3/Map.wav" type="AudioStream" id=9]
 
-[node name="Map 3 Section 1" type="Node" index="0"]
+[node name="Map 3 Section 1" type="Node"]
 
 script = ExtResource( 1 )
 __meta__ = {

@@ -73,18 +73,33 @@
 ## O que deve ser feito:
 
  - [ ] ajeitar o dash
- - [ ] implementar o lock
+ - [x] implementar o lock
  - [ ] conferir todos os sons
  - [ ] caixa de dialogo
- - [ ] atualizar os comandos do jogo
- - [ ] conferir a camera
+ - [x] atualizar os comandos do jogo __utilizar o que está__
+ - [x] conferir a camera
  - [ ] atualizar o hp/velocidade dos inimigos
  - [ ] adicionar moedas nas ultimas 2 fases
  - [ ] mensagem na tela indica que o upgrade foi adquirido
  - [ ] modificar imagem do upgrade/moeda
- 
- ## Para pensar:
- 
+
+## Para pensar:
+
  * As balas dos inimigos são rapidas demais?
  * O Upgrade fica muito forte?
  * As músicas combinam com as fases?
+
+## Comandos:
+
+### Arrow Keys
+  > Movimentação
+### x
+  > atira
+### Left Shift
+  > dash
+### c
+  > lock
+### z
+  > pula
+### 1,2,3
+  > muda a arma

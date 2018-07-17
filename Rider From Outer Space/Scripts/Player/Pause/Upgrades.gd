@@ -28,6 +28,8 @@ var option
 signal saiu
 signal aumentou_hp
 
+onready var timer = $Timer
+
 func _ready():
 	var player = get_parent()
 	player = player.get_parent()
@@ -99,6 +101,10 @@ func choose_option():
 
 func _input(event):
 	if event.is_action_pressed("ui_esc"):
+		timer.set_one_shot(true)
+		timer.set_wait_time(0.1)
+		timer.start()
+		yield(timer,"timeout")
 		emit_signal("saiu")
 		queue_free()
 

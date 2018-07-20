@@ -4,7 +4,7 @@ const LIFE_POSITION = Vector2(0,-14)
 const DEATH_POSITION = Vector2(0,-2)
 const FIREBALL_SCENE = preload("res://Scenes/Enemies/BossWeapon1.tscn")
 
-const MAX_HP = 1000
+const MAX_HP = 5000
 
 signal dead
 var hp

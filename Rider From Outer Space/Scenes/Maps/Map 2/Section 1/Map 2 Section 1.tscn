@@ -12,7 +12,7 @@
 [ext_resource path="res://Scenes/Collect/Coins.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Sounds/Music/map2/Venus.wav" type="AudioStream" id=11]
 
-[node name="Map 2 Section 1" type="Node"]
+[node name="Map 2 Section 1" type="Node" index="0"]
 
 script = ExtResource( 1 )
 next_world = "res://Scenes/Maps/Map 2/Section 2/Map 2 Section 2.tscn"

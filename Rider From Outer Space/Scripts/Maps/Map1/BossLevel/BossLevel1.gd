@@ -68,8 +68,6 @@ func inicia_dialogo():
 	
 	$begin.play()
 	dialogo = false
-	$PlayerTest.set_physics_process(true)
-	$Boss/Djikstra.set_process(true)
 
 func begin():
 	var black = BLACK_SCREEN.instance()
@@ -130,6 +128,8 @@ func cria_dialogo_fim():
 	emit_signal("termina_fase")
 
 func _on_begin_finished():
+	$PlayerTest.set_physics_process(true)
+	$Boss/Djikstra.set_process(true)
 	$music.play()
 
 

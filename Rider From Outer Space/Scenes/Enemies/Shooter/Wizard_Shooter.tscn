@@ -79,7 +79,7 @@ collision_mask = 5
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Transform", "collision" ]
-MAXHP = 50
+MAXHP = 500
 WAIT_TIME = 1.5
 
 [node name="Sprite" type="AnimatedSprite" parent="." index="0"]
@@ -194,6 +194,7 @@ rect = Rect2( -10, -10, 20, 20 )
 
 stream = ExtResource( 11 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "SFX"

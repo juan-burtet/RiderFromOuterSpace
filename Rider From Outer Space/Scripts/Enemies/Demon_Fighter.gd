@@ -3,9 +3,9 @@ extends KinematicBody2D
 
 # Constantes
 const UP = Vector2(0,-1)
-const SPEED = 100
+const SPEED = 80
 const GRAVITY = 20
-const MAX_HP = 200
+const MAX_HP = 1000
 const RIGHT_OFFSET = Vector2(20,-10)
 const LEFT_OFFSET = Vector2(-10,-10)
 
@@ -14,7 +14,8 @@ var motion = Vector2()
 var hp 
 onready var timer = $Timer
 
-signal ataque
+signal left_attack
+signal right_attack
 
 func _ready():
 	timer.set_one_shot(false)
@@ -24,6 +25,8 @@ func _ready():
 	print_hp()
 	$Sprite.play("Idle")
 	$Sprite.set_offset(Vector2(0,0))
+	connect("left_attack",self,"on_left_attack")
+	connect("right_attack",self,"on_right_attack")
 
 func _process(delta):
 	
@@ -93,11 +96,7 @@ func do_attack(string):
 					$Sprite.flip_h = false
 					yield($Sprite, "attack")
 					$Sounds/attack.play()
-					player = $LeftAttack.get_collider()
-					if player != null:
-						if player.get_name() == "PlayerTest":
-							player.get_attack("left")
-							
+					emit_signal("left_attack")
 			pass
 		"right":
 			player = $RightAttack.get_collider()
@@ -106,10 +105,7 @@ func do_attack(string):
 					$Sprite.flip_h = true
 					yield($Sprite, "attack")
 					$Sounds/attack.play()
-					player = $RightAttack.get_collider()
-					if player != null:
-						if player.get_name() == "PlayerTest":
-							player.get_attack("right")
+					emit_signal("right_attack")
 			pass
 	
 	yield($Sprite, "over")
@@ -154,7 +150,20 @@ func _on_topLeft_body_entered(body):
 	body.get_attack("left")
 	pass # replace with function body
 
-
 func _on_topRight_body_entered(body):
 	body.get_attack("right")
 	pass # replace with function body
+
+func on_right_attack():
+	var player = $RightAttack.get_collider()
+	if player != null:
+		if player.get_name() == "PlayerTest":
+			player.get_attack("right")
+	pass
+
+func on_left_attack():
+	var player = $LeftAttack.get_collider()
+	if player != null:
+		if player.get_name() == "PlayerTest":
+			player.get_attack("left")
+	pass

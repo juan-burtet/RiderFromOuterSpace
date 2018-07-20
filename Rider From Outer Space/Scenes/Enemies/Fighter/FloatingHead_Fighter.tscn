@@ -1,11 +1,11 @@
 [gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/Enemies/FloatingHead_Fighter.gd" type="Script" id=1]
-[ext_resource path="res://Images/Enemies/0.png" type="Texture" id=2]
-[ext_resource path="res://Images/Enemies/1.png" type="Texture" id=3]
-[ext_resource path="res://Images/Enemies/2.png" type="Texture" id=4]
-[ext_resource path="res://Images/Enemies/3.png" type="Texture" id=5]
-[ext_resource path="res://Images/Enemies/idle.png" type="Texture" id=6]
+[ext_resource path="res://Images/Enemies/idle.png" type="Texture" id=2]
+[ext_resource path="res://Images/Enemies/0.png" type="Texture" id=3]
+[ext_resource path="res://Images/Enemies/1.png" type="Texture" id=4]
+[ext_resource path="res://Images/Enemies/2.png" type="Texture" id=5]
+[ext_resource path="res://Images/Enemies/3.png" type="Texture" id=6]
 [ext_resource path="res://Images/Enemies/Bosses/HP/under.png" type="Texture" id=7]
 [ext_resource path="res://Images/Enemies/Bosses/HP/fill.png" type="Texture" id=8]
 [ext_resource path="res://Sounds/Effects/Enemies/Death/sfx_deathscream_alien3.wav" type="AudioStream" id=9]
@@ -14,15 +14,15 @@
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "Run",
-"speed": 6.0
-}, {
-"frames": [ ExtResource( 6 ) ],
+"frames": [ ExtResource( 2 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "Run",
+"speed": 6.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -77,14 +77,15 @@ collision_mask = 5
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision" ]
-SPEED = 150
-MAXHP = 50
+SPEED = 200
+MAXHP = 300
 
 [node name="Sprite" type="AnimatedSprite" parent="." index="0"]
 
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "Run"
+frame = 3
 playing = true
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -212,6 +213,7 @@ autostart = false
 
 stream = ExtResource( 9 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "SFX"
@@ -220,6 +222,7 @@ bus = "SFX"
 
 stream = ExtResource( 10 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "SFX"

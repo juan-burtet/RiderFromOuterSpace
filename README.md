@@ -78,9 +78,9 @@
  - [ ] caixa de dialogo
  - [x] atualizar os comandos do jogo __utilizar o que está__
  - [x] conferir a camera
- - [ ] atualizar o hp/velocidade dos inimigos
+ - [x] atualizar o hp/velocidade dos inimigos (conferir de novo)
  - [ ] adicionar moedas nas ultimas 2 fases
- - [ ] mensagem na tela indica que o upgrade foi adquirido
+ - [x] mensagem na tela indica que o upgrade foi adquirido
  - [ ] modificar imagem do upgrade/moeda
 
 ## Para pensar:

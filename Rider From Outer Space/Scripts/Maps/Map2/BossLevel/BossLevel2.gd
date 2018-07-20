@@ -80,8 +80,7 @@ func inicia_dialogo():
 	$begin.play()
 	dialogo = false
 	$PlayerTest.set_physics_process(true)
-	$Boss/Turing.set_process(true)
-	$Boss/Turing.restart_timer()
+	#$Boss/Turing.restart_timer()
 
 func begin():
 	var black = BLACK_SCREEN.instance()
@@ -136,6 +135,7 @@ func cria_dialogo_fim():
 
 
 func _on_begin_finished():
+	$Boss/Turing.set_process(true)
 	$music.play()
 
 

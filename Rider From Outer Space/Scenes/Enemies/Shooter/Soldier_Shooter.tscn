@@ -1,20 +1,20 @@
 [gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Scripts/Enemies/Soldier_Shooter.gd" type="Script" id=1]
-[ext_resource path="res://Images/Enemies/enemies/Soldier_Shooter/run0.png" type="Texture" id=2]
-[ext_resource path="res://Images/Enemies/enemies/Soldier_Shooter/run1.png" type="Texture" id=3]
-[ext_resource path="res://Images/Enemies/enemies/Soldier_Shooter/run2.png" type="Texture" id=4]
-[ext_resource path="res://Images/Enemies/enemies/Soldier_Shooter/run3.png" type="Texture" id=5]
-[ext_resource path="res://Images/Enemies/enemies/Soldier_Shooter/run4.png" type="Texture" id=6]
-[ext_resource path="res://Images/Enemies/enemies/Soldier_Shooter/run5.png" type="Texture" id=7]
-[ext_resource path="res://Images/Enemies/enemies/Soldier_Shooter/runUp0.png" type="Texture" id=8]
-[ext_resource path="res://Images/Enemies/enemies/Soldier_Shooter/runUp1.png" type="Texture" id=9]
-[ext_resource path="res://Images/Enemies/enemies/Soldier_Shooter/runUp2.png" type="Texture" id=10]
-[ext_resource path="res://Images/Enemies/enemies/Soldier_Shooter/runUp3.png" type="Texture" id=11]
-[ext_resource path="res://Images/Enemies/enemies/Soldier_Shooter/runUp4.png" type="Texture" id=12]
-[ext_resource path="res://Images/Enemies/enemies/Soldier_Shooter/runUp5.png" type="Texture" id=13]
-[ext_resource path="res://Images/Enemies/enemies/Soldier_Shooter/idleUp.png" type="Texture" id=14]
-[ext_resource path="res://Images/Enemies/enemies/Soldier_Shooter/idleRight.png" type="Texture" id=15]
+[ext_resource path="res://Images/Enemies/enemies/Soldier_Shooter/idleUp.png" type="Texture" id=2]
+[ext_resource path="res://Images/Enemies/enemies/Soldier_Shooter/runUp0.png" type="Texture" id=3]
+[ext_resource path="res://Images/Enemies/enemies/Soldier_Shooter/runUp1.png" type="Texture" id=4]
+[ext_resource path="res://Images/Enemies/enemies/Soldier_Shooter/runUp2.png" type="Texture" id=5]
+[ext_resource path="res://Images/Enemies/enemies/Soldier_Shooter/runUp3.png" type="Texture" id=6]
+[ext_resource path="res://Images/Enemies/enemies/Soldier_Shooter/runUp4.png" type="Texture" id=7]
+[ext_resource path="res://Images/Enemies/enemies/Soldier_Shooter/runUp5.png" type="Texture" id=8]
+[ext_resource path="res://Images/Enemies/enemies/Soldier_Shooter/idleRight.png" type="Texture" id=9]
+[ext_resource path="res://Images/Enemies/enemies/Soldier_Shooter/run0.png" type="Texture" id=10]
+[ext_resource path="res://Images/Enemies/enemies/Soldier_Shooter/run1.png" type="Texture" id=11]
+[ext_resource path="res://Images/Enemies/enemies/Soldier_Shooter/run2.png" type="Texture" id=12]
+[ext_resource path="res://Images/Enemies/enemies/Soldier_Shooter/run3.png" type="Texture" id=13]
+[ext_resource path="res://Images/Enemies/enemies/Soldier_Shooter/run4.png" type="Texture" id=14]
+[ext_resource path="res://Images/Enemies/enemies/Soldier_Shooter/run5.png" type="Texture" id=15]
 [ext_resource path="res://Images/Enemies/Bosses/HP/under.png" type="Texture" id=16]
 [ext_resource path="res://Images/Enemies/Bosses/HP/fill.png" type="Texture" id=17]
 [ext_resource path="res://Sounds/Effects/Enemies/Death/sfx_deathscream_robot1.wav" type="AudioStream" id=18]
@@ -22,25 +22,25 @@
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "run",
-"speed": 7.0
-}, {
-"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "shot_rightUp",
-"speed": 7.0
-}, {
-"frames": [ ExtResource( 14 ) ],
+"frames": [ ExtResource( 2 ) ],
 "loop": true,
 "name": "shot_up",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 15 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "shot_rightUp",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 9 ) ],
 "loop": true,
 "name": "shot_right",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "run",
+"speed": 7.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -102,7 +102,7 @@ RUN_OFFSET = Vector2( 0, 7 )
 UP_OFFSET = Vector2( 0, 5 )
 ORIGINAL_OFFSET = Vector2( 0, 0 )
 SPEED = 150
-MAXHP = 50
+MAXHP = 800
 WAIT_TIME = 1.5
 
 [node name="Sprite" type="AnimatedSprite" parent="." index="0"]
@@ -255,6 +255,7 @@ rect = Rect2( -2.5, -2.5, 5, 5 )
 
 stream = ExtResource( 18 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "SFX"

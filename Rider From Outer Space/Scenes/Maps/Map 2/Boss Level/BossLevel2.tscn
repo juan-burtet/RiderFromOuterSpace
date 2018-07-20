@@ -82,7 +82,7 @@ tracks/0/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 5, 290 )
 
-[node name="BossLevel2" type="Node"]
+[node name="BossLevel2" type="Node" index="0"]
 
 script = ExtResource( 1 )
 next_world = "res://Scenes/Maps/Map 3/Section 1/Map 3 Section 1.tscn"
@@ -111,8 +111,6 @@ _sections_unfolded = [ "Cell", "Collision", "Transform" ]
 
 [node name="Boss" type="Node" parent="." index="1"]
 
-editor/display_folded = true
-
 [node name="Turing" type="KinematicBody2D" parent="Boss" index="0"]
 
 position = Vector2( 640, 352 )
@@ -132,7 +130,7 @@ position = Vector2( 0, -25 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "default"
-frame = 10
+frame = 7
 playing = true
 flip_h = true
 _sections_unfolded = [ "Transform", "Visibility" ]

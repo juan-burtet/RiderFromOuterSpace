@@ -70,6 +70,8 @@ func _on_Timer_timeout():
 
 func is_dead():
 	if !hp:
+		$CollisionShape2D.set_disabled(true)
+		global.add_upgrades()
 		can_shot = false
 		$Sprite.set_position(DEATH_POSITION)
 		$Sprite.play("Death")

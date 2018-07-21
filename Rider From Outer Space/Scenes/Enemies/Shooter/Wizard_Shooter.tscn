@@ -70,12 +70,12 @@ tracks/0/keys = {
 "values": [ Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[node name="Wizard_Shooter" type="KinematicBody2D" index="0"]
+[node name="Wizard_Shooter" type="KinematicBody2D"]
 
 scale = Vector2( 1.75, 1.75 )
 input_pickable = false
 collision_layer = 2
-collision_mask = 5
+collision_mask = 21
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Transform", "collision" ]

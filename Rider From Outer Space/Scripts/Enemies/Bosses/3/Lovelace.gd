@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 const FIREBALL_SCENE = preload("res://Scenes/Enemies/BossWeapon3.tscn")
 
-const MAX_HP = 30
+const MAX_HP = 15000
 var hp 
 var can_shot
 var pos
@@ -85,6 +85,7 @@ func update_hp():
 
 func is_dead():
 	if !hp:
+		global.add_upgrades()
 		can_shot = false
 		$CollisionShape2D.queue_free()
 		$Animation.play("Death")
@@ -101,11 +102,11 @@ func _on_sequencia_tiros_timeout():
 	timer_sequencia.set_one_shot(false)
 
 func restart_timer_atirar():
-	timer_atirar.set_wait_time(2)
+	timer_atirar.set_wait_time(1)
 	timer_atirar.set_one_shot(true)
 	timer_atirar.start()
 
 func restart_timer_sequencia():
-	timer_sequencia.set_wait_time(0.2)
+	timer_sequencia.set_wait_time(0.15)
 	timer_sequencia.set_one_shot(true)
 	timer_sequencia.start()

@@ -38,9 +38,11 @@ func _ready():
 	$Boss/Carmack/Info/Name.set_visible(false)
 	$PlayerTest/camera.queue_free()
 	$Boss/Carmack.set_process(false)
+	$PlayerTest.set_physics_process(false)
+	$PlayerTest.set_process(true)
 	begin()
 	yield(self, "fade")
-	$PlayerTest.set_physics_process(false)
+	$PlayerTest.set_process(false)
 	dialogo = true
 	largou = true
 	inicia_dialogo()
@@ -102,6 +104,8 @@ func end():
 	emit_signal("fade")
 
 func _on_Carmack_dead():
+	$PlayerTest.set_physics_process(false)
+	$PlayerTest.set_process(true)
 	end()
 	yield(self, "fade")
 	dialogo = true

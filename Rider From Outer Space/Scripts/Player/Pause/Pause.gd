@@ -11,9 +11,14 @@ var white = Color(1,1,1,1)
 
 onready var timer = $Timer
 
+signal song
+
 func _ready():
 	move = true
 	option = 0
+	var parent = get_parent()
+	var grandparent = parent.get_parent()
+	connect("song", grandparent, "_on_music_finished")
 	pass
 
 func _input(event):
@@ -86,6 +91,7 @@ func returnGame():
 	timer.start()
 	yield(timer,"timeout")
 	get_tree().paused = false
+	emit_signal("song")
 	queue_free()
 	pass
 

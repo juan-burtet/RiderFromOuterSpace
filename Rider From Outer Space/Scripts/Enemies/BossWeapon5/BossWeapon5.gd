@@ -21,8 +21,8 @@ func _process(delta):
 
 # Destroi a bala quando sair da tela
 func _on_Visibility_screen_exited():
-	$Animation.play("explosion")
-	yield($Animation, "animation_finished")
+	$anim.play("explosion")
+	yield($anim, "animation_finished")
 	queue_free()
 
 func _on_BossWeapon5_body_entered(body):

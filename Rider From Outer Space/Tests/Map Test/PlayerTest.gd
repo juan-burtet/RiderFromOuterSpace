@@ -52,6 +52,7 @@ var lock
 onready var pistol_timer = get_node("Timers/pistol_timer")
 onready var shotgun_timer = get_node("Timers/shotgun_timer")
 onready var machinegun_timer = get_node("Timers/machinegun_timer")
+onready var timer = get_node("Timers/dash_timer")
 
 # Função ativada quando o nó é iniciado
 func _ready():
@@ -65,10 +66,23 @@ func _ready():
 	# END _ready
 
 func _input(event):
-	if event.is_action_pressed("ui_esc"):
-		print("entrou")
-		pause_menu()
+	if is_physics_processing():
+		if event.is_action_pressed("ui_esc"):
+			print("entrou")
+			pause_menu()
 	pass
+
+func _process(delta):
+	motion.y += GRAVITY
+	
+	if is_on_floor():
+		$Player.play("IdleRight")
+	else:
+		$Player.play("JumpRight")
+	
+	motion = move_and_slide(motion, UP)
+	pass
+
 
 # Função que roda a cada frame
 func _physics_process(delta):
@@ -130,6 +144,7 @@ func update_player():
 
 func pause_menu():
 	get_tree().paused = true
+	get_parent().get_node("music").stop()
 	add_child(PAUSE_SCENE.instance())
 	pass
 
@@ -429,7 +444,12 @@ func jump_control():
 # Função que faz o movimento dash
 func dash(speed):
 	motion.x += speed
-	move_and_slide(motion, UP) 
+	motion = move_and_slide(motion, UP)
+	timer.set_one_shot(true)
+	timer.set_wait_time(0.4)
+	timer.start()
+	if $camera != null:
+		$camera.set_enable_follow_smoothing(true) 
 	# END dash
 
 func get_shot_direction():
@@ -637,3 +657,9 @@ func get_attack(string):
 	motion = move_and_slide(motion,UP)
 	
 	pass
+
+func _on_dash_timer_timeout():
+	timer.set_one_shot(false)
+	if $camera != null:
+		$camera.set_enable_follow_smoothing(false)
+	pass # replace with function body

@@ -9,41 +9,41 @@
 [ext_resource path="res://Images/Menus/Space Background/parallax-space-ring-planet.png" type="Texture" id=7]
 [ext_resource path="res://Tilesets/FinalBoss/FinalBoss_TileSet.tres" type="TileSet" id=8]
 [ext_resource path="res://Scripts/Enemies/Bosses/4/Carmack.gd" type="Script" id=9]
-[ext_resource path="res://Images/Enemies/Bosses/4/Life/0.png" type="Texture" id=10]
-[ext_resource path="res://Images/Enemies/Bosses/4/Life/1.png" type="Texture" id=11]
-[ext_resource path="res://Images/Enemies/Bosses/4/Life/2.png" type="Texture" id=12]
-[ext_resource path="res://Images/Enemies/Bosses/4/Life/3.png" type="Texture" id=13]
-[ext_resource path="res://Images/Enemies/Bosses/4/Life/4.png" type="Texture" id=14]
-[ext_resource path="res://Images/Enemies/Bosses/4/Life/5.png" type="Texture" id=15]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/0.png" type="Texture" id=16]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/1.png" type="Texture" id=17]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/2.png" type="Texture" id=18]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/3.png" type="Texture" id=19]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/4.png" type="Texture" id=20]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/5.png" type="Texture" id=21]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/6.png" type="Texture" id=22]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/7.png" type="Texture" id=23]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/8.png" type="Texture" id=24]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/9.png" type="Texture" id=25]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/10.png" type="Texture" id=26]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/11.png" type="Texture" id=27]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/12.png" type="Texture" id=28]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/13.png" type="Texture" id=29]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIdle/0.png" type="Texture" id=30]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIdle/1.png" type="Texture" id=31]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIdle/2.png" type="Texture" id=32]
-[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIdle/3.png" type="Texture" id=33]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/0.png" type="Texture" id=34]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/1.png" type="Texture" id=35]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/2.png" type="Texture" id=36]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/3.png" type="Texture" id=37]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/4.png" type="Texture" id=38]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/5.png" type="Texture" id=39]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/6.png" type="Texture" id=40]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/7.png" type="Texture" id=41]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/8.png" type="Texture" id=42]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/9.png" type="Texture" id=43]
-[ext_resource path="res://Images/Enemies/Bosses/4/Death/10.png" type="Texture" id=44]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIdle/0.png" type="Texture" id=10]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIdle/1.png" type="Texture" id=11]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIdle/2.png" type="Texture" id=12]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIdle/3.png" type="Texture" id=13]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/0.png" type="Texture" id=14]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/1.png" type="Texture" id=15]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/2.png" type="Texture" id=16]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/3.png" type="Texture" id=17]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/4.png" type="Texture" id=18]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/5.png" type="Texture" id=19]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/6.png" type="Texture" id=20]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/7.png" type="Texture" id=21]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/8.png" type="Texture" id=22]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/9.png" type="Texture" id=23]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/10.png" type="Texture" id=24]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/11.png" type="Texture" id=25]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/12.png" type="Texture" id=26]
+[ext_resource path="res://Images/Enemies/Bosses/4/ShadowIn/13.png" type="Texture" id=27]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/0.png" type="Texture" id=28]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/1.png" type="Texture" id=29]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/2.png" type="Texture" id=30]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/3.png" type="Texture" id=31]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/4.png" type="Texture" id=32]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/5.png" type="Texture" id=33]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/6.png" type="Texture" id=34]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/7.png" type="Texture" id=35]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/8.png" type="Texture" id=36]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/9.png" type="Texture" id=37]
+[ext_resource path="res://Images/Enemies/Bosses/4/Death/10.png" type="Texture" id=38]
+[ext_resource path="res://Images/Enemies/Bosses/4/Life/0.png" type="Texture" id=39]
+[ext_resource path="res://Images/Enemies/Bosses/4/Life/1.png" type="Texture" id=40]
+[ext_resource path="res://Images/Enemies/Bosses/4/Life/2.png" type="Texture" id=41]
+[ext_resource path="res://Images/Enemies/Bosses/4/Life/3.png" type="Texture" id=42]
+[ext_resource path="res://Images/Enemies/Bosses/4/Life/4.png" type="Texture" id=43]
+[ext_resource path="res://Images/Enemies/Bosses/4/Life/5.png" type="Texture" id=44]
 [ext_resource path="res://Scenes/Enemies/Info.tscn" type="PackedScene" id=45]
 [ext_resource path="res://Sounds/Effects/Enemies/Death/sfx_deathscream_human14.wav" type="AudioStream" id=46]
 [ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=47]
@@ -52,25 +52,25 @@
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "Life",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ],
-"loop": true,
-"name": "Shadow_In",
-"speed": 7.0
-}, {
-"frames": [ ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ) ],
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "Shadow_Idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 44 ) ],
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "Shadow_In",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 38 ), ExtResource( 38 ), ExtResource( 38 ), ExtResource( 38 ) ],
 "loop": true,
 "name": "Death",
 "speed": 7.0
+}, {
+"frames": [ ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ) ],
+"loop": true,
+"name": "Life",
+"speed": 10.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -234,26 +234,25 @@ cell_clip_uv = false
 collision_use_kinematic = false
 collision_friction = 1.0
 collision_bounce = 0.0
-collision_layer = 1
-collision_mask = 1
+collision_layer = 4
+collision_mask = 19
 occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( 65535, 9, 0, 0, 11, 0, 1, 12, 0, 2, 12, 0, 3, 12, 0, 4, 12, 0, 5, 12, 0, 6, 12, 0, 7, 9, 0, 8, 21, 0, 9, 22, 0, 10, 21, 0, 11, 22, 0, 12, 21, 0, 13, 22, 0, 14, 21, 0, 15, 9, 0, 16, 12, 0, 17, 12, 0, 18, 12, 0, 19, 12, 0, 20, 12, 0, 21, 12, 0, 22, 13, 0, 23, 9, 0, 131071, 9, 0, 65536, 1610612751, 0, 65537, 1610612751, 0, 65538, 1610612755, 0, 65539, 1610612751, 0, 65540, 1610612755, 0, 65541, 1610612751, 0, 65542, 1610612755, 0, 65543, 1610612751, 0, 65544, 1610612755, 0, 65545, 1610612751, 0, 65546, 1610612755, 0, 65547, 1610612751, 0, 65548, 1610612755, 0, 65549, 1610612751, 0, 65550, 1610612755, 0, 65551, 1610612751, 0, 65552, 1610612755, 0, 65553, 1610612751, 0, 65554, 1610612755, 0, 65555, 1610612751, 0, 65556, 1610612755, 0, 65557, 1610612751, 0, 65558, 1610612751, 0, 65559, 9, 0, 196607, 9, 0, 131072, -1610612721, 0, 131073, 1610612754, 0, 131074, 1610612753, 0, 131075, 1610612753, 0, 131076, 1610612753, 0, 131077, 1610612753, 0, 131078, 1610612753, 0, 131079, 1610612753, 0, 131080, 1610612753, 0, 131081, 1610612753, 0, 131082, 1610612753, 0, 131083, 1610612753, 0, 131084, 1610612753, 0, 131085, 1610612753, 0, 131086, 1610612753, 0, 131087, 1610612753, 0, 131088, 1610612753, 0, 131089, 1610612753, 0, 131090, 1610612753, 0, 131091, 1610612753, 0, 131092, 1610612753, 0, 131093, 1610612752, 0, 131094, -1610612721, 0, 131095, 9, 0, 262143, 9, 0, 196608, -1610612721, 0, 196630, -1073741809, 0, 196631, 9, 0, 327679, 9, 0, 262144, -1610612721, 0, 262166, -1073741809, 0, 262167, 9, 0, 393215, 9, 0, 327680, -1610612721, 0, 327702, -1073741809, 0, 327703, 9, 0, 458751, 9, 0, 393216, -1610612721, 0, 393238, -1073741809, 0, 393239, 9, 0, 524287, 9, 0, 458752, -1610612721, 0, 458774, -1073741809, 0, 458775, 9, 0, 589823, 9, 0, 524288, -1610612721, 0, 524310, -1073741809, 0, 524311, 9, 0, 655359, 9, 0, 589824, -1610612721, 0, 589846, -1073741809, 0, 589847, 9, 0, 720895, 9, 0, 655360, -1610612721, 0, 655382, -1073741809, 0, 655383, 9, 0, 786431, 9, 0, 720896, 15, 0, 720897, 16, 0, 720898, 17, 0, 720899, 17, 0, 720900, 17, 0, 720901, 17, 0, 720902, 17, 0, 720903, 17, 0, 720904, 17, 0, 720905, 17, 0, 720906, 17, 0, 720907, 17, 0, 720908, 17, 0, 720909, 17, 0, 720910, 17, 0, 720911, 17, 0, 720912, 17, 0, 720913, 17, 0, 720914, 17, 0, 720915, 17, 0, 720916, 17, 0, 720917, 18, 0, 720918, 15, 0, 720919, 9, 0, 851967, 9, 0, 786432, 15, 0, 786433, 15, 0, 786434, 15, 0, 786435, 15, 0, 786436, 15, 0, 786437, 15, 0, 786438, 15, 0, 786439, 15, 0, 786440, 15, 0, 786441, 15, 0, 786442, 15, 0, 786443, 15, 0, 786444, 15, 0, 786445, 15, 0, 786446, 15, 0, 786447, 15, 0, 786448, 15, 0, 786449, 15, 0, 786450, 15, 0, 786451, 15, 0, 786452, 15, 0, 786453, 15, 0, 786454, 15, 0, 786455, 9, 0, 917503, 9, 0, 851968, 0, 0, 851969, 1, 0, 851970, 2, 0, 851971, 3, 0, 851972, 3, 0, 851973, 3, 0, 851974, 3, 0, 851975, 3, 0, 851976, 3, 0, 851977, 3, 0, 851978, 3, 0, 851979, 3, 0, 851980, 3, 0, 851981, 3, 0, 851982, 3, 0, 851983, 3, 0, 851984, 3, 0, 851985, 3, 0, 851986, 3, 0, 851987, 3, 0, 851988, 4, 0, 851989, 5, 0, 851990, 6, 0, 851991, 9, 0, 983039, 9, 0, 917504, 17, 0, 917505, 10, 0, 917506, 11, 0, 917507, 12, 0, 917508, 12, 0, 917509, 12, 0, 917510, 12, 0, 917511, 12, 0, 917512, 12, 0, 917513, 12, 0, 917514, 12, 0, 917515, 12, 0, 917516, 12, 0, 917517, 12, 0, 917518, 12, 0, 917519, 12, 0, 917520, 12, 0, 917521, 12, 0, 917522, 12, 0, 917523, 12, 0, 917524, 13, 0, 917525, 14, 0, 917526, 17, 0, 917527, 9, 0, 983063, 9, 0 )
-_sections_unfolded = [ "Cell", "Transform" ]
+_sections_unfolded = [ "Cell", "Collision", "Transform" ]
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="Boss" type="Node" parent="." index="2"]
 
-editor/display_folded = true
-
 [node name="Carmack" type="KinematicBody2D" parent="Boss" index="0"]
 
+editor/display_folded = true
 position = Vector2( 640, 320 )
 input_pickable = false
 collision_layer = 2
-collision_mask = 5
+collision_mask = 21
 collision/safe_margin = 0.08
 script = ExtResource( 9 )
 _sections_unfolded = [ "Collision" ]
@@ -267,7 +266,7 @@ position = Vector2( 0, 14 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "Life"
-frame = 1
+frame = 2
 playing = true
 flip_h = true
 _sections_unfolded = [ "Transform", "Visibility" ]
@@ -368,8 +367,8 @@ bus = "SFX"
 editor/display_folded = true
 position = Vector2( 576, 256 )
 input_pickable = false
-collision_layer = 16
-collision_mask = 16
+collision_layer = 32
+collision_mask = 32
 collision/safe_margin = 0.08
 _sections_unfolded = [ "Collision" ]
 __meta__ = {

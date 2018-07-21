@@ -73,7 +73,7 @@ tracks/0/keys = {
 
 input_pickable = false
 collision_layer = 2
-collision_mask = 5
+collision_mask = 21
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision" ]
@@ -85,7 +85,7 @@ MAXHP = 300
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "Run"
-frame = 3
+frame = 1
 playing = true
 _sections_unfolded = [ "Transform", "Visibility" ]
 

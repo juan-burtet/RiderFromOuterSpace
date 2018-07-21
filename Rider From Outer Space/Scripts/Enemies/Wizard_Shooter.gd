@@ -25,21 +25,23 @@ func _ready():
 	update_hp()
 	timer.set_one_shot(false)
 	$Sprite.play("idle")
+	timer.set_one_shot(false)
 	pass
 
 func _process(delta):
 	motion.y += GRAVITY
 	
-	if $Right.is_colliding():
-		teste($Right)
-	elif $Left.is_colliding():
-		teste($Left)
-	elif $Up.is_colliding():
-		teste($Up)
-	elif $LeftUp.is_colliding():
-		teste($LeftUp)
-	elif $RightUp.is_colliding():
-		teste($RightUp)
+	if !timer.is_one_shot():
+		if $Right.is_colliding():
+			teste($Right)
+		elif $Left.is_colliding():
+			teste($Left)
+		elif $Up.is_colliding():
+			teste($Up)
+		elif $LeftUp.is_colliding():
+			teste($LeftUp)
+		elif $RightUp.is_colliding():
+			teste($RightUp)
 	
 	motion = move_and_slide(motion, UP)
 	pass
@@ -74,8 +76,8 @@ func dies():
 
 func teste(node):
 	if node.get_collider() != null:
+		print(node.get_collider())
 		if node.get_collider().get_name() == "PlayerTest":
-			set_process(false)
 			match node.get_name():
 				"Left":
 					shoot(Vector2(-1,0))
@@ -103,14 +105,14 @@ func update_hp():
 
 func shoot(direction):
 	if $Visibility.is_on_screen():
-		if !timer.is_one_shot():
-			$Sprite.play("attack")
-			yield($Sprite, "over")
-			var position
-			var pistol = PISTOL_SCENE.instance()
-			pistol.init(direction)
-			get_parent().add_child(pistol)
-			pistol.set_position($Gun.get_global_position() + direction*10)
-			restart_timer()
+		print(direction)
+		timer.set_one_shot(true)
+		$Sprite.play("attack")
+		yield($Sprite, "over")
+		var position
+		var pistol = PISTOL_SCENE.instance()
+		pistol.init(direction)
+		get_parent().add_child(pistol)
+		pistol.set_position($Gun.get_global_position() + direction*10)
+		restart_timer()
 	pass
-	set_process(true)

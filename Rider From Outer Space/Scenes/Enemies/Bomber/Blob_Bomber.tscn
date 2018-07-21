@@ -26,13 +26,13 @@
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
 "loop": true,
-"name": "Run",
-"speed": 7.0
+"name": "Idle",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
 "loop": true,
-"name": "Idle",
-"speed": 5.0
+"name": "Run",
+"speed": 7.0
 } ]
 
 [sub_resource type="SpriteFrames" id=2]
@@ -58,7 +58,7 @@ radius = 81.0
 
 input_pickable = false
 collision_layer = 2
-collision_mask = 5
+collision_mask = 21
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Transform" ]
@@ -70,7 +70,7 @@ __meta__ = {
 
 frames = SubResource( 1 )
 animation = "Run"
-frame = 5
+frame = 4
 playing = true
 
 [node name="Explosion" type="AnimatedSprite" parent="." index="1"]
@@ -190,6 +190,7 @@ _sections_unfolded = [ "Transform" ]
 
 stream = ExtResource( 20 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "SFX"

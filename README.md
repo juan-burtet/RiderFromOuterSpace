@@ -66,22 +66,32 @@
 
 ## Colisões dos Personagens
   * __Personagem[1]__: Toca em Inimigos, Mapa e Explosão
-  * __Inimigos[2]__: Toca em Personagem, Mapa
-  * __Mapa[3]__: Toca em Inimigos, Personagem
+    * Layer: 1
+    * Mask: 2 3 4
+  * __Inimigos[2]__: Toca em Personagem, Mapa e Munição
+    * Layer: 2
+    * Mask: 1 3 5
+  * __Mapa[3]__: Toca em Inimigos, Personagem e Munição
+    * Layer: 3
+    * Mask: 1 2 5
   * __Explosão[4]__: Toca em Personagem
+    * Layer: 4
+    * Mask: 1
+  * __Munição[5]__: No Mapa e Inimigos
+    * Layer: 5
+    * Mask: 2 3
 
 ## O que deve ser feito:
 
- - [ ] ajeitar o dash
+ - [x] ajeitar o dash (talvez adicionar um foguinho?)
  - [x] implementar o lock
  - [ ] conferir todos os sons
- - [ ] caixa de dialogo
+ - [x] caixa de dialogo
  - [x] atualizar os comandos do jogo __utilizar o que está__
  - [x] conferir a camera
  - [x] atualizar o hp/velocidade dos inimigos (conferir de novo)
  - [ ] adicionar moedas nas ultimas 2 fases
  - [x] mensagem na tela indica que o upgrade foi adquirido
- - [ ] modificar imagem do upgrade/moeda
 
 ## Para pensar:
 

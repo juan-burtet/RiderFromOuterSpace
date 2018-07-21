@@ -153,6 +153,7 @@ func restart_timer():
 
 func is_dead():
 	if !hp:
+		global.add_upgrades()
 		can_shot = false
 		$death.play()
 		$AnimationPlayer.play("death")

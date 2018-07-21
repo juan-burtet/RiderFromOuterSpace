@@ -31,11 +31,13 @@ var dialogo
 var largou
 
 func _ready():
+	$PlayerTest.set_physics_process(false)
 	$PlayerTest/camera.queue_free()
 	$Boss/Lovelace.set_process(false)
+	$PlayerTest.set_process(true)
 	begin()
 	yield(self, "fade")
-	$PlayerTest.set_physics_process(false)
+	$PlayerTest.set_process(false)
 	dialogo = true
 	largou = true
 	inicia_dialogo()
@@ -95,6 +97,8 @@ func end():
 	emit_signal("fade")
 
 func _on_Lovelace_dead():
+	$PlayerTest.set_physics_process(false)
+	$PlayerTest.set_process(true)
 	end()
 	yield(self, "fade")
 	dialogo = true

@@ -41,7 +41,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 0 ) ]
 }
 
-[node name="BossWeapon5" type="Area2D" index="0"]
+[node name="BossWeapon5" type="Area2D"]
 
 rotation = 1.5708
 scale = Vector2( 4, 4 )

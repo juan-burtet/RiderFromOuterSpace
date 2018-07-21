@@ -85,12 +85,12 @@ tracks/0/keys = {
 "values": [ Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[node name="Demon_Fighter" type="KinematicBody2D"]
+[node name="Demon_Fighter" type="KinematicBody2D" index="0"]
 
 scale = Vector2( 2, 2 )
 input_pickable = false
 collision_layer = 2
-collision_mask = 5
+collision_mask = 21
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Transform" ]
@@ -99,7 +99,7 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 3
+frame = 1
 playing = true
 script = ExtResource( 19 )
 _sections_unfolded = [ "Visibility" ]

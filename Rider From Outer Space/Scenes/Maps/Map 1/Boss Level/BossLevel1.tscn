@@ -4,17 +4,17 @@
 [ext_resource path="res://Images/Maps/Map 1/Section 2/cave_wall.png" type="Texture" id=2]
 [ext_resource path="res://Tilesets/Map1/Section 2/Map1_Section2_TileSet.tres" type="TileSet" id=3]
 [ext_resource path="res://Scripts/Enemies/Bosses/1/Djikstra.gd" type="Script" id=4]
-[ext_resource path="res://Images/Enemies/Bosses/1/Life/life0.png" type="Texture" id=5]
-[ext_resource path="res://Images/Enemies/Bosses/1/Life/life1.png" type="Texture" id=6]
-[ext_resource path="res://Images/Enemies/Bosses/1/Life/life2.png" type="Texture" id=7]
-[ext_resource path="res://Images/Enemies/Bosses/1/Life/life3.png" type="Texture" id=8]
-[ext_resource path="res://Images/Enemies/Bosses/1/Life/life4.png" type="Texture" id=9]
-[ext_resource path="res://Images/Enemies/Bosses/1/Death/death0.png" type="Texture" id=10]
-[ext_resource path="res://Images/Enemies/Bosses/1/Death/death1.png" type="Texture" id=11]
-[ext_resource path="res://Images/Enemies/Bosses/1/Death/death2.png" type="Texture" id=12]
-[ext_resource path="res://Images/Enemies/Bosses/1/Death/death3.png" type="Texture" id=13]
-[ext_resource path="res://Images/Enemies/Bosses/1/Death/death4.png" type="Texture" id=14]
-[ext_resource path="res://Images/Enemies/Bosses/1/Death/death5.png" type="Texture" id=15]
+[ext_resource path="res://Images/Enemies/Bosses/1/Death/death0.png" type="Texture" id=5]
+[ext_resource path="res://Images/Enemies/Bosses/1/Death/death1.png" type="Texture" id=6]
+[ext_resource path="res://Images/Enemies/Bosses/1/Death/death2.png" type="Texture" id=7]
+[ext_resource path="res://Images/Enemies/Bosses/1/Death/death3.png" type="Texture" id=8]
+[ext_resource path="res://Images/Enemies/Bosses/1/Death/death4.png" type="Texture" id=9]
+[ext_resource path="res://Images/Enemies/Bosses/1/Death/death5.png" type="Texture" id=10]
+[ext_resource path="res://Images/Enemies/Bosses/1/Life/life0.png" type="Texture" id=11]
+[ext_resource path="res://Images/Enemies/Bosses/1/Life/life1.png" type="Texture" id=12]
+[ext_resource path="res://Images/Enemies/Bosses/1/Life/life2.png" type="Texture" id=13]
+[ext_resource path="res://Images/Enemies/Bosses/1/Life/life3.png" type="Texture" id=14]
+[ext_resource path="res://Images/Enemies/Bosses/1/Life/life4.png" type="Texture" id=15]
 [ext_resource path="res://Scenes/Enemies/Info.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Sounds/Effects/Enemies/Death/sfx_deathscream_human14.wav" type="AudioStream" id=17]
 [ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=18]
@@ -24,14 +24,14 @@
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "Life",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "Death",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "Life",
 "speed": 5.0
 } ]
 
@@ -93,12 +93,12 @@ cell_clip_uv = false
 collision_use_kinematic = false
 collision_friction = 1.0
 collision_bounce = 0.0
-collision_layer = 1
-collision_mask = 1
+collision_layer = 4
+collision_mask = 19
 occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( -262144, 5, 0, -262143, 4, 0, -262142, 4, 0, -262141, 4, 0, -262140, 4, 0, -262139, 4, 0, -262138, 3, 0, -196608, 5, 0, -196607, 4, 0, -196606, 4, 0, -196605, 4, 0, -196604, 4, 0, -196603, 4, 0, -196602, 3, 0, -131072, 5, 0, -131071, 4, 0, -131070, 4, 0, -131069, 4, 0, -131068, 4, 0, -131067, 4, 0, -131066, 3, 0, -65536, 5, 0, -65535, 4, 0, -65534, 4, 0, -65533, 4, 0, -65532, 4, 0, -65531, 4, 0, -65530, 3, 0, 0, 5, 0, 6, 6, 0, 7, 7, 0, 8, 7, 0, 9, 7, 0, 10, 7, 0, 11, 7, 0, 12, 7, 0, 13, 7, 0, 14, 7, 0, 15, 7, 0, 16, 7, 0, 17, 7, 0, 18, 7, 0, 19, 7, 0, 20, 7, 0, 21, 7, 0, 22, 11, 0, 65536, 5, 0, 65558, 3, 0, 131072, 5, 0, 131094, 3, 0, 196608, 5, 0, 196630, 3, 0, 262144, 5, 0, 262166, 3, 0, 327680, 5, 0, 327702, 3, 0, 393216, 5, 0, 393238, 3, 0, 458752, 5, 0, 458774, 3, 0, 524288, 5, 0, 524310, 3, 0, 589824, 5, 0, 589846, 3, 0, 655360, 5, 0, 655382, 3, 0, 720896, 5, 0, 720918, 3, 0, 786432, 5, 0, 786454, 3, 0, 851968, 5, 0, 851990, 3, 0, 917504, 10, 0, 917505, 1, 0, 917506, 1, 0, 917507, 1, 0, 917508, 1, 0, 917509, 1, 0, 917510, 1, 0, 917511, 1, 0, 917512, 1, 0, 917513, 1, 0, 917514, 1, 0, 917515, 1, 0, 917516, 1, 0, 917517, 1, 0, 917518, 1, 0, 917519, 1, 0, 917520, 1, 0, 917521, 1, 0, 917522, 1, 0, 917523, 1, 0, 917524, 1, 0, 917525, 1, 0, 917526, 12, 0 )
-_sections_unfolded = [ "Cell" ]
+_sections_unfolded = [ "Cell", "Collision" ]
 __meta__ = {
 "_edit_lock_": true
 }
@@ -110,7 +110,7 @@ __meta__ = {
 position = Vector2( 640, 384 )
 input_pickable = false
 collision_layer = 2
-collision_mask = 5
+collision_mask = 21
 collision/safe_margin = 0.08
 script = ExtResource( 4 )
 _sections_unfolded = [ "Collision" ]
@@ -183,8 +183,8 @@ bus = "SFX"
 editor/display_folded = true
 position = Vector2( 576, 288 )
 input_pickable = false
-collision_layer = 16
-collision_mask = 16
+collision_layer = 32
+collision_mask = 32
 collision/safe_margin = 0.08
 _sections_unfolded = [ "Collision" ]
 __meta__ = {
@@ -197,7 +197,7 @@ shape = SubResource( 4 )
 
 [node name="PlayerTest" parent="." index="3" instance=ExtResource( 18 )]
 
-position = Vector2( 128, -32 )
+position = Vector2( 128, 256 )
 
 [node name="Timer" type="Timer" parent="." index="4"]
 

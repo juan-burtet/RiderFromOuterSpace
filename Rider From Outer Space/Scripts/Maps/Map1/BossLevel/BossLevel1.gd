@@ -29,13 +29,15 @@ var dialogo
 var largou
 
 func _ready():
+	$PlayerTest.set_physics_process(false)
+	$PlayerTest.set_process(true)
 	$PlayerTest/camera.queue_free()
 	$Boss/Djikstra.set_process(false)
 	begin()
 	yield(self, "fade")
-	$PlayerTest.set_physics_process(false)
 	dialogo = true
 	largou = true
+	$PlayerTest.set_process(false)
 	inicia_dialogo()
 	pass
 
@@ -85,6 +87,8 @@ func end():
 	emit_signal("fade")
 
 func _on_Djikstra_dead():
+	$PlayerTest.set_physics_process(false)
+	$PlayerTest.set_process(true)
 	end()
 	yield(self, "fade")
 	$PlayerTest.queue_free()

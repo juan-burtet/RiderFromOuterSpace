@@ -19,9 +19,11 @@ signal apertou
 signal fade
 
 func _ready():
+	$PlayerTest.set_physics_process(false)
+	$PlayerTest.set_process(true)
 	begin()
 	yield(self, "fade")
-	$PlayerTest.set_physics_process(false)
+	$PlayerTest.set_process(false)
 	inicia_dialogo()
 	pass
 

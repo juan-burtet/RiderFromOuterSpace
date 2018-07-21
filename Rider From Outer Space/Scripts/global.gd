@@ -65,7 +65,7 @@ func _ready():
 	pistol = 0
 	shotgun = 0
 	machinegun = 0
-	upgrades = 0
+	upgrades = 15
 	coins = 0
 	pass
 
@@ -106,10 +106,29 @@ func imprime():
 	print("oi")
 
 func check_upgrade():
-	if upgrades > 0:
-		emit_signal("on")
-	elif upgrades == 0:
+	if !is_full_upgrade():
+		if upgrades > 0:
+			emit_signal("on")
+		elif upgrades == 0:
+			emit_signal("off")
+	else:
 		emit_signal("off")
+
+func is_full_upgrade():
+	if heart != 3:
+		return false
+	if jetpack != 3:
+		return false
+	if pistol != 3:
+		return false
+	if shotgun != 3:
+		return false
+	if machinegun != 3:
+		return false
+	
+	return true
+	pass
+
 
 func add_upgrades():
 	if upgrades == 0:

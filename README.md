@@ -85,12 +85,12 @@
 
  - [x] ajeitar o dash (talvez adicionar um foguinho?)
  - [x] implementar o lock
- - [ ] conferir todos os sons
+ - [x] conferir todos os sons
  - [x] caixa de dialogo
  - [x] atualizar os comandos do jogo __utilizar o que está__
  - [x] conferir a camera
  - [x] atualizar o hp/velocidade dos inimigos (conferir de novo)
- - [ ] adicionar moedas nas ultimas 2 fases
+ - [x] adicionar moedas nas ultimas 2 fases
  - [x] mensagem na tela indica que o upgrade foi adquirido
 
 ## Para pensar:

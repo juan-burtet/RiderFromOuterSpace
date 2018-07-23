@@ -42,7 +42,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="BossWeapon3" type="Area2D"]
+[node name="BossWeapon3" type="Area2D" index="0"]
 
 scale = Vector2( 2, 2 )
 input_pickable = true
@@ -59,7 +59,7 @@ _sections_unfolded = [ "Transform" ]
 
 frames = SubResource( 1 )
 animation = "default"
-frame = 4
+frame = 3
 playing = true
 _sections_unfolded = [ "Visibility" ]
 

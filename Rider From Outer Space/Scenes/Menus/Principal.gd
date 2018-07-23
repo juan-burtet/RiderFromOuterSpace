@@ -1,6 +1,6 @@
 extends Node
 
-const firstLevel = "res://Scenes/Prelude/Prelude.tscn"
+const firstLevel = "res://Scenes/Controls.tscn"
 const KONISBERG = "res://Scenes/Maps/Map 1/Section 1/Map 1 Section 1.tscn"
 
 var menu = 0

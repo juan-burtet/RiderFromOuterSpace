@@ -107,6 +107,7 @@ __meta__ = {
 
 [node name="Djikstra" type="KinematicBody2D" parent="Boss" index="0"]
 
+editor/display_folded = true
 position = Vector2( 640, 384 )
 input_pickable = false
 collision_layer = 2
@@ -124,7 +125,7 @@ position = Vector2( 0, -14 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "Life"
-frame = 1
+frame = 5
 playing = true
 flip_h = true
 _sections_unfolded = [ "Transform", "Visibility" ]

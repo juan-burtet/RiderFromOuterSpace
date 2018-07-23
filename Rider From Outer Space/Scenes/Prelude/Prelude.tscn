@@ -6,7 +6,7 @@
 [ext_resource path="res://Images/Enemies/Bosses/4/Life/0.png" type="Texture" id=4]
 [ext_resource path="res://Images/Player/Death Screen/blackScreen.png" type="Texture" id=5]
 
-[node name="Prelude" type="Node" index="0"]
+[node name="Prelude" type="Node"]
 
 script = ExtResource( 1 )
 next_world = "res://Scenes/Maps/Map 1/Section 1/Map 1 Section 1.tscn"
@@ -38,7 +38,7 @@ __meta__ = {
 
 [node name="PlayerTest" parent="." index="1" instance=ExtResource( 3 )]
 
-position = Vector2( 115, 374 )
+position = Vector2( 97, 359 )
 
 [node name="Sprite" type="Sprite" parent="." index="2"]
 

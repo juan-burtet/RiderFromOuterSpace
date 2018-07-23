@@ -79,8 +79,8 @@ func choose_option():
 	else:
 		match option:
 			0:
-				global.add_heart()
 				emit_signal("aumentou_hp")
+				global.add_heart()
 				pass
 			1:
 				global.add_jetpack()

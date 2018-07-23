@@ -4,16 +4,16 @@
 [ext_resource path="res://Images/Player/Pause/jetpack.png" type="Texture" id=2]
 [ext_resource path="res://Images/Player/Pause/raw.png" type="Texture" id=3]
 [ext_resource path="res://Images/Player/Pause/life.png" type="Texture" id=4]
-[ext_resource path="res://Images/Player/Pause/pistol.png" type="Texture" id=5]
-[ext_resource path="res://Images/Player/Pause/shotgun.png" type="Texture" id=6]
+[ext_resource path="res://Images/Player/Pause/shotgun.png" type="Texture" id=5]
+[ext_resource path="res://Images/Player/Pause/pistol.png" type="Texture" id=6]
 [ext_resource path="res://Images/Player/Pause/machineGun.png" type="Texture" id=7]
-[ext_resource path="res://Images/Player/Pause/up_3.png" type="Texture" id=8]
-[ext_resource path="res://Images/Player/Pause/up_2.png" type="Texture" id=9]
-[ext_resource path="res://Images/Player/Pause/up_1.png" type="Texture" id=10]
+[ext_resource path="res://Images/Player/Pause/up_1.png" type="Texture" id=8]
+[ext_resource path="res://Images/Player/Pause/up_3.png" type="Texture" id=9]
+[ext_resource path="res://Images/Player/Pause/up_2.png" type="Texture" id=10]
 [ext_resource path="res://Images/Player/Pause/jetPackImage.png" type="Texture" id=11]
 [ext_resource path="res://Images/Player/Pause/lifeImage.png" type="Texture" id=12]
-[ext_resource path="res://Images/Player/Pause/pistolImage.png" type="Texture" id=13]
-[ext_resource path="res://Images/Player/Pause/shotgunImage.png" type="Texture" id=14]
+[ext_resource path="res://Images/Player/Pause/shotgunImage.png" type="Texture" id=13]
+[ext_resource path="res://Images/Player/Pause/pistolImage.png" type="Texture" id=14]
 [ext_resource path="res://Images/Player/Pause/machineGunImage.png" type="Texture" id=15]
 [ext_resource path="res://Fonts/PressStart2P.ttf" type="DynamicFontData" id=16]
 [ext_resource path="res://Images/Collects/master0.png" type="Texture" id=17]
@@ -33,12 +33,12 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 5 ), ExtResource( 3 ) ],
 "loop": true,
-"name": "Pistol",
+"name": "Shotgun",
 "speed": 3.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 3 ) ],
 "loop": true,
-"name": "Shotgun",
+"name": "Pistol",
 "speed": 3.0
 }, {
 "frames": [ ExtResource( 7 ), ExtResource( 3 ) ],
@@ -50,24 +50,24 @@ animations = [ {
 [sub_resource type="SpriteFrames" id=2]
 
 animations = [ {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "3",
+"speed": 5.0
+}, {
 "frames": [  ],
 "loop": true,
 "name": "0",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ) ],
-"loop": true,
-"name": "3",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 9 ) ],
-"loop": true,
-"name": "2",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 10 ) ],
 "loop": true,
-"name": "1",
+"name": "2",
 "speed": 5.0
 } ]
 
@@ -86,12 +86,12 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 13 ) ],
 "loop": true,
-"name": "Pistol",
+"name": "Shotgun",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
-"name": "Shotgun",
+"name": "Pistol",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 15 ) ],
@@ -153,6 +153,7 @@ script = ExtResource( 1 )
 
 frames = SubResource( 1 )
 animation = "Life"
+frame = 1
 playing = true
 centered = false
 _sections_unfolded = [ "Offset", "Transform", "Visibility" ]

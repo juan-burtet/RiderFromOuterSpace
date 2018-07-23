@@ -3,7 +3,7 @@ extends KinematicBody2D
 const FIREBALL_SCENE = preload("res://Scenes/Enemies/BossWeapon4.tscn")
 const SHADOWBALL_SCENE = preload("res://Scenes/Enemies/BossWeapon5.tscn")
 
-const MAX_HP = 15000
+const MAX_HP = 16000
 var hp 
 var can_shot
 var pos

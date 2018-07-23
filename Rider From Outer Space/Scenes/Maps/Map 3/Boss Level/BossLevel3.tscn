@@ -12,22 +12,22 @@
 [ext_resource path="res://Images/Enemies/Bosses/3/Idle/5.png" type="Texture" id=10]
 [ext_resource path="res://Images/Enemies/Bosses/3/Idle/6.png" type="Texture" id=11]
 [ext_resource path="res://Images/Enemies/Bosses/3/Idle/7.png" type="Texture" id=12]
-[ext_resource path="res://Images/Enemies/Bosses/3/Ultra/0.png" type="Texture" id=13]
-[ext_resource path="res://Images/Enemies/Bosses/3/Ultra/1.png" type="Texture" id=14]
-[ext_resource path="res://Images/Enemies/Bosses/3/Ultra/2.png" type="Texture" id=15]
-[ext_resource path="res://Images/Enemies/Bosses/3/Ultra/3.png" type="Texture" id=16]
-[ext_resource path="res://Images/Enemies/Bosses/3/Ultra/4.png" type="Texture" id=17]
-[ext_resource path="res://Images/Enemies/Bosses/3/Ultra/5.png" type="Texture" id=18]
-[ext_resource path="res://Images/Enemies/Bosses/3/Ultra/6.png" type="Texture" id=19]
-[ext_resource path="res://Images/Enemies/Bosses/3/Ultra/7.png" type="Texture" id=20]
-[ext_resource path="res://Images/Enemies/Bosses/3/Attack/0.png" type="Texture" id=21]
-[ext_resource path="res://Images/Enemies/Bosses/3/Attack/1.png" type="Texture" id=22]
-[ext_resource path="res://Images/Enemies/Bosses/3/Attack/2.png" type="Texture" id=23]
-[ext_resource path="res://Images/Enemies/Bosses/3/Attack/3.png" type="Texture" id=24]
-[ext_resource path="res://Images/Enemies/Bosses/3/Attack/4.png" type="Texture" id=25]
-[ext_resource path="res://Images/Enemies/Bosses/3/Attack/5.png" type="Texture" id=26]
-[ext_resource path="res://Images/Enemies/Bosses/3/Attack/6.png" type="Texture" id=27]
-[ext_resource path="res://Images/Enemies/Bosses/3/Attack/7.png" type="Texture" id=28]
+[ext_resource path="res://Images/Enemies/Bosses/3/Attack/0.png" type="Texture" id=13]
+[ext_resource path="res://Images/Enemies/Bosses/3/Attack/1.png" type="Texture" id=14]
+[ext_resource path="res://Images/Enemies/Bosses/3/Attack/2.png" type="Texture" id=15]
+[ext_resource path="res://Images/Enemies/Bosses/3/Attack/3.png" type="Texture" id=16]
+[ext_resource path="res://Images/Enemies/Bosses/3/Attack/4.png" type="Texture" id=17]
+[ext_resource path="res://Images/Enemies/Bosses/3/Attack/5.png" type="Texture" id=18]
+[ext_resource path="res://Images/Enemies/Bosses/3/Attack/6.png" type="Texture" id=19]
+[ext_resource path="res://Images/Enemies/Bosses/3/Attack/7.png" type="Texture" id=20]
+[ext_resource path="res://Images/Enemies/Bosses/3/Ultra/0.png" type="Texture" id=21]
+[ext_resource path="res://Images/Enemies/Bosses/3/Ultra/1.png" type="Texture" id=22]
+[ext_resource path="res://Images/Enemies/Bosses/3/Ultra/2.png" type="Texture" id=23]
+[ext_resource path="res://Images/Enemies/Bosses/3/Ultra/3.png" type="Texture" id=24]
+[ext_resource path="res://Images/Enemies/Bosses/3/Ultra/4.png" type="Texture" id=25]
+[ext_resource path="res://Images/Enemies/Bosses/3/Ultra/5.png" type="Texture" id=26]
+[ext_resource path="res://Images/Enemies/Bosses/3/Ultra/6.png" type="Texture" id=27]
+[ext_resource path="res://Images/Enemies/Bosses/3/Ultra/7.png" type="Texture" id=28]
 [ext_resource path="res://Scenes/Enemies/Info.tscn" type="PackedScene" id=29]
 [ext_resource path="res://Sounds/Effects/Enemies/Death/sfx_deathscream_alien1.wav" type="AudioStream" id=30]
 [ext_resource path="res://Tests/Map Test/PlayerTest.tscn" type="PackedScene" id=31]
@@ -44,12 +44,12 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
 "loop": true,
-"name": "Ultra",
+"name": "Attack",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ) ],
 "loop": true,
-"name": "Attack",
+"name": "Ultra",
 "speed": 10.0
 } ]
 
@@ -101,7 +101,7 @@ tracks/0/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 3, 240 )
 
-[node name="BossLevel3" type="Node" index="0"]
+[node name="BossLevel3" type="Node"]
 
 script = ExtResource( 1 )
 next_world = "res://Scenes/Maps/Final Boss/FinalBoss.tscn"
@@ -176,7 +176,7 @@ __meta__ = {
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 7
+frame = 6
 playing = true
 flip_h = true
 _sections_unfolded = [ "Transform", "Visibility" ]

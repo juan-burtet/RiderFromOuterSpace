@@ -131,14 +131,14 @@ func is_full_upgrade():
 
 
 func add_upgrades():
-	if upgrades == 0:
+	if upgrades == 0 or !is_full_upgrade():
 		emit_signal("on")
-	upgrades += 1
-	if upgrades > 15:
-		upgrades = 15
+		upgrades += 1
+		if upgrades > 15:
+			upgrades = 15
 
 func sub_upgrades():
-	if upgrades == 1:
+	if upgrades == 1 or is_full_upgrade():
 		emit_signal("off")
 	
 	upgrades -= 1

@@ -186,6 +186,11 @@ animations = [ {
 "name": "unable",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 29 ) ],
+"loop": true,
+"name": "nala",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 36 ), ExtResource( 32 ) ],
 "loop": true,
 "name": "byron_on",
@@ -195,11 +200,6 @@ animations = [ {
 "loop": true,
 "name": "unable_on",
 "speed": 3.0
-}, {
-"frames": [ ExtResource( 29 ) ],
-"loop": true,
-"name": "nala",
-"speed": 5.0
 }, {
 "frames": [ ExtResource( 34 ) ],
 "loop": true,

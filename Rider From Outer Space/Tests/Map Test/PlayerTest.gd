@@ -525,8 +525,10 @@ func get_can_move():
 	return can_move
 
 func on_aumentou_hp():
-	hp = global.get_hp()
-	update_hp()
+	if global.get_heart() < 3:
+		hp = global.get_hp()
+		hp += 2
+		update_hp()
 	pass
 
 func update_hp():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/Maps/Map3/Map 3 Section 1.gd" type="Script" id=1]
 [ext_resource path="res://Images/Maps/Map 3/Section 1/background.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Scenes/Enemies/Fighter/Demon_Fighter.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Enemies/Shooter/Soldier_Shooter.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Sounds/Music/map3/Map.wav" type="AudioStream" id=9]
+[ext_resource path="res://Scenes/Collect/MasterUpgrade.tscn" type="PackedScene" id=10]
 
 [node name="Map 3 Section 1" type="Node" index="0"]
 
@@ -237,6 +238,12 @@ pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "MUSIC"
+
+[node name="Collect" type="Node" parent="." index="6"]
+
+[node name="MasterUpgrade" parent="Collect" index="0" instance=ExtResource( 10 )]
+
+position = Vector2( -567, 419 )
 
 [connection signal="next_world" from="ChangeLevel" to="." method="_on_ChangeLevel_next_world"]
 

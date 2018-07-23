@@ -154,6 +154,7 @@ func restart_timer():
 func is_dead():
 	if !hp:
 		global.add_upgrades()
+		$CollisionShape2D.set_disabled(true)
 		can_shot = false
 		$death.play()
 		$AnimationPlayer.play("death")

@@ -101,10 +101,10 @@ tracks/0/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 3, 240 )
 
-[node name="BossLevel3" type="Node"]
+[node name="BossLevel3" type="Node" index="0"]
 
 script = ExtResource( 1 )
-next_world = "res://Scenes/Maps/Final Boss/FinalBoss.tscn"
+next_world = "res://Scenes/Maps/Transition/EndBossLevel3.tscn"
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -176,7 +176,7 @@ __meta__ = {
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 6
+frame = 1
 playing = true
 flip_h = true
 _sections_unfolded = [ "Transform", "Visibility" ]

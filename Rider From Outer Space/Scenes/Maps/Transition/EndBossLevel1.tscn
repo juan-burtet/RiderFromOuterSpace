@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Maps/Transitions/EndBossLevel1.gd" type="Script" id=1]
+[ext_resource path="res://Images/Player/Death Screen/blackScreen.png" type="Texture" id=2]
+
+[node name="EndBossLevel1" type="Node"]
+
+script = ExtResource( 1 )
+next_world = "res://Scenes/Maps/Map 2/Section 1/Map 2 Section 1.tscn"
+
+[node name="Background" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+
+[node name="Timer" type="Timer" parent="." index="1"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+

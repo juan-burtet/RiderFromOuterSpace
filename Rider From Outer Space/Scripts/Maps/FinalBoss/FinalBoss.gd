@@ -15,7 +15,7 @@ const TEXT6 = "HAHAHAHAHAHAHAHAHAHA!"
 
 const TEXT8 = "NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO!"
 const TEXT9 = "THE GEM IS SAFE..."
-const TEXT10 = "... FOR NOW."
+const TEXT10 = "...FOR NOW."
 
 
 var yellow = Color(1,1,0,1)
@@ -109,8 +109,6 @@ func _on_Carmack_dead():
 	end()
 	yield(self, "fade")
 	dialogo = true
-	cria_dialogo_fim()
-	yield(self, "termina_fase")
 	change_level()
 	pass # replace with function body
 

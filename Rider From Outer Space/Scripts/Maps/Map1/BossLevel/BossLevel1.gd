@@ -93,15 +93,10 @@ func _on_Djikstra_dead():
 	yield(self, "fade")
 	$PlayerTest.queue_free()
 	
-	dialogo = true
-	cria_dialogo_fim()
-	yield(self, "termina_fase")
 	change_level()
 	pass # replace with function body
 
 func change_level():
-	global.set_loadgame(next_world)
-	global.set_map2()
 	get_tree().change_scene(next_world)
 
 func cria_dialogo_fim():

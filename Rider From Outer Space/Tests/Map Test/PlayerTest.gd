@@ -145,6 +145,7 @@ func update_player():
 func pause_menu():
 	get_tree().paused = true
 	get_parent().get_node("music").stop()
+	on_pause_in()
 	add_child(PAUSE_SCENE.instance())
 	pass
 
@@ -665,3 +666,11 @@ func _on_dash_timer_timeout():
 	if $camera != null:
 		$camera.set_enable_follow_smoothing(false)
 	pass # replace with function body
+
+func on_pause_in():
+	$pause_in.play()
+	pass
+
+func on_pause_out():
+	$pause_out.play()
+	pass

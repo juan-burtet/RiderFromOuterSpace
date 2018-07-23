@@ -39,6 +39,7 @@ _sections_unfolded = [ "Collision" ]
 
 frames = SubResource( 1 )
 animation = "default"
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
@@ -52,7 +53,7 @@ volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "SFX"
+bus = "COIN"
 
 [connection signal="body_entered" from="." to="." method="_on_Coins_body_entered"]
 

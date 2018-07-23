@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Win Jingle.wav-716461b755d6b0631e29f416d6692c88.sample"
+
+[deps]
+
+source_file="res://Sounds/Music/end/Win Jingle.wav"
+dest_files=[ "res://.import/Win Jingle.wav-716461b755d6b0631e29f416d6692c88.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

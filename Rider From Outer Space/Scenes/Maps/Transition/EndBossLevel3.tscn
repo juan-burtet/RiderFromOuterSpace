@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Maps/Transition/EndBossLevel2.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Maps/Transitions/EndBossLevel3.gd" type="Script" id=2]
+
+[node name="EndBossLevel3" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+next_world = "res://Scenes/Maps/Final Boss/FinalBoss.tscn"
+
+

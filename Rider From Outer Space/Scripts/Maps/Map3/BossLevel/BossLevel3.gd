@@ -6,14 +6,14 @@ export(String, FILE, "*.tscn") var next_world
 const DIALOG_SCENE = preload("res://Scenes/Dialog/Dialog.tscn")
 const BLACK_SCREEN = preload("res://Scenes/BlackScreen/BlackScreen.tscn")
 
-const TEXT1 = "YOU MUST BE LOVELACE" 
+const TEXT1 = "YOU MUST BE LOVELACE." 
 const TEXT2 = "ANOTHER VISITOR."
 const TEXT3 = "GIVE THE GEM!"
 const TEXT4 = "THE GEM MUST BE IN THE TEMPLE."
 const TEXT5 = "I DON'T CARE. I NEED THE GEM. NOW!"
-const TEXT6 = "LOVELACE MUST KILL ANYONE WHO TRIES TO STOLE THE GEM. PREPARE TO DIE"
+const TEXT6 = "LOVELACE MUST KILL ANYONE WHO TRIES TO STOLE THE GEM. PREPARE TO DIE."
 
-const TEXT8 = "PLEASE. LEAVE THE GEM. IT'S NOT SAFE"
+const TEXT8 = "PLEASE. LEAVE THE GEM. IT'S NOT SAFE."
 
 
 var yellow = Color(1,1,0,1)
@@ -102,14 +102,10 @@ func _on_Lovelace_dead():
 	end()
 	yield(self, "fade")
 	dialogo = true
-	cria_dialogo_fim()
-	yield(self, "termina_fase")
 	change_level()
 	pass # replace with function body
 
 func change_level():
-	global.set_loadgame(next_world)
-	global.set_map4()
 	get_tree().change_scene(next_world)
 
 func cria_dialogo_fim():

@@ -105,14 +105,10 @@ func _on_Turing_dead():
 	end()
 	yield(self, "fade")
 	dialogo = true
-	cria_dialogo_fim()
-	yield(self, "termina_fase")
 	change_level()
 	pass # replace with function body
 
 func change_level():
-	global.set_loadgame(next_world)
-	global.set_map3()
 	get_tree().change_scene(next_world)
 
 func cria_dialogo_fim():

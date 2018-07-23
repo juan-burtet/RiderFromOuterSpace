@@ -195,7 +195,7 @@ func shoot(direction):
 					pass
 			var pistol = PISTOL_SCENE.instance()
 			pistol.init(direction)
-			add_child(pistol)
+			get_parent().add_child(pistol)
 			print(position)
 			print(direction)
 			pistol.set_position(position)

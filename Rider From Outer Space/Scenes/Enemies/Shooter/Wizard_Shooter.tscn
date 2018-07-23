@@ -86,7 +86,7 @@ WAIT_TIME = 1.5
 
 frames = SubResource( 1 )
 animation = "attack"
-frame = 1
+frame = 6
 playing = true
 offset = Vector2( 0, 2 )
 script = ExtResource( 8 )
@@ -189,6 +189,8 @@ blend_times = [  ]
 rect = Rect2( -10, -10, 20, 20 )
 
 [node name="Sounds" type="Node" parent="." index="12"]
+
+editor/display_folded = true
 
 [node name="death" type="AudioStreamPlayer" parent="Sounds" index="0"]
 

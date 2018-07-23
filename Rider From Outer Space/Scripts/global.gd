@@ -10,6 +10,7 @@ var upgrades
 var coins
 
 var loadgame
+var all
 
 var map1
 var map2
@@ -55,6 +56,7 @@ func get_hp():
 	return (6 + 2*x)
 
 func _ready():
+	all = false
 	map1 = false
 	map2 = false
 	map3 = false
@@ -68,6 +70,26 @@ func _ready():
 	upgrades = 0
 	coins = 0
 	pass
+
+func get_all():
+	return all
+
+func everything():
+	all = true
+	map1 = true
+	map2 = true
+	map3 = true
+	map4 = true
+	loadgame = get_loadgame()
+	heart = 3
+	jetpack = 3
+	pistol = 3
+	shotgun = 3
+	machinegun = 3
+	upgrades = 15
+	coins = 99
+	pass
+
 
 func get_jump_height():
 	var height = -500
@@ -131,19 +153,16 @@ func is_full_upgrade():
 
 
 func add_upgrades():
-	if upgrades == 0 and !is_full_upgrade():
-		emit_signal("on")
 	upgrades += 1
 	if upgrades > 15:
 		upgrades = 15
+	check_upgrade()
 
 func sub_upgrades():
-	if upgrades == 1 and is_full_upgrade():
-		emit_signal("off")
-	
 	upgrades -= 1
 	if upgrades < 0:
 		upgrades = 0
+	check_upgrade()
 
 func get_coins():
 	return coins

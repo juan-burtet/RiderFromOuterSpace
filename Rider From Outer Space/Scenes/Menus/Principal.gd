@@ -6,6 +6,14 @@ const KONISBERG = "res://Scenes/Maps/Map 1/Section 1/Map 1 Section 1.tscn"
 var menu = 0
 var scaling = 5
 signal sound
+signal all
+
+func _input(event):
+	if event.is_action_pressed("get_all"):
+		if !global.get_all():
+			global.everything()
+			emit_signal("all")
+	pass
 
 func on_menu():
 	$GameLogo.set_visible(true)
@@ -32,6 +40,7 @@ func _ready():
 	all_sprites_on_not()
 	var parent = get_parent()
 	connect("sound", parent, "on_sound")
+	connect("all", parent, "on_all")
 	pass
 
 func _process(delta):

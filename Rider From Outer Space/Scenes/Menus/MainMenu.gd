@@ -2,11 +2,17 @@ extends Node
 
 var scaling
 func _ready():
+	$Principal.set_process(false)
 	scaling = 5
 	$MenuSounds/Music.play()
 	$Principal.on_menu()
 	$ChapterSelect.off_menu()
 	$Options.off_menu()
+	$Timer.set_one_shot(false)
+	$Timer.set_wait_time(0.2)
+	$Timer.start()
+	yield($Timer,"timeout")
+	$Principal.set_process(true)
 	pass
 
 
@@ -76,3 +82,7 @@ func _on_Music_finished():
 
 func on_sound():
 	$MenuSounds/ChangeOption.play()
+
+func on_all():
+	$MenuSounds/All.play()
+	$ChapterSelect.update_sprites()

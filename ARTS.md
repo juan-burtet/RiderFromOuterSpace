@@ -1,10 +1,43 @@
 # Artes utilizadas no jogo!
 
+## Coletaveis
+### Moedas
+	>https://opengameart.org/content/nes-gems
+### Master Upgrade
+	> https://opengameart.org/content/heart-3
+
+## Inimigos
+### Chefes
+	> https://opengameart.org/content/bosses-and-monsters-spritesheets-ars-notoria
+### Bomber 1
+
+### Bomber 2
+
+### Bomber 3
+
+### Fighter 1
+	> https://opengameart.org/content/bosses-and-monsters-spritesheets-ars-notoria
+### Fighter 2
+
+### Fighter 3
+
+### Shooter 1
+
+### Shooter 2
+
+### Shooter 3
+
+
+
+
 ## Personagens
 
 ## Mapas
-
+ 
 ## GUI
+
+
+
 
 ## Menu de Upgrades [COMPLETO]
 ### Fonts

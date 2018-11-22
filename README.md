@@ -1,5 +1,12 @@
-# PeC-IV-Jogos
-## Repositório da Disciplina de Jogos (Ciência da Computação - UFPEL)
+# Rider From Outer Space
+
+<img src="/Extras/img/gameLogo.png" width="650px">
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=5L5BhkazliQ
+" target="_blank"><img src="http://img.youtube.com/vi/5L5BhkazliQ/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="650px" border="10" /></a>
+
+## Pastas do Repositório
 
   * [Extras](https://github.com/juan-burtet/PeC-IV-Jogos/tree/master/Extras)
     > Pasta com arquivos extras pro Desenvolvimento do trabalho.
@@ -10,19 +17,4 @@
   * [GAME.md](https://github.com/juan-burtet/PeC-IV-Jogos/blob/master/GAME.md)
     > Markdown contendo os tópicos do Storyboard atualizados com as artes usadas no jogo.
 
-## Colisões dos Personagens
-  * __Personagem[1]__: Toca em Inimigos, Mapa e Explosão
-    * Layer: 1
-    * Mask: 2 3 4
-  * __Inimigos[2]__: Toca em Personagem, Mapa e Munição
-    * Layer: 2
-    * Mask: 1 3 5
-  * __Mapa[3]__: Toca em Inimigos, Personagem e Munição
-    * Layer: 3
-    * Mask: 1 2 5
-  * __Explosão[4]__: Toca em Personagem
-    * Layer: 4
-    * Mask: 1
-  * __Munição[5]__: No Mapa e Inimigos
-    * Layer: 5
-    * Mask: 2 3
+

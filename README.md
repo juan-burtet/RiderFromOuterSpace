@@ -2,9 +2,10 @@
 
 <img src="/Extras/img/gameLogo.png" width="650px">
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=5L5BhkazliQ
-" target="_blank"><img src="http://img.youtube.com/vi/5L5BhkazliQ/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="650px" border="10" /></a>
+## Gameplay
+
+### [YouTube](https://www.youtube.com/watch?v=5L5BhkazliQ)
+
 
 ## Pastas do Repositório
 
